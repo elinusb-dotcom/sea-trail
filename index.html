@@ -3,41 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>שביל הים - מנציחים את מורשת המעפילים</title>
+    <title>שביל הים - פרויקט הנצחת ספינות המעפילים</title>
     
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;700;900&display=swap" rel="stylesheet">
 
     <style>
         body {
-            font-family: 'Heebo', Arial, sans-serif;
-            font-size: 20px;
-            line-height: 1.6;
-            color: #2c3e50; 
-            margin: 0;
-            padding: 0;
-            background-color: #fdfbf7; 
+            font-family: 'Heebo', sans-serif;
+            margin: 0; padding: 0; background-color: #fdfbf7; color: #2c3e50; line-height: 1.6;
         }
 
-        .section { padding: 40px 20px; display: flex; justify-content: center; }
-        .container { max-width: 850px; width: 100%; }
+        .container { max-width: 900px; margin: 0 auto; padding: 20px; }
 
-        .hero-section {
+        /* כותרת עליונה */
+        .hero {
             background: linear-gradient(135deg, #003366 0%, #005b96 100%);
-            color: #ffffff;
-            text-align: center;
-            padding: 60px 20px;
+            color: white; text-align: center; padding: 60px 20px;
         }
+        .hero h1 { font-size: 48px; font-weight: 900; margin-bottom: 10px; }
+        .hero p { font-size: 24px; opacity: 0.9; }
 
-        .hero-section h1 { font-size: 46px; font-weight: 900; margin-bottom: 15px; line-height: 1.2; }
-        .hero-section h2 { font-size: 26px; font-weight: 400; color: #e0f2fe; }
+        /* סרטוני וידאו */
+        .video-section { background-color: #ffffff; padding: 40px 20px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); margin: 30px 0; }
+        .video-title { text-align: center; color: #005b96; font-size: 28px; font-weight: 900; margin-bottom: 20px; }
+        
+        .video-wrapper {
+            position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; background: #000;
+        }
+        .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
 
-        .video-section { background-color: #e0f2fe; border-top: 5px solid #0284c7; padding: 50px 20px; }
+        /* תוכן טקסטואלי */
+        .content-box { background: white; padding: 35px; border-right: 8px solid #005b96; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin: 40px 0; }
+        .content-box h3 { color: #005b96; font-size: 30px; margin-top: 0; }
+        .content-box p { font-size: 22px; }
 
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%; 
+        /* כפתור תרומה */
+        .cta-container { text-align: center; margin: 60px 0; }
+        .cta-btn {
+            display: inline-block; background-color: #16a34a; color: white; padding: 25px 50px; font-size: 32px; font-weight: 900; text-decoration: none; border-radius: 60px; box-shadow: 0 10px 25px rgba(22,163,74,0.4); transition: 0.3s;
+        }
+        .cta-btn:hover { background-color: #15803d; transform: translateY(-3px); }
+
+        .footer { font-size: 16px; color: #64748b; text-align: center; padding: 40px; border-top: 1px solid #e2e8f0; }
+    </style>
+</head>
+<body>
+
+    <div class="hero">
+        <div class="container">
+            <h1>מנציחים את המורשת לאורך החוף</h1>
+            <p>פרויקט "שביל הים" והנצחת ספינות המעפילים</p>
+        </div>
+    </div>
+
+    <div class="container">
+        
+        <div class="video-section">
+            <h3 class="video-title">חזון שביל הים: מחברים היסטוריה לטבע</h3>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/V7w8_sPsXAc?start=10&end=35&autoplay=1&mute=1&rel=0" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="content-box">
+            <h3>הסיפור שלהם הוא העתיד שלנו</h3>
+            <p>אלפי מעפילים הגיעו לחופי ישראל בספינות רעועות, מונעים מכוחה של אמונה וציונות. פרויקט <strong>שביל הים</strong> הופך את קו החוף למוזיאון פתוח וחי, שבו כל צעדה היא מפגש עם פרק מרגש בהיסטוריה שלנו.</p>
+        </div>
+
+        <div class="video-section" style="border: 2px solid #bae6fd;">
+            <h3 class="video-title">פרופ' סנונית שהם מכריזה על הפרויקט</h3>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/V7w8_sPsXAc?rel=0" title="הכרזת הפרויקט" allowfullscreen></iframe>
+            </div>
+            <p style="text-align: center; font-style: italic; margin-top: 15px; font-size: 18px;">
+                "אנחנו מעניקים לספינות המעפילים מקום של כבוד במרחב הציבורי."
+            </p>
+        </div>
+
+        <div class="content-box" style="border-right-color: #16a34a;">
+            <h3>מה אנחנו משיגים יחד?</h3>
+            <ul style="font-size: 22px;">
+                <li>הקמת 30 נקודות הנצחה אינטראקטיביות לאורך החוף.</li>
+                <li>שימור מורשת המעפילים עבור דורות של מטיילים ותלמידים.</li>
+                <li>חיבור הקהילה לערכי הים וההיסטוריה הישראלית.</li>
+            </ul>
+        </div>
+
+        <div class="cta-container">
+            <h2 style="color: #003366; margin-bottom: 20px;">היו שותפים בהקמת השביל</h2>
+            <a href="https://pay.grow.link/9c1e9057bad27814769cf3bebf6556e5-MzI2MTIzOQ" class="cta-btn">לתרומה והנצחה באתר המאובטח</a>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <p>פרויקט משותף של ארגון מעפילי קפריסין וצוות "שביל הים" | ליצירת קשר: avi.schaul@gmail.com</p>
+    </div>
+
+</body>
+</html>
             height: 0;
             overflow: hidden;
             border-radius: 15px;
