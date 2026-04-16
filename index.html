@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>שביל הים - מנציחים את מורשת המעפילים</title>
+    <title>שביל הים - פרויקט הנצחת ספינות המעפילים</title>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700;900&display=swap" rel="stylesheet">
     <style>
         :root { --primary: #003366; --secondary: #005b96; --accent: #16a34a; --bg: #fdfbf7; }
@@ -15,29 +15,24 @@
         .hero h1 { font-size: 52px; font-weight: 900; margin: 0; }
         .hero p { font-size: 26px; margin-top: 15px; }
 
-        /* Sections */
         .section { background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); margin: 20px auto 40px; }
-        .historical-img { width: 100%; border-radius: 15px; filter: sepia(0.2) contrast(1.1); box-shadow: 0 8px 20px rgba(0,0,0,0.2); margin: 25px 0; }
-        .sign-preview { max-width: 450px; display: block; margin: 30px auto; border-radius: 10px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); transition: 0.3s; }
-        .sign-preview:hover { transform: translateY(-10px); }
+        
+        /* תמונות */
+        .historical-img { width: 100%; border-radius: 15px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); margin: 25px 0; }
+        .sign-preview { width: 100%; max-width: 600px; display: block; margin: 30px auto; border-radius: 10px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); border: 5px solid white; }
 
+        /* וידאו */
         .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; border-radius: 15px; overflow: hidden; background: #000; margin: 20px 0; }
         .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
 
-        /* Fundraising Bar */
+        /* מדד גיוס */
         .goal-box { border: 2px solid var(--secondary); padding: 25px; border-radius: 15px; background: #f0f7ff; margin: 40px 0; text-align: center; }
         .goal-container { background: #e2e8f0; border-radius: 50px; height: 35px; margin: 20px 0; overflow: hidden; }
-        .goal-bar { background: var(--accent); width: 15%; height: 100%; color: white; font-weight: bold; line-height: 35px; transition: 1s ease-in-out; }
+        .goal-bar { background: var(--accent); width: 15%; height: 100%; color: white; font-weight: bold; line-height: 35px; }
 
-        /* Message Box */
         .legacy-box { background: var(--primary); color: white; padding: 35px; border-radius: 15px; margin: 40px 0; text-align: center; }
-        .legacy-box h3 { font-size: 32px; margin-top: 0; color: #e0f2fe; }
-
-        /* CTA */
         .cta-btn { display: inline-block; background: var(--accent); color: white; padding: 22px 60px; font-size: 32px; font-weight: 900; text-decoration: none; border-radius: 50px; box-shadow: 0 10px 20px rgba(22,163,74,0.3); transition: 0.3s; margin-top: 20px; }
         .cta-btn:hover { background: #15803d; transform: scale(1.05); }
-
-        .footer { text-align: center; padding: 40px; font-size: 14px; color: #64748b; }
     </style>
 </head>
 <body>
@@ -54,7 +49,7 @@
         <div class="section">
             <h2 style="text-align: center; color: var(--primary); margin-top: 0;">ההורים בנו, עכשיו תורנו לשמור</h2>
             <img src="ספינות2.png" alt="מעפילים מגיעים לחוף" class="historical-img">
-            <p style="font-size: 22px; text-align: center;">המשמרת של הורינו הסתיימה. כעת, האחריות לתחזוקת המורשת עוברת לידינו.</p>
+            <p style="font-size: 22px; text-align: center; font-weight: bold;">המשמרת של הורינו הסתיימה. כעת, האחריות לתחזוקת המורשת עוברת לידינו.</p>
         </div>
 
         <div class="section">
@@ -64,10 +59,17 @@
             </div>
         </div>
 
+        <div class="section">
+            <h3 style="text-align: center; color: var(--secondary);">חזון שביל הים - מסלול המורשת</h3>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/V7w8_sPsXAc?start=1&end=26&rel=0" allowfullscreen></iframe>
+            </div>
+        </div>
+
         <div class="legacy-box">
-            <h3>מנציחים 30 אוניות ב-30 תחנות</h3>
-            <p style="font-size: 20px;">אנחנו מקימים רשת שלטי מורשת אינטראקטיביים מראש הנקרה ועד זיקים, כדי שכל מטייל יכיר את סיפור הגבורה של המעפילים.</p>
-            <img src="שלךט דוגמא במפרץ חיפה .png" alt="דוגמא לשלט מורשת" class="sign-preview">
+            <h3>כך ייראו 30 התחנות לאורך החוף</h3>
+            <p style="font-size: 20px;">כל שלט הוא גלעד חי לסיפורה של אונייה. דוגמא לשלט במפרץ חיפה:</p>
+            <img src="שלךט  דוגמא  במפרץ חיפה .png" alt="דוגמא לשלט מורשת במפרץ חיפה" class="sign-preview">
         </div>
 
         <div class="goal-box">
@@ -75,14 +77,14 @@
             <div class="goal-container">
                 <div class="goal-bar">15% הושלמו</div>
             </div>
-            <p><strong>הצטרפו אלינו להשגת היעד:</strong> כל תרומה מקרבת אותנו להצבת השלט הבא בשביל.</p>
+            <p><strong>הצטרפו אלינו:</strong> כל תרומה מקרבת אותנו להצבת השלט הבא בשביל.</p>
             <a href="https://pay.grow.link/9c1e9057bad27814769cf3bebf6556e5-MzI2MTIzOQ" class="cta-btn">לתרומה והנצחה עכשיו</a>
         </div>
 
     </div>
 
-    <div class="footer">
-        פרויקט מורשת ההעפלה בשביל הים | ליצירת קשר: avi.schaul@gmail.com
+    <div style="text-align: center; padding: 40px; color: #64748b;">
+        פרויקט מורשת ההעפלה בשביל הים | avi.schaul@gmail.com
     </div>
 
 </body>
