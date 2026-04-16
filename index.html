@@ -10,31 +10,34 @@
         body { font-family: 'Heebo', sans-serif; margin: 0; padding: 0; background-color: var(--bg); color: #2c3e50; line-height: 1.6; }
         .container { max-width: 900px; margin: 0 auto; padding: 20px; }
         
-        /* Hero Section */
+        /* Hero */
         .hero { background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); color: white; text-align: center; padding: 80px 20px; clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); }
         .hero h1 { font-size: 52px; font-weight: 900; margin: 0; }
         .hero p { font-size: 26px; margin-top: 15px; }
 
-        /* General Section Style */
+        /* Sections */
         .section { background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); margin: 20px auto 40px; }
-        
-        .main-image { width: 100%; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); margin: 20px 0; }
-        
+        .historical-img { width: 100%; border-radius: 15px; filter: sepia(0.2) contrast(1.1); box-shadow: 0 8px 20px rgba(0,0,0,0.2); margin: 25px 0; }
+        .sign-preview { max-width: 450px; display: block; margin: 30px auto; border-radius: 10px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); transition: 0.3s; }
+        .sign-preview:hover { transform: translateY(-10px); }
+
         .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; border-radius: 15px; overflow: hidden; background: #000; margin: 20px 0; }
         .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
 
-        /* Fundraiser Goal Bar */
-        .goal-container { background: #e2e8f0; border-radius: 50px; height: 30px; margin: 20px 0; overflow: hidden; border: 2px solid var(--primary); }
-        .goal-bar { background: var(--accent); width: 15%; height: 100%; text-align: center; color: white; font-weight: bold; font-size: 14px; line-height: 26px; }
+        /* Fundraising Bar */
+        .goal-box { border: 2px solid var(--secondary); padding: 25px; border-radius: 15px; background: #f0f7ff; margin: 40px 0; text-align: center; }
+        .goal-container { background: #e2e8f0; border-radius: 50px; height: 35px; margin: 20px 0; overflow: hidden; }
+        .goal-bar { background: var(--accent); width: 15%; height: 100%; color: white; font-weight: bold; line-height: 35px; transition: 1s ease-in-out; }
 
-        /* Content Boxes */
-        .message-box { border-right: 8px solid var(--secondary); padding: 25px; background: #f0f7ff; border-radius: 10px; margin: 30px 0; }
-        .message-box h3 { margin-top: 0; color: var(--primary); font-size: 28px; }
+        /* Message Box */
+        .legacy-box { background: var(--primary); color: white; padding: 35px; border-radius: 15px; margin: 40px 0; text-align: center; }
+        .legacy-box h3 { font-size: 32px; margin-top: 0; color: #e0f2fe; }
 
         /* CTA */
-        .cta-box { text-align: center; background: var(--primary); color: white; padding: 50px 20px; border-radius: 20px; }
-        .cta-btn { display: inline-block; background: var(--accent); color: white; padding: 22px 60px; font-size: 32px; font-weight: 900; text-decoration: none; border-radius: 50px; transition: 0.3s; box-shadow: 0 10px 20px rgba(22,163,74,0.3); }
-        .cta-btn:hover { transform: scale(1.05); background: #15803d; }
+        .cta-btn { display: inline-block; background: var(--accent); color: white; padding: 22px 60px; font-size: 32px; font-weight: 900; text-decoration: none; border-radius: 50px; box-shadow: 0 10px 20px rgba(22,163,74,0.3); transition: 0.3s; margin-top: 20px; }
+        .cta-btn:hover { background: #15803d; transform: scale(1.05); }
+
+        .footer { text-align: center; padding: 40px; font-size: 14px; color: #64748b; }
     </style>
 </head>
 <body>
@@ -46,15 +49,12 @@
         </div>
     </div>
 
-    <div class="container" style="margin-top: -50px;">
+    <div class="container" style="margin-top: -60px;">
         
         <div class="section">
-            <h2 style="text-align: center; color: var(--secondary); margin-top: 0;">ההורים בנו, עכשיו תורנו לשמור</h2>
-            <img src="ספינות2.png" alt="מעפילים מגיעים לחוף" class="main-image">
-            <div class="message-box">
-                <h3>האחריות היא שלנו</h3>
-                <p>המשמרת של הורינו הסתיימה. כעת, עלינו מוטלת מלוא האחריות לתחזק את המורשת המפוארת של ספינות המעפילים. אנחנו לא רק מנציחים את העבר, אנחנו מבטיחים שהסיפור שלהם ימשיך להדהד בחופים שבהם הכל התחיל.</p>
-            </div>
+            <h2 style="text-align: center; color: var(--primary); margin-top: 0;">ההורים בנו, עכשיו תורנו לשמור</h2>
+            <img src="ספינות2.png" alt="מעפילים מגיעים לחוף" class="historical-img">
+            <p style="font-size: 22px; text-align: center;">המשמרת של הורינו הסתיימה. כעת, האחריות לתחזוקת המורשת עוברת לידינו.</p>
         </div>
 
         <div class="section">
@@ -64,27 +64,25 @@
             </div>
         </div>
 
-        <div class="section">
-            <h2 style="color: var(--primary);">היעד שלנו: 320,000 ש"ח להקמת 30 שלטים</h2>
-            <p>הצטרפו אלינו להקמת רשת שלטי מורשת אינטראקטיביים מראש הנקרה ועד זיקים.</p>
-            
+        <div class="legacy-box">
+            <h3>מנציחים 30 אוניות ב-30 תחנות</h3>
+            <p style="font-size: 20px;">אנחנו מקימים רשת שלטי מורשת אינטראקטיביים מראש הנקרה ועד זיקים, כדי שכל מטייל יכיר את סיפור הגבורה של המעפילים.</p>
+            <img src="שלךט דוגמא במפרץ חיפה .png" alt="דוגמא לשלט מורשת" class="sign-preview">
+        </div>
+
+        <div class="goal-box">
+            <h2 style="color: var(--primary); margin-top: 0;">היעד לגיוס: 320,000 ש"ח</h2>
             <div class="goal-container">
-                <div class="goal-bar">15% גויסו</div>
+                <div class="goal-bar">15% הושלמו</div>
             </div>
-            <p style="font-size: 16px; text-align: center; color: #666;">עד כה גויסו כ-48,000 ש"ח מתוך היעד.</p>
-
-            <h3 style="color: var(--secondary); margin-top: 30px;">כך זה ייראה בשטח:</h3>
-            <img src="שלךט דוגמא במפרץ חיפה .png" alt="דוגמא לשלט מורשת במפרץ חיפה" class="main-image" style="max-width: 400px; display: block; margin: 20px auto;">
-        </div>
-
-        <div class="cta-box">
-            <h2 style="margin-top:0;">בואו נשלים את המשימה יחד</h2>
-            <p style="font-size: 22px;">התרומה שלך היא אבן הפינה לשלט הבא</p>
-            <br>
+            <p><strong>הצטרפו אלינו להשגת היעד:</strong> כל תרומה מקרבת אותנו להצבת השלט הבא בשביל.</p>
             <a href="https://pay.grow.link/9c1e9057bad27814769cf3bebf6556e5-MzI2MTIzOQ" class="cta-btn">לתרומה והנצחה עכשיו</a>
-            <p style="margin-top: 20px; font-size: 14px; opacity: 0.8;">הסליקה מאובטחת | avi.schaul@gmail.com</p>
         </div>
 
+    </div>
+
+    <div class="footer">
+        פרויקט מורשת ההעפלה בשביל הים | ליצירת קשר: avi.schaul@gmail.com
     </div>
 
 </body>
