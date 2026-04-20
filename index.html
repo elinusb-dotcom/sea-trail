@@ -3,42 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>שביל הים - פרויקט הנצחת ספינות המעפילים</title>
+    <title>שביל הים - מנציחים את מורשת ההעפלה</title>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700;900&display=swap" rel="stylesheet">
     <style>
         :root { --primary: #003366; --secondary: #005b96; --accent: #16a34a; --bg: #fdfbf7; }
         body { font-family: 'Heebo', sans-serif; margin: 0; padding: 0; background-color: var(--bg); color: #2c3e50; line-height: 1.6; }
         .container { max-width: 900px; margin: 0 auto; padding: 20px; }
-        
-        /* Hero */
-        .hero { background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); color: white; text-align: center; padding: 80px 20px; clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); }
-        .hero h1 { font-size: 52px; font-weight: 900; margin: 0; line-height: 1.2; }
-        .hero p { font-size: 26px; margin-top: 15px; font-weight: 300; }
-
+        .logos-header { display: flex; justify-content: center; align-items: center; gap: 30px; padding: 20px; background: white; }
+        .logos-header img { height: 80px; width: auto; object-fit: contain; }
+        .hero { background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); color: white; text-align: center; padding: 60px 20px; clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%); }
+        .hero h1 { font-size: 48px; font-weight: 900; margin: 0; line-height: 1.2; }
+        .hero p { font-size: 24px; margin-top: 15px; font-weight: 300; }
         .section { background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); margin: 20px auto 40px; }
-        
-        /* תמונות */
-        .historical-img { width: 100%; border-radius: 15px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); margin: 25px 0; }
-        .sign-preview { width: 100%; max-width: 600px; display: block; margin: 30px auto; border-radius: 10px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); border: 5px solid white; }
-
-        /* וידאו */
-        .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; border-radius: 15px; overflow: hidden; background: #000; margin: 20px 0; }
+        .historical-img { width: 100%; border-radius: 15px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); margin-bottom: 20px; }
+        .sign-preview { width: 100%; max-width: 500px; display: block; margin: 30px auto; border-radius: 10px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); border: 5px solid white; }
+        .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; border-radius: 15px; overflow: hidden; background: #000; margin: 25px 0; }
         .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
-
-        /* מדד גיוס */
+        .legacy-box { background: var(--primary); color: white; padding: 35px; border-radius: 15px; margin: 40px 0; text-align: center; }
+        .legacy-box h3 { font-size: 32px; color: #e0f2fe; margin-top: 0; }
         .goal-box { border: 2px solid var(--secondary); padding: 25px; border-radius: 15px; background: #f0f7ff; margin: 40px 0; text-align: center; }
         .goal-container { background: #e2e8f0; border-radius: 50px; height: 35px; margin: 20px 0; overflow: hidden; }
         .goal-bar { background: var(--accent); width: 15%; height: 100%; color: white; font-weight: bold; line-height: 35px; }
-
-        .legacy-box { background: var(--primary); color: white; padding: 35px; border-radius: 15px; margin: 40px 0; text-align: center; }
-        .legacy-box h3 { font-size: 32px; color: #e0f2fe; margin-top: 0; }
-
-        /* CTA */
-        .cta-btn { display: inline-block; background: var(--accent); color: white; padding: 22px 60px; font-size: 32px; font-weight: 900; text-decoration: none; border-radius: 50px; box-shadow: 0 10px 20px rgba(22,163,74,0.3); transition: 0.3s; margin-top: 20px; }
-        .cta-btn:hover { background: #15803d; transform: scale(1.05); }
+        .cta-btn { display: inline-block; background: var(--accent); color: white; padding: 22px 60px; font-size: 30px; font-weight: 900; text-decoration: none; border-radius: 50px; box-shadow: 0 10px 20px rgba(22,163,74,0.3); transition: 0.3s; margin-top: 20px; }
+        .cta-btn:hover { background: #15803d; transform: scale(1.03); }
     </style>
 </head>
 <body>
+
+    <div class="logos-header">
+        <img src="קפריסין.png" alt="לוגו ארגון מעפילי קפריסין">
+        <img src="לוגו שביל הים.jpg" alt="לוגו שביל הים">
+    </div>
 
     <div class="hero">
         <div class="container">
@@ -47,7 +42,7 @@
         </div>
     </div>
 
-    <div class="container" style="margin-top: -60px;">
+    <div class="container" style="margin-top: -50px;">
         
         <div class="section">
             <h2 style="text-align: center; color: var(--primary); margin-top: 0;">ההורים בנו, עכשיו תורנו לשמור</h2>
@@ -56,22 +51,22 @@
         </div>
 
         <div class="section">
-            <h3 style="text-align: center; color: var(--secondary);">פרופ' סנונית שהם מכריזה על הפרויקט</h3>
+            <h3 style="text-align: center; color: var(--secondary);">פרופ' סנונית שהם קוראת לכם להיות שותפים</h3>
             <div class="video-wrapper">
-                <iframe src="https://www.youtube.com/embed/V7w8_sPsXAc?start=11&end=40&autoplay=1&mute=1&rel=0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/4uf-opdypHY?start=1&end=65&autoplay=1&mute=1&rel=0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             </div>
         </div>
 
         <div class="section">
-            <h3 style="text-align: center; color: var(--secondary);">חזון שביל הים - מסלול המורשת</h3>
+            <h3 style="text-align: center; color: var(--secondary);">חזון שביל הים - ד"ר אליק אדלר</h3>
             <div class="video-wrapper">
-                <iframe src="https://www.youtube.com/embed/V7w8_sPsXAc?start=1&end=26&rel=0" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/BS5rndoQC-w?rel=0" allowfullscreen></iframe>
             </div>
         </div>
 
         <div class="legacy-box">
             <h3>30 תחנות, סיפור גבורה אחד</h3>
-            <p style="font-size: 20px;">אנחנו מקימים רשת שלטי מורשת אינטראקטיביים המנציחים את מפעל ההעפלה כולו. כל שלט הוא חלון לסיפורה של אונייה ולגבורת המעפילים בדיוק בנקודה שבה נגעו בחוף.</p>
+            <p style="font-size: 20px;">בכל שלט יסופר סיפורן המלא של הספינות שנחתו, יורטו או התכוונו להגיע לחוף זה – כך שכל ספינות ההעפלה יקבלו ביטוי וזיכרון.</p>
             <img src="שלךט  דוגמא  במפרץ חיפה .png" alt="דוגמא לשלט מורשת" class="sign-preview">
         </div>
 
