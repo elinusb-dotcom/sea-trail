@@ -9,23 +9,43 @@
         :root { --primary: #003366; --secondary: #005b96; --accent: #16a34a; --bg: #fdfbf7; }
         body { font-family: 'Heebo', sans-serif; margin: 0; padding: 0; background-color: var(--bg); color: #2c3e50; line-height: 1.6; }
         .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+        
         .logos-header { display: flex; justify-content: center; align-items: center; gap: 30px; padding: 20px; background: white; }
         .logos-header img { height: 80px; width: auto; object-fit: contain; }
+
         .hero { background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); color: white; text-align: center; padding: 60px 20px; clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%); }
         .hero h1 { font-size: 48px; font-weight: 900; margin: 0; line-height: 1.2; }
-        .hero p { font-size: 24px; margin-top: 15px; font-weight: 300; }
+        
         .section { background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); margin: 20px auto 40px; }
         .historical-img { width: 100%; border-radius: 15px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); margin-bottom: 20px; }
-        .sign-preview { width: 100%; max-width: 500px; display: block; margin: 30px auto; border-radius: 10px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); border: 5px solid white; }
-        .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; border-radius: 15px; overflow: hidden; background: #000; margin: 25px 0; }
-        .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
-        .legacy-box { background: var(--primary); color: white; padding: 35px; border-radius: 15px; margin: 40px 0; text-align: center; }
-        .legacy-box h3 { font-size: 32px; color: #e0f2fe; margin-top: 0; }
-        .goal-box { border: 2px solid var(--secondary); padding: 25px; border-radius: 15px; background: #f0f7ff; margin: 40px 0; text-align: center; }
-        .goal-container { background: #e2e8f0; border-radius: 50px; height: 35px; margin: 20px 0; overflow: hidden; }
+
+        /* אפקט 3D למלבן התרומה */
+        .goal-box-3d { 
+            border: 1px solid rgba(0,91,150,0.2); 
+            padding: 30px; 
+            border-radius: 20px; 
+            background: #ffffff; 
+            margin: 40px 0; 
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1), 0 5px 15px rgba(0,0,0,0.05);
+            transform: translateY(0);
+            transition: all 0.3s ease;
+            position: relative;
+            border-bottom: 5px solid var(--secondary);
+        }
+        .goal-box-3d:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 30px 50px rgba(0,0,0,0.15);
+        }
+        
+        .goal-container { background: #e2e8f0; border-radius: 50px; height: 35px; margin: 20px 0; overflow: hidden; box-shadow: inset 0 2px 4px rgba(0,0,0,0.1); }
         .goal-bar { background: var(--accent); width: 15%; height: 100%; color: white; font-weight: bold; line-height: 35px; }
-        .cta-btn { display: inline-block; background: var(--accent); color: white; padding: 22px 60px; font-size: 30px; font-weight: 900; text-decoration: none; border-radius: 50px; box-shadow: 0 10px 20px rgba(22,163,74,0.3); transition: 0.3s; margin-top: 20px; }
-        .cta-btn:hover { background: #15803d; transform: scale(1.03); }
+
+        .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; border-radius: 15px; overflow: hidden; background: #000; margin: 25px 0; box-shadow: 0 15px 35px rgba(0,0,0,0.2); }
+        .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+
+        .cta-btn { display: inline-block; background: var(--accent); color: white; padding: 20px 50px; font-size: 28px; font-weight: 900; text-decoration: none; border-radius: 50px; box-shadow: 0 10px 20px rgba(22,163,74,0.3); transition: 0.3s; margin-top: 15px; }
+        .cta-btn:hover { background: #15803d; transform: scale(1.05); box-shadow: 0 15px 25px rgba(22,163,74,0.4); }
     </style>
 </head>
 <body>
@@ -57,6 +77,15 @@
             </div>
         </div>
 
+        <div class="goal-box-3d">
+            <h2 style="color: var(--primary); margin-top: 0;">היו שותפים להקמת התחנות</h2>
+            <div class="goal-container">
+                <div class="goal-bar">15% מהיעד הושגו</div>
+            </div>
+            <p style="font-size: 18px;"><strong>כל תרומה מקרבת אותנו להצבת השלט הבא לאורך החוף.</strong></p>
+            <a href="https://pay.grow.link/9c1e9057bad27814769cf3bebf6556e5-MzI2MTIzOQ" class="cta-btn">לתרומה והנצחה עכשיו</a>
+        </div>
+
         <div class="section">
             <h3 style="text-align: center; color: var(--secondary);">חזון שביל הים - ד"ר אליק אדלר</h3>
             <div class="video-wrapper">
@@ -64,18 +93,18 @@
             </div>
         </div>
 
-        <div class="legacy-box">
-            <h3>30 תחנות, סיפור גבורה אחד</h3>
-            <p style="font-size: 20px;">בכל שלט יסופר סיפורן המלא של הספינות שנחתו, יורטו או התכוונו להגיע לחוף זה – כך שכל ספינות ההעפלה יקבלו ביטוי וזיכרון.</p>
-            <img src="שלךט  דוגמא  במפרץ חיפה .png" alt="דוגמא לשלט מורשת" class="sign-preview">
+        <div class="section" style="background: var(--primary); color: white; text-align: center;">
+            <h3 style="font-size: 32px; color: #e0f2fe; margin-top: 0;">30 תחנות, סיפור גבורה אחד</h3>
+            <p style="font-size: 20px;">בכל שלט יסופר סיפורן המלא של הספינות שנחתו, יורטו או התכוונו להגיע לחוף זה.</p>
+            <img src="שלךט  דוגמא  במפרץ חיפה .png" alt="דוגמא לשלט מורשת" style="width: 100%; max-width: 500px; border-radius: 10px; border: 5px solid white;">
         </div>
 
-        <div class="goal-box">
-            <h2 style="color: var(--primary); margin-top: 0;">היעד לגיוס: 320,000 ש"ח</h2>
+        <div class="goal-box-3d">
+            <h2 style="color: var(--primary); margin-top: 0;">יעד הגיוס: 320,000 ש"ח</h2>
             <div class="goal-container">
-                <div class="goal-bar">15% הושלמו</div>
+                <div class="goal-bar">15% הושגו</div>
             </div>
-            <p><strong>כל תרומה מקרבת אותנו להצבת השלט הבא.</strong></p>
+            <p><strong>יחד נבטיח שהמורשת תישאר חקוקה על החוף לעד.</strong></p>
             <a href="https://pay.grow.link/9c1e9057bad27814769cf3bebf6556e5-MzI2MTIzOQ" class="cta-btn">לתרומה והנצחה עכשיו</a>
         </div>
 
