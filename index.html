@@ -6,50 +6,37 @@
     <title>שביל הים - מנציחים את מורשת ההעפלה</title>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700;900&display=swap" rel="stylesheet">
     <style>
-        :root { --primary: #003366; --secondary: #005b96; --accent: #16a34a; --bg: #fdfbf7; }
+        :root { --primary: #003366; --secondary: #005b96; --accent: #16a34a; --bg: #fdfbf7; --text-on-hero: #e0f2fe; }
         body { font-family: 'Heebo', sans-serif; margin: 0; padding: 0; background-color: var(--bg); color: #2c3e50; line-height: 1.6; }
         .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+        
         .logos-header { display: flex; justify-content: center; align-items: center; gap: 30px; padding: 20px; background: white; }
         .logos-header img { height: 80px; width: auto; object-fit: contain; }
-        .hero { background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); color: white; text-align: center; padding: 60px 20px; clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%); }
+
+        .hero { 
+            background-image: linear-gradient(135deg, rgba(0,51,102,0.9) 0%, rgba(0,91,150,0.8) 100%), url('ספינות2.png');
+            background-size: cover;
+            background-position: center;
+            color: white; 
+            text-align: center; 
+            padding: 80px 20px 100px; 
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); 
+        }
         .hero h1 { font-size: 48px; font-weight: 900; margin: 0; line-height: 1.2; }
+        .hero h1 span.emphasize { color: var(--text-on-hero); font-weight: 900; }
+
         .section { background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); margin: 20px auto 40px; }
         .historical-img { width: 100%; border-radius: 15px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); margin-bottom: 20px; }
-        
-        /* מלבן תרומה 3D קטן (Compact) */
-        .goal-box-mini { 
-            padding: 20px; 
-            border-radius: 15px; 
-            background: #ffffff; 
-            margin: 20px auto; 
-            max-width: 500px;
-            text-align: center;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-            border-bottom: 3px solid var(--accent);
-            transition: 0.3s;
-        }
-        .goal-box-mini:hover { transform: scale(1.02); }
 
-        /* מלבן תרומה 3D מלא (Main) */
-        .goal-box-main { 
-            padding: 30px; 
-            border-radius: 20px; 
-            background: #ffffff; 
-            margin: 40px 0; 
-            text-align: center;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            border-bottom: 5px solid var(--secondary);
-        }
-
-        .goal-container { background: #e2e8f0; border-radius: 50px; height: 25px; margin: 15px 0; overflow: hidden; }
-        .goal-bar { background: var(--accent); width: 15%; height: 100%; color: white; font-size: 14px; font-weight: bold; line-height: 25px; }
+        .goal-box-mini { padding: 20px; border-radius: 15px; background: #ffffff; margin: 20px auto; max-width: 500px; text-align: center; box-shadow: 0 10px 25px rgba(0,0,0,0.08); border-bottom: 3px solid var(--accent); transition: 0.3s; }
+        .goal-box-main { padding: 30px; border-radius: 20px; background: #ffffff; margin: 40px 0; text-align: center; box-shadow: 0 20px 40px rgba(0,0,0,0.1); border-bottom: 5px solid var(--secondary); }
 
         .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; border-radius: 15px; overflow: hidden; background: #000; margin: 25px 0; box-shadow: 0 15px 35px rgba(0,0,0,0.2); }
         .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
 
-        .cta-btn { display: inline-block; background: var(--accent); color: white; padding: 15px 40px; font-size: 22px; font-weight: 900; text-decoration: none; border-radius: 50px; transition: 0.3s; margin-top: 10px; }
+        .cta-btn { display: inline-block; background: var(--accent); color: white; padding: 15px 40px; font-size: 22px; font-weight: 900; text-decoration: none; border-radius: 50px; transition: 0.3s; margin-top: 10px; border: none; cursor: pointer; }
         .cta-btn-large { padding: 22px 60px; font-size: 30px; }
-        .cta-btn:hover { background: #15803d; transform: scale(1.05); }
+        .cta-btn:hover { background: #15803d; transform: scale(1.05); box-shadow: 0 10px 20px rgba(22,163,74,0.3); }
     </style>
 </head>
 <body>
@@ -61,8 +48,8 @@
 
     <div class="hero">
         <div class="container">
-            <h1>הם בנו את הזיכרון,<br>אנחנו נשמור עליו בחיים.</h1>
-            <p>המשמרת עוברת אלינו: מנציחים את מורשת ההעפלה בשביל הים</p>
+            <h1>הם <span class="emphasize">בנו</span> את הזיכרון,<br>אנחנו נשמור עליו <span class="emphasize">בחיים</span></h1>
+            <p style="font-size: 24px; margin-top: 15px; font-weight: 300; color: #f0f7ff;">המשמרת עוברת אלינו: מנציחים את מורשת ההעפלה בשביל הים</p>
         </div>
     </div>
 
@@ -83,7 +70,7 @@
 
         <div class="goal-box-mini">
             <p style="margin: 0; font-weight: bold; color: var(--primary);">שותפים לדרך? הצטרפו להקמת התחנות</p>
-            <a href="https://pay.grow.link/9c1e9057bad27814769cf3bebf6556e5-MzI2MTIzOQ" class="cta-btn">לתרומה מהירה</a>
+            <a href="https://pay.grow.link/9c1e9057bad27814769cf3bebf6556e5-MzI2MTIzOQ" class="cta-btn">להנצחה ותרומה עכשיו</a>
         </div>
 
         <div class="section">
@@ -93,25 +80,22 @@
             </div>
         </div>
 
-        <div class="section" style="background: var(--primary); color: white; text-align: center;">
+        <div class="section" style="background: var(--primary); color: white; text-align: center; border-radius: 20px; padding: 50px;">
             <h3 style="font-size: 32px; color: #e0f2fe; margin-top: 0;">30 תחנות, סיפור גבורה אחד</h3>
-            <p style="font-size: 20px;">בכל שלט יסופר סיפורן המלא של הספינות שביקשו להגיע הביתה.</p>
-            <img src="שלט במפרץ.png" alt="שלט מורשת במפרץ חיפה" style="width: 100%; max-width: 600px; border-radius: 10px; border: 5px solid white;">
+            <p style="font-size: 20px;">בכל שלט יסופר סיפורן המלא של הספינות שביקשו לגעת בחוף.</p>
+            <img src="שלט במפרץ.png" alt="משפחה לומדת את מורשת ההעפלה בטיילת" style="width: 100%; max-width: 700px; border-radius: 15px; box-shadow: 0 15px 35px rgba(0,0,0,0.3); border: 5px solid white; margin-top: 20px;">
         </div>
 
         <div class="goal-box-main">
             <h2 style="color: var(--primary); margin-top: 0;">יעד הגיוס: 320,000 ש"ח</h2>
-            <div class="goal-container">
-                <div class="goal-bar">15% הושגו</div>
-            </div>
-            <p><strong>יחד נבטיח שהמורשת תישאר חקוקה על החוף לעד.</strong></p>
-            <a href="https://pay.grow.link/9c1e9057bad27814769cf3bebf6556e5-MzI2MTIzOQ" class="cta-btn cta-btn-large">לתרומה והנצחה עכשיו</a>
+            <p style="font-size: 18px;"><strong>יחד נבטיח שהמורשת תישאר חקוקה על החוף לעד.</strong></p>
+            <a href="https://pay.grow.link/9c1e9057bad27814769cf3bebf6556e5-MzI2MTIzOQ" class="cta-btn cta-btn-large">להנצחה ותרומה עכשיו</a>
         </div>
 
     </div>
 
     <div style="text-align: center; padding: 40px; color: #64748b;">
-        פרויקט מורשת ההעפלה בשביל הים | avi.schaul@gmail.com
+        פרויקט מורשת ההעפלה בשביל הים | אבי שאול: avi.schaul@gmail.com
     </div>
 
 </body>
