@@ -13,7 +13,7 @@
         /* כותרת עליונה עם דגלים */
         .logos-header { display: flex; justify-content: center; align-items: center; gap: 20px; padding: 20px; background: white; border-bottom: 1px solid #eee; }
         .logos-header img { height: 70px; width: auto; object-fit: contain; }
-        .flag-emoji { font-size: 40px; }
+        .flag-emoji { font-size: 40px; display: inline-block; }
 
         .hero { 
             background-image: linear-gradient(135deg, rgba(0,51,102,0.9) 0%, rgba(0,91,150,0.8) 100%), url('ספינות2.png');
@@ -40,20 +40,22 @@
         .cta-btn-large { padding: 22px 60px; font-size: 30px; }
         .cta-btn:hover { background: #15803d; transform: scale(1.05); }
 
-        /* עיצוב תחתית העמוד - פוטר */
-        .footer-info { text-align: center; padding: 40px 20px; background: #f8fafc; color: #475569; border-top: 1px solid #e2e8f0; margin-top: 40px; }
-        .footer-info a { color: var(--secondary); text-decoration: none; font-weight: bold; }
-        .contact-row { margin-top: 15px; font-size: 1.1em; }
+        /* פוטר - פרטי קשר */
+        .footer-info { text-align: center; padding: 50px 20px; background: #f1f5f9; color: #1e293b; border-top: 2px solid #e2e8f0; margin-top: 50px; }
+        .footer-info p { margin: 10px 0; font-size: 1.1em; }
+        .footer-info a { color: var(--secondary); text-decoration: none; font-weight: bold; border-bottom: 1px solid transparent; transition: 0.2s; }
+        .footer-info a:hover { border-bottom: 1px solid var(--secondary); }
+        .contact-box { margin-top: 20px; padding: 15px; background: white; display: inline-block; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
     </style>
 </head>
 <body>
 
-    <div class="logos-header">
+    <header class="logos-header">
         <span class="flag-emoji">🇮🇱</span>
         <img src="קפריסין.png" alt="לוגו ארגון מעפילי קפריסין">
         <img src="לוגו שביל הים.jpg" alt="לוגו שביל הים">
         <span class="flag-emoji">🇮🇱</span>
-    </div>
+    </header>
 
     <div class="hero">
         <div class="container">
@@ -105,8 +107,9 @@
 
     <footer class="footer-info">
         <p>פרויקט מורשת ההעפלה בשביל הים | <a href="mailto:avi.schaul@gmail.com">avi.schaul@gmail.com</a></p>
-        <div class="contact-row">
-            לעזרה: אבי <a href="tel:0544348968">054-4348968</a> | עופר <a href="tel:0544285338">054-4285338</a>
+        <div class="contact-box">
+            <strong>לעזרה ותמיכה טכנית:</strong><br>
+            אבי: <a href="tel:0544348968">054-4348968</a> | עופר: <a href="tel:0544285338">054-4285338</a>
         </div>
     </footer>
 
