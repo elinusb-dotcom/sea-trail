@@ -6,110 +6,155 @@
     <title>שביל הים - מנציחים את מורשת ההעפלה</title>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700;900&display=swap" rel="stylesheet">
     <style>
-        :root { --primary: #003366; --secondary: #005b96; --accent: #16a34a; --bg: #fdfbf7; --text-on-hero: #e0f2fe; }
+        :root { 
+            --primary: #003366; 
+            --secondary: #005b96; 
+            --accent: #16a34a; 
+            --highlight: #ffbf00; 
+            --bg: #fdfbf7; 
+        }
         body { font-family: 'Heebo', sans-serif; margin: 0; padding: 0; background-color: var(--bg); color: #2c3e50; line-height: 1.6; }
-        .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
         
-        /* כותרת עליונה עם דגלים */
-        .logos-header { display: flex; justify-content: center; align-items: center; gap: 20px; padding: 20px; background: white; border-bottom: 1px solid #eee; }
-        .logos-header img { height: 70px; width: auto; object-fit: contain; }
-        .flag-emoji { font-size: 40px; display: inline-block; }
+        .logos-header { 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            gap: 15px; 
+            padding: 15px; 
+            background: white; 
+            flex-wrap: nowrap;
+        }
+        .logos-header img { 
+            height: 50px; 
+            width: auto; 
+            max-width: 30%; 
+        }
+        .flag-emoji { font-size: 30px; }
 
         .hero { 
-            background-image: linear-gradient(135deg, rgba(0,51,102,0.9) 0%, rgba(0,91,150,0.8) 100%), url('ספינות2.png');
+            background-image: linear-gradient(135deg, rgba(0,51,102,0.92) 0%, rgba(0,91,150,0.85) 100%), url('ספינות2.png');
             background-size: cover;
             background-position: center;
             color: white; 
             text-align: center; 
-            padding: 80px 20px 100px; 
-            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); 
+            padding: 60px 20px 80px; 
+            clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%); 
         }
-        .hero h1 { font-size: 48px; font-weight: 900; margin: 0; line-height: 1.2; }
-        .hero h1 span.emphasize { color: var(--text-on-hero); font-weight: 900; }
+        .hero h1 { font-size: 42px; font-weight: 900; margin: 0; line-height: 1.2; }
+        .hero h1 span.emphasize { color: var(--highlight); font-weight: 900; }
 
-        .section { background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); margin: 20px auto 40px; }
-        .historical-img { width: 100%; border-radius: 15px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); margin-bottom: 20px; }
+        .section { background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); margin: 20px auto 30px; }
+        .historical-img { width: 100%; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.15); margin-bottom: 20px; }
 
-        .goal-box-mini { padding: 20px; border-radius: 15px; background: #ffffff; margin: 20px auto; max-width: 500px; text-align: center; box-shadow: 0 10px 25px rgba(0,0,0,0.08); border-bottom: 3px solid var(--accent); }
-        .goal-box-main { padding: 30px; border-radius: 20px; background: #ffffff; margin: 40px 0; text-align: center; box-shadow: 0 20px 40px rgba(0,0,0,0.1); border-bottom: 5px solid var(--secondary); }
-
-        .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; border-radius: 15px; overflow: hidden; background: #000; margin: 25px 0; box-shadow: 0 15px 35px rgba(0,0,0,0.2); }
+        .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; border-radius: 12px; overflow: hidden; background: #000; margin: 20px 0; }
         .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
 
-        .cta-btn { display: inline-block; background: var(--accent); color: white; padding: 15px 40px; font-size: 22px; font-weight: 900; text-decoration: none; border-radius: 50px; transition: 0.3s; margin-top: 10px; border: none; }
-        .cta-btn-large { padding: 22px 60px; font-size: 30px; }
-        .cta-btn:hover { background: #15803d; transform: scale(1.05); }
+        /* קריאה לצוותי המורשת */
+        .ambassador-call {
+            background: #eef2ff;
+            border-right: 5px solid var(--secondary);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 30px 0;
+            text-align: right;
+        }
 
-        /* פוטר - פרטי קשר */
-        .footer-info { text-align: center; padding: 50px 20px; background: #f1f5f9; color: #1e293b; border-top: 2px solid #e2e8f0; margin-top: 50px; }
-        .footer-info p { margin: 10px 0; font-size: 1.1em; }
-        .footer-info a { color: var(--secondary); text-decoration: none; font-weight: bold; border-bottom: 1px solid transparent; transition: 0.2s; }
-        .footer-info a:hover { border-bottom: 1px solid var(--secondary); }
-        .contact-box { margin-top: 20px; padding: 15px; background: white; display: inline-block; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .goal-box-main { 
+            padding: 40px 20px; 
+            border-radius: 20px; 
+            background: white; 
+            margin: 40px 0; 
+            text-align: center; 
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1); 
+            border-top: 5px solid var(--highlight); 
+        }
+
+        .cta-btn { 
+            display: inline-block; 
+            background: var(--accent); 
+            color: white; 
+            padding: 20px 50px; 
+            font-size: 26px; 
+            font-weight: 900; 
+            text-decoration: none; 
+            border-radius: 50px; 
+            transition: 0.3s; 
+            box-shadow: 0 10px 20px rgba(22,163,74,0.3);
+        }
+        .cta-btn:hover { transform: scale(1.05); background: #15803d; }
+
+        .footer-info { text-align: center; padding: 40px 20px; background: #f1f5f9; color: #1e293b; border-top: 2px solid #e2e8f0; margin-top: 40px; }
+        
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 32px; }
+            .logos-header img { height: 40px; }
+        }
     </style>
 </head>
 <body>
 
     <header class="logos-header">
         <span class="flag-emoji">🇮🇱</span>
-        <img src="קפריסין.png" alt="לוגו ארגון מעפילי קפריסין">
-        <img src="לוגו שביל הים.jpg" alt="לוגו שביל הים">
+        <img src="קפריסין.png" alt="ארגון מעפילי קפריסין">
+        <img src="לוגו שביל הים.jpg" alt="שביל הים">
         <span class="flag-emoji">🇮🇱</span>
     </header>
 
     <div class="hero">
         <div class="container">
             <h1>הם <span class="emphasize">בנו</span> את הזיכרון,<br>אנחנו נשמור עליו <span class="emphasize">בחיים</span></h1>
-            <p style="font-size: 24px; margin-top: 15px; font-weight: 300; color: #f0f7ff;">המשמרת עוברת אלינו: מנציחים את מורשת ההעפלה בשביל הים</p>
+            <p style="font-size: 20px; margin-top: 15px; font-weight: 300; color: #f0f7ff;">המשמרת עוברת אלינו: מנציחים את מורשת ההעפלה בשביל הים</p>
         </div>
     </div>
 
-    <div class="container" style="margin-top: -50px;">
+    <div class="container" style="margin-top: -30px;">
         
         <div class="section">
-            <h2 style="text-align: center; color: var(--primary); margin-top: 0;">ההורים בנו, עכשיו תורנו לשמור</h2>
+            <h2 style="text-align: center; color: var(--primary); margin-top: 0; font-size: 24px;">ההורים בנו, עכשיו תורנו לשמור</h2>
             <img src="ספינות2.png" alt="מעפילים מגיעים לחוף" class="historical-img">
-            <p style="font-size: 22px; text-align: center; font-weight: bold; color: var(--secondary);">המשמרת של הורינו הסתיימה. כעת, האחריות לשימור המורשת עוברת לידינו.</p>
+            <p style="font-size: 20px; text-align: center; font-weight: bold; color: var(--secondary);">האחריות לשימור המורשת עוברת לידינו.</p>
         </div>
 
         <div class="section">
-            <h3 style="text-align: center; color: var(--secondary);">פרופ׳ סנונית שהם מזמינה לקחת חלק בפרויקט הנצחת ספינות ההעפלה</h3>
+            <h3 style="text-align: center; color: var(--secondary); margin-top: 0;">פרופ׳ סנונית שהם על חשיבות המיזם</h3>
             <div class="video-wrapper">
-                <iframe src="https://www.youtube.com/embed/gniVJelr-0U?rel=0" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/V6XN46X6Aoc?rel=0" allowfullscreen></iframe>
             </div>
         </div>
 
-        <div class="goal-box-mini">
-            <p style="margin: 0; font-weight: bold; color: var(--primary);">שותפים לדרך? הצטרפו להקמת התחנות</p>
-            <a href="https://pay.grow.link/9c1e9057bad27814769cf3bebf6556e5-MzI2MTIzOQ" class="cta-btn">להנצחה ותרומה עכשיו</a>
-        </div>
-
         <div class="section">
-            <h3 style="text-align: center; color: var(--secondary);">חזון שביל הים - ד"ר אליק אדלר</h3>
+            <h3 style="text-align: center; color: var(--secondary); margin-top: 0;">חזון שביל הים - ד"ר אליק אדלר</h3>
             <div class="video-wrapper">
                 <iframe src="https://www.youtube.com/embed/ix4kBFgPEyI?rel=0" allowfullscreen></iframe>
             </div>
         </div>
 
-        <div class="section" style="background: var(--primary); color: white; text-align: center; border-radius: 20px; padding: 50px;">
-            <h3 style="font-size: 32px; color: #e0f2fe; margin-top: 0;">30 תחנות, סיפור גבורה אחד</h3>
-            <p style="font-size: 20px;">בכל שלט יסופר סיפורן המלא של הספינות שביקשו לגעת בחוף.</p>
-            <img src="שלט במפרץ.png" alt="שלט מורשת במפרץ חיפה" style="width: 100%; max-width: 700px; border-radius: 15px; box-shadow: 0 15px 35px rgba(0,0,0,0.3); border: 5px solid white; margin-top: 20px;">
+        <div class="section" style="background: var(--primary); color: white; text-align: center; border-radius: 20px;">
+            <h3 style="font-size: 28px; color: var(--highlight); margin-top: 0;">30 תחנות, סיפור גבורה אחד</h3>
+            <p style="font-size: 18px;">בכל שלט יסופר סיפורן המלא של הספינות שביקשו לגעת בחוף.</p>
+            <img src="שלט במפרץ.png" alt="משפחה לומדת את מורשת ההעפלה" style="width: 100%; border-radius: 12px; border: 3px solid white; margin-top: 10px;">
+        </div>
+
+        <div class="ambassador-call">
+            <h4 style="margin-top: 0; color: var(--primary);">צוותי המורשת – אתם הכוח המניע</h4>
+            <p style="margin-bottom: 0;">בזכותכם סיפור הספינות חי. עכשיו הגיע הזמן להוציא אותו אל האור ב-30 תחנות שביל הים. 
+            <strong>תמכו במיזם היום, עודדו את חברי הקהילה שלכם להצטרף, ויחד נשלים את המשימה.</strong></p>
         </div>
 
         <div class="goal-box-main">
-            <h2 style="color: var(--primary); margin-top: 0;">יעד הגיוס: 320,000 ש"ח</h2>
-            <p style="font-size: 18px;"><strong>יחד נבטיח שהמורשת תישאר חקוקה על החוף לעד.</strong></p>
-            <a href="https://pay.grow.link/9c1e9057bad27814769cf3bebf6556e5-MzI2MTIzOQ" class="cta-btn cta-btn-large">להנצחה ותרומה עכשיו</a>
+            <h2 style="color: var(--primary); margin-top: 0; font-size: 28px;">יעד הגיוס: 320,000 ש"ח</h2>
+            <p style="font-size: 18px; margin-bottom: 30px;"><strong>יחד נבטיח שהמורשת תישאר חקוקה על החוף לעד.</strong></p>
+            <a href="https://pay.grow.link/9c1e9057bad27814769cf3bebf6556e5-MzI2MTIzOQ" class="cta-btn">להנצחה ותרומה עכשיו</a>
         </div>
 
     </div>
 
     <footer class="footer-info">
-        <p>פרויקט מורשת ההעפלה בשביל הים | <a href="mailto:avi.schaul@gmail.com">avi.schaul@gmail.com</a></p>
-        <div class="contact-box">
+        <p>פרויקט מורשת ההעפלה בשביל הים | <a href="mailto:avi.schaul@gmail.com" style="color: var(--secondary); text-decoration: none; font-weight: bold;">avi.schaul@gmail.com</a></p>
+        <div class="contact-box" style="margin-top: 10px;">
             <strong>לעזרה ותמיכה טכנית:</strong><br>
-            אבי: <a href="tel:0544348968">054-4348968</a> | עופר: <a href="tel:0544285338">054-4285338</a>
+            אבי: <a href="tel:0544348968" style="color: var(--secondary); text-decoration: none;">054-4348968</a> | עופר: <a href="tel:0544285338" style="color: var(--secondary); text-decoration: none;">054-4285338</a>
         </div>
     </footer>
 
