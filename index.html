@@ -1,177 +1,38 @@
-<style>
-    .campaign-body {
-        direction: rtl;
-        font-family: 'Segoe UI', Arial, sans-serif;
-        max-width: 1000px;
-        margin: 0 auto;
-        padding: 20px;
-        color: #333;
-        line-height: 1.6;
-        text-align: center;
-    }
-
-    .hero-section {
-        padding: 40px 20px;
-        background-color: #f8fafc;
-        border-radius: 15px;
-        margin-bottom: 30px;
-        border: 1px solid #e2e8f0;
-    }
-
-    .main-title {
-        font-size: 2.8rem;
-        color: #003366;
-        margin-bottom: 15px;
-        font-weight: 800;
-    }
-
-    .sub-title {
-        font-size: 1.6rem;
-        color: #b8860b; /* גוון זהב עמוק */
-        margin-bottom: 25px;
-        font-weight: 600;
-    }
-
-    .intro-text {
-        font-size: 1.25rem;
-        max-width: 850px;
-        margin: 0 auto 30px auto;
-        color: #4a5568;
-    }
-
-    .video-section {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 25px;
-        justify-content: center;
-        margin-bottom: 50px;
-    }
-
-    .video-container {
-        flex: 1;
-        min-width: 320px;
-        max-width: 480px;
-        border-radius: 12px;
-        overflow: hidden;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        aspect-ratio: 16 / 9;
-    }
-
-    .video-container iframe {
-        width: 100%;
-        height: 100%;
-        border: none;
-    }
-
-    .donation-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-        gap: 20px;
-        margin-top: 40px;
-    }
-
-    .donation-card {
-        background: #ffffff;
-        border: 2px solid #003366;
-        border-radius: 15px;
-        padding: 25px 15px;
-        transition: all 0.3s ease;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        min-height: 220px;
-    }
-
-    .donation-card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 12px 24px rgba(0,51,102,0.15);
-    }
-
-    .tier-label {
-        font-size: 1.2rem;
-        font-weight: 700;
-        color: #003366;
-        margin-bottom: 15px;
-    }
-
-    .tier-amount {
-        font-size: 1.8rem;
-        font-weight: 800;
-        color: #b8860b;
-        margin-bottom: 20px;
-    }
-
-    .donate-btn {
-        background-color: #003366;
-        color: #ffffff !important;
-        text-decoration: none !important;
-        padding: 12px 20px;
-        border-radius: 8px;
-        font-weight: bold;
-        transition: background 0.2s;
-    }
-
-    .donate-btn:hover {
-        background-color: #002244;
-    }
-
-    .card-other { border-color: #718096; }
-    .card-other .tier-label, .card-other .tier-amount { color: #4a5568; }
-    .card-other .donate-btn { background-color: #718096; }
-
-    @media (max-width: 600px) {
-        .main-title { font-size: 1.8rem; }
-        .sub-title { font-size: 1.2rem; }
-    }
-</style>
-
-<div class="campaign-body">
-    <div class="hero-section">
-        <h1 class="main-title">הם בנו את הזיכרון, אנחנו נשמור עליו בחיים</h1>
-        <h2 class="sub-title">המשמרת עוברת אלינו: מנציחים את מורשת ההעפלה בשביל הים</h2>
-        <p class="intro-text">
-            מורשת מעפילי קפריסין וספינות ההעפלה היא אבן יסוד במסע של העם היהודי אל חירותו. כעת, עומדת בידינו האפשרות להפוך את שביל הים ל"מסלול זיכרון חי" שיספר את סיפורן של 141 הספינות לדורות הבאים.
-        </p>
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>גיוס המונים - מורשת ההעפלה</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #ffffff;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+        }
+        .btn-donate {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>פרויקט הנצחת מורשת ההעפלה בשביל הים</h1>
+        <p>סיוע במימון 30 שלטי הנצחה לאורך החוף</p>
+        
+        <a href="[YOUR_GROW_LINK_HERE]" class="btn-donate">לחץ כאן לתרומה לפרויקט</a>
     </div>
-
-    <div class="video-section">
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/S2p0P15_rLo" title="Video 1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/8v_Y_Z77UaY" title="Video 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-    </div>
-
-    <div class="donation-grid">
-        <div class="donation-card">
-            <div class="tier-label">ידיד הנתיב</div>
-            <div class="tier-amount">₪180</div>
-            <a href="https://reg.meshulam.co.il/p/9206121b-6893-6c70-696a-723554303433" class="donate-btn">לתרומה</a>
-        </div>
-
-        <div class="donation-card">
-            <div class="tier-label">נאמן מורשת</div>
-            <div class="tier-amount">₪360</div>
-            <a href="https://reg.meshulam.co.il/p/9206121b-6893-6c70-696a-723554303433" class="donate-btn">לתרומה</a>
-        </div>
-
-        <div class="donation-card">
-            <div class="tier-label">מייסד נקודת ציון</div>
-            <div class="tier-amount">₪720</div>
-            <a href="https://reg.meshulam.co.il/p/9206121b-6893-6c70-696a-723554303433" class="donate-btn">לתרומה</a>
-        </div>
-
-        <div class="donation-card">
-            <div class="tier-label">מוביל הנתיב</div>
-            <div class="tier-amount">₪1,500</div>
-            <a href="https://reg.meshulam.co.il/p/9206121b-6893-6c70-696a-723554303433" class="donate-btn">לתרומה</a>
-        </div>
-
-        <div class="donation-card card-other">
-            <div class="tier-label">תרומה אחרת</div>
-            <div class="tier-amount">סכום לבחירה</div>
-            <a href="https://reg.meshulam.co.il/p/9206121b-6893-6c70-696a-723554303433" class="donate-btn">לתרומה</a>
-        </div>
-    </div>
-</div>
+</body>
+</html>
