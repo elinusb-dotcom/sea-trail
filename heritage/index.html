@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>מנציחים את הגבורה - שביל הים</title>
+    <title>מורשת ההעפלה בשביל הים - מהדורה מיוחדת</title>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700;900&display=swap" rel="stylesheet">
     <style>
         :root { 
@@ -16,85 +16,62 @@
         body { font-family: 'Heebo', sans-serif; margin: 0; padding: 0; background-color: var(--bg); color: #2c3e50; line-height: 1.6; text-align: right; }
         .container { max-width: 900px; margin: 0 auto; padding: 20px; }
         
-        .logos-header { 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            gap: 30px; 
-            padding: 20px; 
-            background: white; 
-        }
-        .logos-header img { height: 60px; width: auto; }
+        .logos-header { display: flex; justify-content: center; align-items: center; gap: 30px; padding: 15px; background: white; }
+        .logos-header img { height: 50px; width: auto; }
 
-        .hero { 
-            background-image: linear-gradient(135deg, rgba(0,51,102,0.85) 0%, rgba(0,91,150,0.7) 100%), url('כותרת.jpg');
-            background-size: cover;
-            background-position: center;
-            color: white; 
-            text-align: center; 
-            padding: 100px 20px; 
-            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); 
-        }
-        .hero h1 { font-size: 52px; font-weight: 900; margin: 0; line-height: 1.1; }
-        .hero h1 span { color: var(--highlight); }
-        .hero p { font-size: 24px; margin-top: 20px; color: #f0f7ff; }
-
-        .intro-section { padding: 45px 35px; background: white; border-radius: 20px; margin-top: -50px; box-shadow: 0 15px 35px rgba(0,0,0,0.12); position: relative; z-index: 10; }
-        
-        .impact-statement { 
-            font-size: 22px; 
-            color: var(--primary); 
-            font-weight: 700; 
-            text-align: center; 
-            margin-bottom: 30px;
-            border-bottom: 2px solid var(--highlight);
-            display: inline-block;
+        /* כותרת וידאו חיה */
+        .hero-video-container {
+            position: relative;
             width: 100%;
-            padding-bottom: 10px;
+            height: 60vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
         }
+        .hero-video-container video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+        .hero-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 51, 102, 0.4);
+            z-index: 1;
+        }
+        .hero-content { z-index: 2; padding: 20px; }
+        .hero-content h1 { font-size: 46px; font-weight: 900; margin: 0; text-shadow: 2px 2px 10px rgba(0,0,0,0.7); }
+        .hero-content h1 span { color: var(--highlight); }
+        .special-edition { font-size: 20px; background: var(--highlight); color: var(--primary); display: inline-block; padding: 5px 20px; border-radius: 50px; margin-top: 15px; font-weight: 700; }
 
-        .sign-demo { text-align: center; margin: 35px 0; background: #f8fafc; padding: 20px; border-radius: 15px; }
-        .sign-demo img { width: 100%; max-width: 600px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        .intro-section { padding: 40px; background: white; border-radius: 20px; margin-top: -30px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); position: relative; z-index: 10; }
 
         .donation-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin: 40px 0; }
         .donation-card { 
-            background: #fff; 
-            border: 2px solid #e2e8f0; 
-            border-radius: 15px; 
-            padding: 25px; 
-            text-align: center; 
-            transition: 0.3s;
-            display: flex;
-            flex-direction: column;
+            background: white; border: 2px solid #e2e8f0; border-radius: 15px; padding: 25px; text-align: center; transition: 0.3s;
         }
-        .donation-card:hover { transform: translateY(-5px); border-color: var(--highlight); box-shadow: 0 10px 25px rgba(0,0,0,0.08); }
-        .donation-card h3 { font-size: 34px; color: var(--primary); margin: 0; font-weight: 900; }
-        .donation-card p { font-size: 18px; color: #475569; margin: 15px 0; flex-grow: 1; }
-        .donation-card .reward { font-weight: bold; color: var(--secondary); font-size: 15px; padding: 12px 0; border-top: 1px solid #f1f5f9; min-height: 50px; }
+        .donation-card:hover { transform: translateY(-5px); border-color: var(--highlight); }
+        .donation-card h3 { font-size: 32px; color: var(--primary); margin: 0; }
         
-        .cta-btn { 
-            display: block; 
-            background: var(--accent); 
-            color: white; 
-            padding: 16px; 
-            text-decoration: none; 
-            border-radius: 12px; 
-            font-weight: 900; 
-            font-size: 20px;
-            margin-top: 15px;
-            box-shadow: 0 4px 10px rgba(22,163,74,0.2);
-        }
+        .cta-btn { display: block; background: var(--accent); color: white; padding: 12px; text-decoration: none; border-radius: 10px; font-weight: 700; margin-top: 15px; }
 
-        .video-section { margin-top: 70px; padding: 50px 0; border-top: 2px dashed #cbd5e1; }
-        .video-section h3 { text-align: center; color: var(--primary); font-size: 30px; margin-bottom: 40px; font-weight: 900; }
-        
-        .video-container { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
-        .video-box { background: white; padding: 20px; border-radius: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.06); }
-        .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; border-radius: 12px; overflow: hidden; }
+        .video-section { margin-top: 50px; border-top: 2px dashed #cbd5e1; padding-top: 40px; }
+        .video-container { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .video-box { background: white; padding: 15px; border-radius: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; }
         .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
 
         @media (max-width: 768px) {
-            .hero h1 { font-size: 34px; }
+            .hero-content h1 { font-size: 30px; }
             .video-container { grid-template-columns: 1fr; }
         }
     </style>
@@ -106,69 +83,59 @@
         <img src="לוגו שביל הים.jpg" alt="שביל הים">
     </header>
 
-    <div class="hero">
-        <div class="container">
+    <div class="hero-video-container">
+        <video autoplay muted loop playsinline>
+            <source src="יצירת_סרטון_כותרת_לדף_נחיתה.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
             <h1>הם <span>בנו</span> את הזיכרון,<br>אנחנו נשמור עליו <span>בחיים</span></h1>
-            <p>מקימים את מסלול המורשת הלאומי לאורך חופי ישראל</p>
+            <div class="special-edition">מהדורה מיוחדת למשפחת ספינת המעפילים אמיר רוגל</div>
         </div>
     </div>
 
     <div class="container">
         <div class="intro-section">
-            <div class="impact-statement">הופכים את שביל הים למסלול זיכרון חי</div>
+            <p style="font-size: 20px;">מורשת ספינות ההעפלה היא אבן יסוד בזהותנו. כעת אנו מחברים בין ההיסטוריה לשביל הים - <strong>"מסלול זיכרון חי"</strong> שינציח את סיפור הגבורה בנקודות המפגש עם החוף[cite: 16, 17, 18].</p>
             
-            <div style="font-size: 20px; color: #334155; text-align: center; max-width: 750px; margin: 0 auto;">
-                <p>עשרות ספינות מעפילים הגיעו אל חופינו בדרכן להקמת המדינה. היום, אלפי מטיילים צועדים בשביל הים מבלי להכיר את סיפורי הגבורה שהתרחשו ממש מול הגלים.</p>
-                <p><strong>יחד, נציב 30 שלטי מורשת ייחודיים שיפיחו חיים בהיסטוריה בכל צעד ושעל.</strong></p>
+            <div style="text-align: center; margin: 30px 0;">
+                <img src="שלט על חוף טנטורה.png" alt="שלט הנצחה" style="max-width: 100%; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
             </div>
-
-            <div class="sign-demo">
-                <p style="font-weight: bold; color: var(--secondary); margin-bottom: 15px;">החזון שלנו: היסטוריה שפוגשת את הטבע</p>
-                <img src="שלט על חוף טנטורה.png" alt="שלט מורשת על חוף טנטורה">
-                <p style="font-size: 14px; color: #64748b; margin-top: 10px;">(הדמיית שלט מורשת בשביל הים)</p>
-            </div>
-
-            <h2 style="text-align: center; color: var(--primary); margin-top: 50px; font-weight: 900;">בחרו את השותפות שלכם בהנצחה:</h2>
 
             <div class="donation-grid">
                 <div class="donation-card">
                     <h3>₪180</h3>
-                    <p>שותפות בהקמת תחנת מורשת</p>
-                    <div class="reward">תעודת הוקרה דיגיטלית אישית</div>
-                    <a href="https://pay.grow.link/9c1e9057bad27814769cf3bebf6556e5-MzI2MTIzOQ" class="cta-btn">להצטרפות</a>
+                    <p>תעודת הוקרה במייל</p>
+                    <a href="https://pay.grow.link/9c1e9057bad27814769cf3bebf6556e5-MzI2MTIzOQ" class="cta-btn">תרומה עכשיו</a>
                 </div>
                 <div class="donation-card">
                     <h3>₪360</h3>
-                    <p>שימור מורשת ספינת מעפילים</p>
-                    <div class="reward">ערכת הוקרה מודפסת ופרוספקט בדואר</div>
-                    <a href="https://pay.grow.link/9c1e9057bad27814769cf3bebf6556e5-MzI2MTIzOQ" class="cta-btn">להצטרפות</a>
+                    <p>תעודת כרומו בדואר</p>
+                    <a href="https://pay.grow.link/9c1e9057bad27814769cf3bebf6556e5-MzI2MTIzOQ" class="cta-btn">תרומה עכשיו</a>
                 </div>
                 <div class="donation-card">
                     <h3>₪720</h3>
-                    <p>הקדשה משפחתית על שביל המורשת</p>
-                    <div class="reward">תעודת כבוד יוקרתית ופרוספקט בדואר</div>
-                    <a href="https://pay.grow.link/9c1e9057bad27814769cf3bebf6556e5-MzI2MTIzOQ" class="cta-btn">להצטרפות</a>
+                    <p>תעודה מהודרת בדואר</p>
+                    <a href="https://pay.grow.link/9c1e9057bad27814769cf3bebf6556e5-MzI2MTIzOQ" class="cta-btn">תרומה עכשיו</a>
                 </div>
-                <div class="donation-card" style="border: 3px solid var(--highlight); background: #fffdf5;">
+                <div class="donation-card">
                     <h3>₪1500</h3>
-                    <p>שותף מייסד במסלול הזיכרון</p>
-                    <div class="reward">תעודת הוקרה ממוסגרת ושי אישי</div>
-                    <a href="https://pay.grow.link/9c1e9057bad27814769cf3bebf6556e5-MzI2MTIzOQ" class="cta-btn">להצטרפות</a>
+                    <p>שותף מייסד במיזם</p>
+                    <a href="https://pay.grow.link/9c1e9057bad27814769cf3bebf6556e5-MzI2MTIzOQ" class="cta-btn">תרומה עכשיו</a>
                 </div>
             </div>
         </div>
 
         <div class="video-section">
-            <h3>החזון שמאחורי המפעל:<br><small style="font-weight: 300; font-size: 20px; color: var(--secondary);">כך נחזיר את המעפילים אל קו החוף</small></h3>
             <div class="video-container">
                 <div class="video-box">
-                    <h4 style="text-align: center; color: var(--primary);">מורשת עוברת לדורות הבאים</h4>
+                    <h4 style="text-align: center;">דברי פרופ' סנונית שהם</h4>
                     <div class="video-wrapper">
                         <iframe src="https://www.youtube.com/embed/BS5rndoQC-w" allowfullscreen></iframe>
                     </div>
                 </div>
                 <div class="video-box">
-                    <h4 style="text-align: center; color: var(--primary);">החיבור העמוק לשביל הים</h4>
+                    <h4 style="text-align: center;">חזון שביל הים - ד"ר אליק אדלר</h4>
                     <div class="video-wrapper">
                         <iframe src="https://www.youtube.com/embed/ix4kBFgPEyI" allowfullscreen></iframe>
                     </div>
@@ -177,9 +144,8 @@
         </div>
     </div>
 
-    <footer style="text-align: center; padding: 60px; background: #1e293b; color: #f1f5f9; margin-top: 60px;">
-        <p style="font-size: 20px; font-weight: 700; margin-bottom: 10px;">שומרים על מורשת ההעפלה חיה</p>
-        <p style="font-size: 15px; opacity: 0.8;">ארגון מעפילי קפריסין בשיתוף שביל הים | 2026</p>
+    <footer style="text-align: center; padding: 40px; color: #94a3b8;">
+        פרויקט מורשת ההעפלה בשביל הים | 2026
     </footer>
 
 </body>
