@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Legacy | Lorem Ipsum Edition</title>
+    <style>
+        /* All original CSS styles remain here for layout consistency */
+        body { font-family: Arial, sans-serif; line-height: 1.25; margin: 0; padding: 0; background-color: #f4f7f9; color: #1a1a1a; text-align: center; }
+        .hero-banner { background: linear-gradient(rgba(0, 34, 68, 0.9), rgba(0, 74, 153, 0.9)), url('https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/כותרת.jpg'); background-size: cover; background-position: center; color: white; padding: 40px 20px; display: flex; align-items: center; justify-content: space-between; gap: 20px; max-width: 1200px; margin: 0 auto; box-sizing: border-box; }
+        .banner-img { width: 180px; height: 130px; object-fit: cover; border-radius: 6px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); border: 2px solid rgba(255, 255, 255, 0.2); flex-shrink: 0; }
+        .banner-text { flex-grow: 1; text-align: center; }
+        .banner-text h1 { font-size: 2.2em; margin: 0 0 10px 0; font-weight: bold; }
+        .banner-text h2 { font-size: 1.4em; color: #fffb00; margin: 0; line-height: 1.4; }
+        .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; background: white; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-radius: 8px; margin-top: 20px; }
+        .target-box { background-color: #e6f0fa; border: 1px solid #b3d1f2; padding: 15px; border-radius: 6px; font-weight: bold; color: #004a99; font-size: 1.1em; margin-bottom: 30px; }
+        .content-text { text-align: left; font-size: 1.15em; color: #333; }
+        .content-text p { margin-bottom: 20px; }
+        .highlight-box { border-left: 4px solid #004a99; padding-left: 15px; margin: 25px 0; font-style: italic; color: #003366; text-align: left; }
+        .donation-section { margin: 40px 0; }
+        .donation-section h3 { font-size: 1.4em; color: #004a99; margin-bottom: 20px; }
+        .donation-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 15px; margin-bottom: 25px; }
+        .donation-card { background: #fdfdfd; border: 2px solid #004a99; border-radius: 8px; padding: 15px; display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.2s, box-shadow 0.2s; }
+        .card-title { font-size: 0.95em; font-weight: bold; color: #004a99; margin-bottom: 5px; }
+        .card-amount { font-size: 1.6em; font-weight: bold; color: #1a1a1a; margin-bottom: 12px; }
+        .donate-btn { background-color: #004a99; color: white; text-decoration: none; padding: 8px 15px; border-radius: 4px; font-weight: bold; font-size: 0.9em; }
+        .signature-box { margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px; text-align: left; font-size: 1.05em; }
+    </style>
+</head>
+<body>
+
+    <div class="hero-banner">
+        <img class="banner-img" src="https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/שלט במפרץ.png" alt="Header Left">
+        <div class="banner-text">
+            <h1>Lorem Ipsum Dolor Sit Amet</h1>
+            <h2>Consectetur adipiscing elit sed do eiusmod<br>tempor incididunt ut labore et dolore magna aliqua.</h2>
+        </div>
+        <img class="banner-img" src="https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/אוניית_המעפילים_שאר_ישוב.jpg" alt="Header Right">
+    </div>
+
+    <div class="container">
+        <div class="target-box">
+            Fundraising Goal: $40,000 USD
+        </div>
+
+        <div class="content-text">
+            <p><strong>Dear Lorem Ipsum Members,</strong></p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p><strong>Duis aute irure dolor in reprehenderit in voluptate velit esse.</strong></p>
+            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+            
+            <div class="highlight-box">
+                "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+            </div>
+
+            <p><strong>How can you help?</strong> At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
+        </div>
+
+        <div class="donation-section">
+            <h3>Choose your support level:</h3>
+            <div class="donation-grid">
+                <div class="donation-card">
+                    <div class="card-title">Friend</div>
+                    <div class="card-amount">$50</div>
+                    <a href="#" class="donate-btn">Donate</a>
+                </div>
+                <div class="donation-card">
+                    <div class="card-title">Supporter</div>
+                    <div class="card-amount">$100</div>
+                    <a href="#" class="donate-btn">Donate</a>
+                </div>
+                <div class="donation-card">
+                    <div class="card-title">Partner</div>
+                    <div class="card-amount">$250</div>
+                    <a href="#" class="donate-btn">Donate</a>
+                </div>
+                <div class="donation-card">
+                    <div class="card-title">Lead</div>
+                    <div class="card-amount">$500</div>
+                    <a href="#" class="donate-btn">Donate</a>
+                </div>
+                <div class="donation-card">
+                    <div class="card-title">Other</div>
+                    <div class="card-amount" style="font-size: 1.1em; margin: 8px 0 15px 0;">Custom</div>
+                    <a href="#" class="donate-btn">Donate</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="signature-box">
+            Best regards,<br>
+            <strong>Professor John Doe</strong>,<br>
+            Organization Chair
+        </div>
+    </div>
+
+    <div style="font-size: 0.75em; color: #ccc; margin-top: 50px; text-align: center;">
+        v2026.06.08 - Lorem Ipsum Template
+    </div>
+
+</body>
+</html>
