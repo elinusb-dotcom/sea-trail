@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Legacy | Lorem Ipsum Edition</title>
     <style>
-        /* All original CSS styles remain here for layout consistency */
+        /* Original CSS */
         body { font-family: Arial, sans-serif; line-height: 1.25; margin: 0; padding: 0; background-color: #f4f7f9; color: #1a1a1a; text-align: center; }
         .hero-banner { background: linear-gradient(rgba(0, 34, 68, 0.9), rgba(0, 74, 153, 0.9)), url('https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/כותרת.jpg'); background-size: cover; background-position: center; color: white; padding: 40px 20px; display: flex; align-items: center; justify-content: space-between; gap: 20px; max-width: 1200px; margin: 0 auto; box-sizing: border-box; }
         .banner-img { width: 180px; height: 130px; object-fit: cover; border-radius: 6px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); border: 2px solid rgba(255, 255, 255, 0.2); flex-shrink: 0; }
@@ -17,6 +17,29 @@
         .content-text { text-align: left; font-size: 1.15em; color: #333; }
         .content-text p { margin-bottom: 20px; }
         .highlight-box { border-left: 4px solid #004a99; padding-left: 15px; margin: 25px 0; font-style: italic; color: #003366; text-align: left; }
+        
+        /* Video Section Styles */
+        .video-section { margin: 35px 0; text-align: center; }
+        .video-section h3 { color: #004a99; margin-bottom: 15px; }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .video-container iframe, .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
         .donation-section { margin: 40px 0; }
         .donation-section h3 { font-size: 1.4em; color: #004a99; margin-bottom: 20px; }
         .donation-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 15px; margin-bottom: 25px; }
@@ -30,72 +53,74 @@
 <body>
 
     <div class="hero-banner">
-        <img class="banner-img" src="https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/שלט במפרץ.png" alt="Header Left">
+        <img class="banner-img" src="https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/שלט במפרץ.png" alt="History Image">
         <div class="banner-text">
-            <h1>Lorem Ipsum Dolor Sit Amet</h1>
-            <h2>Consectetur adipiscing elit sed do eiusmod<br>tempor incididunt ut labore et dolore magna aliqua.</h2>
+            <h1>Lorem Ipsum Title</h1>
+            <h2>Sed do eiusmod tempor incididunt ut labore<br>et dolore magna aliqua ut enim ad minim veniam.</h2>
         </div>
-        <img class="banner-img" src="https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/אוניית_המעפילים_שאר_ישוב.jpg" alt="Header Right">
+        <img class="banner-img" src="https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/אוניית_המעפילים_שאר_ישוב.jpg" alt="Ship Image">
     </div>
 
     <div class="container">
         <div class="target-box">
-            Fundraising Goal: $40,000 USD
+            Project Goal: $40,000
         </div>
 
         <div class="content-text">
-            <p><strong>Dear Lorem Ipsum Members,</strong></p>
+            <p><strong>Dear Community Members,</strong></p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <p><strong>Duis aute irure dolor in reprehenderit in voluptate velit esse.</strong></p>
-            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
             
             <div class="highlight-box">
-                "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+                "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
             </div>
+        </div>
 
-            <p><strong>How can you help?</strong> At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
+        <!-- NEW VIDEO SEGMENT -->
+        <div class="video-section">
+            <h3>Documentary Video Segment</h3>
+            <div class="video-container">
+                <!-- Replace 'XXXXX' with your YouTube video ID -->
+                <iframe src="https://www.youtube.com/embed/XXXXX" allowfullscreen></iframe>
+                
+                <!-- OR use a direct MP4 link by uncommenting the line below and deleting the iframe above: -->
+                <!-- <video controls><source src="your-video.mp4" type="video/mp4"></video> -->
+            </div>
         </div>
 
         <div class="donation-section">
-            <h3>Choose your support level:</h3>
+            <h3>Support Levels:</h3>
             <div class="donation-grid">
                 <div class="donation-card">
                     <div class="card-title">Friend</div>
                     <div class="card-amount">$50</div>
-                    <a href="#" class="donate-btn">Donate</a>
+                    <a href="#" class="donate-btn">Join Us</a>
                 </div>
                 <div class="donation-card">
-                    <div class="card-title">Supporter</div>
+                    <div class="card-title">Sponsor</div>
                     <div class="card-amount">$100</div>
-                    <a href="#" class="donate-btn">Donate</a>
+                    <a href="#" class="donate-btn">Join Us</a>
                 </div>
                 <div class="donation-card">
-                    <div class="card-title">Partner</div>
+                    <div class="card-title">Patron</div>
                     <div class="card-amount">$250</div>
-                    <a href="#" class="donate-btn">Donate</a>
+                    <a href="#" class="donate-btn">Join Us</a>
                 </div>
                 <div class="donation-card">
-                    <div class="card-title">Lead</div>
+                    <div class="card-title">Legacy</div>
                     <div class="card-amount">$500</div>
-                    <a href="#" class="donate-btn">Donate</a>
-                </div>
-                <div class="donation-card">
-                    <div class="card-title">Other</div>
-                    <div class="card-amount" style="font-size: 1.1em; margin: 8px 0 15px 0;">Custom</div>
-                    <a href="#" class="donate-btn">Donate</a>
+                    <a href="#" class="donate-btn">Join Us</a>
                 </div>
             </div>
         </div>
 
         <div class="signature-box">
-            Best regards,<br>
-            <strong>Professor John Doe</strong>,<br>
-            Organization Chair
+            Sincerely,<br>
+            <strong>Organization Name</strong>
         </div>
     </div>
 
     <div style="font-size: 0.75em; color: #ccc; margin-top: 50px; text-align: center;">
-        v2026.06.08 - Lorem Ipsum Template
+        v2026.06.08 - Video Template
     </div>
 
 </body>
