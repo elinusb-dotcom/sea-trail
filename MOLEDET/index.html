@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מורשת ההעפלה בשביל הים | מולדת</title>
+    <style>
+        /* הגדרות עיצוב כלליות */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.25;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f9;
+            color: #1a1a1a;
+            text-align: center;
+        }
+
+        /* באנר עליון משולב תמונות מימין ומשמאל */
+        .hero-banner {
+            background: linear-gradient(rgba(0, 34, 68, 0.9), rgba(0, 74, 153, 0.9)), url('https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/כותרת.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 40px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+
+        /* עיצוב אחיד לתמונות ההיסטוריות בכותרת */
+        .banner-img {
+            width: 180px;
+            height: 130px;
+            object-fit: cover;
+            border-radius: 6px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            flex-shrink: 0;
+        }
+
+        /* אזור הטקסט המרכזי בבאנר */
+        .banner-text {
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        .banner-text h1 {
+            font-size: 2.2em;
+            margin: 0 0 10px 0;
+            font-weight: bold;
+        }
+
+        .banner-text h2 {
+            font-size: 1.4em;
+            color: #fffb00;
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        /* מכלול התוכן של קול הקורא */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: white;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        /* מד יעד הגיוס */
+        .target-box {
+            background-color: #e6f0fa;
+            border: 1px solid #b3d1f2;
+            padding: 15px;
+            border-radius: 6px;
+            font-weight: bold;
+            color: #004a99;
+            font-size: 1.1em;
+            margin-bottom: 30px;
+        }
+
+        /* טקסט חופשי */
+        .content-text {
+            text-align: right;
+            font-size: 1.15em;
+            color: #333;
+        }
+
+        .content-text p {
+            margin-bottom: 20px;
+        }
+
+        .highlight-box {
+            border-right: 4px solid #004a99;
+            padding-right: 15px;
+            margin: 25px 0;
+            font-style: italic;
+            color: #003366;
+        }
+
+        /* אזור כפתורי התרומה */
+        .donation-section {
+            margin: 40px 0;
+        }
+
+        .donation-section h3 {
+            font-size: 1.4em;
+            color: #004a99;
+            margin-bottom: 20px;
+        }
+
+        .donation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .donation-card {
+            background: #fdfdfd;
+            border: 2px solid #004a99;
+            border-radius: 8px;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .donation-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .card-title {
+            font-size: 0.95em;
+            font-weight: bold;
+            color: #004a99;
+            margin-bottom: 5px;
+        }
+
+        .card-amount {
+            font-size: 1.6em;
+            font-weight: bold;
+            color: #1a1a1a;
+            margin-bottom: 12px;
+        }
+
+        .donate-btn {
+            background-color: #004a99;
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+
+        .donate-btn:hover {
+            background-color: #002244;
+        }
+
+        /* חתימת סגירה */
+        .signature-box {
+            margin-top: 40px;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+            text-align: right;
+            font-size: 1.05em;
+        }
+
+        /* חתימת הגרסה הסמויה שלך למעקב */
+        .version-tag {
+            font-size: 0.75em;
+            color: #ccc;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        /* התאמה מלאה לטלפונים ניידים */
+        @media (max-width: 768px) {
+            .hero-banner {
+                flex-direction: column;
+                padding: 30px 20px;
+            }
+            .banner-img {
+                width: 100%;
+                max-width: 280px;
+                height: 150px;
+            }
+            .banner-text h1 { font-size: 1.8em; }
+            .banner-text h2 { font-size: 1.2em; }
+            .donation-grid { grid-template-columns: 1fr 1fr; }
+            .donation-card:last-child { grid-column: span 2; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- באנר עליון משולב תמונות וטקסט -->
+    <div class="hero-banner">
+        
+        <!-- ימין: תמונת השלט במפרץ -->
+        <img class="banner-img" src="https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/שלט במפרץ.png" alt="שלט הנצחה בשביל הים">
+        
+        <!-- מרכז: כותרות גיוס ההמונים -->
+        <div class="banner-text">
+            <h1>מורשת ההעפלה בשביל הים</h1>
+            <h2>אנחנו בישורת האחרונה!<br>מטביעים את חותם מעפילי קפריסין על חופי המדינה</h2>
+        </div>
+        
+        <!-- שמאל: תמונת אוניית המעפילים שאר ישוב -->
+        <img class="banner-img" src="https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/אוניית_המעפילים_שאר_ישוב.jpg" alt="אוניית המעפילים שאר ישוב">
+        
+    </div>
+
+    <div class="container">
+        
+        <!-- מד יעד הגיוס של הקבוצה -->
+        <div class="target-box">
+            מטרת הגיוס המשותפת של משפחת 'שאר ישוב': 40,000 ₪
+        </div>
+
+        <!-- תוכן הקול קורא הנקי -->
+        <div class="content-text">
+            <p><strong>חברות וחברי משפחת 'שאר ישוב' היקרים,</strong></p>
+            
+            <p>על החופים האלה, שבהם נשברים גלי הים התיכון, נכתב אחד הפרקים הדרמטיים ביותר בסיפור הקמתה של מדינת ישראל. על החופים האלה פגשו הורינו, סבינו, ואולי חלקכם באופן אישי, את החול החם של ארץ ישראל – לעיתים לרגע קט של תקווה לפני הגירוש הכואב חזרה למחנות בקפריסין, ולעיתים ברגע המיוחל של השיבה הביתה.</p>
+            
+            <p><strong>היום, יש לנו הזדמנות היסטורית להבטיח שהסיפור הזה לא יישכח לעולם.</strong></p>
+            
+            <p>אנחנו נמצאים בישורת האחרונה ממש של פרויקט להנצחת מורשת ההעפלה בשיתוף עם פרויקט "שביל הים" – שביל הליכה לאומי ורציף לאורך חופי המדינה, שבו צועדים מדי יום אלפי מטיילים, בני נוער, משפחות ותיירים. בשיתוף פעולה ייחודי, קיבלנו את המנדט להקים לאורך השביל שלטי הנצחה ונקודות מידע אינטראקטיביות, שיספרו את סיפורי ההעפלה המרגשים בדיוק בנקודות שבהן ספינות המעפילים הגיעו אל החוף (או שהיו מיועדות אליו).</p>
+            
+            <div class="highlight-box">
+                "כל שלט הנצחה הוא יד זיכרון חיה. הוא הגשר שיחבר בין המטייל הצעיר של שנת 2026 לבין התינוק שנולד במחנה החורף בקפריסין, לבין המעפילה שקפצה מהספינה אל המים הקרים, ולבין הלוחמים שהמתינו על החוף."
+            </div>
+
+            <p><strong>כיצד אתם יכולים לעזור?</strong> אנו קוראים לכל אחד ואחת מחברי משפחת הספינה 'שאר ישוב' לקחת חלק במאמץ המשותף ולתרום לפרויקט. כל תרומה, קטנה כגדולה, תוקדש ישירות למימון חומרי שלט ההנצחה, והנגשת המידע למטיילים בשטח.</p>
+        </div>
+
+        <!-- אזור כפתורי גיוס ההמונים - מקושרים כעת ישירות לדף ה-GROW שלך -->
+        <div class="donation-section">
+            <h3>בחר את רמת השותפות שלך בהנצחה:</h3>
+            
+            <div class="donation-grid">
+                
+                <!-- כפתור 1 -->
+                <div class="donation-card">
+                    <div class="card-title">ידיד הנתיב</div>
+                    <div class="card-amount">₪180</div>
+                    <a href="https://tinyurl.com/4yumpz33" class="donate-btn">שותף לדרך</a>
+                </div>
+
+                <!-- כפתור 2 -->
+                <div class="donation-card">
+                    <div class="card-title">נאמן מורשת</div>
+                    <div class="card-amount">₪360</div>
+                    <a href="https://tinyurl.com/4yumpz33" class="donate-btn">שותף לדרך</a>
+                </div>
+
+                <!-- כפתור 3 -->
+                <div class="donation-card">
+                    <div class="card-title">מייסד נקודה</div>
+                    <div class="card-amount">₪720</div>
+                    <a href="https://tinyurl.com/4yumpz33" class="donate-btn">שותף לדרך</a>
+                </div>
+
+                <!-- כפתור 4 -->
+                <div class="donation-card">
+                    <div class="card-title">מוביל הנתיב</div>
+                    <div class="card-amount">₪1,500</div>
+                    <a href="https://tinyurl.com/4yumpz33" class="donate-btn">שותף לדרך</a>
+                </div>
+
+                <!-- כפתור 5 -->
+                <div class="donation-card">
+                    <div class="card-title">סכום אחר</div>
+                    <div class="card-amount" style="font-size: 1.1em; margin: 8px 0 15px 0;">לבחירתך</div>
+                    <a href="https://tinyurl.com/4yumpz33" class="donate-btn">לתרומה</a>
+                </div>
+
+            </div>
+            
+            <p style="font-size: 1.1em; color: #004a99; font-weight: bold;">זהו הרגע שלנו להבטיח שמורשת מעפילי קפריסין תהיה חלק בלתי נפרד מנוף מולדתנו. הים זוכר, ועכשיו גם המטיילים יזכרו.</p>
+        </div>
+
+        <!-- חתימה רשמית מהנהלת הארגון -->
+        <div class="signature-box">
+            בתודה, בהערכה ובשותפות לדרך,<br>
+            <strong>פרופ' סנונית שהם</strong>,<br>
+            יו"ר ארגון מעפילי קפריסין
+        </div>
+
+    </div>
+
+    <!-- חתימת הגרסה הסמויה שלך למעקב קל ומהיר בדפדפן -->
+    <div class="version-tag">
+        גרסה 2026.06.08 - שאר ישוב מחוברת ל-GROW
+    </div>
+
+</body>
+</html>
