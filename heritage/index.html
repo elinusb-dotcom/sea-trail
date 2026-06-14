@@ -16,60 +16,64 @@
             text-align: center;
         }
 
-        /* באנר עליון משולב תמונות, סמל ורקע אותנטי */
-        .hero-banner {
-            background: linear-gradient(rgba(0, 34, 68, 0.85), rgba(0, 74, 153, 0.85)), url('https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/אוניית_המעפילים_שאר_ישוב.jpg');
-            background-size: cover;
-            background-position: center;
+        /* מבנה הבאנר העליון המשודרג */
+        .hero-container {
+            background: linear-gradient(rgba(0, 34, 68, 0.9), rgba(0, 74, 153, 0.9));
             color: white;
-            padding: 40px 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 20px;
+            padding: 30px 20px;
             max-width: 1200px;
             margin: 0 auto;
+            border-radius: 0 0 8px 8px;
             box-sizing: border-box;
         }
 
+        .banner-titles {
+            margin-bottom: 25px;
+        }
+
+        .banner-titles h1 {
+            font-size: 2.4em;
+            margin: 0 0 8px 0;
+            font-weight: bold;
+        }
+
+        .banner-titles h2 {
+            font-size: 1.5em;
+            color: #fffb00;
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        /* גריד ויזואלי המשלב את 3 הרכיבים זה לצד זה */
+        .banner-media-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
         .banner-img {
-            width: 180px;
-            height: 130px;
+            width: 220px;
+            height: 150px;
             object-fit: cover;
             border-radius: 6px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.4);
             border: 2px solid rgba(255, 255, 255, 0.2);
             flex-shrink: 0;
         }
 
-        /* סגנון ייעודי עבור סמל הארגון */
-        .org-logo {
-            width: 110px;
-            height: 110px;
+        /* סגנון ייעודי ללוגו הארגון במרכז */
+        .org-logo-center {
+            width: 140px;
+            height: 140px;
             object-fit: contain;
-            background-color: rgba(255, 255, 255, 0.9);
-            padding: 8px;
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 10px;
             border-radius: 50%;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
             flex-shrink: 0;
-        }
-
-        .banner-text {
-            flex-grow: 1;
-            text-align: center;
-        }
-
-        .banner-text h1 {
-            font-size: 2.2em;
-            margin: 0 0 10px 0;
-            font-weight: bold;
-        }
-
-        .banner-text h2 {
-            font-size: 1.4em;
-            color: #fffb00;
-            margin: 0;
-            line-height: 1.4;
         }
 
         /* מכלול התוכן הראשי */
@@ -149,7 +153,7 @@
             border: 0;
         }
 
-        /* טבלת הנתונים ההיסטוריים הבלעדית של שאר ישוב */
+        /* טבלת הנתונים ההיסטוריים */
         .project-data-section {
             margin: 40px 0;
         }
@@ -275,21 +279,11 @@
 
         /* התאמה מלאה לטלפונים ניידים */
         @media (max-width: 768px) {
-            .hero-banner {
-                flex-direction: column;
-                padding: 30px 20px;
-            }
-            .banner-img {
-                width: 100%;
-                max-width: 280px;
-                height: 150px;
-            }
-            .org-logo {
-                width: 90px;
-                height: 90px;
-            }
-            .banner-text h1 { font-size: 1.8em; }
-            .banner-text h2 { font-size: 1.2em; }
+            .banner-titles h1 { font-size: 1.9em; }
+            .banner-titles h2 { font-size: 1.2em; }
+            .banner-media-row { gap: 15px; }
+            .banner-img { width: 45%; height: 110px; }
+            .org-logo-center { width: 90px; height: 90px; order: 3; width: 100%; max-width: 100px; margin: 10px auto 0 auto; }
             .donation-grid { grid-template-columns: 1fr 1fr; }
             .donation-card:last-child { grid-column: span 2; }
             .data-table th, .data-table td { padding: 8px 10px; font-size: 0.95em; }
@@ -299,20 +293,26 @@
 </head>
 <body>
 
-    <!-- באנר עליון משולב תמונות, סמל רשמי וטקסט -->
-    <div class="hero-banner">
+    <!-- באנר עליון משולב ומאוזן לפי הנחיות העיצוב החדשות -->
+    <div class="hero-container">
         
-        <!-- ימין: תמונת השלט במפרץ -->
-        <img class="banner-img" src="https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/שלט במפרץ.png" alt="שלט הנצחה בשביל הים">
-        
-        <!-- מרכז: כותרות גיוס ההמונים -->
-        <div class="banner-text">
+        <!-- כותרות הבאנר בחלק העליון -->
+        <div class="banner-titles">
             <h1>מורשת ההעפלה בשביל הים</h1>
             <h2>אנחנו בישורת האחרונה!<br>מטביעים את חותם מעפילי קפריסין על חופי המדינה</h2>
         </div>
-        
-        <!-- שמאל: סמל ארגון מעפילי קפריסין המובנה -->
-        <img class="org-logo" src="https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/לוגו שביל הים.jpg" alt="סמל ארגון מעפילי קפריסין">
+
+        <!-- שורת המדיה: שלט מימין, לוגו קפריסין באמצע, אוניית שאר ישוב משמאל -->
+        <div class="banner-media-row">
+            <!-- ימין: תמונת השלט במפרץ -->
+            <img class="banner-img" src="https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/שלט במפרץ.png" alt="שלט הנצחה בשביל הים">
+            
+            <!-- מרכז: לוגו ארגון מעפילי קפריסין האותנטי -->
+            <img class="org-logo-center" src="https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/קפריסין.png" alt="לוגו ארגון מעפילי קפריסין">
+            
+            <!-- שמאל: תמונת אוניית המעפילים שאר ישוב האותנטית -->
+            <img class="banner-img" src="https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/SHAAR YESHUV .avif" alt="אוניית המעפילים שאר ישוב">
+        </div>
         
     </div>
 
@@ -350,7 +350,7 @@
             </div>
         </div>
 
-        <!-- מקטע מובנה: תעודת הזהות ההיסטורית של האונייה המעודכנת לפי הנתונים הסופיים -->
+        <!-- מקטע מובנה: תעודת הזהות ההיסטורית המתוקנת והמוסמכת -->
         <div class="project-data-section">
             <h3>תעודת זהות היסטורית: אוניית המעפילים 'שאר ישוב'</h3>
             <p style="text-align: right; font-size: 1.1em; color: #444;">שלט ההנצחה המתוכנן ינגיש למטיילים בשטח את נתוני ההפלגה המרכזיים באמצעות סריקת קוד QR ייעודי במכשיר הנייד:</p>
@@ -365,11 +365,11 @@
                 <tbody>
                     <tr>
                         <td><strong>נמל ומועד היציאה</strong></td>
-                        <td>האונייה הפליגה מנמל באקאר שבאיטליה במהלך חודש אפריל 1947.</td>
+                        <td>האונייה הפליגה מנמל <strong>בוליאסקו שבאיטליה</strong> במהלך חודש אפריל 1947.</td>
                     </tr>
                     <tr>
                         <td><strong>מספר המעפילים</strong></td>
-                        <td>על סיפונה של האונייה הצטופפו 773 מעפילים, ניצולי שואה, שעשו את דרכם אל עבר חופי המולדת.</td>
+                        <td>על סיפונה של האונייה הצטופפו <strong>768 מעפילים</strong>, ניצולי שואה, שעשו את דרכם אל עבר חופי המולדת.</td>
                     </tr>
                     <tr>
                         <td><strong>ההגעה והעימות עם הבריטים</strong></td>
@@ -407,14 +407,14 @@
                     <a href="https://pay.grow.link/OTkxMDI~f28b5226e8e2972af60dbde9252ef19b-MzU0MjU0Mw" class="donate-btn">שותף לדרך</a>
                 </div>
 
-                <!-- כפתור 3 - קישור זמני קיים -->
+                <!-- כפתור 3 -->
                 <div class="donation-card">
                     <div class="card-title">מייסד נקודה</div>
                     <div class="card-amount">₪720</div>
                     <a href="https://tinyurl.com/4yumpz33" class="donate-btn">שותף לדרך</a>
                 </div>
 
-                <!-- כפתור 4 - קישור זמני קיים -->
+                <!-- כפתור 4 -->
                 <div class="donation-card">
                     <div class="card-title">מוביל הנתיב</div>
                     <div class="card-amount">₪1,500</div>
@@ -449,9 +449,9 @@
 
     </div>
 
-    <!-- חתימת הגרסה הסמויה שלך למעקב קל ומהיר בדפדפן -->
+    <!-- חתימת הגרסה הסמויה למעקב -->
     <div class="version-tag">
-        גרסה 2026.06.14 - שאר ישוב גרסה רשמית מלאה
+        גרסה 2026.06.14 - שאר ישוב גרסה היסטורית מוסמכת
     </div>
 
 </body>
