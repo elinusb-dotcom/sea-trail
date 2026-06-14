@@ -16,9 +16,9 @@
             text-align: center;
         }
 
-        /* באנר עליון משולב תמונות מימין ומשמאל */
+        /* באנר עליון משולב תמונות, סמל ורקע אותנטי */
         .hero-banner {
-            background: linear-gradient(rgba(0, 34, 68, 0.9), rgba(0, 74, 153, 0.9)), url('https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/כותרת.jpg');
+            background: linear-gradient(rgba(0, 34, 68, 0.85), rgba(0, 74, 153, 0.85)), url('https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/אוניית_המעפילים_שאר_ישוב.jpg');
             background-size: cover;
             background-position: center;
             color: white;
@@ -39,6 +39,18 @@
             border-radius: 6px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.3);
             border: 2px solid rgba(255, 255, 255, 0.2);
+            flex-shrink: 0;
+        }
+
+        /* סגנון ייעודי עבור סמל הארגון */
+        .org-logo {
+            width: 110px;
+            height: 110px;
+            object-fit: contain;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 8px;
+            border-radius: 50%;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
             flex-shrink: 0;
         }
 
@@ -272,6 +284,10 @@
                 max-width: 280px;
                 height: 150px;
             }
+            .org-logo {
+                width: 90px;
+                height: 90px;
+            }
             .banner-text h1 { font-size: 1.8em; }
             .banner-text h2 { font-size: 1.2em; }
             .donation-grid { grid-template-columns: 1fr 1fr; }
@@ -283,7 +299,7 @@
 </head>
 <body>
 
-    <!-- באנר עליון משולב תמונות וטקסט -->
+    <!-- באנר עליון משולב תמונות, סמל רשמי וטקסט -->
     <div class="hero-banner">
         
         <!-- ימין: תמונת השלט במפרץ -->
@@ -295,8 +311,8 @@
             <h2>אנחנו בישורת האחרונה!<br>מטביעים את חותם מעפילי קפריסין על חופי המדינה</h2>
         </div>
         
-        <!-- שמאל: תמונת אוניית המעפילים שאר ישוב -->
-        <img class="banner-img" src="https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/אוניית_המעפילים_שאר_ישוב.jpg" alt="אוניית המעפילים שאר ישוב">
+        <!-- שמאל: סמל ארגון מעפילי קפריסין המובנה -->
+        <img class="org-logo" src="https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/לוגו שביל הים.jpg" alt="סמל ארגון מעפילי קפריסין">
         
     </div>
 
@@ -307,7 +323,7 @@
             מטרת הגיוס המשותפת של משפחת 'שאר ישוב': 40,000 ₪
         </div>
 
-        <!-- תוכן קול הקורא -->
+        <!-- תוכן קול הקורא המעודכן היסטורית -->
         <div class="content-text">
             <p><strong>חברות וחברי משפחת 'שאר ישוב' היקרים,</strong></p>
             
@@ -334,7 +350,7 @@
             </div>
         </div>
 
-        <!-- מקטע מובנה: תעודת הזהות ההיסטורית של האונייה -->
+        <!-- מקטע מובנה: תעודת הזהות ההיסטורית של האונייה המעודכנת לפי הנתונים הסופיים -->
         <div class="project-data-section">
             <h3>תעודת זהות היסטורית: אוניית המעפילים 'שאר ישוב'</h3>
             <p style="text-align: right; font-size: 1.1em; color: #444;">שלט ההנצחה המתוכנן ינגיש למטיילים בשטח את נתוני ההפלגה המרכזיים באמצעות סריקת קוד QR ייעודי במכשיר הנייד:</p>
@@ -435,7 +451,7 @@
 
     <!-- חתימת הגרסה הסמויה שלך למעקב קל ומהיר בדפדפן -->
     <div class="version-tag">
-        גרסה 2026.06.13 - שאר ישוב קישורי GROW
+        גרסה 2026.06.14 - שאר ישוב גרסה רשמית מלאה
     </div>
 
 </body>
