@@ -16,64 +16,65 @@
             text-align: center;
         }
 
-        /* מבנה הבאנר העליון המשודרג */
-        .hero-container {
-            background: linear-gradient(rgba(0, 34, 68, 0.9), rgba(0, 74, 153, 0.9));
+        /* באנר עליון משולב - תמונות בצדדים, לוגו מוקטן וכותרות במרכז */
+        .hero-banner {
+            background: linear-gradient(rgba(0, 34, 68, 0.9), rgba(0, 74, 153, 0.9)), url('https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/כותרת.jpg');
+            background-size: cover;
+            background-position: center;
             color: white;
             padding: 30px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
             max-width: 1200px;
             margin: 0 auto;
-            border-radius: 0 0 8px 8px;
             box-sizing: border-box;
+            border-radius: 0 0 8px 8px;
         }
 
-        .banner-titles {
-            margin-bottom: 25px;
+        .banner-img {
+            width: 180px;
+            height: 130px;
+            object-fit: cover;
+            border-radius: 6px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            flex-shrink: 0;
         }
 
-        .banner-titles h1 {
-            font-size: 2.4em;
-            margin: 0 0 8px 0;
+        /* מרכז הבאנר: כותרות ולוגו ארגון מוקטן בחצי */
+        .banner-center-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            text-align: center;
+        }
+
+        .banner-text h1 {
+            font-size: 2.2em;
+            margin: 0 0 10px 0;
             font-weight: bold;
         }
 
-        .banner-titles h2 {
-            font-size: 1.5em;
+        .banner-text h2 {
+            font-size: 1.4em;
             color: #fffb00;
             margin: 0;
             line-height: 1.4;
         }
 
-        /* גריד ויזואלי המשלב את 3 הרכיבים זה לצד זה */
-        .banner-media-row {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-            margin-top: 15px;
-        }
-
-        .banner-img {
-            width: 220px;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 6px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-            border: 2px solid rgba(255, 255, 255, 0.2);
-            flex-shrink: 0;
-        }
-
-        /* סגנון ייעודי ללוגו הארגון במרכז */
-        .org-logo-center {
-            width: 140px;
-            height: 140px;
+        /* לוגו קפריסין מוקטן בדיוק לחצי (70px) */
+        .org-logo-small {
+            width: 70px;
+            height: 70px;
             object-fit: contain;
             background-color: rgba(255, 255, 255, 0.95);
-            padding: 10px;
+            padding: 6px;
             border-radius: 50%;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-            flex-shrink: 0;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
 
         /* מכלול התוכן הראשי */
@@ -269,7 +270,7 @@
             min-width: 200px;
         }
 
-        /* חתימת הגרסה הסמויה שלך למעקב */
+        /* חתימת הגרסה הסמויה למעקב */
         .version-tag {
             font-size: 0.75em;
             color: #ccc;
@@ -279,11 +280,17 @@
 
         /* התאמה מלאה לטלפונים ניידים */
         @media (max-width: 768px) {
-            .banner-titles h1 { font-size: 1.9em; }
-            .banner-titles h2 { font-size: 1.2em; }
-            .banner-media-row { gap: 15px; }
-            .banner-img { width: 45%; height: 110px; }
-            .org-logo-center { width: 90px; height: 90px; order: 3; width: 100%; max-width: 100px; margin: 10px auto 0 auto; }
+            .hero-banner {
+                flex-direction: column;
+                padding: 30px 20px;
+            }
+            .banner-img {
+                width: 100%;
+                max-width: 280px;
+                height: 150px;
+            }
+            .banner-text h1 { font-size: 1.8em; }
+            .banner-text h2 { font-size: 1.2em; }
             .donation-grid { grid-template-columns: 1fr 1fr; }
             .donation-card:last-child { grid-column: span 2; }
             .data-table th, .data-table td { padding: 8px 10px; font-size: 0.95em; }
@@ -293,26 +300,25 @@
 </head>
 <body>
 
-    <!-- באנר עליון משולב ומאוזן לפי הנחיות העיצוב החדשות -->
-    <div class="hero-container">
+    <!-- באנר עליון קלאסי ומתוקן - תמונות בצידים, לוגו קטן וכותרות במרכז -->
+    <div class="hero-banner">
         
-        <!-- כותרות הבאנר בחלק העליון -->
-        <div class="banner-titles">
-            <h1>מורשת ההעפלה בשביל הים</h1>
-            <h2>אנחנו בישורת האחרונה!<br>מטביעים את חותם מעפילי קפריסין על חופי המדינה</h2>
-        </div>
-
-        <!-- שורת המדיה: שלט מימין, לוגו קפריסין באמצע, אוניית שאר ישוב משמאל -->
-        <div class="banner-media-row">
-            <!-- ימין: תמונת השלט במפרץ -->
-            <img class="banner-img" src="https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/שלט במפרץ.png" alt="שלט הנצחה בשביל הים">
+        <!-- צד ימין: תמונת השלט במפרץ -->
+        <img class="banner-img" src="https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/שלט במפרץ.png" alt="שלט הנצחה בשביל הים">
+        
+        <!-- מרכז הבאנר: שילוב לוגו קפריסין המוקטן והכותרות הרשמיות -->
+        <div class="banner-center-content">
+            <!-- לוגו ארגון מעפילי קפריסין המוקטן בחצי -->
+            <img class="org-logo-small" src="https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/heritage/קפריסין.png" alt="לוגו ארגון מעפילי קפריסין">
             
-            <!-- מרכז: לוגו ארגון מעפילי קפריסין האותנטי -->
-            <img class="org-logo-center" src="https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/קפריסין.png" alt="לוגו ארגון מעפילי קפריסין">
-            
-            <!-- שמאל: תמונת אוניית המעפילים שאר ישוב האותנטית -->
-            <img class="banner-img" src="https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/SHAAR YESHUV .avif" alt="אוניית המעפילים שאר ישוב">
+            <div class="banner-text">
+                <h1>מורשת ההעפלה בשביל הים</h1>
+                <h2>אנחנו בישורת האחרונה!<br>מטביעים את חותם מעפילי קפריסין על חופי המדינה</h2>
+            </div>
         </div>
+        
+        <!-- צד שמאל: תמונת האונייה המעודכנת בדיוק לפי שם הקובץ החדש והרווחים -->
+        <img class="banner-img" src="https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/heritage/שאר ישוב .png" alt="אוניית המעפילים שאר ישוב">
         
     </div>
 
@@ -350,7 +356,7 @@
             </div>
         </div>
 
-        <!-- מקטע מובנה: תעודת הזהות ההיסטורית המתוקנת והמוסמכת -->
+        <!-- מקטע מובנה: תעודת הזהות ההיסטורית המוסמכת והעדכנית -->
         <div class="project-data-section">
             <h3>תעודת זהות היסטורית: אוניית המעפילים 'שאר ישוב'</h3>
             <p style="text-align: right; font-size: 1.1em; color: #444;">שלט ההנצחה המתוכנן ינגיש למטיילים בשטח את נתוני ההפלגה המרכזיים באמצעות סריקת קוד QR ייעודי במכשיר הנייד:</p>
@@ -451,7 +457,7 @@
 
     <!-- חתימת הגרסה הסמויה למעקב -->
     <div class="version-tag">
-        גרסה 2026.06.14 - שאר ישוב גרסה היסטורית מוסמכת
+        גרסה 2026.06.14 - שאר ישוב תמונת ספינה מתוקנת
     </div>
 
 </body>
