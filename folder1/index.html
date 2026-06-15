@@ -1,1 +1,396 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>שימור מורשת ההעפלה בשביל הים</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', 'Arial', sans-serif;
+            color: #2c3e50;
+            line-height: 1.5;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f7f6;
+        }
 
+        .folder-spread {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto 40px auto;
+            background-color: #ffffff;
+            box-shadow: 0 0 15px rgba(0,0,0,0.08);
+            display: flex;
+            box-sizing: border-box;
+            border-bottom: 6px solid #D4A373;
+        }
+
+        .folder-column {
+            flex: 1;
+            width: 33.33%;
+            padding: 40px 30px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            border-left: 1px dashed #e2e8f0;
+            position: relative;
+        }
+
+        .folder-column:last-child {
+            border-left: none;
+        }
+
+        /* סגנון עמוד השער והעמודים בעלי רקע כחול ימי עמוק וממלכתי */
+        .column-dark {
+            background-color: #0C355A;
+            color: #ffffff;
+            border-left: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .column-dark h1, .column-dark h2, .column-dark h3 {
+            color: #ffffff !important;
+        }
+        
+        .column-dark p, .column-dark li {
+            color: #e0e0e0 !important;
+        }
+
+        h1 {
+            font-size: 24pt;
+            color: #0C355A;
+            margin: 0 0 15px 0;
+            line-height: 1.3;
+            font-weight: 800;
+        }
+
+        h2 {
+            font-size: 16pt;
+            color: #0C355A;
+            margin-top: 0;
+            margin-bottom: 15px;
+            border-right: 4px solid #D4A373;
+            padding-right: 10px;
+        }
+
+        h3 {
+            font-size: 12pt;
+            color: #0C355A;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 10.5pt;
+            margin-bottom: 15px;
+            text-align: justify;
+            color: #34495e;
+        }
+
+        ul {
+            margin-bottom: 15px;
+            padding-right: 20px;
+        }
+
+        li {
+            font-size: 10.5pt;
+            margin-bottom: 8px;
+            color: #34495e;
+        }
+
+        .bold-lead {
+            font-weight: bold;
+            color: #0C355A;
+        }
+
+        .column-dark .bold-lead {
+            color: #D4A373;
+        }
+
+        .highlight-box {
+            background-color: #f8fafc;
+            border-right: 4px solid #0C355A;
+            padding: 15px;
+            margin: 15px 0;
+            font-size: 10pt;
+        }
+
+        /* מסגרות גרפיות מעוצבות לתמונות */
+        .image-container-frame {
+            width: 100%;
+            height: 180px;
+            border: 2px solid #D4A373;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            margin: 15px 0;
+            background-color: #1a446c;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .inner-frame-bg {
+            background-color: #f8fafc;
+            border: 2px solid #0C355A;
+        }
+
+        .folder-image-render {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* עיצוב ייעודי ואיכותי לרכיב ה-QR החדש בדף 2 */
+        .qr-section-wrapper {
+            margin-top: auto;
+            padding: 12px;
+            border: 1px solid #e2e8f0;
+            background-color: #f8fafc;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 4px;
+        }
+
+        .qr-code-img {
+            width: 85px;
+            height: 85px;
+            object-fit: contain;
+            border: 1px solid #cbd5e1;
+        }
+
+        .qr-text-caption {
+            width: 65%;
+            font-size: 10.5pt;
+            color: #0C355A;
+            font-weight: 600;
+            line-height: 1.4;
+            padding-right: 10px;
+        }
+
+        /* באנר לוגואים מעודכן - פריסה לשני הצדדים */
+        .logo-box-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* דוחף את הלוגואים לקצוות */
+            border-bottom: 2px solid #D4A373;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+            height: 60px;
+        }
+
+        .logo-item-slot {
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-render-file {
+            max-height: 100%;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .folder-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 9.5pt;
+        }
+
+        .folder-table th {
+            background-color: #0C355A;
+            color: #ffffff;
+            padding: 8px;
+            text-align: right;
+        }
+
+        .folder-table td {
+            padding: 8px;
+            border-bottom: 1px solid #e2e8f0;
+            color: #4a5568;
+        }
+
+        .footer-note {
+            margin-top: auto;
+            font-size: 9.5pt;
+            color: #7f8c8d;
+            text-align: center;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 15px;
+        }
+
+        .column-dark .footer-note {
+            color: #cbd5e1;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .print-header {
+            text-align: center; 
+            font-weight: bold; 
+            margin-bottom: 10px; 
+            color: #0C355A;
+        }
+
+        @media print {
+            body { padding: 0; background-color: #ffffff; }
+            .folder-spread { box-shadow: none; page-break-after: always; max-width: 100%; }
+            .folder-column { border-left: 1px dashed #cbd5e1; }
+            .print-header { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="print-header">דף 1: פריסה חיצונית (מיועד להדפסה צד א')</div>
+    <div class="folder-spread">
+        
+        <div class="folder-column column-dark">
+            <div class="logo-box-wrapper">
+                <div class="logo-item-slot">
+                    <img src="seatrail-logo.png" alt="לוגו שביל הים" class="logo-render-file">
+                </div>
+                <div class="logo-item-slot">
+                    <img src="cyp-logo.png" alt="לוגו ארגון מעפילי קפריסין" class="logo-render-file">
+                </div>
+            </div>
+            
+            <div style="margin-top: 20px; margin-bottom: 20px; text-align: center;">
+                <h1 style="font-size: 24pt; font-weight: 800; margin-bottom: 15px; color:#ffffff;">שימור מורשת ההעפלה בשביל הים</h1>
+                <h2 style="font-size: 13pt; color: #D4A373; border: none; text-align: center; padding: 0;">יוזמה ערכית-לאומית להנצחת סיפור ההעפלה לאורך חופי ישראל</h2>
+            </div>
+
+            <div class="image-container-frame">
+                <img src="maapilim-dock.jpg" alt="הורדת מעפילים" class="folder-image-render">
+            </div>
+
+            <div class="footer-note" style="font-weight: bold; color: #D4A373;">
+                מוגש להנהלת הרשות המקומית ולצוותים המקצועיים
+            </div>
+        </div>
+
+        <div class="folder-column">
+            <h2>קריאה לשיתוף פעולה</h2>
+            <p>
+                אנו מבקשים את הצטרפותה הרשמית של רשותכם ליוזמת מורשת ההעפלה בשביל הים, מתוך הכרה עמוקה בחשיבותה הציבורית והלאומית.
+            </p>
+            <div class="highlight-box" style="margin: 5px 0; padding: 10px;">
+                <span class="bold-lead">השלבים הבאים עם הרשות:</span><br>
+                1. מתן אישור עקרוני לקידום המיזם בתחומה.<br>
+                2. מינוי גורם מקצועי מוסמך מטעמה (מתאם מוניציפלי) לתיאום שוטף.
+            </div>
+            
+            <h3 style="margin-top: 10px; margin-bottom: 5px;">📞 לתיאום וקידום המיזם:</h3>
+            <p style="margin-bottom: 3px; font-size: 10pt;">
+                <strong>אדריכל ירדן ערמון</strong><br>ראש צוות רשויות במיזם | 052-5717680
+            </p>
+            <p style="margin-bottom: 3px; font-size: 10pt;">
+                <strong>פרופ' סנונית שהם</strong><br>יו"ר ארגון מעפילי קפריסין
+            </p>
+            <p style="font-size: 9.5pt; color: #7f8c8d; margin-bottom: 0;">
+                avi.schaul@gmail.com | אתר ההעפלה והרכש
+            </p>
+            <div class="footer-note">ארגון מעפילי קפריסין (ע"ר)</div>
+        </div>
+
+        <div class="folder-column">
+            <h2>הערך והחזון לרשות המקומית</h2>
+            <p>
+                ההליכה לאורך החוף הופכת למסע של היכרות עם אחד הפרקים המכוננים בתולדות המדינה, מתוך מפגש ישיר וחווייתי בין נוף, מקום וסיפור.
+            </p>
+            <p>
+                הצטרפות הרשות למיזם מבטאת שותפות במהלך לאומי בעל נראות ציבורית וערכית גבוהה, המעניקה לרשות עוגנים משמעותיים:
+            </p>
+            <ul>
+                <li><span class="bold-lead">חיזוק הגאווה המקומית:</span> חיבור נכסי החוף והטיילות המקומיות לסיפור היסוד של הקמת המדינה.</li>
+                <li><span class="bold-lead">עוגן חינוכי מוביל:</span> יצירת "כיתת שטח" פתוחה עבור בתי הספר העירוניים ותנועות הנוער לסיורים ופעילות מבוססת מקום.</li>
+                <li><span class="bold-lead">תיירות רכה ואיכותית:</span> שילוב רצועת החוף בנתיב מורשת ארצי המושך מטיילים לאורך כל השנה.</li>
+            </ul>
+            <div class="footer-note">שימור מורשת ההעפלה בשביל הים</div>
+        </div>
+
+    </div>
+
+
+    <div class="print-header">דף 2: פריסה פנימית (מיועד להדפסה צד ב')</div>
+    <div class="folder-spread">
+        
+        <div class="folder-column">
+            <h2>מי אנחנו?</h2>
+            <p>
+                <strong>ארגון מעפילי קפריסין (ע"ר)</strong> הוא עמותה רשומה שמטרותיה הרשמיות הן הנצחת מעפילי קפריסין, תומכיהם, מלוויהם והנחלת מורשתם לדורות הבאים, לצד גיבוש קהילה רחבה של כלל המעפילים ובני משפחותיהם.
+            </p>
+            <p>
+                מתוך תחושת שליחות עמוקה זו, אנו מובילים מהלך ארצי המבקש לחבר בין הזיכרון הלאומי לבין המרחב הציבורי הפתוח, ולהנכיח את סיפור הגבורה הימי של המדינה במקום המדויק שבו הים, הדרך והמורשת נפגשים.
+            </p>
+            <div class="highlight-box" style="margin-bottom: 20px;">
+                <span class="bold-lead">💰 מימון עצמי מלא:</span><br>
+                המימון המלא להקמת והצבת שלטי המידע ומחקר המידע יגיע ישירות מקרב חברי העמותה ודורות ההמשך. **הרשות אינה נדרשת להקצאה תקציבית כלשהי.**
+            </div>
+
+            <div class="qr-section-wrapper">
+                <div class="qr-text-caption">להרחבה - סרקו למעבר לאתר ארגון מעפילי קפריסין</div>
+                <img src="QR_קפריסין-1024.jpeg" alt="QR קוד לאתר המידע" class="qr-code-img">
+            </div>
+            
+            <div class="footer-note">מיזם המורשת הלאומי</div>
+        </div>
+
+        <div class="folder-column">
+            <h2>מה יוצג בפועל לציבור?</h2>
+            <p>
+                התוכן המחקרי יונגש בשטח באמצעות פריסה ארצית של <strong>30 שלטי מידע ותוכן מעוצבים באופן אחיד וממלכתי</strong>, אשר יוצבו בנקודות גיאוגרפיות אסטרטגיות לאורך החוף:
+            </p>
+            <ul>
+                <li><span class="bold-lead">תכנים היסטוריים:</span> סיפורי מסע ומידע על ספינות ההעפלה הרלוונטיות לגזרה החופית.</li>
+                <li><span class="bold-lead">מסמכים חזותיים:</span> תצלומים אותנטיים, מסמכי ארכיון ומפות מסע מפורטות.</li>
+                <li><span class="bold-lead">קישורי QR דינמיים:</span> גישה ישירה מהשטח אל מאגר המידע המורחב, סרטוני עדות ורשתות התוכן החינוכיות.</li>
+            </ul>
+            
+            <div class="image-container-frame inner-frame-bg" style="height: 120px;">
+                <img src="sign-preview.jpg" alt="הדמיה רשמית של שלט מורשת" class="folder-image-render">
+            </div>
+            
+            <div class="footer-note">הנגשה לדורות הבאים</div>
+        </div>
+
+        <div class="folder-column">
+            <h2>מדוע החיבור נכון?</h2>
+            <p>
+                סיפור ההעפלה הוא סיפור ימי במהותו, ולכן החיבור בינו לבין שביל הים הוא טבעי ומדויק. במקום שהמורשת תישאר רק בארכיונים, היא מקבלת נוכחות במרחב הפתוח ונפגשת עם הציבור הרחב והצועדים.
+            </p>
+            
+            <h3 style="margin-top: 5px; margin-bottom: 5px;">מפת דרכים לעבודה משותפת:</h3>
+            <table class="folder-table">
+                <thead>
+                    <tr style="background-color: #0C355A; color: #ffffff;">
+                        <th>שלב</th>
+                        <th>פעילות ותוצר נדרש</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>1. אישור</strong></td>
+                        <td>הצגת המיזם לרשות וקבלת מכתב כוונות עקרוני.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>2. תיאום</strong></td>
+                        <td>סיור שטח משותף ואישור מפת מיקומים (נ"צ).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>3. תוכן</strong></td>
+                        <td>גיבוש ואישור שכבת התוכן ההיסטורית לגזרה.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>4. הצבה</strong></td>
+                        <td>הקמת השלטים (במימון עצמי) ואירוע השקה.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="footer-note">שותפות מקצועית וסטטוטורית</div>
+        </div>
+
+    </div>
+
+</body>
+</html>
