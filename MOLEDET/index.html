@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>מורשת ההעפלה בשביל הים | מולדת</title>
+    <title>מורשת מעפילי מולדת | שביל הים</title>
     <style>
         /* הגדרות עיצוב כלליות */
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.25;
+            line-height: 1.4;
             margin: 0;
             padding: 0;
             background-color: #f4f7f9;
@@ -16,13 +16,13 @@
             text-align: center;
         }
 
-        /* באנר עליון משולב תמונות מימין ומשמאל */
+        /* באנר עליון משולב - תמונות בצדדים, לוגו מוקטן וכותרות במרכז */
         .hero-banner {
             background: linear-gradient(rgba(0, 34, 68, 0.9), rgba(0, 74, 153, 0.9)), url('https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/כותרת.jpg');
             background-size: cover;
             background-position: center;
             color: white;
-            padding: 40px 20px;
+            padding: 30px 20px;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -30,9 +30,9 @@
             max-width: 1200px;
             margin: 0 auto;
             box-sizing: border-box;
+            border-radius: 0 0 8px 8px;
         }
 
-        /* עיצוב אחיד לתמונות ההיסטוריות בכותרת */
         .banner-img {
             width: 180px;
             height: 130px;
@@ -43,9 +43,13 @@
             flex-shrink: 0;
         }
 
-        /* אזור הטקסט המרכזי בבאנר */
-        .banner-text {
+        /* מרכז הבאנר: כותרות ולוגו ארגון מוקטן בחצי */
+        .banner-center-content {
             flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
             text-align: center;
         }
 
@@ -62,18 +66,29 @@
             line-height: 1.4;
         }
 
-        /* מכלול התוכן של קול הקורא */
+        /* לוגו קפריסין מוקטן (70px) */
+        .org-logo-small {
+            width: 70px;
+            height: 70px;
+            object-fit: contain;
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 6px;
+            border-radius: 50%;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        /* מכלול התוכן הראשי */
         .container {
-            max-width: 800px;
+            max-width: 850px;
             margin: 0 auto;
             padding: 40px 20px;
             background: white;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
             border-radius: 8px;
             margin-top: 20px;
+            box-sizing: border-box;
         }
 
-        /* מד יעד הגיוס */
         .target-box {
             background-color: #e6f0fa;
             border: 1px solid #b3d1f2;
@@ -85,7 +100,6 @@
             margin-bottom: 30px;
         }
 
-        /* טקסט חופשי */
         .content-text {
             text-align: right;
             font-size: 1.15em;
@@ -102,6 +116,78 @@
             margin: 25px 0;
             font-style: italic;
             color: #003366;
+        }
+
+        /* אזור וידאו וסרטון שביל הים */
+        .video-section {
+            margin: 40px 0;
+            background-color: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid #eee;
+        }
+
+        .video-section h3 {
+            font-size: 1.4em;
+            color: #004a99;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+            border-radius: 6px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* טבלת הנתונים ההיסטוריים */
+        .project-data-section {
+            margin: 40px 0;
+        }
+
+        .project-data-section h3 {
+            font-size: 1.4em;
+            color: #004a99;
+            margin-bottom: 20px;
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            font-size: 1.05em;
+            text-align: right;
+        }
+
+        .data-table th {
+            background-color: #004a99;
+            color: white;
+            padding: 12px 15px;
+            font-weight: bold;
+            border: 1px solid #004a99;
+        }
+
+        .data-table td {
+            padding: 12px 15px;
+            border: 1px solid #e1e8ed;
+        }
+
+        .data-table tr:nth-child(even) {
+            background-color: #f9fbfd;
         }
 
         /* אזור כפתורי התרומה */
@@ -166,16 +252,25 @@
             background-color: #002244;
         }
 
-        /* חתימת סגירה */
-        .signature-box {
+        /* חתימת סגירה וצוות מורחב */
+        .signature-box-container {
             margin-top: 40px;
             border-top: 1px solid #eee;
             padding-top: 20px;
+            display: flex;
+            justify-content: space-between;
             text-align: right;
             font-size: 1.05em;
+            flex-wrap: wrap;
+            gap: 20px;
         }
 
-        /* חתימת הגרסה הסמויה שלך למעקב */
+        .signature-col {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        /* חתימת הגרסה הסמויה למעקב */
         .version-tag {
             font-size: 0.75em;
             color: #ccc;
@@ -198,91 +293,145 @@
             .banner-text h2 { font-size: 1.2em; }
             .donation-grid { grid-template-columns: 1fr 1fr; }
             .donation-card:last-child { grid-column: span 2; }
+            .data-table th, .data-table td { padding: 8px 10px; font-size: 0.95em; }
+            .signature-box-container { flex-direction: column; gap: 15px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- באנר עליון משולב תמונות וטקסט -->
+    <!-- באנר עליון מותאם לתיקיית moledet החדשה -->
     <div class="hero-banner">
         
-        <!-- ימין: תמונת השלט במפרץ -->
+        <!-- צד ימין: תמונת השלט הכללית בנתיב הראשי -->
         <img class="banner-img" src="https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/שלט במפרץ.png" alt="שלט הנצחה בשביל הים">
         
-        <!-- מרכז: כותרות גיוס ההמונים -->
-        <div class="banner-text">
-            <h1>מורשת ההעפלה בשביל הים</h1>
-            <h2>אנחנו בישורת האחרונה!<br>מטביעים את חותם מעפילי קפריסין על חופי המדינה</h2>
+        <!-- מרכז הבאנר: לוגו קפריסין המופנה כעת לתוך תיקיית moledet -->
+        <div class="banner-center-content">
+            <img class="org-logo-small" src="https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/moledet/קפריסין.png" alt="לוגו ארגון מעפילי קפריסין">
+            
+            <div class="banner-text">
+                <h1>מורשת ההעפלה בשביל הים</h1>
+                <h2>מנציחים את גבורת מעפילי האונייה 'מולדת'<br>על חופי המדינה</h2>
+            </div>
         </div>
         
-        <!-- שמאל: תמונת אוניית המעפילים שאר ישוב -->
-        <img class="banner-img" src="https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/אוניית_המעפילים_שאר_ישוב.jpg" alt="אוניית המעפילים שאר ישוב">
+        <!-- צד שמאל: תמונת האונייה מולדת המופנית לתוך תיקיית moledet החדשה -->
+        <img class="banner-img" src="https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/moledet/מולדת.png" alt="אוניית המעפילים מולדת">
         
     </div>
 
     <div class="container">
         
-        <!-- מד יעד הגיוס של הקבוצה -->
+        <!-- מד יעד הגיוס הספציפי של קבוצת מולדת -->
         <div class="target-box">
             מטרת הגיוס המשותפת של משפחת 'מולדת': 40,000 ₪
         </div>
 
-        <!-- תוכן הקול קורא הנקי -->
+        <!-- תוכן קול הקורא המותאם למולדת -->
         <div class="content-text">
-            <p><strong>חברות וחברי משפחת 'שאר ישוב' היקרים,</strong></p>
+            <p><strong>חברות וחברי משפחת 'מולדת' היקרים,</strong></p>
             
-            <p>על החופים האלה, שבהם נשברים גלי הים התיכון, נכתב אחד הפרקים הדרמטיים ביותר בסיפור הקמתה של מדינת ישראל. על החופים האלה פגשו הורינו, סבינו, ואולי חלקכם באופן אישי, את החול החם של ארץ ישראל – לעיתים לרגע קט של תקווה לפני הגירוש הכואב חזרה למחנות בקפריסין, ולעיתים ברגע המיוחל של השיבה הביתה.</p>
+            <p>על החופים האלה, שבהם נשברים גלי הים התיכון, נכתב אחד הפרקים הדרמטיים ביותר בסיפור הקמתה של מדינת ישראל. אל חופים האלה הגיעו הורינו, סבינו, ואולי חלקכם אחרי מסע תלאות, הראשונים ממשפחתם בשרשרת הדורות. נאבקו בבריטים על הזכות להגיע למולדת האבות. ראו את הארץ ושרו "התקווה" לפני הגירוש הכואב למחנות בקפריסין.</p>
             
             <p><strong>היום, יש לנו הזדמנות היסטורית להבטיח שהסיפור הזה לא יישכח לעולם.</strong></p>
             
-            <p>אנחנו נמצאים בישורת האחרונה ממש של פרויקט להנצחת מורשת ההעפלה בשיתוף עם פרויקט "שביל הים" – שביל הליכה לאומי ורציף לאורך חופי המדינה, שבו צועדים מדי יום אלפי מטיילים, בני נוער, משפחות ותיירים. בשיתוף פעולה ייחודי, קיבלנו את המנדט להקים לאורך השביל שלטי הנצחה ונקודות מידע אינטראקטיביות, שיספרו את סיפורי ההעפלה המרגשים בדיוק בנקודות שבהן ספינות המעפילים הגיעו אל החוף (או שהיו מיועדות אליו).</p>
+            <p>אנו פועלים במסגרת פרויקט להנצחת מורשת ההעפלה בשיתוף עם פרויקט "שביל הים" – שביל הליכה לאומי ורציף לאורך חופי המדינה, שבו צועדים אלפי מטיילים, בני נוער, משפחות ותיירים. בשיתוף פעולה ייחודי, קיבלנו את המנדט להקים לאורך השביל שלטי הנצחה ונקודות מידע אינטראקטיביות, שיספרו את סיפורי ההעפלה המרגשים בנקודות שבהן ספינות המעפילים הגיעו אל החוף (או שהיו מיועדות אליו).</p>
+            <p><strong>מיזם זה הינו מיזם מרכזי של ארגון מעפילי קפריסין.</strong></p>
+            
+            <p>כדי להשלים את התקנת 30 שלטי ההנצחה – אנחנו צריכים אתכם איתנו.</p>
             
             <div class="highlight-box">
-                "כל שלט הנצחה הוא יד זיכרון חיה. הוא הגשר שיחבר בין המטייל הצעיר של שנת 2026 לבין התינוק שנולד במחנה החורף בקפריסין, לבין המעפילה שקפצה מהספינה אל המים הקרים, ולבין הלוחמים שהמתינו על החוף."
+                "כל שלט הנצחה הוא יד זיכרון חיה. הוא הגשר שיחבר בין המטייל לבין המעפילות המעפילים והצוותים שהגיעו בספינה. סיפור הגבורה והנחישות המלא של אלו שאנו חבים להם כה רבות יונגש למטיילים פיזית ובמרחב הדיגיטלי."
             </div>
 
-            <p><strong>כיצד אתם יכולים לעזור?</strong> אנו קוראים לכל אחד ואחת מחברי משפחת הספינה 'שאר ישוב' לקחת חלק במאמץ המשותף ולתרום לפרויקט. כל תרומה, קטנה כגדולה, תוקדש ישירות למימון חומרי שלט ההנצחה, והנגשת המידע למטיילים בשטח.</p>
+            <p><strong>כיצד אתם יכולים לעזור?</strong> אנו קוראים לכל אחד ואחת מחברי משפחת הספינה 'מולדת' לקחת חלק במאמץ המשותף ולתרום לפרויקט. כל תרומה, קטנה כגדולה, תוקדש ישירות למימון הכנת והתקנת שלט ההנצחה, והנגשת המידע למטיילים בשטח.</p>
         </div>
 
-        <!-- אזור כפתורי גיוס ההמונים - מקושרים כעת ישירות לדף ה-GROW שלך -->
+        <!-- מקטע מובנה: סרטון ההיכרות הרשמי של אליק אדלר על שביל הים -->
+        <div class="video-section">
+            <h3>הכירו את שביל הים</h3>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/ix4kBFgPEyI" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <!-- מקטע מובנה: תעודת הזהות ההיסטורית של מולדת -->
+        <div class="project-data-section">
+            <h3>תעודת זהות היסטורית: אוניית המעפילים 'מולדת'</h3>
+            <p style="text-align: right; font-size: 1.1em; color: #444;">שלט ההנצחה המתוכנן ינגיש למטיילים בשטח תקציר אודות הספינה וקורות מעפיליה, וסריקת קוד QR ייעודי במכשיר נייד תעביר אותם לאתר מידע מורחב</p>
+            
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th style="width: 30%;">פרק בהיסטוריה</th>
+                        <th style="width: 70%;">נתוני הפלגת הגבורה של 'מולדת'</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>נמל ומועד היציאה</strong></td>
+                        <td>האונייה הפליגה מנמל <strong>מטאפונטו שבאיטליה</strong> בתאריך 23.3.1947.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>מספר המעפילים</strong></td>
+                        <td>על סיפונה של האונייה הצטופפו <strong>1,568 מעפילים</strong>, ניצולי שואה, שעשו את דרכם אל עבר חופי המולדת.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ההגעה והעימות עם הבריטים</strong></td>
+                        <td>ב-29.3.1947 נתקלה האונייה במשחתות בריטיות. למרות מצבה המכני הרעוע ונטייתה המסוכנת על צדה, המעפילים והמפקדים גילו אומץ לב עילאי, ולא הסכימו להסגיר את הספינה לבריטים ללא מאבק עיקש.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>הגירוש לקפריסין</strong></td>
+                        <td>לאחר העימות הקשה בים, נגררה האונייה לנמל חיפה, והמעפילים גורשו באופן כואב אל מחנות המעצר הבריטיים בקפריסין, שם שהו עד לשחרורם.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>מיקום שלט ההנצחה בשביל</strong></td>
+                        <td>השלט הפיזי מתוכנן להיות מוצב ב"שביל הים" בחוף העיר אשדוד אל מול נתיב הגעתה ההיסטורי של "מולדת"</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- אזור כפתורי גיוס ההמונים -->
         <div class="donation-section">
-            <h3>בחר את רמת השותפות שלך בהנצחה:</h3>
+            <h3>לתרומה מאובטחת והבטחת מקומנו על השביל:</h3>
             
             <div class="donation-grid">
                 
-                <!-- כפתור 1 -->
+                <!-- כפתור 1 - 180 ש"ח -->
                 <div class="donation-card">
                     <div class="card-title">ידיד הנתיב</div>
                     <div class="card-amount">₪180</div>
-                    <a href="https://tinyurl.com/4yumpz33" class="donate-btn">שותף לדרך</a>
+                    <a href="https://pay.grow.link/OTkxMDI~609ee4070b8fb715aa68b5173eaf2fdb-MzU0MjQ4OQ" class="donate-btn">שותף לדרך</a>
                 </div>
 
-                <!-- כפתור 2 -->
+                <!-- כפתור 2 - 360 ש"ח -->
                 <div class="donation-card">
                     <div class="card-title">נאמן מורשת</div>
                     <div class="card-amount">₪360</div>
-                    <a href="https://tinyurl.com/4yumpz33" class="donate-btn">שותף לדרך</a>
+                    <a href="https://pay.grow.link/OTkxMDI~f28b5226e8e2972af60dbde9252ef19b-MzU0MjU0Mw" class="donate-btn">שותף לדרך</a>
                 </div>
 
-                <!-- כפתור 3 -->
+                <!-- כפתור 3 - 720 ש"ח -->
                 <div class="donation-card">
                     <div class="card-title">מייסד נקודה</div>
                     <div class="card-amount">₪720</div>
-                    <a href="https://tinyurl.com/4yumpz33" class="donate-btn">שותף לדרך</a>
+                    <a href="https://pay.grow.link/OTkxMDI~7645ce79d23164ddbc012c17f6367308-MzU09AwMQ" class="donate-btn">שותף לדרך</a>
                 </div>
 
-                <!-- כפתור 4 -->
+                <!-- כפתור 4 - 1,500 ש"ח -->
                 <div class="donation-card">
                     <div class="card-title">מוביל הנתיב</div>
                     <div class="card-amount">₪1,500</div>
-                    <a href="https://tinyurl.com/4yumpz33" class="donate-btn">שותף לדרך</a>
+                    <a href="https://pay.grow.link/OTkxMDI~c0106f819f7fa5e39c9415ae11997e8b-MzU09AzNA" class="donate-btn">שותף לדרך</a>
                 </div>
 
-                <!-- כפתור 5 -->
+                <!-- כפתור 5 - תשלום פתוח -->
                 <div class="donation-card">
                     <div class="card-title">סכום אחר</div>
                     <div class="card-amount" style="font-size: 1.1em; margin: 8px 0 15px 0;">לבחירתך</div>
-                    <a href="https://tinyurl.com/4yumpz33" class="donate-btn">לתרומה</a>
+                    <a href="https://pay.grow.link/OTkxMDI~1ae44df27a248930a79f9e07e08f2634-MzU0MzY0MA" class="donate-btn">לתרומה</a>
                 </div>
 
             </div>
@@ -290,18 +439,24 @@
             <p style="font-size: 1.1em; color: #004a99; font-weight: bold;">זהו הרגע שלנו להבטיח שמורשת מעפילי קפריסין תהיה חלק בלתי נפרד מנוף מולדתנו. הים זוכר, ועכשיו גם המטיילים יזכרו.</p>
         </div>
 
-        <!-- חתימה רשמית מהנהלת הארגון -->
-        <div class="signature-box">
-            בתודה, בהערכה ובשותפות לדרך,<br>
-            <strong>פרופ' סנונית שהם</strong>,<br>
-            יו"ר ארגון מעפילי קפריסין
+        <!-- חתימה רשמית -->
+        <div class="signature-box-container">
+            <div class="signature-col">
+                בתודה, בהערכה ובשותפות לדרך,<br>
+                <strong>פרופ' סנונית שהם</strong>,<br>
+                יו"ר ארגון מעפילי קפריסין
+            </div>
+            <div class="signature-col" style="text-align: left;">
+                <br>
+                <strong>צוות מורשת מולדת</strong>
+            </div>
         </div>
 
     </div>
 
-    <!-- חתימת הגרסה הסמויה שלך למעקב קל ומהיר בדפדפן -->
+    <!-- חתימת הגרסה הסמויה למעקב -->
     <div class="version-tag">
-        גרסה 2026.06.08 - שאר ישוב מחוברת ל-GROW
+        גרסה 2026.06.18 - מולדת תיקיית moledet מעודכנת
     </div>
 
 </body>
