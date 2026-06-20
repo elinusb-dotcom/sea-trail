@@ -7,7 +7,7 @@
         body {
             font-family: 'Segoe UI', 'Arial', sans-serif;
             color: #2c3e50;
-            line-height: 1.5;
+            line-height: 1.6;
             margin: 0;
             padding: 20px;
             background-color: #f4f7f6;
@@ -21,25 +21,28 @@
             box-shadow: 0 0 15px rgba(0,0,0,0.08);
             display: flex;
             box-sizing: border-box;
-            border-bottom: 6px solid #D4A373;
+            position: relative;
+            overflow: hidden;
         }
 
         .folder-column {
             flex: 1;
             width: 33.33%;
-            padding: 40px 30px;
+            padding: 50px 30px 100px 30px; /* הארכת הטורים ב-2 ס"מ ומרווח נשימה */
             box-sizing: border-box;
             display: flex;
             flex-direction: column;
             border-left: 1px dashed #e2e8f0;
             position: relative;
+            min-height: 680px; /* גובה מוארך ומכובד */
+            z-index: 2;
         }
 
         .folder-column:last-child {
             border-left: none;
         }
 
-        /* סגנון עמוד השער והעמודים בעלי רקע כחול ימי עמוק וממלכתי */
+        /* עמוד שער - כחול ימי עמוק וממלכתי */
         .column-dark {
             background-color: #0C355A;
             color: #ffffff;
@@ -114,10 +117,10 @@
             font-size: 10pt;
         }
 
-        /* מסגרות גרפיות מעוצבות לתמונות */
+        /* מסגרות גרפיות מוגדלות לתמונות */
         .image-container-frame {
             width: 100%;
-            height: 180px;
+            height: 240px; /* הגדלת התמונה בדף הפתיחה ב-1.5 ס"מ */
             border: 2px solid #D4A373;
             box-shadow: 0 4px 10px rgba(0,0,0,0.15);
             margin: 15px 0;
@@ -131,6 +134,7 @@
         .inner-frame-bg {
             background-color: #f8fafc;
             border: 2px solid #0C355A;
+            height: 220px; /* הגדלת תמונת השלט בעמוד השני */
         }
 
         .folder-image-render {
@@ -139,9 +143,9 @@
             object-fit: cover;
         }
 
-        /* עיצוב ייעודי ואיכותי לרכיב ה-QR החדש בדף 2 */
+        /* עיצוב רכיב ה-QR */
         .qr-section-wrapper {
-            margin-top: auto;
+            margin-top: 15px;
             padding: 12px;
             border: 1px solid #e2e8f0;
             background-color: #f8fafc;
@@ -160,35 +164,63 @@
 
         .qr-text-caption {
             width: 65%;
-            font-size: 10.5pt;
+            font-size: 9.5pt;
             color: #0C355A;
             font-weight: 600;
             line-height: 1.4;
             padding-right: 10px;
         }
 
-        /* באנר לוגואים מעודכן - פריסה לשני הצדדים */
         .logo-box-wrapper {
             display: flex;
             align-items: center;
-            justify-content: space-between; /* דוחף את הלוגואים לקצוות */
-            border-bottom: 2px solid #D4A373;
+            justify-content: space-between;
             padding-bottom: 10px;
-            margin-bottom: 30px;
-            height: 60px;
+            margin-bottom: 35px;
+            height: 120px;
         }
 
+        /* הגדלת הלוגואים לפחות ל-3 על 3 ס"מ */
         .logo-item-slot {
-            height: 45px;
+            width: 115px; 
+            height: 115px;
             display: flex;
             align-items: center;
             justify-content: center;
+            background-color: transparent;
         }
 
         .logo-render-file {
             max-height: 100%;
-            width: auto;
+            max-width: 100%;
             object-fit: contain;
+        }
+
+        /* גרפיקת גל תחתון דינמית באמצעות CSS קונסטרוקטיבי */
+        .wave-graphic-left-to-right {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            background: linear-gradient(135deg, transparent 30%, rgba(12, 53, 90, 0.08) 100%);
+            clip-path: ellipse(80% 60% at 100% 100%);
+            z-index: 1;
+        }
+
+        .column-dark .wave-graphic-left-to-right {
+            background: linear-gradient(135deg, transparent 30%, rgba(212, 163, 115, 0.15) 100%);
+        }
+
+        .wave-graphic-right-to-left {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            background: linear-gradient(225deg, transparent 30%, rgba(12, 53, 90, 0.08) 0%);
+            clip-path: ellipse(80% 60% at 0% 100%);
+            z-index: 1;
         }
 
         .folder-table {
@@ -216,13 +248,13 @@
             font-size: 9.5pt;
             color: #7f8c8d;
             text-align: center;
-            border-top: 1px solid #e2e8f0;
             padding-top: 15px;
+            position: relative;
+            z-index: 3;
         }
 
         .column-dark .footer-note {
             color: #cbd5e1;
-            border-top: 1px solid rgba(255,255,255,0.1);
         }
 
         .print-header {
@@ -235,7 +267,6 @@
         @media print {
             body { padding: 0; background-color: #ffffff; }
             .folder-spread { box-shadow: none; page-break-after: always; max-width: 100%; }
-            .folder-column { border-left: 1px dashed #cbd5e1; }
             .print-header { display: none; }
         }
     </style>
@@ -251,11 +282,11 @@
                     <img src="seatrail-logo.png" alt="לוגו שביל הים" class="logo-render-file">
                 </div>
                 <div class="logo-item-slot">
-                    <img src="cyp-logo.png" alt="לוגו ארגון מעפילי קפריסין" class="logo-render-file">
+                    <img src="קפריסין.png" alt="לוגו ארגון מעפילי קפריסין" class="logo-render-file">
                 </div>
             </div>
             
-            <div style="margin-top: 20px; margin-bottom: 20px; text-align: center;">
+            <div style="margin-top: 10px; margin-bottom: 15px; text-align: center;">
                 <h1 style="font-size: 24pt; font-weight: 800; margin-bottom: 15px; color:#ffffff;">שימור מורשת ההעפלה בשביל הים</h1>
                 <h2 style="font-size: 13pt; color: #D4A373; border: none; text-align: center; padding: 0;">יוזמה ערכית-לאומית להנצחת סיפור ההעפלה לאורך חופי ישראל</h2>
             </div>
@@ -264,9 +295,8 @@
                 <img src="maapilim-dock.jpg" alt="הורדת מעפילים" class="folder-image-render">
             </div>
 
-            <div class="footer-note" style="font-weight: bold; color: #D4A373;">
-                מוגש להנהלת הרשות המקומית ולצוותים המקצועיים
-            </div>
+            <div class="wave-graphic-left-to-right"></div>
+            <div class="footer-note"></div>
         </div>
 
         <div class="folder-column">
@@ -288,8 +318,10 @@
                 <strong>פרופ' סנונית שהם</strong><br>יו"ר ארגון מעפילי קפריסין
             </p>
             <p style="font-size: 9.5pt; color: #7f8c8d; margin-bottom: 0;">
-                avi.schaul@gmail.com | אתר ההעפלה והרכש
+                avi.schaul@gmail.com
             </p>
+
+            <div class="wave-graphic-left-to-right"></div>
             <div class="footer-note">ארגון מעפילי קפריסין (ע"ר)</div>
         </div>
 
@@ -306,6 +338,8 @@
                 <li><span class="bold-lead">עוגן חינוכי מוביל:</span> יצירת "כיתת שטח" פתוחה עבור בתי הספר העירוניים ותנועות הנוער לסיורים ופעילות מבוססת מקום.</li>
                 <li><span class="bold-lead">תיירות רכה ואיכותית:</span> שילוב רצועת החוף בנתיב מורשת ארצי המושך מטיילים לאורך כל השנה.</li>
             </ul>
+
+            <div class="wave-graphic-left-to-right"></div>
             <div class="footer-note">שימור מורשת ההעפלה בשביל הים</div>
         </div>
 
@@ -323,16 +357,17 @@
             <p>
                 מתוך תחושת שליחות עמוקה זו, אנו מובילים מהלך ארצי המבקש לחבר בין הזיכרון הלאומי לבין המרחב הציבורי הפתוח, ולהנכיח את סיפור הגבורה הימי של המדינה במקום המדויק שבו הים, הדרך והמורשת נפגשים.
             </p>
-            <div class="highlight-box" style="margin-bottom: 20px;">
+            <div class="highlight-box" style="margin-bottom: 15px;">
                 <span class="bold-lead">💰 מימון עצמי מלא:</span><br>
                 המימון המלא להקמת והצבת שלטי המידע ומחקר המידע יגיע ישירות מקרב חברי העמותה ודורות ההמשך. **הרשות אינה נדרשת להקצאה תקציבית כלשהי.**
             </div>
 
             <div class="qr-section-wrapper">
-                <div class="qr-text-caption">להרחבה - סרקו למעבר לאתר ארגון מעפילי קפריסין</div>
+                <div class="qr-text-caption">סרקו לקבלת מידע נוסף, צפייה בהדמיות ועיון במחקר המלא של המיזם לאורך חופי ישראל</div>
                 <img src="QR_קפריסין-1024.jpeg" alt="QR קוד לאתר המידע" class="qr-code-img">
             </div>
             
+            <div class="wave-graphic-right-to-left"></div>
             <div class="footer-note">מיזם המורשת הלאומי</div>
         </div>
 
@@ -347,10 +382,11 @@
                 <li><span class="bold-lead">קישורי QR דינמיים:</span> גישה ישירה מהשטח אל מאגר המידע המורחב, סרטוני עדות ורשתות התוכן החינוכיות.</li>
             </ul>
             
-            <div class="image-container-frame inner-frame-bg" style="height: 120px;">
+            <div class="image-container-frame inner-frame-bg">
                 <img src="sign-preview.jpg" alt="הדמיה רשמית של שלט מורשת" class="folder-image-render">
             </div>
             
+            <div class="wave-graphic-right-to-left"></div>
             <div class="footer-note">הנגשה לדורות הבאים</div>
         </div>
 
@@ -387,10 +423,14 @@
                     </tr>
                 </tbody>
             </table>
+            
+            <div class="wave-graphic-right-to-left"></div>
             <div class="footer-note">שותפות מקצועית וסטטוטורית</div>
         </div>
 
     </div>
+
+</div>
 
 </body>
 </html>
