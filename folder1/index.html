@@ -42,7 +42,7 @@
             border-left: none;
         }
 
-        /* עמוד שער - כחול ימי עמוק */
+        /* עמוד שער וטורים כהים - כחול ימי עמוק וממלכתי */
         .column-dark {
             background-color: #0C355A;
             color: #ffffff;
@@ -117,7 +117,7 @@
             font-size: 10pt;
         }
 
-        /* מסגרות גרפיות לתמונות */
+        /* מסגרות גרפיות מוגדלות לתמונות שלכם */
         .image-container-frame {
             width: 100%;
             height: 250px; 
@@ -145,7 +145,7 @@
             object-fit: cover;
         }
 
-        /* רכיב ה-QR */
+        /* רכיב ה-QR המעוצב בדף 2 */
         .qr-section-wrapper {
             margin-top: 15px;
             padding: 12px;
@@ -184,7 +184,7 @@
             height: 120px;
         }
 
-        /* הגדלת הלוגואים */
+        /* הגדלת הלוגואים קבועה ומדויקת למידות של 3 על 3 ס"מ */
         .logo-item-slot {
             width: 115px; 
             height: 115px;
@@ -200,7 +200,7 @@
             object-fit: contain;
         }
 
-        /* גלים בכחול ימי עמוק */
+        /* עיצוב גרפיקת גל תחתון וקונסטרוקטיבי בצבע כחול ימי אחיד */
         .wave-container {
             position: absolute;
             bottom: 0;
@@ -272,26 +272,31 @@
     <div class="print-header">דף 1: פריסה חיצונית (מיועד להדפסה צד א')</div>
     <div class="folder-spread">
         
-        <div class="folder-column">
-            <h2>הערך והחזון לרשות המקומית</h2>
-            <p>
-                ההליכה לאורך החוף הופכת למסע של היכרות עם פרק מכונן בתולדות המדינה, מתוך מפגש ישיר וחווייתי בין נוף, מקום וסיפור.
-            </p>
-            <p>
-                הצטרפות הרשות למיזם מבטאת שותפות במהלך לאומי בעל נראות ציבורית וערכית גבוהה, המעניקה לרשות עוגנים משמעותיים:
-            </p>
-            <ul>
-                <li><span class="bold-lead">חיזוק הגאווה המקומית:</span> חיבור נכסי החוף והטיילות המקומיות לסיפור היסוד של הקמת המדינה.</li>
-                <li><span class="bold-lead">עוגן חינוכי מוביל:</span> יצירת "כיתת שטח" פתוחה עבור בתי הספר העירוניים ותנועות הנוער לסיורים ופעילות מבוססת מקום.</li>
-                <li><span class="bold-lead">תיירות רכה ואיכותית:</span> שילוב רצועת החוף בנתיב מורשת ארצי המושך מטיילים לאורך כל השנה.</li>
-            </ul>
+        <div class="folder-column column-dark">
+            <div class="logo-box-wrapper">
+                <div class="logo-item-slot">
+                    <img src="seatrail-logo.png" alt="לוגו שביל הים" class="logo-render-file">
+                </div>
+                <div class="logo-item-slot">
+                    <img src="קפריסין.png" alt="לוגו ארגון מעפילי קפריסין" class="logo-render-file">
+                </div>
+            </div>
+            
+            <div style="margin-top: 10px; margin-bottom: 15px; text-align: center;">
+                <h1 style="font-size: 24pt; font-weight: 800; margin-bottom: 15px; color:#ffffff;">שימור מורשת ההעפלה בשביל הים</h1>
+                <h2 style="font-size: 13pt; color: #D4A373; border: none; text-align: center; padding: 0;">יוזמה ערכית-לאומית להנצחת סיפור ההעפלה לאורך חופי ישראל</h2>
+            </div>
+
+            <div class="image-container-frame">
+                <img src="maapilim-dock.jpg" alt="הורדת מעפילים" class="folder-image-render">
+            </div>
 
             <div class="wave-container">
                 <svg class="wave-svg-render" viewBox="0 0 300 80" preserveAspectRatio="none">
-                    <path d="M0,80 C100,75 200,60 300,30 L300,80 Z" fill="rgba(12, 53, 90, 0.15)"/>
+                    <path d="M0,80 C100,75 200,60 300,30 L300,80 Z" fill="rgba(212, 163, 115, 0.15)"/>
                 </svg>
             </div>
-            <div class="footer-note">שימור מורשת ההעפלה בשביל הים</div>
+            <div class="footer-note"></div>
         </div>
 
         <div class="folder-column">
@@ -323,32 +328,27 @@
             </div>
             <div class="footer-note">ארגון מעפילי קפריסין (ע"ר)</div>
         </div>
-        
-        <div class="folder-column column-dark">
-            <div class="logo-box-wrapper">
-                <div class="logo-item-slot">
-                    <img src="seatrail-logo.png" alt="לוגו שביל הים" class="logo-render-file">
-                </div>
-                <div class="logo-item-slot">
-                    <img src="cyp-logo.png" alt="לוגו ארגון מעפילי קפריסין" class="logo-render-file">
-                </div>
-            </div>
-            
-            <div style="margin-top: 10px; margin-bottom: 15px; text-align: center;">
-                <h1 style="font-size: 24pt; font-weight: 800; margin-bottom: 15px; color:#ffffff;">שימור מורשת ההעפלה בשביל הים</h1>
-                <h2 style="font-size: 13pt; color: #D4A373; border: none; text-align: center; padding: 0;">יוזמה ערכית-לאומית להנצחת סיפור ההעפלה לאורך חופי ישראל</h2>
-            </div>
 
-            <div class="image-container-frame">
-                <img src="maapilim-dock.jpg" alt="הורדת מעפילים" class="folder-image-render">
-            </div>
+        <div class="folder-column">
+            <h2>הערך והחזון לרשות המקומית</h2>
+            <p>
+                ההליכה לאורך החוף הופכת למסע של היכרות WITH פרק מכונן בתולדות המדינה, מתוך מפגש ישיר וחווייתי בין נוף, מקום וסיפור.
+            </p>
+            <p>
+                הצטרפות הרשות למיזם מבטאת שותפות במהלך לאומי בעל נראות ציבורית וערכית גבוהה, המעניקה לרשות עוגנים משמעותיים:
+            </p>
+            <ul>
+                <li><span class="bold-lead">חיזוק הגאווה המקומית:</span> חיבור נכסי החוף והטיילות המקומיות לסיפור היסוד של הקמת המדינה.</li>
+                <li><span class="bold-lead">עוגן חינוכי מוביל:</span> יצירת "כיתת שטח" פתוחה עבור בתי הספר העירוניים ותנועות הנוער לסיורים ופעילות מבוססת מקום.</li>
+                <li><span class="bold-lead">תיירות רכה ואיכותית:</span> שילוב רצועת החוף בנתיב מורשת ארצי המושך מטיילים לאורך כל השנה.</li>
+            </ul>
 
             <div class="wave-container">
                 <svg class="wave-svg-render" viewBox="0 0 300 80" preserveAspectRatio="none">
-                    <path d="M0,80 C100,75 200,60 300,30 L300,80 Z" fill="rgba(212, 163, 115, 0.15)"/>
+                    <path d="M0,80 C100,75 200,60 300,30 L300,80 Z" fill="rgba(12, 53, 90, 0.08)"/>
                 </svg>
             </div>
-            <div class="footer-note"></div>
+            <div class="footer-note">שימור מורשת ההעפלה בשביל הים</div>
         </div>
 
     </div>
@@ -386,7 +386,7 @@
         <div class="folder-column">
             <h2>מה יוצג בפועל לציבור?</h2>
             <p>
-                התוכן המחקרי יונגש בשטח באמצעות פריסה ארצית של <strong>30 שלטי מידע ותוכן מעוצבים באופן אחיד וממלכתי</strong>, אשר יוצבו בנקודות גיאוגרפיות אסטרטגיות לאורך החוף:
+                התוכן המחקרי יונגש בשטח באמצעות פריסה ארצית של <strong>30 שלטי מידע ותוכן מעוצבים באופן אחיד וממלכתי</strong>. השלטים יוצבו ביעדי ההגעה המתוכננים של ספינות ההעפלה, או בנקודות שבהן הן הגיעו לחוף או יורטו בפועל.
             </p>
             <ul>
                 <li><span class="bold-lead">תכנים היסטוריים:</span> סיפורי מסע ומידע על ספינות ההעפלה הרלוונטיות לגזרה החופית.</li>
