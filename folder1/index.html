@@ -28,13 +28,13 @@
         .folder-column {
             flex: 1;
             width: 33.33%;
-            padding: 50px 30px 120px 30px; /* גובה מוארך למרווח נשימה */
+            padding: 50px 30px 120px 30px; 
             box-sizing: border-box;
             display: flex;
             flex-direction: column;
             border-left: 1px dashed #e2e8f0;
             position: relative;
-            min-height: 740px; /* הארכת הטורים הפיזיים */
+            min-height: 740px; 
             z-index: 2;
         }
 
@@ -42,7 +42,7 @@
             border-left: none;
         }
 
-        /* עמוד שער וטורים כהים - כחול ימי עמוק וממלכתי */
+        /* עמוד שער - כחול ימי עמוק */
         .column-dark {
             background-color: #0C355A;
             color: #ffffff;
@@ -117,10 +117,10 @@
             font-size: 10pt;
         }
 
-        /* מסגרות גרפיות מוגדלות לתמונות שלכם */
+        /* מסגרות גרפיות לתמונות */
         .image-container-frame {
             width: 100%;
-            height: 250px; /* הגדלת התמונה בדף הפתיחה */
+            height: 250px; 
             border: 2px solid #D4A373;
             box-shadow: 0 4px 10px rgba(0,0,0,0.15);
             margin: 15px 0;
@@ -136,7 +136,7 @@
         .inner-frame-bg {
             background-color: #f8fafc;
             border: 2px solid #0C355A;
-            height: 220px; /* הגדלת תמונת השלט בעמוד השני */
+            height: 220px; 
         }
 
         .folder-image-render {
@@ -145,7 +145,7 @@
             object-fit: cover;
         }
 
-        /* רכיב ה-QR המעוצב בדף 2 */
+        /* רכיב ה-QR */
         .qr-section-wrapper {
             margin-top: 15px;
             padding: 12px;
@@ -184,7 +184,7 @@
             height: 120px;
         }
 
-        /* הגדלת הלוגואים קבועה ומדויקת למידות של 3 על 3 ס"מ ברישוי גרפי */
+        /* הגדלת הלוגואים */
         .logo-item-slot {
             width: 115px; 
             height: 115px;
@@ -200,7 +200,7 @@
             object-fit: contain;
         }
 
-        /* עיצוב גרפיקת גל תחתון וקונסטרוקטיבי בצבע כחול ימי אחיד */
+        /* גלים בכחול ימי עמוק */
         .wave-container {
             position: absolute;
             bottom: 0;
@@ -272,31 +272,26 @@
     <div class="print-header">דף 1: פריסה חיצונית (מיועד להדפסה צד א')</div>
     <div class="folder-spread">
         
-        <div class="folder-column column-dark">
-            <div class="logo-box-wrapper">
-                <div class="logo-item-slot">
-                    <img src="seatrail-logo.png" alt="לוגו שביל הים" class="logo-render-file">
-                </div>
-                <div class="logo-item-slot">
-                    <img src="קפריסין.png" alt="לוגו ארגון מעפילי קפריסין" class="logo-render-file">
-                </div>
-            </div>
-            
-            <div style="margin-top: 10px; margin-bottom: 15px; text-align: center;">
-                <h1 style="font-size: 24pt; font-weight: 800; margin-bottom: 15px; color:#ffffff;">שימור מורשת ההעפלה בשביל הים</h1>
-                <h2 style="font-size: 13pt; color: #D4A373; border: none; text-align: center; padding: 0;">יוזמה ערכית-לאומית להנצחת סיפור ההעפלה לאורך חופי ישראל</h2>
-            </div>
-
-            <div class="image-container-frame">
-                <img src="maapilim-dock.jpg" alt="הורדת מעפילים" class="folder-image-render">
-            </div>
+        <div class="folder-column">
+            <h2>הערך והחזון לרשות המקומית</h2>
+            <p>
+                ההליכה לאורך החוף הופכת למסע של היכרות עם פרק מכונן בתולדות המדינה, מתוך מפגש ישיר וחווייתי בין נוף, מקום וסיפור.
+            </p>
+            <p>
+                הצטרפות הרשות למיזם מבטאת שותפות במהלך לאומי בעל נראות ציבורית וערכית גבוהה, המעניקה לרשות עוגנים משמעותיים:
+            </p>
+            <ul>
+                <li><span class="bold-lead">חיזוק הגאווה המקומית:</span> חיבור נכסי החוף והטיילות המקומיות לסיפור היסוד של הקמת המדינה.</li>
+                <li><span class="bold-lead">עוגן חינוכי מוביל:</span> יצירת "כיתת שטח" פתוחה עבור בתי הספר העירוניים ותנועות הנוער לסיורים ופעילות מבוססת מקום.</li>
+                <li><span class="bold-lead">תיירות רכה ואיכותית:</span> שילוב רצועת החוף בנתיב מורשת ארצי המושך מטיילים לאורך כל השנה.</li>
+            </ul>
 
             <div class="wave-container">
                 <svg class="wave-svg-render" viewBox="0 0 300 80" preserveAspectRatio="none">
-                    <path d="M0,80 C100,75 200,60 300,30 L300,80 Z" fill="rgba(12, 53, 90, 0.25)"/>
+                    <path d="M0,80 C100,75 200,60 300,30 L300,80 Z" fill="rgba(12, 53, 90, 0.15)"/>
                 </svg>
             </div>
-            <div class="footer-note"></div>
+            <div class="footer-note">שימור מורשת ההעפלה בשביל הים</div>
         </div>
 
         <div class="folder-column">
@@ -323,32 +318,37 @@
 
             <div class="wave-container">
                 <svg class="wave-svg-render" viewBox="0 0 300 80" preserveAspectRatio="none">
-                    <path d="M0,80 C100,75 200,60 300,30 L300,80 Z" fill="rgba(12, 53, 90, 0.15)"/>
+                    <path d="M0,80 C100,75 200,60 300,30 L300,80 Z" fill="rgba(12, 53, 90, 0.08)"/>
                 </svg>
             </div>
             <div class="footer-note">ארגון מעפילי קפריסין (ע"ר)</div>
         </div>
+        
+        <div class="folder-column column-dark">
+            <div class="logo-box-wrapper">
+                <div class="logo-item-slot">
+                    <img src="seatrail-logo.png" alt="לוגו שביל הים" class="logo-render-file">
+                </div>
+                <div class="logo-item-slot">
+                    <img src="cyp-logo.png" alt="לוגו ארגון מעפילי קפריסין" class="logo-render-file">
+                </div>
+            </div>
+            
+            <div style="margin-top: 10px; margin-bottom: 15px; text-align: center;">
+                <h1 style="font-size: 24pt; font-weight: 800; margin-bottom: 15px; color:#ffffff;">שימור מורשת ההעפלה בשביל הים</h1>
+                <h2 style="font-size: 13pt; color: #D4A373; border: none; text-align: center; padding: 0;">יוזמה ערכית-לאומית להנצחת סיפור ההעפלה לאורך חופי ישראל</h2>
+            </div>
 
-        <div class="folder-column">
-            <h2>הערך והחזון לרשות המקומית</h2>
-            <p>
-                ההליכה לאורך החוף הופכת למסע של היכרות עם פרק מכונן בתולדות המדינה, מתוך מפגש ישיר וחווייתי בין נוף, מקום וסיפור.
-            </p>
-            <p>
-                הצטרפות הרשות למיזם מבטאת שותפות במהלך לאומי בעל נראות ציבורית וערכית גבוהה, המעניקה לרשות עוגנים משמעותיים:
-            </p>
-            <ul>
-                <li><span class="bold-lead">חיזוק הגאווה המקומית:</span> חיבור נכסי החוף והטיילות המקומיות לסיפור היסוד של הקמת המדינה.</li>
-                <li><span class="bold-lead">עוגן חינוכי מוביל:</span> יצירת "כיתת שטח" פתוחה עבור בתי הספר העירוניים ותנועות הנוער לסיורים ופעילות מבוססת מקום.</li>
-                <li><span class="bold-lead">תיירות רכה ואיכותית:</span> שילוב רצועת החוף בנתיב מורשת ארצי המושך מטיילים לאורך כל השנה.</li>
-            </ul>
+            <div class="image-container-frame">
+                <img src="maapilim-dock.jpg" alt="הורדת מעפילים" class="folder-image-render">
+            </div>
 
             <div class="wave-container">
                 <svg class="wave-svg-render" viewBox="0 0 300 80" preserveAspectRatio="none">
-                    <path d="M0,80 C100,75 200,60 300,30 L300,80 Z" fill="rgba(12, 53, 90, 0.15)"/>
+                    <path d="M0,80 C100,75 200,60 300,30 L300,80 Z" fill="rgba(212, 163, 115, 0.15)"/>
                 </svg>
             </div>
-            <div class="footer-note">שימור מורשת ההעפלה בשביל הים</div>
+            <div class="footer-note"></div>
         </div>
 
     </div>
@@ -377,7 +377,7 @@
             
             <div class="wave-container">
                 <svg class="wave-svg-render" viewBox="0 0 300 80" preserveAspectRatio="none">
-                    <path d="M300,80 C200,75 100,60 0,30 L0,80 Z" fill="rgba(12, 53, 90, 0.15)"/>
+                    <path d="M300,80 C200,75 100,60 0,30 L0,80 Z" fill="rgba(12, 53, 90, 0.08)"/>
                 </svg>
             </div>
             <div class="footer-note">מיזם המורשת הלאומי</div>
@@ -400,7 +400,7 @@
             
             <div class="wave-container">
                 <svg class="wave-svg-render" viewBox="0 0 300 80" preserveAspectRatio="none">
-                    <path d="M300,80 C200,75 100,60 0,30 L0,80 Z" fill="rgba(12, 53, 90, 0.15)"/>
+                    <path d="M300,80 C200,75 100,60 0,30 L0,80 Z" fill="rgba(12, 53, 90, 0.08)"/>
                 </svg>
             </div>
             <div class="footer-note">הנגשה לדורות הבאים</div>
@@ -442,7 +442,7 @@
             
             <div class="wave-container">
                 <svg class="wave-svg-render" viewBox="0 0 300 80" preserveAspectRatio="none">
-                    <path d="M300,80 C200,75 100,60 0,30 L0,80 Z" fill="rgba(12, 53, 90, 0.15)"/>
+                    <path d="M300,80 C200,75 100,60 0,30 L0,80 Z" fill="rgba(12, 53, 90, 0.08)"/>
                 </svg>
             </div>
             <div class="footer-note">שותפות מקצועית וסטטוטורית</div>
