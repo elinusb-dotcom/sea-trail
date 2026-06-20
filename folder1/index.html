@@ -7,7 +7,7 @@
         body {
             font-family: 'Segoe UI', 'Arial', sans-serif;
             color: #2c3e50;
-            line-height: 1.5;
+            line-height: 1.6;
             margin: 0;
             padding: 20px;
             background-color: #f4f7f6;
@@ -28,13 +28,13 @@
         .folder-column {
             flex: 1;
             width: 33.33%;
-            padding: 50px 30px 100px 30px; /* הארכת הטורים ב-2 ס"מ למרווח נשימה */
+            padding: 50px 30px 120px 30px; /* גובה מוארך ב-2 ס"מ נוספים למרווח נשימה */
             box-sizing: border-box;
             display: flex;
             flex-direction: column;
             border-left: 1px dashed #e2e8f0;
             position: relative;
-            min-height: 720px; /* גובה מוארך ומכובד לפולדר */
+            min-height: 740px; /* הארכת הטורים הפיזיים */
             z-index: 2;
         }
 
@@ -46,7 +46,7 @@
         .column-dark {
             background-color: #0C355A;
             color: #ffffff;
-            border-left: 1px solid rgba(255,255,255,0.1);
+            border-left: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .column-dark h1, .column-dark h2, .column-dark h3 {
@@ -117,10 +117,10 @@
             font-size: 10pt;
         }
 
-        /* מסגרות גרפיות מוגדלות לתמונות */
+        /* מסגרות גרפיות מוגדלות לתמונות שלכם */
         .image-container-frame {
             width: 100%;
-            height: 240px; /* הגדלת התמונה בדף הפתיחה ב-1.5 ס"מ */
+            height: 250px; /* הגדלת התמונה בדף הפתיחה ב-1.5 ס"מ */
             border: 2px solid #D4A373;
             box-shadow: 0 4px 10px rgba(0,0,0,0.15);
             margin: 15px 0;
@@ -129,6 +129,8 @@
             align-items: center;
             justify-content: center;
             overflow: hidden;
+            position: relative;
+            z-index: 5;
         }
 
         .inner-frame-bg {
@@ -143,7 +145,7 @@
             object-fit: cover;
         }
 
-        /* עיצוב רכיב ה-QR */
+        /* רכיב ה-QR המעוצב בדף 2 */
         .qr-section-wrapper {
             margin-top: 15px;
             padding: 12px;
@@ -153,6 +155,8 @@
             align-items: center;
             justify-content: space-between;
             border-radius: 4px;
+            position: relative;
+            z-index: 5;
         }
 
         .qr-code-img {
@@ -180,7 +184,7 @@
             height: 120px;
         }
 
-        /* הגדלת הלוגואים למידות של 3 על 3 ס"מ לפחות */
+        /* הגדלת הלוגואים קבועה ומדויקת למידות של 3 על 3 ס"מ */
         .logo-item-slot {
             width: 115px; 
             height: 115px;
@@ -196,31 +200,20 @@
             object-fit: contain;
         }
 
-        /* עיצוב גרפיקת גל תחתון בצבע כחול ימי אסטרטגי */
-        .wave-graphic-left-to-right {
+        /* עיצוב גרפיקת גל תחתון וקונסטרוקטיבי בצבע כחול ימי אחיד */
+        .wave-container {
             position: absolute;
             bottom: 0;
             left: 0;
             width: 100%;
-            height: 70px;
-            background: linear-gradient(135deg, transparent 20%, rgba(12, 53, 90, 0.15) 100%);
-            clip-path: ellipse(85% 65% at 100% 100%);
+            height: 80px;
             z-index: 1;
+            pointer-events: none;
         }
 
-        .column-dark .wave-graphic-left-to-right {
-            background: linear-gradient(135deg, transparent 20%, rgba(212, 163, 115, 0.2) 100%);
-        }
-
-        .wave-graphic-right-to-left {
-            position: absolute;
-            bottom: 0;
-            left: 0;
+        .wave-svg-render {
             width: 100%;
-            height: 70px;
-            background: linear-gradient(225deg, transparent 20%, rgba(12, 53, 90, 0.15) 100%);
-            clip-path: ellipse(85% 65% at 0% 100%);
-            z-index: 1;
+            height: 100%;
         }
 
         .folder-table {
@@ -228,6 +221,8 @@
             border-collapse: collapse;
             margin: 15px 0;
             font-size: 9.5pt;
+            position: relative;
+            z-index: 5;
         }
 
         .folder-table th {
@@ -241,6 +236,7 @@
             padding: 8px;
             border-bottom: 1px solid #e2e8f0;
             color: #4a5568;
+            background-color: rgba(255, 255, 255, 0.9);
         }
 
         .footer-note {
@@ -295,7 +291,11 @@
                 <img src="maapilim-dock.jpg" alt="הורדת מעפילים" class="folder-image-render">
             </div>
 
-            <div class="wave-graphic-left-to-right"></div>
+            <div class="wave-container">
+                <svg class="wave-svg-render" viewBox="0 0 300 80" preserveAspectRatio="none">
+                    <path d="M0,80 C100,75 200,60 300,30 L300,80 Z" fill="rgba(212, 163, 115, 0.15)"/>
+                </svg>
+            </div>
             <div class="footer-note"></div>
         </div>
 
@@ -321,14 +321,18 @@
                 avi.schaul@gmail.com
             </p>
 
-            <div class="wave-graphic-left-to-right"></div>
+            <div class="wave-container">
+                <svg class="wave-svg-render" viewBox="0 0 300 80" preserveAspectRatio="none">
+                    <path d="M0,80 C100,75 200,60 300,30 L300,80 Z" fill="rgba(12, 53, 90, 0.08)"/>
+                </svg>
+            </div>
             <div class="footer-note">ארגון מעפילי קפריסין (ע"ר)</div>
         </div>
 
         <div class="folder-column">
             <h2>הערך והחזון לרשות המקומית</h2>
             <p>
-                ההליכה לאורך החוף הופכת למסע של היכרות עם אחד הפרקים המכוננים בתולדות המדינה, מתוך מפגש ישיר וחווייתי בין נוף, מקום וסיפור.
+                ההליכה לאורך החוף הופכת למסע של היכרות WITH פרק מכונן בתולדות המדינה, מתוך מפגש ישיר וחווייתי בין נוף, מקום וסיפור.
             </p>
             <p>
                 הצטרפות הרשות למיזם מבטאת שותפות במהלך לאומי בעל נראות ציבורית וערכית גבוהה, המעניקה לרשות עוגנים משמעותיים:
@@ -339,7 +343,11 @@
                 <li><span class="bold-lead">תיירות רכה ואיכותית:</span> שילוב רצועת החוף בנתיב מורשת ארצי המושך מטיילים לאורך כל השנה.</li>
             </ul>
 
-            <div class="wave-graphic-left-to-right"></div>
+            <div class="wave-container">
+                <svg class="wave-svg-render" viewBox="0 0 300 80" preserveAspectRatio="none">
+                    <path d="M0,80 C100,75 200,60 300,30 L300,80 Z" fill="rgba(12, 53, 90, 0.08)"/>
+                </svg>
+            </div>
             <div class="footer-note">שימור מורשת ההעפלה בשביל הים</div>
         </div>
 
@@ -363,4 +371,86 @@
             </div>
 
             <div class="qr-section-wrapper">
-                <div class="qr-text-caption">סרקו לקבלת מידע נוסף, צפייה בהדמיות ועיון במחקר המלא של
+                <div class="qr-text-caption">סרקו לקבלת מידע נוסף, צפייה בהדמיות ועיון במחקר המלא של המיזם לאורך חופי ישראל</div>
+                <img src="QR_קפריסין-1024.jpeg" alt="QR קוד לאתר המידע" class="qr-code-img">
+            </div>
+            
+            <div class="wave-container">
+                <svg class="wave-svg-render" viewBox="0 0 300 80" preserveAspectRatio="none">
+                    <path d="M300,80 C200,75 100,60 0,30 L0,80 Z" fill="rgba(12, 53, 90, 0.08)"/>
+                </svg>
+            </div>
+            <div class="footer-note">מיזם המורשת הלאומי</div>
+        </div>
+
+        <div class="folder-column">
+            <h2>מה יוצג בפועל לציבור?</h2>
+            <p>
+                התוכן המחקרי יונגש בשטח באמצעות פריסה ארצית של <strong>30 שלטי מידע ותוכן מעוצבים באופן אחיד וממלכתי</strong>, אשר יוצבו בנקודות גיאוגרפיות אסטרטגיות לאורך החוף:
+            </p>
+            <ul>
+                <li><span class="bold-lead">תכנים היסטוריים:</span> סיפורי מסע ומידע על ספינות ההעפלה הרלוונטיות לגזרה החופית.</li>
+                <li><span class="bold-lead">מסמכים חזותיים:</span> תצלומים אותנטיים, מסמכי ארכיון ומפות מסע מפורטות.</li>
+                <li><span class="bold-lead">קישורי QR דינמיים:</span> גישה ישירה מהשטח אל מאגר המידע המורחב, סרטוני עדות ורשתות התוכן החינוכיות.</li>
+            </ul>
+            
+            <div class="image-container-frame inner-frame-bg">
+                <img src="sign-preview.jpg" alt="הדמיה רשמית של שלט מורשת" class="folder-image-render">
+            </div>
+            
+            <div class="wave-container">
+                <svg class="wave-svg-render" viewBox="0 0 300 80" preserveAspectRatio="none">
+                    <path d="M300,80 C200,75 100,60 0,30 L0,80 Z" fill="rgba(12, 53, 90, 0.08)"/>
+                </svg>
+            </div>
+            <div class="footer-note">הנגשה לדורות הבאים</div>
+        </div>
+
+        <div class="folder-column">
+            <h2>מדוע החיבור נכון?</h2>
+            <p>
+                סיפור ההעפלה הוא סיפור ימי במהותו, ולכן החיבור בינו לבין שביל הים הוא טבעי ומדויק. במקום שהמורשת תישאר רק בארכיונים, היא מקבלת נוכחות במרחב הפתוח ונפגשת עם הציבור הרחב והצועדים.
+            </p>
+            
+            <h3 style="margin-top: 5px; margin-bottom: 5px;">מפת דרכים לעבודה משותפת:</h3>
+            <table class="folder-table">
+                <thead>
+                    <tr style="background-color: #0C355A; color: #ffffff;">
+                        <th>שלב</th>
+                        <th>פעילות ותוצר נדרש</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>1. אישור</strong></td>
+                        <td>הצגת המיזם לרשות וקבלת מכתב כוונות עקרוני.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>2. תיאום</strong></td>
+                        <td>סיור שטח משותף ואישור מפת מיקומים (נ"צ).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>3. תוכן</strong></td>
+                        <td>גיבוש ואישור שכבת התוכן ההיסטורית לגזרה.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>4. הצבה</strong></td>
+                        <td>הקמת השלטים (במימון עצמי) ואירוע השקה.</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="wave-container">
+                <svg class="wave-svg-render" viewBox="0 0 300 80" preserveAspectRatio="none">
+                    <path d="M300,80 C200,75 100,60 0,30 L0,80 Z" fill="rgba(12, 53, 90, 0.08)"/>
+                </svg>
+            </div>
+            <div class="footer-note">שותפות מקצועית וסטטוטורית</div>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
