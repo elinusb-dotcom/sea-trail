@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>מורשת מעפילי חיים ארלוזורוב / אולואה | שביל הים</title>
+    <title>מורשת מעפילי אולואה / חיים ארלוזורוב | שביל הים</title>
     <style>
         /* הגדרות עיצוב כלליות */
         body {
@@ -16,9 +16,9 @@
             text-align: center;
         }
 
-        /* באנר עליון משולב - תמונות בצדדים, לוגו מוקטן וכותרות במרכז */
+        /* באנר עליון משולב - מותאם באופן מלא למחשב ולאנדרואיד */
         .hero-banner {
-            background: linear-gradient(rgba(0, 34, 68, 0.9), rgba(0, 74, 153, 0.9)), url('https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/כותרת.jpg');
+            background: linear-gradient(rgba(0, 34, 68, 0.9), rgba(0, 74, 153, 0.9)), url('https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/%D7%9B%D7%AA%D7%95%D7%A4%D7%AA.jpg');
             background-size: cover;
             background-position: center;
             color: white;
@@ -43,7 +43,7 @@
             flex-shrink: 0;
         }
 
-        /* סגנון ספציפי עבור לוגו קהילת אולואה הלבן מימין - מנותב לתיקיית PINI TEST */
+        /* לוגו אולואה מימין - קידוד רווחים אוניברסלי למניעת ריבוע לבן */
         .banner-img-logo {
             width: 140px;
             height: 130px;
@@ -65,17 +65,19 @@
             text-align: center;
         }
 
+        /* שבירת שורות מובנית לכותרת הראשית לפי דרישה */
         .banner-text h1 {
-            font-size: 2.2em;
-            margin: 0 0 10px 0;
+            font-size: 2.1em;
+            margin: 0;
             font-weight: bold;
+            line-height: 1.3;
         }
 
-        .banner-text h2 {
-            font-size: 1.4em;
+        .banner-text .sub-line {
+            display: block;
+            font-size: 1.05em;
             color: #fffb00;
-            margin: 0;
-            line-height: 1.4;
+            margin-top: 5px;
         }
 
         /* לוגו קפריסין מוקטן (70px) */
@@ -112,7 +114,7 @@
             margin-bottom: 30px;
         }
 
-        /* מבנה טקסט קול הקורא ברוחב מלא */
+        /* פריסת קול קורא */
         .call-to-action-section {
             text-align: right;
             margin-bottom: 30px;
@@ -145,15 +147,15 @@
             background-color: #002244;
         }
 
-        .highlight-box {
-            border-right: 4px solid #004a99;
-            padding-right: 15px;
-            margin: 25px 0;
-            font-style: italic;
-            color: #003366;
+        /* פונט ומראה אחיד לחלוטין לפסקה הבאה ללא שינוי סגנון */
+        .content-text {
+            text-align: right;
+            font-size: 1.15em;
+            color: #333;
+            margin-top: 25px;
         }
 
-        /* אזור וידאו וסרטון שביל הים */
+        /* אזור וידאו וסרטון שביל הים - מותאם במיוחד לאנדרואיד */
         .video-section {
             margin: 40px 0;
             background-color: #f8f9fa;
@@ -251,7 +253,7 @@
             background-color: #002244;
         }
 
-        /* חתימת סגירה וצוות מורחב */
+        /* חתימת סגירה וצוות מורחב - גמיש למחשב ולאנדרואיד */
         .signature-box-container {
             margin-top: 40px;
             border-top: 1px solid #eee;
@@ -266,7 +268,7 @@
 
         .signature-col {
             flex: 1;
-            min-width: 200px;
+            min-width: 240px;
         }
 
         /* חתימת הגרסה הסמויה למעקב */
@@ -277,44 +279,52 @@
             text-align: center;
         }
 
-        /* התאמה מלאה לטלפונים ניידים */
+        /* התאמה מלאה לטלפונים ניידים ומכשירי אנדרואיד */
         @media (max-width: 768px) {
             .hero-banner {
                 flex-direction: column;
-                padding: 30px 20px;
+                padding: 25px 15px;
             }
             .banner-img, .banner-img-logo {
                 width: 100%;
-                max-width: 240px;
-                height: 140px;
+                max-width: 220px;
+                height: 130px;
             }
-            .banner-text h1 { font-size: 1.8em; }
-            .banner-text h2 { font-size: 1.2em; }
+            .banner-text h1 { font-size: 1.6em; }
+            .banner-text .sub-line { font-size: 1.1em; }
             .donation-grid { grid-template-columns: 1fr 1fr; }
             .donation-card:last-child { grid-column: span 2; }
-            .signature-box-container { flex-direction: column; gap: 15px; }
+            
+            /* פתרון בעיית עימוד חתימות באנדרואיד - סידור אנכי ממורכז */
+            .signature-box-container { 
+                flex-direction: column; 
+                text-align: center !important;
+                gap: 20px; 
+            }
+            .signature-col {
+                text-align: center !important;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- באנר עליון מותאם - משיכת לוגו אולואה מתוך פולדר PINI TEST החדש -->
+    <!-- באנר עליון מותאם - שילוב לוגו קהילת אולואה המקודד ללא שגיאות טעינה -->
     <div class="hero-banner">
         
-        <!-- צד ימין: לוגו קהילת אולואה מתוך תיקיית PINI TEST -->
-        <img class="banner-img-logo" src="https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/PINI TEST/WhatsApp Image 2022-03-16 at 12.55.02.jpeg" alt="לוגו מעפילי אולואה">
+        <!-- צד ימין: לוגו קהילת אולואה הרשמי מתוך תיקיית PINI TEST - מקודד למניעת ריבוע לבן בנייד -->
+        <img class="banner-img-logo" src="https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/PINI%20TEST/WhatsApp%20Image%202022-03-16%20at%2012.55.02.jpeg" alt="לוגו מעפילי אולואה">
         
-        <!-- מרכז הבאנר: שילוב לוגו קפריסין והכותרות הרשמיות -->
+        <!-- מרכז הבאנר: שבירת שורות ושינוי סדר השם לפי דרישה -->
         <div class="banner-center-content">
             <img class="org-logo-small" src="https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/קפריסין.png" alt="לוגו ארגון מעפילי קפריסין">
             
             <div class="banner-text">
-                <h1>מורשת ההעפלה בשביל הים</h1>
-                <h2>מנציחים את גבורת מעפילי 'חיים ארלוזורוב / אולואה'<br>בנתיב הים הלאומי</h2>
+                <h1>מנציחים את גבורת מעפילי<br>’אולואה / חיים ארלוזורוב’<br><span class="sub-line">בנתיב הים הלאומי</span></h1>
             </div>
         </div>
         
-        <!-- צד שמאל: תמונת השלט הכללית מהמאגר לסימטריה עיצובית -->
+        <!-- צד שמאל: תמונת השלט הכללית מהמאגר -->
         <img class="banner-img" src="https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/שלט במפרץ.png" alt="שלט הנצחה בשביל הים">
         
     </div>
@@ -323,24 +333,26 @@
         
         <!-- מד יעד הגיוס המשותף והייחודי של קהילת אולואה -->
         <div class="target-box">
-            מטרת הגיוס המשותפת של משפחת 'חיים ארלוזורוב / אולואה': 40,000 ₪
+            מטרת הגיוס המשותפת של משפחת ’אולואה / חיים ארלוזורוב’: 40,000 ₪
         </div>
 
-        <!-- מקטע קול הקורא הרשמי של סנונית בפריסה נקייה ברוחב מלא -->
+        <!-- מקטע קול הקורא הרשמי של סנונית -->
         <div class="call-to-action-section">
             
             <div class="call-text">
                 <p style="font-size: 1.3em; color: #004a99; font-weight: bold; margin-bottom: 5px;">"הם בנו את הזיכרון, אנחנו נשמור עליו בחיים"</p>
                 <p style="font-size: 1.1em; font-weight: bold; color: #555; margin-top: 0;">המשמרת עוברת אלינו: מנציחים את מורשת ההעפלה בשביל הים</p>
                 
-                <p><strong>חברות וחברי משפחת 'חיים ארלוזורוב / אולואה' היקרים.ות,</strong></p>
-                <p>אנו שמחים לשתף אתכם במידע אודות פרויקט הנצחה מרגש שארגון מעפילי קפריסין יוצא עמו לדרך. הרעיון הוא הנצחה של כל ספינות המעפילים לאורך חופי הארץ, שישולבו בשביל הים.</p>
+                <!-- שבירת שורה מובנית לפני שם האונייה -->
+                <p><strong>חברות וחברי משפחת<br>’אולואה / חיים ארלוזורוב’ היקרים.ות,</strong></p>
+                <p>Aנו שמחים לשתף אתכם במידע אודות פרויקט הנצחה מרגש שארגון מעפילי קפריסין יוצא עמו לדרך. הרעיון הוא הנצחה של כל ספינות המעפילים לאורך חופי הארץ, שישולבו בשביל הים.</p>
                 
                 <p>הארגון יוצא למסע כשהשאיפה היא להקים כ-30 עמודי הנצחה, שבהם יונצחו הספינות השונות. זה כמובן מצריך תיאום מול עשרות רשויות מקומיות, תיאור של כל ספינה, בר-קודים שיאפשרו מידע רחב יותר על סיפורה של כל ספינה וספינה, ועיצוב גראפי של שלטי הזיכרון. מיקום השלטים ייקבע על פי מקום הגעת הספינות או יעדי הספינות של אלה שנתפסו בלב ים.</p>
                 
-                <p>מדובר בפרויקט משמעותי הדורש עבודה רבה וגם יהיה צורך לגייס כספים למימונו. מספר צוותים כבר עובדים בתכנון וחשיבה על כל פרטיו.</p>
+                <!-- נוסח מעודכן ומהודק לפי סעיף 4 -->
+                <p>מדובר בפרויקט משמעותי הדורש עבודה רבה וגיוס כספים למימונו. מספר צוותים כבר עובדים בתכנון וחשיבה על כל פרטיו.</p>
                 
-                <!-- לחצן הדרייב המעודכן -->
+                <!-- לחצן המצגת המעודכן -->
                 <a href="https://drive.google.com/file/d/1h9dwElePibsbWZ2Q_5MHCvtL0svXLnKE/view?usp=sharing" target="_blank" class="presentation-btn">📊 מספר מילים על המיזם</a>
                 
                 <p>נמשיך ונעדכן אתכם בכל שלב של המסע אל הזיכרון!</p>
@@ -348,15 +360,16 @@
 
         </div>
 
+        <!-- פסקת המרה מהודקת, קצרה ובאותו סוג וגודל פונט בדיוק לפי סעיף 5 -->
         <div class="content-text">
-            <p>אף על פי שלספינה המפוארת שלנו כבר יש אנדרטה נפלאה משלה שהקמנו יחד, שותפותנו בהצבת שלטי המידע הלאומיים לאורך נתיבי המטיילים היא זו שתשלים את התמונה הגדולה של מורשת מעפילי קפריסין כולה עבור הדורות הבאים. אנו קוראים לכם לקחת חלק, להוביל כקהילה חזקה, ולתרום להצלחת המיזם הכללי. כל תרומה תוקדש ישירות למימון הכנת והתקנת שלט ההנצחה, והנגשת המידע למטיילים בשטח.</p>
+            <p>לספינה שלנו כבר יש אנדרטה נפלאה שהקמנו יחד. שותפותנו בהצבת שלטי המידע הלאומיים לאורך נתיבי המטיילים תשלים את התמונה של מורשת מעפילי קפריסין עבור הדורות הבאים. אנו קוראים לכם לקחת חלק, להוביל כקהילה חזקה, ולתרום להצלחת המיזם. כל תרומה תוקדש למימון שלט ההנצחה, והנגשת המידע למטיילים בשטח.</p>
         </div>
 
-        <!-- מקטע מובנה: סרטון ההיכרות הרשמי של אליק אדלר על שביל הים -->
+        <!-- מקטע וידאו - מותאם לטעינה חלקה גם בדפדפני אנדרואיד -->
         <div class="video-section">
             <h3>הכירו את שביל הים</h3>
             <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/ix4kBFgPEyI" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/ix4kBFgPEyI?rel=0&playsinline=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
 
@@ -406,16 +419,16 @@
             <p style="font-size: 1.1em; color: #004a99; font-weight: bold;">זהו הרגע שלנו להבטיח שמורשת מעפילי קפריסין תהיה חלק בלתי נפרד מנוף מולדתנו. הים זוכר, ועכשיו גם המטיילים יזכרו.</p>
         </div>
 
-        <!-- חתימה רשמית מהנהלת הארגון וצוות המורשת המקומי -->
+        <!-- חתימה רשמית - עם מנגנון מובנה ליישור אנכי מושלם באנדרואיד -->
         <div class="signature-box-container">
-            <div class="signature-col">
+            <div class="signature-col" style="text-align: right;">
                 בתודה, בהערכה ובשותפות לדרך,<br>
                 <strong>פרופ' סנונית שוהם</strong>,<br>
                 יו"ר ארגון מעפילי קפריסין (ע"ר)
             </div>
             <div class="signature-col" style="text-align: left;">
                 <br>
-                <strong>צוות מורשת חיים ארלוזורוב / אולואה</strong>
+                <strong>צוות מורשת אולואה / חיים ארלוזורוב</strong>
             </div>
         </div>
 
@@ -423,7 +436,7 @@
 
     <!-- חתימת הגרסה הסמויה למעקב -->
     <div class="version-tag">
-        גרסה 2026.06.28 - ניתוב לוגו אולואה לתיקיית PINI TEST
+        גרסה 2026.06.28 - תיקון אנדרואיד מלא והידוק מלל
     </div>
 
 </body>
