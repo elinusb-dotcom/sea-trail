@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>מורשת מעפילי חיים ארלוזורוב (אולואה) | שביל הים</title>
+    <title>מורשת מעפילי חיים ארלוזורוב / אולואה | שביל הים</title>
     <style>
         /* הגדרות עיצוב כלליות */
         body {
@@ -40,6 +40,18 @@
             border-radius: 6px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.3);
             border: 2px solid rgba(255, 255, 255, 0.2);
+            flex-shrink: 0;
+        }
+
+        /* סגנון ספציפי עבור לוגו קהילת אולואה הלבן מימין */
+        .banner-img-logo {
+            width: 140px;
+            height: 130px;
+            object-fit: contain;
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 5px;
+            border-radius: 6px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
             flex-shrink: 0;
         }
 
@@ -100,17 +112,13 @@
             margin-bottom: 30px;
         }
 
-        /* מבנה משולב לטקסט קול הקורא ומפת השביל בצד */
+        /* מבנה טקסט קול הקורא ברוחב מלא */
         .call-to-action-section {
-            display: flex;
-            gap: 25px;
-            align-items: flex-start;
             text-align: right;
             margin-bottom: 30px;
         }
 
         .call-text {
-            flex: 1;
             font-size: 1.15em;
             color: #333;
         }
@@ -119,32 +127,18 @@
             margin-bottom: 15px;
         }
 
-        .map-container {
-            width: 160px;
-            flex-shrink: 0;
-            background: #f8f9fa;
-            padding: 10px;
-            border-radius: 6px;
-            border: 1px solid #ddd;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        }
-
-        .map-img {
-            width: 100%;
-            height: auto;
-            border-radius: 4px;
-        }
-
         .presentation-btn {
             display: inline-block;
             background-color: #004a99;
             color: white;
             text-decoration: none;
-            padding: 10px 20px;
+            padding: 10px 24px;
             border-radius: 4px;
             font-weight: bold;
             margin: 15px 0;
+            font-size: 1.05em;
             transition: background-color 0.2s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
 
         .presentation-btn:hover {
@@ -193,42 +187,6 @@
             width: 100%;
             height: 100%;
             border: 0;
-        }
-
-        /* טבלת הנתונים ההיסטוריים */
-        .project-data-section {
-            margin: 40px 0;
-        }
-
-        .project-data-section h3 {
-            font-size: 1.4em;
-            color: #004a99;
-            margin-bottom: 20px;
-        }
-
-        .data-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 15px;
-            font-size: 1.05em;
-            text-align: right;
-        }
-
-        .data-table th {
-            background-color: #004a99;
-            color: white;
-            padding: 12px 15px;
-            font-weight: bold;
-            border: 1px solid #004a99;
-        }
-
-        .data-table td {
-            padding: 12px 15px;
-            border: 1px solid #e1e8ed;
-        }
-
-        .data-table tr:nth-child(even) {
-            background-color: #f9fbfd;
         }
 
         /* אזור כפתורי התרומה */
@@ -325,84 +283,67 @@
                 flex-direction: column;
                 padding: 30px 20px;
             }
-            .banner-img {
+            .banner-img, .banner-img-logo {
                 width: 100%;
-                max-width: 280px;
-                height: 150px;
-            }
-            .call-to-action-section {
-                flex-direction: column-reverse;
-                align-items: center;
-            }
-            .map-container {
-                width: 100%;
-                max-width: 220px;
-                margin-bottom: 20px;
+                max-width: 240px;
+                height: 140px;
             }
             .banner-text h1 { font-size: 1.8em; }
             .banner-text h2 { font-size: 1.2em; }
             .donation-grid { grid-template-columns: 1fr 1fr; }
             .donation-card:last-child { grid-column: span 2; }
-            .data-table th, .data-table td { padding: 8px 10px; font-size: 0.95em; }
             .signature-box-container { flex-direction: column; gap: 15px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- באנר עליון קלאסי - תמונות בצידים, לוגו קטן וכותרות במרכז -->
+    <!-- באנר עליון מותאם - שילוב לוגו קהילת אולואה האותנטי מימין -->
     <div class="hero-banner">
         
-        <!-- צד ימין: תמונת השלט הכללית -->
-        <img class="banner-img" src="https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/שלט במפרץ.png" alt="שלט הנצחה בשביל הים">
+        <!-- צד ימין: לוגו קהילת אולואה הרשמי מהקבצים שהעלית -->
+        <img class="banner-img-logo" src="https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/heritage/WhatsApp Image 2022-03-16 at 12.55.02.jpeg" alt="לוגו מעפילי אולואה">
         
-        <!-- מרכז הבאנר: שילוב לוגו קפריסין והכותרות הרשמיות של חיים ארלוזורוב -->
+        <!-- מרכז הבאנר: שילוב לוגו קפריסין והכותרות המעודכנות בפורמט לוכסן -->
         <div class="banner-center-content">
             <img class="org-logo-small" src="https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/קפריסין.png" alt="לוגו ארגון מעפילי קפריסין">
             
             <div class="banner-text">
                 <h1>מורשת ההעפלה בשביל הים</h1>
-                <h2>מנציחים את גבורת מעפילי 'חיים ארלוזורוב' (אולואה)<br>בנתיב הים הלאומי</h2>
+                <h2>מנציחים את גבורת מעפילי 'חיים ארלוזורוב / אולואה'<br>בנתיב הים הלאומי</h2>
             </div>
         </div>
         
-        <!-- צד שמאל: תמונת השלט הכללית מהמאגר -->
-        <img class="banner-img" src="https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/שלט במפרץ.png" alt="אוניית המעפילים חיים ארלוזורוב">
+        <!-- צד שמאל: תמונת השלט הכללית מהמאגר לצורך סימטריה מקצועית -->
+        <img class="banner-img" src="https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/שלט במפרץ.png" alt="שלט הנצחה בשביל הים">
         
     </div>
 
     <div class="container">
         
-        <!-- מד יעד הגיוס המשותף של קהילת אולואה -->
+        <!-- מד יעד הגיוס המשותף והייחודי של קהילת אולואה -->
         <div class="target-box">
-            מטרת הגיוס המשותפת של משפחת 'חיים ארלוזורוב' (אולואה): 40,000 ₪
+            מטרת הגיוס המשותפת של משפחת 'חיים ארלוזורוב / אולואה': 40,000 ₪
         </div>
 
-        <!-- מקטע משולב: קול הקורא הרשמי של סנונית לצד מפת הנתיב -->
+        <!-- מקטע קול הקורא הרשמי של סנונית בפריסה נקייה ברוחב מלא -->
         <div class="call-to-action-section">
             
-            <!-- הטקסט הרשמי של סנונית -->
             <div class="call-text">
                 <p style="font-size: 1.3em; color: #004a99; font-weight: bold; margin-bottom: 5px;">"הם בנו את הזיכרון, אנחנו נשמור עליו בחיים"</p>
                 <p style="font-size: 1.1em; font-weight: bold; color: #555; margin-top: 0;">המשמרת עוברת אלינו: מנציחים את מורשת ההעפלה בשביל הים</p>
                 
-                <p><strong>חברות וחברי משפחת 'חיים ארלוזורוב' (אולואה) היקרים.ות,</strong></p>
+                <p><strong>חברות וחברי משפחת 'חיים ארלוזורוב / אולואה' היקרים.ות,</strong></p>
                 <p>אנו שמחים לשתף אתכם במידע אודות פרויקט הנצחה מרגש שארגון מעפילי קפריסין יוצא עמו לדרך. הרעיון הוא הנצחה של כל ספינות המעפילים לאורך חופי הארץ, שישולבו בשביל הים.</p>
                 
                 <p>הארגון יוצא למסע כשהשאיפה היא להקים כ-30 עמודי הנצחה, שבהם יונצחו הספינות השונות. זה כמובן מצריך תיאום מול עשרות רשויות מקומיות, תיאור של כל ספינה, בר-קודים שיאפשרו מידע רחב יותר על סיפורה של כל ספינה וספינה, ועיצוב גראפי של שלטי הזיכרון. מיקום השלטים ייקבע על פי מקום הגעת הספינות או יעדי הספינות של אלה שנתפסו בלב ים.</p>
                 
                 <p>מדובר בפרויקט משמעותי הדורש עבודה רבה וגם יהיה צורך לגייס כספים למימונו. מספר צוותים כבר עובדים בתכנון וחשיבה על כל פרטיו.</p>
                 
-                <!-- לחצן המצגת החדש המקושר ישירות ל-Google Drive ששלחת -->
-                <a href="https://drive.google.com/file/d/1h9dwElePibsbWZ2Q_5MHCvtL0svXLnKE/view?usp=sharing" target="_blank" class="presentation-btn">📊 לחצו כאן לצפייה במצגת ההסבר על שביל הים</a>
+                <!-- לחצן הדרייב המעודכן בנוסח החדש והמדויק -->
+                <a href="https://drive.google.com/file/d/1h9dwElePibsbWZ2Q_5MHCvtL0svXLnKE/view?usp=sharing" target="_blank" class="presentation-btn">📊 מספר מילים על המיזם</a>
                 
                 <p>נמשיך ונעדכן אתכם בכל שלב של המסע אל הזיכרון!</p>
-            </div>
-
-            <!-- מפת השביל שהעלית משולבת בצד הדף באופן שוטף -->
-            <div class="map-container">
-                <img class="map-img" src="https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/heritage/image_f13861.png" alt="מפת תחנות ההנצחה בשביל הים">
-                <p style="font-size: 0.85em; color: #666; text-align: center; margin: 8px 0 0 0; font-weight: bold;">נתיב שלטי ההנצחה</p>
             </div>
 
         </div>
@@ -417,43 +358,6 @@
             <div class="video-container">
                 <iframe src="https://www.youtube.com/embed/ix4kBFgPEyI" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
-        </div>
-
-        <!-- מקטע מובנה: תעודת הזהות ההיסטורית של חיים ארלוזורוב -->
-        <div class="project-data-section">
-            <h3>תעודת זהות היסטורית: האונייה 'חיים ארלוזורוב' (אולואה)</h3>
-            <p style="text-align: right; font-size: 1.1em; color: #444;">שלט ההנצחה המתוכנן ינגיש למטיילים בשטח תקציר אודות הספינה וקורות מעפיליה, וסריקת קוד QR ייעודי במכשיר נייד תעביר אותם לאתר מידע מורחב</p>
-            
-            <table class="data-table">
-                <thead>
-                    <tr>
-                        <th style="width: 30%;">פרק בהיסטוריה</th>
-                        <th style="width: 70%;">נתוני הפלגת הגבורה של 'חיים ארלוזורוב' (אולואה)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>נמל ומועד היציאה</strong></td>
-                        <td>הפליגה מנמל <strong>בוגליאסקו שבאיטליה</strong> במהלך חודש פברואר 1947 (לאחר מסע פנימי מורכב שהחל בשוודיה).</td>
-                    </tr>
-                    <tr>
-                        <td><strong>מספר המעפילים</strong></td>
-                        <td>על סיפונה של האונייה הצטופפו <strong>1,398 מעפילים</strong> ואנשי צוות, שעשו את דרכם אל עבר חופי המולדת.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>ההגעה והעימות עם הבריטים</strong></td>
-                        <td>ב-27 וב-28 בפברואר 1947 ניהלה האונייה קרב הגנה אפי וסוער מול משחתות בריטיות שניסו לבלום אותה. המעפילים גילו התנגדות אמיצה ועיקשת יוצאת דופן.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>ההחפה והגירוש לקפריסין</strong></td>
-                        <td>במהלך העימות, הצליחה האונייה לפרוץ ולהיחף ישירות מול חוף בת גלים בחיפה. לאחר מאבק פנים אל פנים קשה על הסיפון, נשבו המעפילים וגורשו באופן כואב אל מחנות המעצר הבריטיים בקפריסין.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>מיקום שלט ההנצחה בשביל</strong></td>
-                        <td>השלט הפיזי מתוכנן להיות מוצב ב"שביל הים" בטיילת בת גלים בחיפה, אל מול נקודת החפתה ההיסטורית של האונייה.</td>
-                    </tr>
-                </tbody>
-            </table>
         </div>
 
         <!-- אזור כפתורי גיוס ההמונים - מחובר לחלוטין לכל 5 קישורי GROW המאובטחים -->
@@ -471,7 +375,7 @@
 
                 <!-- כפתור 2 - 360 ש"ח -->
                 <div class="donation-card">
-                    <div class="card-title">נאמן מורשת</div>
+                    <div class="card-title">נาמן מורשת</div>
                     <div class="card-amount">₪360</div>
                     <a href="https://pay.grow.link/OTkxMDI~f28b5226e8e2972af60dbde9252ef19b-MzU0MjU0Mw" class="donate-btn">שותף לדרך</a>
                 </div>
@@ -511,7 +415,7 @@
             </div>
             <div class="signature-col" style="text-align: left;">
                 <br>
-                <strong>צוות מורשת חיים ארלוזורוב (אולואה)</strong>
+                <strong>צוות מורשת חיים ארלוזורוב / אולואה</strong>
             </div>
         </div>
 
@@ -519,7 +423,7 @@
 
     <!-- חתימת הגרסה הסמויה למעקב -->
     <div class="version-tag">
-        גרסה 2026.06.26 - קול קורא רשמי סנונית ומצגת מעודכנת
+        גרסה 2026.06.28 - קהילת אולואה גרסה רשמית נקייה
     </div>
 
 </body>
