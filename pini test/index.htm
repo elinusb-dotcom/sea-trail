@@ -1,101 +1,525 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="he" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Legacy | Lorem Ipsum Edition</title>
+    <title>מורשת מעפילי חיים ארלוזורוב (אולואה) | שביל הים</title>
     <style>
-        /* All original CSS styles remain here for layout consistency */
-        body { font-family: Arial, sans-serif; line-height: 1.25; margin: 0; padding: 0; background-color: #f4f7f9; color: #1a1a1a; text-align: center; }
-        .hero-banner { background: linear-gradient(rgba(0, 34, 68, 0.9), rgba(0, 74, 153, 0.9)), url('https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/כותרת.jpg'); background-size: cover; background-position: center; color: white; padding: 40px 20px; display: flex; align-items: center; justify-content: space-between; gap: 20px; max-width: 1200px; margin: 0 auto; box-sizing: border-box; }
-        .banner-img { width: 180px; height: 130px; object-fit: cover; border-radius: 6px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); border: 2px solid rgba(255, 255, 255, 0.2); flex-shrink: 0; }
-        .banner-text { flex-grow: 1; text-align: center; }
-        .banner-text h1 { font-size: 2.2em; margin: 0 0 10px 0; font-weight: bold; }
-        .banner-text h2 { font-size: 1.4em; color: #fffb00; margin: 0; line-height: 1.4; }
-        .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; background: white; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-radius: 8px; margin-top: 20px; }
-        .target-box { background-color: #e6f0fa; border: 1px solid #b3d1f2; padding: 15px; border-radius: 6px; font-weight: bold; color: #004a99; font-size: 1.1em; margin-bottom: 30px; }
-        .content-text { text-align: left; font-size: 1.15em; color: #333; }
-        .content-text p { margin-bottom: 20px; }
-        .highlight-box { border-left: 4px solid #004a99; padding-left: 15px; margin: 25px 0; font-style: italic; color: #003366; text-align: left; }
-        .donation-section { margin: 40px 0; }
-        .donation-section h3 { font-size: 1.4em; color: #004a99; margin-bottom: 20px; }
-        .donation-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 15px; margin-bottom: 25px; }
-        .donation-card { background: #fdfdfd; border: 2px solid #004a99; border-radius: 8px; padding: 15px; display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.2s, box-shadow 0.2s; }
-        .card-title { font-size: 0.95em; font-weight: bold; color: #004a99; margin-bottom: 5px; }
-        .card-amount { font-size: 1.6em; font-weight: bold; color: #1a1a1a; margin-bottom: 12px; }
-        .donate-btn { background-color: #004a99; color: white; text-decoration: none; padding: 8px 15px; border-radius: 4px; font-weight: bold; font-size: 0.9em; }
-        .signature-box { margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px; text-align: left; font-size: 1.05em; }
+        /* הגדרות עיצוב כלליות */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.4;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f9;
+            color: #1a1a1a;
+            text-align: center;
+        }
+
+        /* באנר עליון משולב - תמונות בצדדים, לוגו מוקטן וכותרות במרכז */
+        .hero-banner {
+            background: linear-gradient(rgba(0, 34, 68, 0.9), rgba(0, 74, 153, 0.9)), url('https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/כותרת.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 30px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            box-sizing: border-box;
+            border-radius: 0 0 8px 8px;
+        }
+
+        .banner-img {
+            width: 180px;
+            height: 130px;
+            object-fit: cover;
+            border-radius: 6px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            flex-shrink: 0;
+        }
+
+        /* מרכז הבאנר: כותרות ולוגו ארגון מוקטן */
+        .banner-center-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            text-align: center;
+        }
+
+        .banner-text h1 {
+            font-size: 2.2em;
+            margin: 0 0 10px 0;
+            font-weight: bold;
+        }
+
+        .banner-text h2 {
+            font-size: 1.4em;
+            color: #fffb00;
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        /* לוגו קפריסין מוקטן (70px) */
+        .org-logo-small {
+            width: 70px;
+            height: 70px;
+            object-fit: contain;
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 6px;
+            border-radius: 50%;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        /* מכלול התוכן הראשי */
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: white;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-radius: 8px;
+            margin-top: 20px;
+            box-sizing: border-box;
+        }
+
+        .target-box {
+            background-color: #e6f0fa;
+            border: 1px solid #b3d1f2;
+            padding: 15px;
+            border-radius: 6px;
+            font-weight: bold;
+            color: #004a99;
+            font-size: 1.1em;
+            margin-bottom: 30px;
+        }
+
+        /* מבנה משולב לטקסט קול הקורא ומפת השביל בצד */
+        .call-to-action-section {
+            display: flex;
+            gap: 25px;
+            align-items: flex-start;
+            text-align: right;
+            margin-bottom: 30px;
+        }
+
+        .call-text {
+            flex: 1;
+            font-size: 1.15em;
+            color: #333;
+        }
+
+        .call-text p {
+            margin-bottom: 15px;
+        }
+
+        .map-container {
+            width: 160px;
+            flex-shrink: 0;
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .map-img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+
+        .presentation-btn {
+            display: inline-block;
+            background-color: #004a99;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-weight: bold;
+            margin: 15px 0;
+            transition: background-color 0.2s;
+        }
+
+        .presentation-btn:hover {
+            background-color: #002244;
+        }
+
+        .highlight-box {
+            border-right: 4px solid #004a99;
+            padding-right: 15px;
+            margin: 25px 0;
+            font-style: italic;
+            color: #003366;
+        }
+
+        /* אזור וידאו וסרטון שביל הים */
+        .video-section {
+            margin: 40px 0;
+            background-color: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid #eee;
+        }
+
+        .video-section h3 {
+            font-size: 1.4em;
+            color: #004a99;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+            border-radius: 6px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* טבלת הנתונים ההיסטוריים */
+        .project-data-section {
+            margin: 40px 0;
+        }
+
+        .project-data-section h3 {
+            font-size: 1.4em;
+            color: #004a99;
+            margin-bottom: 20px;
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            font-size: 1.05em;
+            text-align: right;
+        }
+
+        .data-table th {
+            background-color: #004a99;
+            color: white;
+            padding: 12px 15px;
+            font-weight: bold;
+            border: 1px solid #004a99;
+        }
+
+        .data-table td {
+            padding: 12px 15px;
+            border: 1px solid #e1e8ed;
+        }
+
+        .data-table tr:nth-child(even) {
+            background-color: #f9fbfd;
+        }
+
+        /* אזור כפתורי התרומה */
+        .donation-section {
+            margin: 40px 0;
+        }
+
+        .donation-section h3 {
+            font-size: 1.4em;
+            color: #004a99;
+            margin-bottom: 20px;
+        }
+
+        .donation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .donation-card {
+            background: #fdfdfd;
+            border: 2px solid #004a99;
+            border-radius: 8px;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .donation-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .card-title {
+            font-size: 0.95em;
+            font-weight: bold;
+            color: #004a99;
+            margin-bottom: 5px;
+        }
+
+        .card-amount {
+            font-size: 1.6em;
+            font-weight: bold;
+            color: #1a1a1a;
+            margin-bottom: 12px;
+        }
+
+        .donate-btn {
+            background-color: #004a99;
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+
+        .donate-btn:hover {
+            background-color: #002244;
+        }
+
+        /* חתימת סגירה וצוות מורחב */
+        .signature-box-container {
+            margin-top: 40px;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            text-align: right;
+            font-size: 1.05em;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .signature-col {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        /* חתימת הגרסה הסמויה למעקב */
+        .version-tag {
+            font-size: 0.75em;
+            color: #ccc;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        /* התאמה מלאה לטלפונים ניידים */
+        @media (max-width: 768px) {
+            .hero-banner {
+                flex-direction: column;
+                padding: 30px 20px;
+            }
+            .banner-img {
+                width: 100%;
+                max-width: 280px;
+                height: 150px;
+            }
+            .call-to-action-section {
+                flex-direction: column-reverse;
+                align-items: center;
+            }
+            .map-container {
+                width: 100%;
+                max-width: 220px;
+                margin-bottom: 20px;
+            }
+            .banner-text h1 { font-size: 1.8em; }
+            .banner-text h2 { font-size: 1.2em; }
+            .donation-grid { grid-template-columns: 1fr 1fr; }
+            .donation-card:last-child { grid-column: span 2; }
+            .data-table th, .data-table td { padding: 8px 10px; font-size: 0.95em; }
+            .signature-box-container { flex-direction: column; gap: 15px; }
+        }
     </style>
 </head>
 <body>
 
+    <!-- באנר עליון קלאסי - תמונות בצידים, לוגו קטן וכותרות במרכז -->
     <div class="hero-banner">
-        <img class="banner-img" src="https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/שלט במפרץ.png" alt="Header Left">
-        <div class="banner-text">
-            <h1>Lorem Ipsum Dolor Sit Amet</h1>
-            <h2>Consectetur adipiscing elit sed do eiusmod<br>tempor incididunt ut labore et dolore magna aliqua.</h2>
+        
+        <!-- צד ימין: תמונת השלט הכללית -->
+        <img class="banner-img" src="https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/שלט במפרץ.png" alt="שלט הנצחה בשביל הים">
+        
+        <!-- מרכז הבאנר: שילוב לוגו קפריסין והכותרות הרשמיות של חיים ארלוזורוב -->
+        <div class="banner-center-content">
+            <img class="org-logo-small" src="https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/קפריסין.png" alt="לוגו ארגון מעפילי קפריסין">
+            
+            <div class="banner-text">
+                <h1>מורשת ההעפלה בשביל הים</h1>
+                <h2>מנציחים את גבורת מעפילי 'חיים ארלוזורוב' (אולואה)<br>בנתיב הים הלאומי</h2>
+            </div>
         </div>
-        <img class="banner-img" src="https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/אוניית_המעפילים_שאר_ישוב.jpg" alt="Header Right">
+        
+        <!-- צד שמאל: תמונת השלט הכללית מהמאגר -->
+        <img class="banner-img" src="https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/שלט במפרץ.png" alt="אוניית המעפילים חיים ארלוזורוב">
+        
     </div>
 
     <div class="container">
+        
+        <!-- מד יעד הגיוס המשותף של קהילת אולואה -->
         <div class="target-box">
-            Fundraising Goal: $40,000 USD
+            מטרת הגיוס המשותפת של משפחת 'חיים ארלוזורוב' (אולואה): 40,000 ₪
+        </div>
+
+        <!-- מקטע משולב: קול הקורא הרשמי של סנונית לצד מפת הנתיב -->
+        <div class="call-to-action-section">
+            
+            <!-- הטקסט הרשמי של סנונית -->
+            <div class="call-text">
+                <p style="font-size: 1.3em; color: #004a99; font-weight: bold; margin-bottom: 5px;">"הם בנו את הזיכרון, אנחנו נשמור עליו בחיים"</p>
+                <p style="font-size: 1.1em; font-weight: bold; color: #555; margin-top: 0;">המשמרת עוברת אלינו: מנציחים את מורשת ההעפלה בשביל הים</p>
+                
+                <p><strong>חברות וחברי משפחת 'חיים ארלוזורוב' (אולואה) היקרים.ות,</strong></p>
+                <p>אנו שמחים לשתף אתכם במידע אודות פרויקט הנצחה מרגש שארגון מעפילי קפריסין יוצא עמו לדרך. הרעיון הוא הנצחה של כל ספינות המעפילים לאורך חופי הארץ, שישולבו בשביל הים.</p>
+                
+                <p>הארגון יוצא למסע כשהשאיפה היא להקים כ-30 עמודי הנצחה, שבהם יונצחו הספינות השונות. זה כמובן מצריך תיאום מול עשרות רשויות מקומיות, תיאור של כל ספינה, בר-קודים שיאפשרו מידע רחב יותר על סיפורה של כל ספינה וספינה, ועיצוב גראפי של שלטי הזיכרון. מיקום השלטים ייקבע על פי מקום הגעת הספינות או יעדי הספינות של אלה שנתפסו בלב ים.</p>
+                
+                <p>מדובר בפרויקט משמעותי הדורש עבודה רבה וגם יהיה צורך לגייס כספים למימונו. מספר צוותים כבר עובדים בתכנון וחשיבה על כל פרטיו.</p>
+                
+                <!-- לחצן המצגת החדש המקושר ישירות ל-Google Drive ששלחת -->
+                <a href="https://drive.google.com/file/d/1h9dwElePibsbWZ2Q_5MHCvtL0svXLnKE/view?usp=sharing" target="_blank" class="presentation-btn">📊 לחצו כאן לצפייה במצגת ההסבר על שביל הים</a>
+                
+                <p>נמשיך ונעדכן אתכם בכל שלב של המסע אל הזיכרון!</p>
+            </div>
+
+            <!-- מפת השביל שהעלית משולבת בצד הדף באופן שוטף -->
+            <div class="map-container">
+                <img class="map-img" src="https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/heritage/image_f13861.png" alt="מפת תחנות ההנצחה בשביל הים">
+                <p style="font-size: 0.85em; color: #666; text-align: center; margin: 8px 0 0 0; font-weight: bold;">נתיב שלטי ההנצחה</p>
+            </div>
+
         </div>
 
         <div class="content-text">
-            <p><strong>Dear Lorem Ipsum Members,</strong></p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <p><strong>Duis aute irure dolor in reprehenderit in voluptate velit esse.</strong></p>
-            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+            <p>אף על פי שלספינה המפוארת שלנו כבר יש אנדרטה נפלאה משלה שהקמנו יחד, שותפותנו בהצבת שלטי המידע הלאומיים לאורך נתיבי המטיילים היא זו שתשלים את התמונה הגדולה של מורשת מעפילי קפריסין כולה עבור הדורות הבאים. אנו קוראים לכם לקחת חלק, להוביל כקהילה חזקה, ולתרום להצלחת המיזם הכללי. כל תרומה תוקדש ישירות למימון הכנת והתקנת שלט ההנצחה, והנגשת המידע למטיילים בשטח.</p>
+        </div>
+
+        <!-- מקטע מובנה: סרטון ההיכרות הרשמי של אליק אדלר על שביל הים -->
+        <div class="video-section">
+            <h3>הכירו את שביל הים</h3>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/ix4kBFgPEyI" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <!-- מקטע מובנה: תעודת הזהות ההיסטורית של חיים ארלוזורוב -->
+        <div class="project-data-section">
+            <h3>תעודת זהות היסטורית: האונייה 'חיים ארלוזורוב' (אולואה)</h3>
+            <p style="text-align: right; font-size: 1.1em; color: #444;">שלט ההנצחה המתוכנן ינגיש למטיילים בשטח תקציר אודות הספינה וקורות מעפיליה, וסריקת קוד QR ייעודי במכשיר נייד תעביר אותם לאתר מידע מורחב</p>
             
-            <div class="highlight-box">
-                "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
-            </div>
-
-            <p><strong>How can you help?</strong> At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th style="width: 30%;">פרק בהיסטוריה</th>
+                        <th style="width: 70%;">נתוני הפלגת הגבורה של 'חיים ארלוזורוב' (אולואה)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>נמל ומועד היציאה</strong></td>
+                        <td>הפליגה מנמל <strong>בוגליאסקו שבאיטליה</strong> במהלך חודש פברואר 1947 (לאחר מסע פנימי מורכב שהחל בשוודיה).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>מספר המעפילים</strong></td>
+                        <td>על סיפונה של האונייה הצטופפו <strong>1,398 מעפילים</strong> ואנשי צוות, שעשו את דרכם אל עבר חופי המולדת.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ההגעה והעימות עם הבריטים</strong></td>
+                        <td>ב-27 וב-28 בפברואר 1947 ניהלה האונייה קרב הגנה אפי וסוער מול משחתות בריטיות שניסו לבלום אותה. המעפילים גילו התנגדות אמיצה ועיקשת יוצאת דופן.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ההחפה והגירוש לקפריסין</strong></td>
+                        <td>במהלך העימות, הצליחה האונייה לפרוץ ולהיחף ישירות מול חוף בת גלים בחיפה. לאחר מאבק פנים אל פנים קשה על הסיפון, נשבו המעפילים וגורשו באופן כואב אל מחנות המעצר הבריטיים בקפריסין.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>מיקום שלט ההנצחה בשביל</strong></td>
+                        <td>השלט הפיזי מתוכנן להיות מוצב ב"שביל הים" בטיילת בת גלים בחיפה, אל מול נקודת החפתה ההיסטורית של האונייה.</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
 
+        <!-- אזור כפתורי גיוס ההמונים - מחובר לחלוטין לכל 5 קישורי GROW המאובטחים -->
         <div class="donation-section">
-            <h3>Choose your support level:</h3>
+            <h3>לתרומה מאובטחת והבטחת מקומנו על השביל:</h3>
+            
             <div class="donation-grid">
+                
+                <!-- כפתור 1 - 180 ש"ח -->
                 <div class="donation-card">
-                    <div class="card-title">Friend</div>
-                    <div class="card-amount">$50</div>
-                    <a href="#" class="donate-btn">Donate</a>
+                    <div class="card-title">ידיד הנתיב</div>
+                    <div class="card-amount">₪180</div>
+                    <a href="https://pay.grow.link/OTkxMDI~609ee4070b8fb715aa68b5173eaf2fdb-MzU0MjQ4OQ" class="donate-btn">שותף לדרך</a>
                 </div>
+
+                <!-- כפתור 2 - 360 ש"ח -->
                 <div class="donation-card">
-                    <div class="card-title">Supporter</div>
-                    <div class="card-amount">$100</div>
-                    <a href="#" class="donate-btn">Donate</a>
+                    <div class="card-title">נאמן מורשת</div>
+                    <div class="card-amount">₪360</div>
+                    <a href="https://pay.grow.link/OTkxMDI~f28b5226e8e2972af60dbde9252ef19b-MzU0MjU0Mw" class="donate-btn">שותף לדרך</a>
                 </div>
+
+                <!-- כפתור 3 - 720 ש"ח -->
                 <div class="donation-card">
-                    <div class="card-title">Partner</div>
-                    <div class="card-amount">$250</div>
-                    <a href="#" class="donate-btn">Donate</a>
+                    <div class="card-title">מייסד נקודה</div>
+                    <div class="card-amount">₪720</div>
+                    <a href="https://pay.grow.link/OTkxMDI~7645ce79d23164ddbc012c17f6367308-MzU09AwMQ" class="donate-btn">שותף לדרך</a>
                 </div>
+
+                <!-- כפתור 4 - 1,500 ש"ח -->
                 <div class="donation-card">
-                    <div class="card-title">Lead</div>
-                    <div class="card-amount">$500</div>
-                    <a href="#" class="donate-btn">Donate</a>
+                    <div class="card-title">מוביל הנתיב</div>
+                    <div class="card-amount">₪1,500</div>
+                    <a href="https://pay.grow.link/OTkxMDI~c0106f819f7fa5e39c9415ae11997e8b-MzU09AzNA" class="donate-btn">שותף לדרך</a>
                 </div>
+
+                <!-- כפתור 5 - תשלום פתוח -->
                 <div class="donation-card">
-                    <div class="card-title">Other</div>
-                    <div class="card-amount" style="font-size: 1.1em; margin: 8px 0 15px 0;">Custom</div>
-                    <a href="#" class="donate-btn">Donate</a>
+                    <div class="card-title">סכום אחר</div>
+                    <div class="card-amount" style="font-size: 1.1em; margin: 8px 0 15px 0;">לבחירתך</div>
+                    <a href="https://pay.grow.link/OTkxMDI~1ae44df27a248930a79f9e07e08f2634-MzU0MzY0MA" class="donate-btn">לתרומה</a>
                 </div>
+
+            </div>
+            
+            <p style="font-size: 1.1em; color: #004a99; font-weight: bold;">זהו הרגע שלנו להבטיח שמורשת מעפילי קפריסין תהיה חלק בלתי נפרד מנוף מולדתנו. הים זוכר, ועכשיו גם המטיילים יזכרו.</p>
+        </div>
+
+        <!-- חתימה רשמית מהנהלת הארגון וצוות המורשת המקומי -->
+        <div class="signature-box-container">
+            <div class="signature-col">
+                בתודה, בהערכה ובשותפות לדרך,<br>
+                <strong>פרופ' סנונית שוהם</strong>,<br>
+                יו"ר ארגון מעפילי קפריסין (ע"ר)
+            </div>
+            <div class="signature-col" style="text-align: left;">
+                <br>
+                <strong>צוות מורשת חיים ארלוזורוב (אולואה)</strong>
             </div>
         </div>
 
-        <div class="signature-box">
-            Best regards,<br>
-            <strong>Professor John Doe</strong>,<br>
-            Organization Chair
-        </div>
     </div>
 
-    <div style="font-size: 0.75em; color: #ccc; margin-top: 50px; text-align: center;">
-        v2026.06.08 - Lorem Ipsum Template
+    <!-- חתימת הגרסה הסמויה למעקב -->
+    <div class="version-tag">
+        גרסה 2026.06.26 - קול קורא רשמי סנונית ומצגת מעודכנת
     </div>
 
 </body>
