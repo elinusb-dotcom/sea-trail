@@ -154,7 +154,6 @@
             margin-bottom: 20px;
         }
 
-        /* מותאם כעת ל-3 עמודות שוות וסימטריות */
         .donation-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -280,7 +279,7 @@
             }
             .banner-text h1 { font-size: 1.6em; }
             .banner-text .sub-line { font-size: 1.1em; }
-            .donation-grid { grid-template-columns: 1fr; } /* בנייד הם יופיעו אחד מתחת לשני בצורה מסודרת */
+            .donation-grid { grid-template-columns: 1fr; }
             .signature-box-container { 
                 flex-direction: column; 
                 text-align: center !important;
@@ -311,43 +310,37 @@
             🚨 גיוס קהילתי: בסכום קטן יחסית, ננציח סיפור גדול ונבטיח את מקום האונייה במיזם ההנצחה!
         </div>
 
+        <!-- מקטע ההקדמה המקוצר והמהיר במיוחד ל-24 מילים בדיוק -->
         <div class="call-to-action-section">
             <div class="call-text">
                 <p style="font-size: 1.3em; color: #004a99; font-weight: bold; margin-bottom: 5px;">"הם בנו את הזיכרון, אנחנו נשמור עליו בחיים"</p>
-                <p style="font-size: 1.1em; font-weight: bold; color: #555; margin-top: 0;">המשמרת עוברת אלינו: מנציחים את מורשת ההעפלה בשביל הים</p>
+                <p style="font-size: 1.1em; font-weight: bold; color: #555; margin-top: 0; margin-bottom: 25px;">המשמרת עוברת אלינו: בני הדור השני והשלישי</p>
                 
-                <p><strong>חברות וחברי משפחת ’אולואה / חיים ארלוזורוב’ היקרים.ות, בני הדור השני והשלישי,</strong></p>
+                <p style="font-size: 1.25em; line-height: 1.5; color: #222;">
+                    יחד ננציח את סיפורם יוצא הדופן של ההורים והסבים, גיבורי ההעפלה, בשביל המטיילים הלאומי. המיזם הותנע – עלו על הסיפון וקחו חלק בהנצחת המורשת.
+                </p>
                 
-                <p>אנו שמחים לשתף אתכם במידע אודות פרויקט הנצחה מרגש שארגון מעפילי קפריסין יוצא עמו לדרך. הרעיון הוא הנצחה של כל ספינות המעפילים לאורך חופי הארץ, שישולבו בשביל הים.</p>
-                
-                <p>השאיפה היא להקים כ-30 עמודי הנצחה לאורך רצועת החוף, בתיאום מול 16 הרשויות המקומיות הרלוונטיות. עמודי הזיכרון המעוצבים יכילו תקציר בשטח, וסריקת קוד QR ייעודי תאפשר למטיילים להגיע לאתר מידע מפורט ומורחב על סיפורה של כל ספינה. מיקום השלטים ייקבע על פי מקום הגעת הספינות או יעדיהן.</p>
-                
-                <p>המיזם כבר הותנע, התכנון נמצא בעיצומו ומספר צוותים כבר עובדים במרץ על כל הפרטים. הגיע הזמן שלנו לקחת חלק – עלו על הסיפון ויחד נבטיח את הנצחת המורשת יוצאת הדופן!</p>
-                
-                <a href="https://drive.google.com/file/d/1h9dwElePibsbWZ2Q_5MHCvtL0svXLnKE/view?usp=sharing" target="_blank" class="presentation-btn">📊 מספר מילים על המיזם</a>
+                <a href="https://drive.google.com/file/d/1h9dwElePibsbWZ2Q_5MHCvtL0svXLnKE/view?usp=sharing" target="_blank" class="presentation-btn" style="margin-top: 15px;">📊 מספר מילים על המיזם</a>
             </div>
         </div>
 
-        <!-- אזור 3 כפתורי התרומה הממוקדים: 180, 360 ואחר -->
+        <!-- אזור 3 כפתורי התרומה הממוקדים -->
         <div class="donation-section">
             <h3>בחרו את רמת השותפות שלכם (לתרומה מאובטחת):</h3>
             
             <div class="donation-grid">
-                <!-- כפתור 1 - 180 ש"ח -->
                 <div class="donation-card">
                     <div class="card-title">ידיד הנתיב</div>
                     <div class="card-amount">₪180</div>
                     <a href="https://pay.grow.link/OTkxMDI~609ee4070b8fb715aa68b5173eaf2fdb-MzU0MjQ4OQ" class="donate-btn">לתרומה</a>
                 </div>
 
-                <!-- כפתור 2 - 360 ש"ח -->
                 <div class="donation-card">
                     <div class="card-title">נאמן מורשת</div>
                     <div class="card-amount">₪360</div>
                     <a href="https://pay.grow.link/OTkxMDI~f28b5226e8e2972af60dbde9252ef19b-MzU0MjU0Mw" class="donate-btn">לתרומה</a>
                 </div>
 
-                <!-- כפתור 3 - סכום אחר -->
                 <div class="donation-card">
                     <div class="card-title">סכום אחר</div>
                     <div class="card-amount" style="font-size: 1.1em; margin: 8px 0 15px 0;">לבחירתך</div>
@@ -356,6 +349,7 @@
             </div>
         </div>
 
+        <!-- פסקת הכבוד והערך ההיסטורי -->
         <div class="content-text">
             <p>לספינה שלנו כבר יש אנדרטה נפלאה שהקמנו יחד. שותפותנו בהצבת נקודות המידע לאורך נתיבי המטיילים תשלים את התמונה בתוך מיזם ההנצחה הכולל, ותעניק את הכבוד הראוי בתולדות עם ישראל לדור מופלא ששרד את השואה הנוראה, הגיע לארץ בקשיים לא רגילים, וזכה להיות שותף פעיל במלחמה ובתקומת המדינה. אנו קוראים לכם לקחת חלק, להוביל כקהילה חזקה, ולתרום להנצחת הסיפור יוצא הדופן של דור המעפילים עבור הדורות הבאים.</p>
         </div>
@@ -382,7 +376,7 @@
     </div>
 
     <div class="version-tag">
-        גרסה 2026.07.01 - מיקוד סופי ל-3 כפתורי תרומה
+        גרסה 2026.07.01 - הקדמה מהודקת ל-24 מילים בדיוק
     </div>
 
 </body>
