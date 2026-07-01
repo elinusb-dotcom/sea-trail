@@ -154,9 +154,10 @@
             margin-bottom: 20px;
         }
 
+        /* מותאם כעת ל-3 עמודות שוות וסימטריות */
         .donation-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 15px;
             margin-bottom: 15px;
         }
@@ -279,7 +280,7 @@
             }
             .banner-text h1 { font-size: 1.6em; }
             .banner-text .sub-line { font-size: 1.1em; }
-            .donation-grid { grid-template-columns: 1fr 1fr; }
+            .donation-grid { grid-template-columns: 1fr; } /* בנייד הם יופיעו אחד מתחת לשני בצורה מסודרת */
             .signature-box-container { 
                 flex-direction: column; 
                 text-align: center !important;
@@ -327,30 +328,26 @@
             </div>
         </div>
 
-        <!-- אזור כפתורי התרומה המותאמים והמופחתים (100, 180, 360) -->
+        <!-- אזור 3 כפתורי התרומה הממוקדים: 180, 360 ואחר -->
         <div class="donation-section">
             <h3>בחרו את רמת השותפות שלכם (לתרומה מאובטחת):</h3>
             
             <div class="donation-grid">
-                <!-- כפתור חדש - 100 ש"ח ידידותי ונגיש -->
-                <div class="donation-card">
-                    <div class="card-title">שותף לדרך</div>
-                    <div class="card-amount">₪100</div>
-                    <a href="https://pay.grow.link/OTkxMDI~609ee4070b8fb715aa68b5173eaf2fdb-MzU0MjQ4OQ" class="donate-btn">לתרומה</a>
-                </div>
-
+                <!-- כפתור 1 - 180 ש"ח -->
                 <div class="donation-card">
                     <div class="card-title">ידיד הנתיב</div>
                     <div class="card-amount">₪180</div>
-                    <a href="https://pay.grow.link/OTkxMDI~f28b5226e8e2972af60dbde9252ef19b-MzU0MjU0Mw" class="donate-btn">לתרומה</a>
+                    <a href="https://pay.grow.link/OTkxMDI~609ee4070b8fb715aa68b5173eaf2fdb-MzU0MjQ4OQ" class="donate-btn">לתרומה</a>
                 </div>
 
+                <!-- כפתור 2 - 360 ש"ח -->
                 <div class="donation-card">
                     <div class="card-title">נאמן מורשת</div>
                     <div class="card-amount">₪360</div>
-                    <a href="https://pay.grow.link/OTkxMDI~7645ce79d23164ddbc012c17f6367308-MzU09AwMQ" class="donate-btn">לתרומה</a>
+                    <a href="https://pay.grow.link/OTkxMDI~f28b5226e8e2972af60dbde9252ef19b-MzU0MjU0Mw" class="donate-btn">לתרומה</a>
                 </div>
 
+                <!-- כפתור 3 - סכום אחר -->
                 <div class="donation-card">
                     <div class="card-title">סכום אחר</div>
                     <div class="card-amount" style="font-size: 1.1em; margin: 8px 0 15px 0;">לבחירתך</div>
@@ -359,7 +356,6 @@
             </div>
         </div>
 
-        <!-- פסקת הערך המעודכנת - ללא אזכור שלט, אלא הנצחת הסיפור יוצא הדופן -->
         <div class="content-text">
             <p>לספינה שלנו כבר יש אנדרטה נפלאה שהקמנו יחד. שותפותנו בהצבת נקודות המידע לאורך נתיבי המטיילים תשלים את התמונה בתוך מיזם ההנצחה הכולל, ותעניק את הכבוד הראוי בתולדות עם ישראל לדור מופלא ששרד את השואה הנוראה, הגיע לארץ בקשיים לא רגילים, וזכה להיות שותף פעיל במלחמה ובתקומת המדינה. אנו קוראים לכם לקחת חלק, להוביל כקהילה חזקה, ולתרום להנצחת הסיפור יוצא הדופן של דור המעפילים עבור הדורות הבאים.</p>
         </div>
@@ -386,7 +382,7 @@
     </div>
 
     <div class="version-tag">
-        גרסה 2026.07.01 - הפחתת סכומי תרומה ל-100 ש"ח ומחיקת אזכורי שלט
+        גרסה 2026.07.01 - מיקוד סופי ל-3 כפתורי תרומה
     </div>
 
 </body>
