@@ -12,14 +12,20 @@
       background-color: #f4f4f9;
       color: #333;
       text-align: center;
+      font-size: 20px;
+      line-height: 1.6;
     }
     header {
       background-color: #1a365d;
       color: white;
       padding: 20px 10px;
     }
+    header h1 {
+      font-size: 32px;
+      margin: 0;
+    }
     .container {
-      max-width: 800px;
+      max-width: 900px;
       margin: 20px auto;
       padding: 20px;
       background: white;
@@ -32,19 +38,63 @@
       border-radius: 6px;
       margin-bottom: 20px;
     }
-    .donate-btn {
-      display: inline-block;
-      background-color: #2b6cb0;
-      color: white;
-      font-size: 1.2rem;
+
+    /* עיצוב אזור כרטיסי התרומה */
+    .donation-section {
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid #e2e8f0;
+    }
+    .donation-title {
+      color: #1a365d;
+      font-size: 26px;
       font-weight: bold;
-      padding: 12px 30px;
-      text-decoration: none;
-      border-radius: 5px;
-      transition: background-color 0.3s ease;
+      margin-bottom: 20px;
+    }
+    .cards-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
       margin-top: 15px;
     }
-    .donate-btn:hover {
+    .card {
+      border: 2px solid #2b6cb0;
+      border-radius: 8px;
+      width: 160px;
+      padding: 15px 10px;
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    .card-title {
+      font-size: 19px;
+      color: #1a365d;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .card-amount {
+      font-size: 30px;
+      font-weight: bold;
+      color: #2b6cb0;
+      margin: 10px 0;
+    }
+    .btn-donate {
+      display: block;
+      width: 90%;
+      background-color: #2b6cb0;
+      color: white !important;
+      text-decoration: none;
+      padding: 10px 0;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    .btn-donate:hover {
       background-color: #2c5282;
     }
   </style>
@@ -64,10 +114,50 @@
     <h2>שותפים להנצחת שביל הים</h2>
     <p>אנו מזמינים אתכם לקחת חלק בפרויקט הנצחת מורשת המעפילים בשביל הים.</p>
 
-    <!-- קישור תרומה ל-GROW -->
-    <a href="https://www.grow.il/" target="_blank" rel="noopener noreferrer" class="donate-btn">
-      לתרומה מאובטחת דרך GROW
-    </a>
+    <!-- אזור כרטיסי התרומות המעודכן -->
+    <div class="donation-section">
+      <div class="donation-title">לתרומה מאובטחת והבטחת מקומנו על השביל:</div>
+
+      <div class="cards-container">
+
+        <!-- כרטיס 180 ש"ח -->
+        <div class="card">
+          <div class="card-title">ידיד הנתיב</div>
+          <div class="card-amount">₪180</div>
+          <a href="https://pay.grow.link/OTkxMDI~609ee4070b8fb715aa68b5173eaf2fdb-MzU0MjQ4OQ" target="_blank" rel="noopener noreferrer" class="btn-donate">שותף לדרך</a>
+        </div>
+
+        <!-- כרטיס 360 ש"ח -->
+        <div class="card">
+          <div class="card-title">נאמן מורשת</div>
+          <div class="card-amount">₪360</div>
+          <a href="https://pay.grow.link/OTkxMDI~f28b5226e8e2972af60dbde9252ef19b-MzU0MjU0Mw" target="_blank" rel="noopener noreferrer" class="btn-donate">שותף לדרך</a>
+        </div>
+
+        <!-- כרטיס 720 ש"ח -->
+        <div class="card">
+          <div class="card-title">מייסד נקודה</div>
+          <div class="card-amount">₪720</div>
+          <a href="https://pay.grow.link/OTkxMDI~7645ce79d23164ddbc012c17f6367308-MzU0OTAwMQ" target="_blank" rel="noopener noreferrer" class="btn-donate">שותף לדרך</a>
+        </div>
+
+        <!-- כרטיס 1500 ש"ח -->
+        <div class="card">
+          <div class="card-title">מוביל הנתיב</div>
+          <div class="card-amount">₪1,500</div>
+          <a href="https://pay.grow.link/OTkxMDI~c0106f819f7fa5e39c9415ae11997e8b-MzU0OTAzNA" target="_blank" rel="noopener noreferrer" class="btn-donate">שותף לדרך</a>
+        </div>
+
+        <!-- כרטיס סכום אחר -->
+        <div class="card">
+          <div class="card-title" style="margin-bottom: 15px;">סכום אחר</div>
+          <div class="card-title" style="font-size: 16px; color: #666;">לבחירתך</div>
+          <a href="https://pay.grow.link/OTkxMDI~1ae44df27a248930a79f9e07e08f2634-MzU0MzY0MA" target="_blank" rel="noopener noreferrer" class="btn-donate">לתרומה</a>
+        </div>
+
+      </div>
+    </div>
+
   </div>
 
 </body>
