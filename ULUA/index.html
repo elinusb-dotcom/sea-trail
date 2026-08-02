@@ -121,24 +121,6 @@
             margin-bottom: 15px;
         }
 
-        .presentation-btn {
-            display: inline-block;
-            background-color: #004a99;
-            color: white;
-            text-decoration: none;
-            padding: 10px 24px;
-            border-radius: 4px;
-            font-weight: bold;
-            margin: 10px 0;
-            font-size: 1.05em;
-            transition: background-color 0.2s;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        .presentation-btn:hover {
-            background-color: #002244;
-        }
-
         .donation-section {
             margin: 30px 0;
             background-color: #f8f9fa;
@@ -212,35 +194,36 @@
             margin-top: 25px;
         }
 
-        .video-section {
+        /* עיצוב המצגת בפורמט PDF */
+        .presentation-container {
             margin: 35px 0;
-            padding: 10px 0;
+            background: #f8fafc;
+            border: 1px solid #b3d1f2;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
         }
 
-        .video-section h3 {
-            font-size: 1.3em;
+        .presentation-container h3 {
+            margin-top: 0;
             color: #004a99;
-            margin-bottom: 15px;
+            font-size: 1.3em;
         }
 
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            max-width: 100%;
-            background: #000;
-            border-radius: 6px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        }
-
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
+        .pdf-frame {
             width: 100%;
-            height: 100%;
-            border: 0;
+            height: 550px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .pdf-fallback-link {
+            display: inline-block;
+            margin-top: 10px;
+            color: #004a99;
+            font-weight: bold;
+            text-decoration: underline;
         }
 
         .signature-box-container {
@@ -286,6 +269,7 @@
                 gap: 20px; 
             }
             .signature-col { text-align: center !important; }
+            .pdf-frame { height: 400px; }
         }
     </style>
 </head>
@@ -297,7 +281,7 @@
         <div class="banner-center-content">
             <img class="org-logo-small" src="https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/קפריסין.png" alt="לוגו ארגון מעפילי קפריסין">
             <div class="banner-text">
-                <h1>מנציחים את גבורת דור המעפילי<br>’<br><span class="sub-line">בשביל מטיילים לאומי - שביל הים</span></h1>
+                <h1>מנציחים את גבורת דור המעפילים<br><span class="sub-line">בשביל מטיילים לאומי - שביל הים</span></h1>
             </div>
         </div>
         
@@ -307,7 +291,7 @@
     <div class="container">
         
         <div class="target-box">
-            🚨 גיוס קהילתי: בסכום קטן , ננציח סיפור גדול וננציח את מורשת הורינו  במיזם ההנצחה!
+            🚨 גיוס קהילתי: בסכום קטן, ננציח סיפור גדול וננציח את מורשת הורינו במיזם ההנצחה!
         </div>
 
         <div class="call-to-action-section">
@@ -319,9 +303,7 @@
                 
                 <p>שמחים לשתף אתכם במיזם מרגש של ארגון מעפילי קפריסין להנצחת מפעל ההעפלה הבלתי לגאלית לאורך חופי הארץ. במסגרת הפרויקט יוצבו כ-30 עמודי הנצחה מעוצבים (הכוללים קוד QR למידע מורחב) מראש הניקרה ועד אשקלון, בנקודות הגעת הספינות או יעדיהן.</p>
                 
-                <p>ה הזמן שלנו לקחת חלק – עלו על הסיפון ויחד נבטיח את הנצחת המורשת יוצאת הדופן של הורינו, דור התקומה </p>
-                
-                
+                <p>זה הזמן שלנו לקחת חלק – עלו על הסיפון ויחד נבטיח את הנצחת המורשת יוצאת הדופן של הורינו, דור התקומה.</p>
             </div>
         </div>
 
@@ -353,11 +335,12 @@
             <p>לספינה שלנו כבר יש אנדרטה נפלאה שהקמנו יחד. שותפותנו בהצבת נקודות המידע לאורך נתיבי המטיילים תשלים את התמונה בתוך מיזם ההנצחה הכולל, ותעניק את הכבוד הראוי בתולדות עם ישראל לדור מופלא ששרד את השואה הנוראה, הגיע לארץ בקשיים לא רגילים, וזכה להיות שותף פעיל במלחמה ובתקומת המדינה. אנו קוראים לכם לקחת חלק, להוביל כקהילה חזקה, ולתרום להנצחת הסיפור יוצא הדופן של דור המעפילים עבור הדורות הבאים.</p>
         </div>
 
-        <div class="video-section">
-            <h3>הכירו את שביל הים</h3>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/ix4kBFgPEyI?rel=0&playsinline=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
+        <!-- הצגת המצגת במקום הסרטון -->
+        <div class="presentation-container">
+            <h3>מצגת המיזם</h3>
+            <iframe class="pdf-frame" src="מצגת אוגוסט.pdf">
+                <p>הדפדפן שלך אינו תומך בהצגת קובצי PDF. <a class="pdf-fallback-link" href="מצגת אוגוסט.pdf" target="_blank">לחץ כאן לפתיחת המצגת בחלון חדש</a>.</p>
+            </iframe>
         </div>
 
         <div class="signature-box-container">
@@ -375,7 +358,7 @@
     </div>
 
     <div class="version-tag">
-        גרסה 2026.07.01 - שחזור נוסח מורחב ומזוקק
+        גרסה 2026.08.01 - עדכון מצגת אוגוסט
     </div>
 
 </body>
