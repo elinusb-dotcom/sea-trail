@@ -47,6 +47,20 @@
         .banner-text h1 { font-size: 2.2em; margin: 0 0 10px 0; font-weight: bold; }
         .banner-text h2 { font-size: 1.4em; color: #fffb00; margin: 0; }
         .org-logo-small { width: 70px; height: 70px; object-fit: contain; background-color: rgba(255, 255, 255, 0.95); padding: 6px; border-radius: 50%; }
+
+        /* התאמה לסלולר עבור הבאנר העליון */
+        @media (max-width: 768px) {
+            .hero-banner {
+                flex-direction: column;
+                padding: 20px 10px;
+            }
+            .banner-img {
+                width: 140px;
+                height: 100px;
+            }
+            .banner-text h1 { font-size: 1.6em; }
+            .banner-text h2 { font-size: 1.1em; }
+        }
         
         .container { 
             max-width: 850px; 
@@ -103,6 +117,17 @@
             color: #004a99;
         }
 
+        @media (max-width: 600px) {
+            .buttons-row {
+                flex-direction: column;
+            }
+            .tab-btn {
+                max-width: 100%;
+                font-size: 1.1em;
+                padding: 10px;
+            }
+        }
+
         /* אזורי התוכן המוסתרים/מוצגים */
         .content-panel {
             display: none;
@@ -138,6 +163,27 @@
         .data-table th { background-color: #004a99; color: white; padding: 12px; border: 1px solid #004a99; width: 30%;}
         .data-table td { padding: 12px; border: 1px solid #e1e8ed; }
 
+        @media (max-width: 768px) {
+            .data-table, .data-table tbody, .data-table tr, .data-table th, .data-table td {
+                display: block;
+                width: 100%;
+            }
+            .data-table tr {
+                margin-bottom: 15px;
+                border: 1px solid #ddd;
+                border-radius: 6px;
+                padding: 5px;
+            }
+            .data-table th, .data-table td {
+                border: none;
+                padding: 8px;
+            }
+            .data-table th {
+                background-color: #e6f0fa;
+                color: #004a99;
+            }
+        }
+
         /* סרטון ותרומות */
         .video-section { margin: 40px 0; }
         .video-section h3 { color: #004a99; margin-bottom: 15px;}
@@ -155,6 +201,10 @@
         .closing-text { font-size: 1.1em; color: #004a99; font-weight: bold; margin: 30px 0; }
         .signature-box-container { margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px; display: flex; justify-content: space-between; text-align: right; }
         .signature-col { font-weight: bold; line-height: 1.6;}
+        @media (max-width: 600px) {
+            .signature-box-container { flex-direction: column; gap: 20px; }
+            .signature-col { text-align: right !important; }
+        }
     </style>
 </head>
 <body>
@@ -291,19 +341,16 @@
     <!-- סקריפט להחלפת טאבים -->
     <script>
         function openTab(evt, tabName) {
-            // הסתרת כל התכנים
             var i, tabcontent, tablinks;
             tabcontent = document.getElementsByClassName("content-panel");
             for (i = 0; i < tabcontent.length; i++) {
                 tabcontent[i].style.display = "none";
                 tabcontent[i].classList.remove("active");
             }
-            // הסרת מחלקת active מכל הכפתורים
             tablinks = document.getElementsByClassName("tab-btn");
             for (i = 0; i < tablinks.length; i++) {
                 tablinks[i].className = tablinks[i].className.replace(" active", "");
             }
-            // הצגת התוכן הנוכחי והוספת active לכפתור שנלחץ
             document.getElementById(tabName).style.display = "block";
             document.getElementById(tabName).classList.add("active");
             evt.currentTarget.className += " active";
