@@ -190,6 +190,30 @@
         .donation-amount { font-size: 1.4em; font-weight: bold; color: #004a99; }
         .donate-btn { background-color: #004a99; color: white; text-decoration: none; padding: 8px 15px; border-radius: 4px; font-weight: bold; width: 100%; box-sizing: border-box; text-align: center; }
         
+        .jump-to-donate-box {
+            background-color: #e6f0fa;
+            border: 2px dashed #004a99;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            margin: 30px 0 20px 0;
+        }
+        .jump-btn {
+            display: inline-block;
+            background-color: #004a99;
+            color: white;
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 6px;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-top: 10px;
+            transition: background 0.3s;
+        }
+        .jump-btn:hover {
+            background-color: #003366;
+        }
+
         .closing-text { font-size: 1.1em; color: #004a99; font-weight: bold; margin: 30px 0; text-align: right; }
         .signature-box-container { margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px; display: flex; justify-content: space-between; text-align: right; }
         .signature-col { font-weight: bold; line-height: 1.6; }
@@ -221,26 +245,23 @@
             <p>על החופים האלה, שבהם נשברים גלי הים התיכון, נכתב אחד הפרקים הדרמטיים ביותר בסיפור הקמתה של מדינת ישראל. אל חופים אלה הגיעו הורינו, סבינו, ואולי חלקכם אחרי מסע תלאות, הראשונים ממשפחתם בשושלת הדורות. נאבקו בבריטים על הזכות להגיע למולדת האבות. ראו את הארץ ושרו "התקווה" לפני הגירוש הכואב למחנות בקפריסין.</p>
         </div>
 
-        <!-- כפתורי הטאבים בסדר הנכון -->
         <div class="buttons-row">
             <button class="tab-btn active" onclick="openTab(event, 'vision')">חזון המיזם</button>
             <button class="tab-btn" onclick="openTab(event, 'id-card')">תעודת זהות 'שאר ישוב'</button>
         </div>
 
-        <!-- תוכן: חזון המיזם -->
         <div id="vision" class="content-panel active">
             <p><strong>היום, יש לנו הזדמנות היסטורית להבטיח שהסיפור הזה לא יישכח לעולם.</strong></p>
-            <p>אנו פועלים במסגרת פרויקט להנצחת מורשת ההעפלה בשיתוף עם פרויקט "שביל הים" – שביל הליכה לאומי ורצוף לאורך חופי המדינה, שבו צועדים אלפי מטיילים, בני נוער, משפחות . בשיתוף פעולה ייחודי, קיבלנו את המנדט להקים לאורך השביל 30 שלטי הנצחה ונקודות מידע אינטראקטיביות, שיספרו את סיפורי ההעפלה המרגשים בנקודות שבהן כל ספינות המעפילים הגיעו אל החוף (או שהיו מיועדות אליו).</p>
+            <p>אנו פועלים במסגרת פרויקט להנצחת מורשת ההעפלה בשיתוף עם פרויקט "שביל הים" – שביל הליכה לאומי ורצוף לאורך חופי המדינה, שבו צועדים אלפי מטיילים, בני נוער, משפחות ותיירים. בשיתוף פעולה ייחודי, קיבלנו את המנדט להקים לאורך השביל שלטי הנצחה ונקודות מידע אינטראקטיביות, שיספרו את סיפורי ההעפלה המרגשים בנקודות שבהן ספינות המעפילים הגיעו אל החוף (או שהיו מיועדות אליו).</p>
             <p>מיזם זה הינו מיזם מרכזי של ארגון מעפילי קפריסין.</p>
             <p>כדי להשלים את התקנת 30 שלטי ההנצחה – אנחנו צריכים אתכם איתנו.</p>
             
             <div class="highlight-quote">
-                "כל שלט הנצחה הוא יד זיכרון חיה. הוא הגשר שיחבר בין המטייל לבין סיפור המעפילים והצוותים שהגיעו בספינה-  יונגש למטיילים פיזית ובמרחב הדיגיטלי."
+                "כל שלט הנצחה הוא יד זיכרון חיה. הוא הגשר שיחבר בין המטייל לבין המעפילים והצוותים שהגיעו בספינה. סיפור הגבורה והנחישות המלא של אלו שאנו חבים להם כה רבות יונגש למטיילים פיזית ובמרחב הדיגיטלי."
             </div>
             
             <p><strong>כיצד אתם יכולים לעזור?</strong> אנו קוראים לכל אחד ואחת מחברי משפחת הספינה 'שאר ישוב' לקחת חלק במאמץ המשותף ולתרום לפרויקט. כל תרומה, קטנה כגדולה, תוקדש ישירות למימון הכנת והתקנת שלט ההנצחה, והנגשת המידע למטיילים בשטח.</p>
 
-            <!-- סרטון שביל הים -->
             <div class="video-section">
                 <h3>הכירו את שביל הים</h3>
                 <div class="video-container">
@@ -248,8 +269,7 @@
                 </div>
             </div>
 
-            <!-- אזור תרומות -->
-            <div class="donation-section">
+            <div id="donation-area" class="donation-section">
                 <h3>לתרומה מאובטחת והבטחת מקומנו על השביל:</h3>
                 <div class="donation-grid">
                     <div class="donation-card">
@@ -284,7 +304,6 @@
                 </div>
             </div>
 
-            <!-- חתימות -->
             <div class="signature-box-container">
                 <div class="signature-col">
                     בתודה, בהערכה ובשותפות לדרך,<br>
@@ -297,7 +316,6 @@
             </div>
         </div>
 
-        <!-- תוכן: תעודת זהות -->
         <div id="id-card" class="content-panel">
             <h3 style="color: #004a99; margin-top: 0;">תעודת זהות היסטורית: אוניית המעפילים 'שאר ישוב'</h3>
             <p>שלט ההנצחה המתוכנן ינגיש למטיילים בשטח תקציר אודות הספינה וקורות מעפיליה, וסריקת קוד QR ייעודי במכשיר נייד תעביר אותם לאתר מידע מורחב.</p>
@@ -323,10 +341,14 @@
                     <td>השלט הפיזי מתוכנן להיות מוצב ב"שביל הים" בחוף העיר אשדוד אל מול נתיב הגעתה ההיסטורי של "שאר ישוב"</td>
                 </tr>
             </table>
+
+            <div class="jump-to-donate-box">
+                <p style="margin: 0 0 10px 0; font-weight: bold; color: #004a99;">רוצים לקחת חלק ולהנציח את מורשת מעפילי 'שאר ישוב'?</p>
+                <a href="#donation-area" class="jump-btn" onclick="openTab({currentTarget: document.querySelectorAll('.tab-btn')[0]}, 'vision')">לתרומה 👇</a>
+            </div>
         </div>
     </div>
 
-    <!-- סקריפט להחלפת טאבים -->
     <script>
         function openTab(evt, tabName) {
             var i, tabcontent, tablinks;
@@ -341,7 +363,12 @@
             }
             document.getElementById(tabName).style.display = "block";
             document.getElementById(tabName).classList.add("active");
-            evt.currentTarget.className += " active";
+            
+            if(tabName === 'vision') {
+                tablinks[0].className += " active";
+            } else {
+                tablinks[1].className += " active";
+            }
         }
     </script>
 </body>
