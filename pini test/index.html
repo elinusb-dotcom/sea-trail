@@ -5,8 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>מורשת מעפילי שאר ישוב | שביל הים</title>
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.5; margin: 0; padding: 0; background-color: #f4f7f9; color: #1a1a1a; text-align: center; }
-        .hero-banner { background: linear-gradient(rgba(0, 34, 68, 0.9), rgba(0, 74, 153, 0.9)), url('https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/כותרת.jpg'); background-size: cover; background-position: center; color: white; padding: 30px 20px; display: flex; align-items: center; justify-content: space-between; gap: 20px; max-width: 1200px; margin: 0 auto; border-radius: 0 0 8px 8px; }
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.5; 
+            margin: 0; 
+            padding: 0; 
+            background-color: #f4f7f9; 
+            color: #1a1a1a; 
+            text-align: center; 
+        }
+        .hero-banner { 
+            background: linear-gradient(rgba(0, 34, 68, 0.9), rgba(0, 74, 153, 0.9)), url('https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/כותרת.jpg'); 
+            background-size: cover; 
+            background-position: center; 
+            color: white; 
+            padding: 30px 20px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between; 
+            gap: 20px; 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            border-radius: 0 0 8px 8px; 
+        }
         .banner-img { width: 180px; height: 130px; object-fit: cover; border-radius: 6px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); border: 2px solid rgba(255, 255, 255, 0.2); }
         .banner-center-content { flex-grow: 1; display: flex; flex-direction: column; align-items: center; gap: 15px; text-align: center; }
         .banner-text h1 { font-size: 2.2em; margin: 0 0 10px 0; font-weight: bold; }
@@ -64,12 +85,35 @@
     </div>
 
     <div class="container">
+        <div class="intro-text">
+            <p><strong>חברות וחברי משפחת 'שאר ישוב' היקרים,</strong></p>
+            <p>על החופים האלה, שבהם נשברים גלי הים התיכון, נכתב אחד הפרקים הדרמטיים ביותר בסיפור הקמתה של מדינת ישראל. אל חופים אלה הגיעו הורינו, סבינו, ואולי חלקכם אחרי מסע תלאות, הראשונים ממשפחתם בשושלת הדורות. נאבקו בבריטים על הזכות להגיע למולדת האבות. ראו את הארץ ושרו "התקווה" לפני הגירוש הכואב למחנות בקפריסין.</p>
+        </div>
+
         <div class="buttons-row">
             <button class="tab-btn active" onclick="openTab(event, 'vision')">חזון המיזם</button>
             <button class="tab-btn" onclick="openTab(event, 'id-card')">תעודת זהות 'שאר ישוב'</button>
         </div>
 
         <div id="vision" class="content-panel active">
+            <p><strong>היום, יש לנו הזדמנות היסטורית להבטיח שהסיפור הזה לא יישכח לעולם.</strong></p>
+            <p>אנו פועלים במסגרת פרויקט להנצחת מורשת ההעפלה בשיתוף עם פרויקט "שביל הים" – שביל הליכה לאומי ורצוף לאורך חופי המדינה, שבו צועדים אלפי מטיילים, בני נוער, משפחות ותיירים. בשיתוף פעולה ייחודי, קיבלנו את המנדט להקים לאורך השביל שלטי הנצחה ונקודות מידע אינטראקטיביות, שיספרו את סיפורי ההעפלה המרגשים בנקודות שבהן ספינות המעפילים הגיעו אל החוף (או שהיו מיועדות אליו).</p>
+            <p>מיזם זה הינו מיזם מרכזי של ארגון מעפילי קפריסין.</p>
+            <p>כדי להשלים את התקנת 30 שלטי ההנצחה – אנחנו צריכים אתכם איתנו.</p>
+            
+            <div class="highlight-quote">
+                "כל שלט הנצחה הוא יד זיכרון חיה. הוא הגשר שיחבר בין המטייל לבין המעפילים והצוותים שהגיעו בספינה. סיפור הגבורה והנחישות המלא של אלו שאנו חבים להם כה רבות יונגש למטיילים פיזית ובמרחב הדיגיטלי."
+            </div>
+            
+            <p><strong>כיצד אתם יכולים לעזור?</strong> אנו קוראים לכל אחד ואחת מחברי משפחת הספינה 'שאר ישוב' לקחת חלק במאמץ המשותף ולתרום לפרויקט. כל תרומה, קטנה כגדולה, תוקדש ישירות למימון הכנת והתקנת שלט ההנצחה, והנגשת המידע למטיילים בשטח.</p>
+
+            <div class="video-section">
+                <h3>הכירו את שביל הים</h3>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/ix4kBFgPEyI" allowfullscreen></iframe>
+                </div>
+            </div>
+
             <div class="donation-section" id="donation-area">
                 <h3>לתרומה מאובטחת והבטחת מקומנו על השביל:</h3>
                 <div class="donation-grid">
@@ -99,13 +143,52 @@
                         <a href="https://pay.grow.link/OTkxMDI~1ae44df27a248930a79f9e07e08f2634-MzU0MzY0MA" class="donate-btn">לתרומה</a>
                     </div>
                 </div>
+                
+                <div class="closing-text">
+                    זהו הרגע שלנו להבטיח שמורשת מעפילי קפריסין תהיה חלק בלתי נפרד מנוף מולדתנו. הים זוכר, ועכשיו גם המטיילים יזכרו.
+                </div>
+            </div>
+
+            <div class="signature-box-container">
+                <div style="text-align: right; font-weight: bold;">
+                    בתודה, בהערכה ובשותפות לדרך,<br>
+                    פרופ' סנונית שהם,<br>
+                    יו"ר ארגון מעפילי קפריסין
+                </div>
+                <div style="text-align: left; font-weight: bold; display: flex; align-items: flex-end;">
+                    צוות מורשת שאר ישוב
+                </div>
             </div>
         </div>
 
         <div id="id-card" class="content-panel">
-            <!-- תוכן תעודת זהות כפי שהיה -->
+            <h3 style="color: #004a99; margin-top: 0;">תעודת זהות היסטורית: אוניית המעפילים 'שאר ישוב'</h3>
+            <p>שלט ההנצחה המתוכנן ינגיש למטיילים בשטח תקציר אודות הספינה וקורות מעפיליה, וסריקת קוד QR ייעודי במכשיר נייד תעביר אותם לאתר מידע מורחב.</p>
+            <table class="data-table">
+                <tr>
+                    <th>נמל ומועד היציאה</th>
+                    <td>האונייה הפליגה מנמל בוליאסקו שבאיטליה ב-7 לאפריל 1947.</td>
+                </tr>
+                <tr>
+                    <th>מספר המעפילים</th>
+                    <td>על סיפונה של האונייה הצטופפו 768 מעפילים, ניצולי שואה, שעשו את דרכם אל עבר חופי המולדת.</td>
+                </tr>
+                <tr>
+                    <th>הגעה והעימות עם הבריטים</th>
+                    <td>ב-23 באפריל 1947 נתקלה האונייה במשחתות בריטיות. המעפילים גילו התנגדות אמיצה ועקשת מול הלוחמים הבריטים שעלו על הסיפון.</td>
+                </tr>
+                <tr>
+                    <th>הגירוש לקפריסין</th>
+                    <td>לאחר מאבק קשה, נגררה האוניה לנמל חיפה, והמעפילים גורשו באופן כואב אל מחנות המעצר הבריטיים בקפריסין. שם המתינו עד לשחרורם המיוחל.</td>
+                </tr>
+                <tr>
+                    <th>מיקום שלט ההנצחה בשביל</th>
+                    <td>השלט הפיזי מתוכנן להיות מוצב ב"שביל הים" בחוף העיר אשדוד אל מול נתיב הגעתה ההיסטורי של "שאר ישוב"</td>
+                </tr>
+            </table>
+
             <div class="jump-to-donate-box">
-                <p style="margin: 0 0 10px 0; font-weight: bold; color: #004a99;">רוצים לקחת חלק?</p>
+                <p style="margin: 0 0 10px 0; font-weight: bold; color: #004a99;">רוצים לקחת חלק ולהנציח את מורשת מעפילי 'שאר ישוב'?</p>
                 <a href="#donation-area" class="jump-btn" onclick="openTab({currentTarget: document.querySelectorAll('.tab-btn')[0]}, 'vision')">לתרומה 👇</a>
             </div>
         </div>
@@ -113,10 +196,24 @@
 
     <script>
         function openTab(evt, tabName) {
-            var i, tabcontent = document.getElementsByClassName("content-panel");
-            for (i = 0; i < tabcontent.length; i++) tabcontent[i].style.display = "none";
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("content-panel");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+                tabcontent[i].classList.remove("active");
+            }
+            tablinks = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
             document.getElementById(tabName).style.display = "block";
-            // עדכון כפתורים...
+            document.getElementById(tabName).classList.add("active");
+            
+            if(tabName === 'vision') {
+                tablinks[0].className += " active";
+            } else {
+                tablinks[1].className += " active";
+            }
         }
     </script>
 </body>
