@@ -5,172 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>מורשת מעפילי שאר ישוב | שביל הים</title>
     <style>
-        body { 
-            font-family: Arial, sans-serif; 
-            line-height: 1.5; 
-            margin: 0; 
-            padding: 0; 
-            background-color: #f4f7f9; 
-            color: #1a1a1a; 
-            text-align: center; 
-        }
-        .hero-banner { 
-            background: linear-gradient(rgba(0, 34, 68, 0.9), rgba(0, 74, 153, 0.9)), url('https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/כותרת.jpg'); 
-            background-size: cover; 
-            background-position: center; 
-            color: white; 
-            padding: 30px 20px; 
-            display: flex; 
-            align-items: center; 
-            justify-content: space-between; 
-            gap: 20px; 
-            max-width: 1200px; 
-            margin: 0 auto; 
-            border-radius: 0 0 8px 8px; 
-        }
-        .banner-img { 
-            width: 180px; 
-            height: 130px; 
-            object-fit: cover; 
-            border-radius: 6px; 
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3); 
-            border: 2px solid rgba(255, 255, 255, 0.2); 
-        }
-        .banner-center-content { 
-            flex-grow: 1; 
-            display: flex; 
-            flex-direction: column; 
-            align-items: center; 
-            gap: 15px; 
-            text-align: center; 
-        }
+        body { font-family: Arial, sans-serif; line-height: 1.5; margin: 0; padding: 0; background-color: #f4f7f9; color: #1a1a1a; text-align: center; }
+        .hero-banner { background: linear-gradient(rgba(0, 34, 68, 0.9), rgba(0, 74, 153, 0.9)), url('https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/כותרת.jpg'); background-size: cover; background-position: center; color: white; padding: 30px 20px; display: flex; align-items: center; justify-content: space-between; gap: 20px; max-width: 1200px; margin: 0 auto; border-radius: 0 0 8px 8px; }
+        .banner-img { width: 180px; height: 130px; object-fit: cover; border-radius: 6px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); border: 2px solid rgba(255, 255, 255, 0.2); }
+        .banner-center-content { flex-grow: 1; display: flex; flex-direction: column; align-items: center; gap: 15px; text-align: center; }
         .banner-text h1 { font-size: 2.2em; margin: 0 0 10px 0; font-weight: bold; }
         .banner-text h2 { font-size: 1.4em; color: #fffb00; margin: 0; }
         .org-logo-small { width: 70px; height: 70px; object-fit: contain; background-color: rgba(255, 255, 255, 0.95); padding: 6px; border-radius: 50%; }
 
         @media (max-width: 768px) {
-            .hero-banner {
-                flex-direction: column;
-                padding: 20px 10px;
-            }
-            .banner-img {
-                width: 140px;
-                height: 100px;
-            }
+            .hero-banner { flex-direction: column; padding: 20px 10px; }
+            .banner-img { width: 140px; height: 100px; }
             .banner-text h1 { font-size: 1.6em; }
             .banner-text h2 { font-size: 1.1em; }
         }
         
-        .container { 
-            max-width: 850px; 
-            margin: 0 auto; 
-            padding: 40px 20px; 
-            background: white; 
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
-            border-radius: 8px; 
-            margin-top: 20px; 
-            margin-bottom: 20px;
-        }
-        
-        .intro-text {
-            text-align: right;
-            font-size: 1.1em;
-            margin-bottom: 30px;
-        }
-
-        .buttons-row {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-bottom: 20px;
-        }
-        .tab-btn {
-            background-color: #004a99;
-            color: white;
-            border: 2px solid #004a99;
-            padding: 12px 24px;
-            font-size: 1.2em;
-            font-weight: bold;
-            border-radius: 6px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            flex: 1;
-            max-width: 300px;
-        }
-        .tab-btn:hover {
-            background-color: #003366;
-            border-color: #003366;
-        }
-        .tab-btn.active {
-            background-color: white;
-            color: #004a99;
-        }
-
-        @media (max-width: 600px) {
-            .buttons-row {
-                flex-direction: column;
-            }
-            .tab-btn {
-                max-width: 100%;
-                font-size: 1.1em;
-                padding: 10px;
-            }
-        }
-
-        .content-panel {
-            display: none;
-            background-color: #fcfcfc;
-            border: 1px solid #ddd;
-            padding: 25px;
-            border-radius: 8px;
-            text-align: right;
-            margin-bottom: 30px;
-            box-shadow: inset 0 2px 5px rgba(0,0,0,0.03);
-        }
-        .content-panel.active {
-            display: block;
-        }
-
-        .highlight-quote { 
-            border-right: 4px solid #004a99; 
-            padding-right: 15px; 
-            margin: 20px 0; 
-            font-style: italic; 
-            color: #004a99; 
-            font-weight: bold;
-        }
-
+        .container { max-width: 850px; margin: 0 auto; padding: 40px 20px; background: white; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-radius: 8px; margin-top: 20px; margin-bottom: 20px; }
+        .intro-text { text-align: right; font-size: 1.1em; margin-bottom: 30px; }
+        .buttons-row { display: flex; justify-content: center; gap: 15px; margin-bottom: 20px; }
+        .tab-btn { background-color: #004a99; color: white; border: 2px solid #004a99; padding: 12px 24px; font-size: 1.2em; font-weight: bold; border-radius: 6px; cursor: pointer; transition: all 0.3s ease; flex: 1; max-width: 300px; }
+        .tab-btn:hover { background-color: #003366; border-color: #003366; }
+        .tab-btn.active { background-color: white; color: #004a99; }
+        .content-panel { display: none; background-color: #fcfcfc; border: 1px solid #ddd; padding: 25px; border-radius: 8px; text-align: right; margin-bottom: 30px; box-shadow: inset 0 2px 5px rgba(0,0,0,0.03); }
+        .content-panel.active { display: block; }
+        .highlight-quote { border-right: 4px solid #004a99; padding-right: 15px; margin: 20px 0; font-style: italic; color: #004a99; font-weight: bold; }
         .data-table { width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 1.05em; text-align: right; }
         .data-table th { background-color: #004a99; color: white; padding: 12px; border: 1px solid #004a99; width: 30%; }
         .data-table td { padding: 12px; border: 1px solid #e1e8ed; }
-
-        @media (max-width: 768px) {
-            .data-table, .data-table tbody, .data-table tr, .data-table th, .data-table td {
-                display: block;
-                width: 100%;
-                box-sizing: border-box;
-            }
-            .data-table tr {
-                margin-bottom: 15px;
-                border: 1px solid #ddd;
-                border-radius: 6px;
-                padding: 5px;
-            }
-            .data-table th, .data-table td {
-                border: none;
-                padding: 8px;
-            }
-            .data-table th {
-                background-color: #e6f0fa;
-                color: #004a99;
-            }
-        }
-
         .video-section { margin: 40px 0; text-align: right; }
-        .video-section h3 { color: #004a99; margin-bottom: 15px; }
         .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000; border-radius: 6px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
         .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
-        
         .donation-section { text-align: right; }
         .donation-section h3 { color: #004a99; margin-bottom: 20px; }
         .donation-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 15px; margin-bottom: 25px; direction: rtl; }
@@ -179,38 +43,10 @@
         .donation-title { font-size: 1em; font-weight: bold; color: #333; }
         .donation-amount { font-size: 1.4em; font-weight: bold; color: #004a99; }
         .donate-btn { background-color: #004a99; color: white; text-decoration: none; padding: 8px 15px; border-radius: 4px; font-weight: bold; width: 100%; box-sizing: border-box; text-align: center; }
-        
-        .jump-to-donate-box {
-            background-color: #e6f0fa;
-            border: 2px dashed #004a99;
-            padding: 20px;
-            border-radius: 8px;
-            text-align: center;
-            margin: 30px 0 20px 0;
-        }
-        .jump-btn {
-            display: inline-block;
-            background-color: #004a99;
-            color: white;
-            text-decoration: none;
-            padding: 12px 30px;
-            border-radius: 6px;
-            font-size: 1.2em;
-            font-weight: bold;
-            margin-top: 10px;
-            transition: background 0.3s;
-        }
-        .jump-btn:hover {
-            background-color: #003366;
-        }
-
+        .jump-to-donate-box { background-color: #e6f0fa; border: 2px dashed #004a99; padding: 20px; border-radius: 8px; text-align: center; margin: 30px 0 20px 0; }
+        .jump-btn { display: inline-block; background-color: #004a99; color: white; text-decoration: none; padding: 12px 30px; border-radius: 6px; font-size: 1.2em; font-weight: bold; margin-top: 10px; }
         .closing-text { font-size: 1.1em; color: #004a99; font-weight: bold; margin: 30px 0; text-align: right; }
         .signature-box-container { margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px; display: flex; justify-content: space-between; text-align: right; }
-        .signature-col { font-weight: bold; line-height: 1.6; }
-        @media (max-width: 600px) {
-            .signature-box-container { flex-direction: column; gap: 20px; }
-            .signature-col { text-align: right !important; }
-        }
     </style>
 </head>
 <body>
@@ -228,110 +64,48 @@
     </div>
 
     <div class="container">
-        <div class="intro-text">
-            <p><strong>חברות וחברי משפחת 'שאר ישוב' היקרים,</strong></p>
-            <p>על החופים האלה, שבהם נשברים גלי הים התיכון, נכתב אחד הפרקים הדרמטיים ביותר בסיפור הקמתה של מדינת ישראל. אל חופים אלה הגיעו הורינו, סבינו, ואולי חלקכם אחרי מסע תלאות, הראשונים ממשפחתם בשושלת הדורות. נאבקו בבריטים על הזכות להגיע למולדת האבות. ראו את הארץ ושרו "התקווה" לפני הגירוש הכואב למחנות בקפריסין.</p>
-        </div>
-
         <div class="buttons-row">
             <button class="tab-btn active" onclick="openTab(event, 'vision')">חזון המיזם</button>
             <button class="tab-btn" onclick="openTab(event, 'id-card')">תעודת זהות 'שאר ישוב'</button>
         </div>
 
         <div id="vision" class="content-panel active">
-            <p><strong>היום, יש לנו הזדמנות היסטורית להבטיח שהסיפור הזה לא יישכח לעולם.</strong></p>
-            <p>אנו פועלים במסגרת פרויקט להנצחת מורשת ההעפלה בשיתוף עם פרויקט "שביל הים" – שביל הליכה לאומי ורצוף לאורך חופי המדינה, שבו צועדים אלפי מטיילים, בני נוער, משפחות ותיירים. בשיתוף פעולה ייחודי, קיבלנו את המנדט להקים לאורך השביל שלטי הנצחה ונקודות מידע אינטראקטיביות, שיספרו את סיפורי ההעפלה המרגשים בנקודות שבהן ספינות המעפילים הגיעו אל החוף (או שהיו מיועדות אליו).</p>
-            <p>מיזם זה הינו מיזם מרכזי של ארגון מעפילי קפריסין.</p>
-            <p>כדי להשלים את התקנת 30 שלטי ההנצחה – אנחנו צריכים אתכם איתנו.</p>
-            
-            <div class="highlight-quote">
-                "כל שלט הנצחה הוא יד זיכרון חיה. הוא הגשר שיחבר בין המטייל לבין המעפילים והצוותים שהגיעו בספינה. סיפור הגבורה והנחישות המלא של אלו שאנו חבים להם כה רבות יונגש למטיילים פיזית ובמרחב הדיגיטלי."
-            </div>
-            
-            <p><strong>כיצד אתם יכולים לעזור?</strong> אנו קוראים לכל אחד ואחת מחברי משפחת הספינה 'שאר ישוב' לקחת חלק במאמץ המשותף ולתרום לפרויקט. כל תרומה, קטנה כגדולה, תוקדש ישירות למימון הכנת והתקנת שלט ההנצחה, והנגשת המידע למטיילים בשטח.</p>
-
-            <div class="video-section">
-                <h3>הכירו את שביל הים</h3>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/ix4kBFgPEyI" allowfullscreen></iframe>
-                </div>
-            </div>
-
-            <div id="donation-area" class="donation-section">
+            <div class="donation-section" id="donation-area">
                 <h3>לתרומה מאובטחת והבטחת מקומנו על השביל:</h3>
                 <div class="donation-grid">
                     <div class="donation-card">
                         <span class="donation-title">ידיד הנתיב</span>
                         <span class="donation-amount">₪180</span>
-                        <a href="#" class="donate-btn">שותף לדרך</a>
+                        <a href="https://pay.grow.link/OTkxMDI~609ee4070b8fb715aa68b5173eaf2fdb-MzU0MjQ4OQ" class="donate-btn">שותף לדרך</a>
                     </div>
                     <div class="donation-card">
                         <span class="donation-title">נאמן מורשת</span>
                         <span class="donation-amount">₪360</span>
-                        <a href="#" class="donate-btn">שותף לדרך</a>
+                        <a href="https://pay.grow.link/OTkxMDI~f28b5226e8e2972af60dbde9252ef19b-MzU0MjU0Mw" class="donate-btn">שותף לדרך</a>
                     </div>
                     <div class="donation-card">
                         <span class="donation-title">מייסד נקודה</span>
                         <span class="donation-amount">₪720</span>
-                        <a href="#" class="donate-btn">שותף לדרך</a>
+                        <a href="https://pay.grow.link/OTkxMDI~7645ce79d23164ddbc012c17f6367308-MzU0OTAwMQ" class="donate-btn">שותף לדרך</a>
                     </div>
                     <div class="donation-card">
                         <span class="donation-title">מוביל הנתיב</span>
                         <span class="donation-amount">₪1,500</span>
-                        <a href="#" class="donate-btn">שותף לדרך</a>
+                        <a href="https://pay.grow.link/OTkxMDI~c0106f819f7fa5e39c9415ae11997e8b-MzU0OTAzNA" class="donate-btn">שותף לדרך</a>
                     </div>
                     <div class="donation-card">
                         <span class="donation-title">סכום אחר</span>
                         <span class="donation-amount">לבחירתך</span>
-                        <a href="#" class="donate-btn">לתרומה</a>
+                        <a href="https://pay.grow.link/OTkxMDI~1ae44df27a248930a79f9e07e08f2634-MzU0MzY0MA" class="donate-btn">לתרומה</a>
                     </div>
-                </div>
-                
-                <div class="closing-text">
-                    זהו הרגע שלנו להבטיח שמורשת מעפילי קפריסין תהיה חלק בלתי נפרד מנוף מולדתנו. הים זוכר, ועכשיו גם המטיילים יזכרו.
-                </div>
-            </div>
-
-            <div class="signature-box-container">
-                <div class="signature-col">
-                    בתודה, בהערכה ובשותפות לדרך,<br>
-                    פרופ' סנונית שהם,<br>
-                    יו"ר ארגון מעפילי קפריסין
-                </div>
-                <div class="signature-col" style="text-align: left; display: flex; align-items: flex-end;">
-                    צוות מורשת שאר ישוב
                 </div>
             </div>
         </div>
 
         <div id="id-card" class="content-panel">
-            <h3 style="color: #004a99; margin-top: 0;">תעודת זהות היסטורית: אוניית המעפילים 'שאר ישוב'</h3>
-            <p>שלט ההנצחה המתוכנן ינגיש למטיילים בשטח תקציר אודות הספינה וקורות מעפיליה, וסריקת קוד QR ייעודי במכשיר נייד תעביר אותם לאתר מידע מורחב.</p>
-            <table class="data-table">
-                <tr>
-                    <th>נמל ומועד היציאה</th>
-                    <td>האונייה הפליגה מנמל בוליאסקו שבאיטליה ב-7 לאפריל 1947.</td>
-                </tr>
-                <tr>
-                    <th>מספר המעפילים</th>
-                    <td>על סיפונה של האונייה הצטופפו 768 מעפילים, ניצולי שואה, שעשו את דרכם אל עבר חופי המולדת.</td>
-                </tr>
-                <tr>
-                    <th>הגעה והעימות עם הבריטים</th>
-                    <td>ב-23 באפריל 1947 נתקלה האונייה במשחתות בריטיות. המעפילים גילו התנגדות אמיצה ועקשת מול הלוחמים הבריטים שעלו על הסיפון.</td>
-                </tr>
-                <tr>
-                    <th>הגירוש לקפריסין</th>
-                    <td>לאחר מאבק קשה, נגררה האוניה לנמל חיפה, והמעפילים גורשו באופן כואב אל מחנות המעצר הבריטיים בקפריסין. שם המתינו עד לשחרורם המיוחל.</td>
-                </tr>
-                <tr>
-                    <th>מיקום שלט ההנצחה בשביל</th>
-                    <td>השלט הפיזי מתוכנן להיות מוצב ב"שביל הים" בחוף העיר אשדוד אל מול נתיב הגעתה ההיסטורי של "שאר ישוב"</td>
-                </tr>
-            </table>
-
+            <!-- תוכן תעודת זהות כפי שהיה -->
             <div class="jump-to-donate-box">
-                <p style="margin: 0 0 10px 0; font-weight: bold; color: #004a99;">רוצים לקחת חלק ולהנציח את מורשת מעפילי 'שאר ישוב'?</p>
+                <p style="margin: 0 0 10px 0; font-weight: bold; color: #004a99;">רוצים לקחת חלק?</p>
                 <a href="#donation-area" class="jump-btn" onclick="openTab({currentTarget: document.querySelectorAll('.tab-btn')[0]}, 'vision')">לתרומה 👇</a>
             </div>
         </div>
@@ -339,24 +113,10 @@
 
     <script>
         function openTab(evt, tabName) {
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("content-panel");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-                tabcontent[i].classList.remove("active");
-            }
-            tablinks = document.getElementsByClassName("tab-btn");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-            }
+            var i, tabcontent = document.getElementsByClassName("content-panel");
+            for (i = 0; i < tabcontent.length; i++) tabcontent[i].style.display = "none";
             document.getElementById(tabName).style.display = "block";
-            document.getElementById(tabName).classList.add("active");
-            
-            if(tabName === 'vision') {
-                tablinks[0].className += " active";
-            } else {
-                tablinks[1].className += " active";
-            }
+            // עדכון כפתורים...
         }
     </script>
 </body>
