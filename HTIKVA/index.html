@@ -25,13 +25,23 @@
         .content-text { font-size: 1.15em; color: #333; }
         .highlight-box { border-right: 4px solid #004a99; padding-right: 15px; margin: 25px 0; font-style: italic; color: #003366; }
         
+        /* אזור כפתורי תרומה - מעל הסרטון */
+        .donation-section { margin: 30px 0; }
+        .donation-section h3 { font-size: 1.4em; color: #004a99; margin-bottom: 20px; text-align: right; }
+        .donation-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; }
+        .donation-card { background: #fdfdfd; border: 2px solid #004a99; border-radius: 8px; padding: 12px; text-align: center; }
+        .donate-btn { background-color: #004a99; color: white !important; text-decoration: none; padding: 10px 12px; border-radius: 4px; font-weight: bold; display: inline-block; margin-top: 8px; font-size: 1em; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
+        .donate-btn:hover { background-color: #002244; }
+
+        /* אזור סרטון עם כותרת "לא נפסיק לזכור" */
+        .video-section { margin: 30px 0; background-color: #f8f9fa; padding: 20px; border-radius: 8px; border: 1px solid #eee; text-align: center; }
+        .video-section h3 { font-size: 1.3em; color: #004a99; margin-top: 0; margin-bottom: 15px; }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+        
         .data-table { width: 100%; border-collapse: collapse; margin-top: 20px; text-align: right; }
         .data-table th { background-color: #004a99; color: white; padding: 12px; }
         .data-table td { padding: 12px; border: 1px solid #e1e8ed; }
-        
-        .donation-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; margin-top: 20px; }
-        .donation-card { background: #fdfdfd; border: 2px solid #004a99; border-radius: 8px; padding: 10px; text-align: center; }
-        .donate-btn { background-color: #004a99; color: white; text-decoration: none; padding: 8px 10px; border-radius: 4px; font-weight: bold; display: inline-block; margin-top: 8px; font-size: 0.9em; }
         
         .signature-box-container { margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px; display: flex; justify-content: space-between; }
     </style>
@@ -53,39 +63,50 @@
     <div class="container">
         <div class="target-box">מטרת הגיוס המשותפת של משפחת "התקווה" : 40,000 ₪</div>
         <div class="content-text">
-            <p><strong>חברות וחברי משפחת מעפילי  "התקווה" היקרים,</strong></p>
+            <p><strong>חברות וחברי משפחת מעפילי "התקווה" היקרים,</strong></p>
             <p>על החופים האלה, שבהם נשברים גלי הים התיכון, נכתב אחד הפרקים הדרמטיים ביותר בסיפור הקמתה של מדינת ישראל. אל חופים אלה הגיעו הורינו, סבינו, ואולי חלקכם אחרי מסע תלאות, הראשונים ממשפחתם בשרשרת הדורות. נאבקו בבריטים על הזכות להגיע למולדת האבות. ראו את הארץ ושרו התקווה לפני הגירוש הכואב למחנות בקפריסין.</p>
             <p>היום, יש לנו הזדמנות היסטורית להבטיח שהסיפור הזה לא יישכח לעולם.</p>
             <p>אנו פועלים במסגרת פרויקט להנצחת מורשת ההעפלה בשיתוף עם פרויקט "שביל הים" – שביל הליכה לאומי ורציף לאורך חופי המדינה, שבו צועדים אלפי מטיילים, בני נוער, משפחות ותיירים. בשיתוף פעולה ייחודי, קיבלנו את המנדט להקים לאורך השביל שלטי הנצחה ונקודות מידע אינטראקטיביות, שיספרו את סיפורי ההעפלה המרגשים בנקודות שבהן ספינות המעפילים הגיעו אל החוף (או שהיו מיועדות אליו).</p>
             <p>מיזם זה הינו מיזם מרכזי של ארגון מעפילי קפריסין. כדי להשלים את התקנת 30 שלטי ההנצחה – אנחנו צריכים אתכם איתנו.</p>
             <div class="highlight-box">
-                "כל שלט הנצחה הוא יד זיכרון חיה. הוא הגשר שיחבר בין המטייל לבין המעפילים והצוותים שהגיעו בספינה. סיפור הגבורה והנחישות המלא של אלו שאנו חבים להם כה רבות יונגש למטיילים פיזית ובמרחב הדיגיטלי."
+                "כל שלט הנצחה הוא יד זיכרון חיה. הוא הגשר שיחבר בין המטייל לבין המעפילים והצוותים שהגיעו בספינה. סיפור הגבורה והנחישות המלא של אלו שאנו חבים להם כה רבות יונгש למטיילים פיזית ובמרחב הדיגיטלי."
             </div>
             <p><strong>כיצד אתם יכולים לעזור?</strong> אנו קוראים לכל אחד ואחת מחברי משפחת מעפילי הספינה 'התקווה' לקחת חלק במאמץ המשותף ולתרום לפרויקט. כל תרומה, קטנה כגדולה, תוקדש ישירות למימון הכנת והתקנת שלט ההנצחה, והנגשת המידע למטיילים בשטח.</p>
         </div>
 
-        <h3> "תעודת זהות היסטורית: אוניית המעפילים "התקווה</h3>
+        <!-- אזור כפתורי תרומה מודגשים מעל הסרטון -->
+        <div class="donation-section">
+            <h3>לתרומה מאובטחת והבטחת מקומנו על השביל:</h3>
+            <div class="donation-grid">
+                <div class="donation-card"><div>ידיד הנתיב</div><strong>₪180</strong><br><a href="https://pay.grow.link/OTkxMDI~609ee4070b8fb715aa68b5173eaf2fdb-MzU0MjQ4OQ" target="_blank" rel="noopener noreferrer" class="donate-btn">לתרומה</a></div>
+                <div class="donation-card"><div>נאמן מורשת</div><strong>₪360</strong><br><a href="https://pay.grow.link/OTkxMDI~f28b5226e8e2972af60dbde9252ef19b-MzU0MjU0Mw" target="_blank" rel="noopener noreferrer" class="donate-btn">לתרומה</a></div>
+                <div class="donation-card"><div>מייסד נקודה</div><strong>₪720</strong><br><a href="https://pay.grow.link/OTkxMDI~7645ce79d23164ddbc012c17f6367308-MzU0OTAwMQ" target="_blank" rel="noopener noreferrer" class="donate-btn">לתרומה</a></div>
+                <div class="donation-card"><div>מוביל הנתיב</div><strong>₪1,500</strong><br><a href="https://pay.grow.link/OTkxMDI~c0106f819f7fa5e39c9415ae11997e8b-MzU0OTAzNA" target="_blank" rel="noopener noreferrer" class="donate-btn">לתרומה</a></div>
+                <div class="donation-card"><div>סכום אחר</div><br>לבחירתך<br><a href="https://pay.grow.link/OTkxMDI~1ae44df27a248930a79f9e07e08f2634-MzU0MzY0MA" target="_blank" rel="noopener noreferrer" class="donate-btn">לתרומה</a></div>
+            </div>
+        </div>
+
+        <!-- אזור סרטון עם כותרת "לא נפסיק לזכור" -->
+        <div class="video-section">
+            <h3>לא נפסיק לזכור...</h3>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/ap9GSRZcBTs" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <h3>תעודת זהות היסטורית: אוניית המעפילים "התקווה"</h3>
         <table class="data-table">
-            <tr><th>פרק בהיסטוריה</th><th> "נתוני הפלגת הגבורה של "התקווה/th></tr>
-            <tr><td><strong>נמל יציאה</strong></td><td>,איטליה ,בוקה דה מגרה</td></tr>
+            <tr><th>פרק בהיסטוריה</th><th>נתוני הפלגת הגבורה של "התקווה"</th></tr>
+            <tr><td><strong>נמל יציאה</strong></td><td>איטליה, בוקה דה מגרה</td></tr>
             <tr><td><strong>מועד הגעה</strong></td><td>17 במאי 1947</td></tr>
             <tr><td><strong>מספר מעפילים</strong></td><td>1,414 מעפילים</td></tr>
             <tr><td><strong>גורל הספינה</strong></td><td>נתפסה על ידי הבריטים, המעפילים גורשו לקפריסין</td></tr>
             <tr><td><strong>מיקום שלט ההנצחה</strong></td><td>מפרץ חיפה</td></tr>
         </table>
 
-        <h3>לתרומה מאובטחת והבטחת מקומנו על השביל:</h3>
-        <div class="donation-grid">
-            <div class="donation-card"><div>ידיד הנתיב</div><strong>₪180</strong><br><a href="https://pay.grow.link/OTkxMDI~609ee4070b8fb715aa68b5173eaf2fdb-MzU0MjQ4OQ" class="donate-btn">לתרומה</a></div>
-            <div class="donation-card"><div>נאמן מורשת</div><strong>₪360</strong><br><a href="https://pay.grow.link/OTkxMDI~f28b5226e8e2972af60dbde9252ef19b-MzU0MjU0Mw" class="donate-btn">לתרומה</a></div>
-            <div class="donation-card"><div>מייסד נקודה</div><strong>₪720</strong><br><a href="https://pay.grow.link/OTkxMDI~7645ce79d23164ddbc012c17f6367308-MzU0OTAwMQ" class="donate-btn">לתרומה</a></div>
-            <div class="donation-card"><div>מוביל הנתיב</div><strong>₪1,500</strong><br><a href="https://pay.grow.link/OTkxMDI~c0106f819f7fa5e39c9415ae11997e8b-MzU0OTAzNA" class="donate-btn">לתרומה</a></div>
-            <div class="donation-card"><div>סכום אחר</div><br>לבחירתך<br><a href="https://pay.grow.link/OTkxMDI~1ae44df27a248930a79f9e07e08f2634-MzU0MzY0MA" class="donate-btn">לתרומה</a></div>
-        </div>
-
         <div class="signature-box-container">
             <div>בתודה ובשותפות,<br><strong>פרופ' סנונית שהם</strong><br>יו"ר ארגון מעפילי קפריסין</div>
-            <div><strong> צוות מורשת התקווה</strong></div>
+            <div><strong>צוות מורשת התקווה</strong></div>
         </div>
     </div>
 </body>
