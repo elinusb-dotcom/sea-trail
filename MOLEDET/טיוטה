@@ -1,1 +1,178 @@
+Skip to content
+elinusb-dotcom
+sea-trail
+Repository navigation
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security and quality
+Insights
+Settings
+Files
+Go to file
+t
+T
+HTIKVA
+MOLEDET
+index.html
+index1
+טיוטה
+MORDEY HAGITAOT
+ULUA
+YAGUR
+folder1
+heritage
+knesetIsrael
+kol kore
+pini test
+pini-test
+500px-אוניית_המעפילים_חביבה_רייק_-_מעפילים_צופים.jpg
+FOLDER
+KNESETISRAEL.jpg
+folder
+index.html
+אוניית_המעפילים_שאר_ישוב.jpg
+אוניית_מעפילים_התקוה.jpg
+אחא
+אחא לוגו.jpeg
+העפלה 1.png
+העפלה 2.png
+התקוה.png
+טנטורה.jfif
+כותרת.png
+לוגו שביל הים.jpg
+מולדת.png
+מצגת אוגוסט .pdf
+ספינות2.png
+קפריסין.png
+שלט במפרץ.png
+שלט על חוף טנטורה.png
+שלךט דוגמא במפרץ חיפה .png
+sea-trail/MOLEDET
+/index.html
+elinusb-dotcom
+elinusb-dotcom
+Update index.html
+363f5bb
+ · 
+3 weeks ago
 
+Code
+
+Blame
+111 lines (94 loc) · 8.59 KB
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מורשת מעפילי מולדת | שביל הים</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; background-color: #f4f7f9; color: #1a1a1a; text-align: center; }
+        
+        .hero-banner { 
+            background: linear-gradient(rgba(0, 34, 68, 0.9), rgba(0, 74, 153, 0.9)), url('https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/כותרת.png'); 
+            background-size: cover; background-position: center; color: white; padding: 25px 20px; 
+            display: flex; align-items: center; justify-content: space-between; gap: 20px; 
+            max-width: 1200px; margin: 0 auto; box-sizing: border-box; border-radius: 0 0 8px 8px; 
+        }
+        
+        .banner-img { width: 160px; height: 120px; object-fit: cover; border-radius: 6px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); border: 2px solid rgba(255, 255, 255, 0.2); flex-shrink: 0; }
+        .banner-center-content { flex-grow: 1; display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center; }
+        .banner-text h1 { font-size: 2em; margin: 0 0 5px 0; font-weight: bold; }
+        .banner-text h2 { font-size: 1.3em; color: #fffb00; margin: 0; line-height: 1.3; }
+        .org-logo-small { width: 60px; height: 60px; object-fit: contain; background-color: rgba(255, 255, 255, 0.95); padding: 5px; border-radius: 50%; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+
+        .container { max-width: 850px; margin: 20px auto; padding: 30px 20px; background: white; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-radius: 8px; box-sizing: border-box; }
+        .content-text { text-align: right; font-size: 1.1em; color: #333; }
+        .content-text p { margin-bottom: 15px; }
+        
+        .highlight-box { border-right: 4px solid #004a99; padding-right: 15px; margin: 20px 0; font-style: italic; color: #003366; background: #f8fbfe; padding-top: 10px; padding-bottom: 10px; border-radius: 0 4px 4px 0; }
+        
+        .video-container { margin: 25px 0; text-align: center; }
+        .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.15); border: 2px solid #004a99; }
+        .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+        
+        .section-title { color: #004a99; font-size: 1.3em; margin: 30px 0 15px 0; text-align: right; font-weight: bold; }
+        
+        .donation-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 12px; margin: 20px 0; }
+        .donation-card { background: #fdfdfd; border: 2px solid #004a99; border-radius: 8px; padding: 12px; display: flex; flex-direction: column; justify-content: space-between; text-align: center; }
+        .card-title { font-size: 0.9em; font-weight: bold; color: #004a99; margin-bottom: 4px; }
+        .card-amount { font-size: 1.4em; font-weight: bold; color: #1a1a1a; margin-bottom: 10px; }
+        .donate-btn { background-color: #004a99; color: white; text-decoration: none; padding: 8px 12px; border-radius: 4px; font-weight: bold; font-size: 0.85em; display: inline-block; }
+        .donate-btn:hover { background-color: #003366; }
+
+        .data-table { width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 1em; text-align: right; }
+        .data-table th { background-color: #004a99; color: white; padding: 10px 12px; font-weight: bold; border: 1px solid #004a99; }
+        .data-table td { padding: 10px 12px; border: 1px solid #e1e8ed; }
+
+        .signature-box-container { margin-top: 35px; border-top: 1px solid #eee; padding-top: 20px; display: flex; justify-content: space-between; text-align: right; font-size: 1em; flex-wrap: wrap; gap: 20px; }
+        
+        @media (max-width: 768px) {
+            .hero-banner { flex-direction: column; }
+            .banner-img { width: 100%; max-width: 260px; height: 140px; }
+            .donation-grid { grid-template-columns: 1fr 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero-banner">
+        <img class="banner-img" src="https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/שלט במפרץ.png" alt="שלט הנצחה">
+        <div class="banner-center-content">
+            <img class="org-logo-small" src="https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/קפריסין.png" alt="לוגו">
+            <div class="banner-text">
+                <h1>מורשת ההעפלה בשביל הים</h1>
+                <h2>מנציחים את גבורת מעפילי האונייה 'מולדת'<br>על חופי המדינה</h2>
+            </div>
+        </div>
+        <img class="banner-img" src="https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/מולדת.png" alt="אוניית המעפילים מולדת">
+    </div>
+
+    <div class="container">
+        <div class="content-text">
+            <p><strong>חברות וחברי משפחת 'מולדת' היקרים,</strong></p>
+            <p>אנו מזמינים אתכם לקחת חלק מרכזי בהנצחת סיפור הגבורה של מעפילי האונייה 'מולדת' ושלט הזיכרון המוקם בראש הנקרה במסגרת פרויקט "שביל הים".</p>
+        </div>
+
+        <!-- כפתורי תרומה מיד למעלה -->
+        <div class="section-title">בחרו במסלול ההנצחה והתרומה שלכם:</div>
+        <div class="donation-grid">
+            <div class="donation-card"><div class="card-title">ידיד הנתיב</div><div class="card-amount">₪180</div><a href="https://pay.grow.link/OTkxMDI~609ee4070b8fb715aa68b5173eaf2fdb-MzU0MjQ4OQ" class="donate-btn">לתרומה</a></div>
+            <div class="donation-card"><div class="card-title">נאמן מורשת</div><div class="card-amount">₪360</div><a href="https://pay.grow.link/OTkxMDI~f28b5226e8e2972af60dbde9252ef19b-MzU0MjU0Mw" class="donate-btn">לתרומה</a></div>
+            <div class="donation-card"><div class="card-title">מייסד נקודה</div><div class="card-amount">₪720</div><a href="https://pay.grow.link/OTkxMDI~7645ce79d23164ddbc012c17f6367308-MzU0OTAwMQ" class="donate-btn">לתרומה</a></div>
+            <div class="donation-card"><div class="card-title">מוביל הנתיב</div><div class="card-amount">₪1,500</div><a href="https://pay.grow.link/OTkxMDI~c0106f819f7fa5e39c9415ae11997e8b-MzU0OTAzNA" class="donate-btn">לתרומה</a></div>
+            <div class="donation-card"><div class="card-title">סכום אחר</div><div class="card-amount" style="font-size: 1em; margin: 6px 0 10px 0;">לבחירתך</div><a href="https://pay.grow.link/OTkxMDI~1ae44df27a248930a79f9e07e08f2634-MzU0MzY0MA" class="donate-btn">לתרומה</a></div>
+        </div>
+
+        <!-- סרטון שביל הים -->
+        <div class="video-container">
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/ix4kBFgPEyI" title="סיפור שביל הים ומורשת ההעפלה" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="highlight-box">
+            "כל שלט הנצחה הוא יד זיכרון חיה המחברת בין המטיילים בשביל הים לבין סיפור הגבורה והנחישות של הורינו וסבינו."
+        </div>
+
+        <!-- תעודת זהות קצרה -->
+        <div class="section-title">תעודת זהות: אוניית המעפילים 'מולדת'</div>
+        <table class="data-table">
+            <tr><td><strong>הפלגה ויציאה:</strong></td><td>23.3.1947 | מטאפונטו, איטליה (1,568 מעפילים)</td></tr>
+            <tr><td><strong>אירוע מרכזי:</strong></td><td>30.3.1947 | מצוקה מול ראש הנקרה ופינוי למשחתות הבריטיות</td></tr>
+            <tr><td><strong>סיום המסע:</strong></td><td>31.3.1947 | גרירה לחיפה וגירוש למחנות קפריסין</td></tr>
+            <tr><td><strong>מיקום השלט:</strong></td><td>שביל הים – ראש הנקרה</td></tr>
+        </table>
+
+        <div class="signature-box-container">
+            <div>בתודה ובשותפות,<br><strong>פרופ' סנונית שהם</strong><br>יו"ר ארגון מעפילי קפריסין</div>
+            <div><strong>צוות מורשת מולדת</strong></div>
+        </div>
+    </div>
+</body>
+</html>
+ 
