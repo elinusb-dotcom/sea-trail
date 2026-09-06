@@ -1,1 +1,129 @@
+<!-- תחילת בלוק כפתורי תרומה -->
+<style>
+    .donation-section-custom {
+        margin: 40px auto;
+        text-align: center;
+        max-width: 600px;
+        font-family: Arial, Helvetica, sans-serif;
+        direction: rtl;
+    }
 
+    .donation-section-custom h3 {
+        font-size: 1.5em;
+        color: #004a99;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+
+    /* הגדרת השורות */
+    .donation-row {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-bottom: 15px;
+    }
+
+    /* כרטיס תרומה */
+    .donation-card-custom {
+        background: #ffffff;
+        border: 1.5px solid #004a99;
+        border-radius: 6px;
+        padding: 15px 10px;
+        width: 130px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        box-sizing: border-box;
+    }
+
+    .donation-card-custom .card-title {
+        font-size: 0.95em;
+        font-weight: bold;
+        color: #004a99;
+        margin-bottom: 6px;
+        text-align: center;
+    }
+
+    .donation-card-custom .card-amount {
+        font-size: 1.6em;
+        font-weight: bold;
+        color: #1a1a1a;
+        margin-bottom: 12px;
+        text-align: center;
+    }
+
+    /* כפתור כחול מלא */
+    .donation-card-custom .donate-btn {
+        background-color: #004a99;
+        color: #ffffff !important;
+        text-decoration: none;
+        padding: 7px 0;
+        width: 100%;
+        border-radius: 4px;
+        font-weight: bold;
+        font-size: 0.9em;
+        display: block;
+        text-align: center;
+        box-sizing: border-box;
+        transition: background-color 0.2s;
+    }
+
+    .donation-card-custom .donate-btn:hover {
+        background-color: #003366;
+    }
+
+    @media (max-width: 480px) {
+        .donation-row {
+            flex-wrap: wrap;
+        }
+        .donation-card-custom {
+            width: 45%;
+        }
+    }
+</style>
+
+<div class="donation-section-custom">
+    <h3>לתרומה מאובטחת ויצירת הקדשה ליקרים לך</h3>
+    
+    <!-- שורה עליונה (מימין לשמאל: 720, 360, 180 - כך ש-180 מופיע הכי שמאלי) -->
+    <div class="donation-row">
+        
+        <div class="donation-card-custom">
+            <div class="card-title">מייסד נקודה</div>
+            <div class="card-amount">₪720</div>
+            <a href="https://pay.grow.link/OTkxMDI~7645ce79d23164ddbc012c17f6367308-MzU0OTAwMQ" target="_blank" rel="noopener noreferrer" class="donate-btn">שותף לדרך</a>
+        </div>
+
+        <div class="donation-card-custom">
+            <div class="card-title">נאמן מורשת</div>
+            <div class="card-amount">₪360</div>
+            <a href="https://pay.grow.link/OTkxMDI~f28b5226e8e2972af60dbde9252ef19b-MzU0MjU0Mw" target="_blank" rel="noopener noreferrer" class="donate-btn">שותף לדרך</a>
+        </div>
+
+        <div class="donation-card-custom">
+            <div class="card-title">ידיד הנתיב</div>
+            <div class="card-amount">₪180</div>
+            <a href="https://pay.grow.link/OTkxMDI~609ee4070b8fb715aa68b5173eaf2fdb-MzU0MjQ4OQ" target="_blank" rel="noopener noreferrer" class="donate-btn">שותף לדרך</a>
+        </div>
+
+    </div>
+
+    <!-- שורה תחתונה (מימין לשמאל: 1500, לבחירתך) -->
+    <div class="donation-row">
+        
+        <div class="donation-card-custom">
+            <div class="card-title">מוביל הנתיב</div>
+            <div class="card-amount">₪1,500</div>
+            <a href="https://pay.grow.link/OTkxMDI~c0106f819f7fa5e39c9415ae11997e8b-MzU0OTAwMQ" target="_blank" rel="noopener noreferrer" class="donate-btn">שותף לדרך</a>
+        </div>
+
+        <div class="donation-card-custom">
+            <div class="card-title">סכום אחר</div>
+            <div class="card-amount" style="font-size: 1em; margin: 6px 0 16px 0;">לבחירתך</div>
+            <a href="https://pay.grow.link/OTkxMDI~1ae44df27a248930a79f9e07e08f2634-MzU0MzY0MA" target="_blank" rel="noopener noreferrer" class="donate-btn">לתרומה</a>
+        </div>
+
+    </div>
+</div>
+<!-- סיום בלוק כפתורי תרומה -->
