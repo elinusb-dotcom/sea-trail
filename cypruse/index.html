@@ -11,7 +11,7 @@
     }
 
     .donation-section-custom h3 {
-        font-size: 1.4em;
+        font-size: 1.35em;
         color: #004a99;
         margin-bottom: 20px;
         font-weight: bold;
@@ -27,39 +27,40 @@
         margin-bottom: 12px;
     }
 
-    /* כרטיס תרומה גמיש ופרופורציונלי */
+    /* כרטיס תרומה ללא הגבלת גובה - גמיש ומרווח */
     .donation-card-custom {
         background: #ffffff;
         border: 1.5px solid #004a99;
         border-radius: 8px;
         flex: 1;
-        max-width: 120px;
-        min-width: 90px;
-        padding: 12px 8px;
+        max-width: 130px;
+        min-width: 105px;
+        padding: 14px 8px 10px 8px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
         box-sizing: border-box;
         box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        height: auto !important; /* ביטול גובה קבוע למניעת חריגת טקסט */
     }
 
     .donation-card-custom .card-amount {
-        font-size: 1.25em;
+        font-size: 1.2em;
         font-weight: bold;
         color: #004a99;
         text-align: center;
-        line-height: 1.1;
-        margin-bottom: 10px;
+        line-height: 1.2;
+        margin-bottom: 12px;
         white-space: nowrap;
     }
 
-    /* כפתור כחול מותאם ומורחב */
+    /* כפתור כחול מותאם */
     .donation-card-custom .donate-btn {
         background-color: #004a99;
         color: #ffffff !important;
         text-decoration: none;
-        padding: 6px 0;
+        padding: 7px 0;
         width: 100%;
         border-radius: 5px;
         font-weight: bold;
@@ -69,28 +70,29 @@
         box-sizing: border-box;
         transition: background-color 0.2s;
         white-space: nowrap;
+        margin-top: auto;
     }
 
     .donation-card-custom .donate-btn:hover {
         background-color: #003366;
     }
 
-    /* התאמה למסכים קטנים במיוחד (סלולר) */
-    @media (max-width: 400px) {
+    /* התאמה מיוחדת לסלולר (אנדרואיד / אייפון) */
+    @media (max-width: 480px) {
         .donation-row {
             gap: 8px;
         }
         .donation-card-custom {
-            padding: 10px 5px;
-            min-width: 80px;
+            padding: 12px 6px 8px 6px;
+            min-width: 95px;
         }
         .donation-card-custom .card-amount {
-            font-size: 1.1em;
-            margin-bottom: 8px;
+            font-size: 1.05em;
+            margin-bottom: 10px;
         }
         .donation-card-custom .donate-btn {
-            font-size: 0.78em;
-            padding: 5px 0;
+            font-size: 0.75em;
+            padding: 6px 0;
         }
     }
 </style>
@@ -127,7 +129,7 @@
         </div>
 
         <div class="donation-card-custom">
-            <div class="card-amount" style="font-size: 0.95em; padding-top: 2px;">סכום אחר</div>
+            <div class="card-amount" style="font-size: 0.9em; margin-bottom: 10px;">סכום אחר</div>
             <a href="https://pay.grow.link/OTkxMDI~1ae44df27a248930a79f9e07e08f2634-MzU0MzY0MA" target="_blank" rel="noopener noreferrer" class="donate-btn">לתרומה</a>
         </div>
 
