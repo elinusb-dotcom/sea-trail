@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
   <meta charset="UTF-8">
@@ -145,7 +145,7 @@
       background-color: #F8FAFC;
     }
 
-    /* Video Embed */
+    /* Video Embed & Link */
     .video-container {
       position: relative;
       padding-bottom: 56.25%;
@@ -154,6 +154,7 @@
       border-radius: 12px;
       margin: 20px 0;
       box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+      background-color: #000000;
     }
 
     .video-container iframe {
@@ -163,6 +164,31 @@
       width: 100%;
       height: 100%;
       border: 0;
+    }
+
+    .video-direct-link {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .video-direct-link a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--primary-light);
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 0.95rem;
+      padding: 6px 16px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: #F1F5F9;
+      transition: background 0.2s;
+    }
+
+    .video-direct-link a:hover {
+      background: #E2E8F0;
+      color: var(--primary);
     }
 
     /* Table Style */
@@ -322,7 +348,7 @@
     <section>
       <h2>חברות וחברי משפחת 'הפאנים' היקרים,</h2>
       <p>על החופים האלה, שבהם נשברים גלי הים התיכון, נכתב אחד הפרקים הדרמטיים והמפוארים ביותר בסיפור הקמתה של מדינת ישראל. אל החופים הללו נשאו את עיניהם הורינו, סבינו ואולי חלקכם – למעלה מ-15,000 מעפילים שיצאו מבורגס שבבולגריה במבצע ההעפלה הגדול בהיסטוריה, כמענה מוחץ לשבירת הרוח של גירוש 'אקסודוס'.</p>
-      <p>הם עברו מסע תלאות ברכבות ברחבי אירופה ובבטן הספינות הצפופות, ראו את חופי הארץ ושרו את "התקווה" בדמעות לפני הגירוש הכואב למחנות המעצר בקפריסין.</p>
+      <p>הם עברו מסע תלאות ברכבות ברחבי אירופה ובבטן הספינות הצפופות, <strong>חלמו על חופי הארץ</strong> ושרו את "התקווה" בדמעות לפני הגירוש הכואב למחנות המעצר בקפריסין.</p>
       
       <blockquote>
         "כל שלט הנצחה הוא יד זיכרון חיה. הוא הגשר שיחבר בין המטייל בשביל לבין המעפילות, המעפילים והצוותים שעל הסיפון."
@@ -334,11 +360,17 @@
     <!-- Video Testimony Section -->
     <section>
       <h2>רגע של עדות: עדות מעפילי 'הפאנים'</h2>
-      <p>צפו בקטע המרטיט מתוך עדויות המעפילים (החל מדקה 5:30 בסרטון), המתאר את המפגש בלב ים עם המשחתות הבריטיות ואת עוצמת הרוח של המעפילים:</p>
-      
+      <p>צפו בקטע המרטיט מתוך עדויות המעפילים (המתחיל בדקה 5:30 בסרטון), המתאר את המפגש בלב ים עם המשחתות הבריטיות ואת עוצמת הרוח של המעפילים:</p>
+
       <div class="video-container">
-        <!-- start=330 מתחיל את הוידאו ישירות בדקה 5:30 -->
+        <!-- נגן YouTube מוגדר להתחיל ישירות בדקה 5:30 (start=330) -->
         <iframe src="https://www.youtube.com/embed/M7lc1UVf-VE?start=330" title="מסע הפאנים - מעפילי עצמאות וקיבוץ גלויות מספרים" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+
+      <div class="video-direct-link">
+        <a href="https://www.youtube.com/watch?v=M7lc1UVf-VE&t=330s" target="_blank">
+          ▶ לחצו כאן לצפייה ישירה ב-YouTube (מדקה 5:30)
+        </a>
       </div>
 
       <blockquote>
