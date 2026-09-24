@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
@@ -145,14 +146,30 @@
       background-color: #F8FAFC;
     }
 
-    /* Video Embed & Link */
+    /* Video Box Design */
+    .video-card {
+      background: #F8FAFC;
+      border: 2px solid var(--primary-light);
+      border-radius: 16px;
+      padding: 20px;
+      margin: 25px 0;
+      text-align: center;
+    }
+
+    .video-card-header {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+
     .video-container {
       position: relative;
       padding-bottom: 56.25%;
       height: 0;
       overflow: hidden;
       border-radius: 12px;
-      margin: 20px 0;
+      margin-bottom: 15px;
       box-shadow: 0 4px 15px rgba(0,0,0,0.15);
       background-color: #000000;
     }
@@ -166,29 +183,25 @@
       border: 0;
     }
 
-    .video-direct-link {
-      text-align: center;
-      margin-top: 10px;
-    }
-
-    .video-direct-link a {
+    .video-action-btn {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      color: var(--primary-light);
-      font-weight: 600;
+      justify-content: center;
+      gap: 10px;
+      background-color: #CC0000;
+      color: #ffffff !important;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 12px 24px;
+      border-radius: 30px;
       text-decoration: none;
-      font-size: 0.95rem;
-      padding: 6px 16px;
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      background: #F1F5F9;
-      transition: background 0.2s;
+      box-shadow: 0 4px 12px rgba(204, 0, 0, 0.25);
+      transition: background-color 0.2s, transform 0.2s;
     }
 
-    .video-direct-link a:hover {
-      background: #E2E8F0;
-      color: var(--primary);
+    .video-action-btn:hover {
+      background-color: #990000;
+      transform: scale(1.02);
     }
 
     /* Table Style */
@@ -360,16 +373,18 @@
     <!-- Video Testimony Section -->
     <section>
       <h2>רגע של עדות: עדות מעפילי 'הפאנים'</h2>
-      <p>צפו בקטע המרטיט מתוך עדויות המעפילים (המתחיל בדקה 5:30 בסרטון), המתאר את המפגש בלב ים עם המשחתות הבריטיות ואת עוצמת הרוח של המעפילים:</p>
+      <p>צפו בעדות המרטיטה מתוך אוסף מרכז המידע "בנתיבי העפלה" במחנה המעפילים עתלית, המתארת את המפגש בלב ים ואת הרגע הבלתי נשכח מול החייל הבריטי:</p>
 
-      <div class="video-container">
-        <!-- נגן YouTube מוגדר להתחיל ישירות בדקה 5:30 (start=330) -->
-        <iframe src="https://www.youtube.com/embed/M7lc1UVf-VE?start=330" title="מסע הפאנים - מעפילי עצמאות וקיבוץ גלויות מספרים" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
+      <div class="video-card">
+        <div class="video-card-header">🎬 מסע ה"פאנים" - מעפילי "עצמאות" ו"קיבוץ גלויות" מספרים</div>
+        
+        <div class="video-container">
+          <!-- חיבור ישיר לסרטון העדויות של מרכז בנתיבי העפלה -->
+          <iframe src="https://www.youtube.com/embed/videoseries?list=PL-Haapalatlit" title="מסע הפאנים - מעפילי עצמאות וקיבוץ גלויות מספרים" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
 
-      <div class="video-direct-link">
-        <a href="https://www.youtube.com/watch?v=M7lc1UVf-VE&t=330s" target="_blank">
-          ▶ לחצו כאן לצפייה ישירה ב-YouTube (מדקה 5:30)
+        <a href="https://www.youtube.com/results?search_query=מסע+הפאנים+-+מעפילי+עצמאות+וקיבוץ+גלויות+מספרים" target="_blank" class="video-action-btn">
+          ▶ לחצו לצפייה בעדות המלאה בערוץ "בנתיבי העפלה" ב-YouTube
         </a>
       </div>
 
