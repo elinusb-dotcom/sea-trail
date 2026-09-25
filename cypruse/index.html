@@ -1,138 +1,489 @@
-<!-- תחילת בלוק כפתורי תרומה -->
-<style>
-    .donation-section-custom {
-        margin: 30px auto;
-        text-align: center;
-        max-width: 500px;
-        font-family: Arial, Helvetica, sans-serif;
-        direction: rtl;
-        box-sizing: border-box;
-        padding: 0 10px;
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>שימור מורשת מעפילי ה"פאנים" בשביל הים</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0F2C59;
+      --primary-light: #1E40AF;
+      --accent: #D97706;
+      --accent-hover: #B45309;
+      --bg-light: #F8FAFC;
+      --text-dark: #1E293B;
+      --text-muted: #64748B;
+      --border: #E2E8F0;
     }
 
-    .donation-section-custom h3 {
-        font-size: 1.35em;
-        color: #004a99;
-        margin-bottom: 20px;
-        font-weight: bold;
-        line-height: 1.3;
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    /* הגדרת השורות */
-    .donation-row {
-        display: flex;
-        justify-content: center;
-        align-items: stretch;
-        gap: 12px;
-        margin-bottom: 12px;
+    body {
+      font-family: 'Rubik', sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-dark);
+      line-height: 1.7;
+      direction: rtl;
     }
 
-    /* כרטיס תרומה ללא הגבלת גובה - גמיש ומרווח */
-    .donation-card-custom {
-        background: #ffffff;
-        border: 1.5px solid #004a99;
-        border-radius: 8px;
-        flex: 1;
-        max-width: 130px;
-        min-width: 105px;
-        padding: 14px 8px 10px 8px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        box-sizing: border-box;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        height: auto !important; /* ביטול גובה קבוע למניעת חריגת טקסט */
+    .container {
+      max-width: 950px;
+      margin: 0 auto;
+      padding: 0 20px;
     }
 
-    .donation-card-custom .card-amount {
-        font-size: 1.2em;
-        font-weight: bold;
-        color: #004a99;
-        text-align: center;
-        line-height: 1.2;
-        margin-bottom: 12px;
-        white-space: nowrap;
+    /* Header & Hero */
+    header {
+      background: linear-gradient(135deg, #0A192F 0%, #0F2C59 100%);
+      color: #ffffff;
+      padding: 50px 20px;
+      text-align: center;
+      border-bottom: 5px solid var(--accent);
     }
 
-    /* כפתור כחול מותאם */
-    .donation-card-custom .donate-btn {
-        background-color: #004a99;
-        color: #ffffff !important;
-        text-decoration: none;
-        padding: 7px 0;
-        width: 100%;
-        border-radius: 5px;
-        font-weight: bold;
-        font-size: 0.85em;
-        display: block;
-        text-align: center;
-        box-sizing: border-box;
-        transition: background-color 0.2s;
-        white-space: nowrap;
-        margin-top: auto;
+    header h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      margin-bottom: 14px;
+      color: #ffffff;
+      line-height: 1.3;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
-    .donation-card-custom .donate-btn:hover {
-        background-color: #003366;
+    header .subtitle {
+      font-size: 1.25rem;
+      color: #E2E8F0;
+      font-weight: 500;
+      margin-bottom: 20px;
     }
 
-    /* התאמה מיוחדת לסלולר (אנדרואיד / אייפון) */
-    @media (max-width: 480px) {
-        .donation-row {
-            gap: 8px;
-        }
-        .donation-card-custom {
-            padding: 12px 6px 8px 6px;
-            min-width: 95px;
-        }
-        .donation-card-custom .card-amount {
-            font-size: 1.05em;
-            margin-bottom: 10px;
-        }
-        .donation-card-custom .donate-btn {
-            font-size: 0.75em;
-            padding: 6px 0;
-        }
+    .goal-badge {
+      display: inline-block;
+      background-color: var(--accent);
+      color: #ffffff;
+      font-weight: 700;
+      padding: 8px 24px;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
-</style>
 
-<div class="donation-section-custom">
-    <h3>לתרומה מאובטחת<br>ויצירת הקדשה ליקרים לך</h3>
+    /* Sections */
+    section {
+      background: #ffffff;
+      margin: 30px 0;
+      padding: 35px 30px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+      border: 1px solid var(--border);
+    }
+
+    section h2 {
+      color: var(--primary);
+      font-size: 1.6rem;
+      margin-bottom: 18px;
+      border-bottom: 3px solid var(--accent);
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    p {
+      margin-bottom: 15px;
+      font-size: 1.05rem;
+    }
+
+    /* Quotes & Highlight Boxes */
+    blockquote {
+      background-color: #FFFDF5;
+      border-right: 5px solid var(--accent);
+      padding: 18px 20px;
+      margin: 20px 0;
+      border-radius: 0 12px 12px 0;
+      font-style: italic;
+      font-size: 1.1rem;
+      color: #451A03;
+    }
+
+    .testimony-box {
+      background-color: #FFFDF5;
+      border-right: 5px solid var(--accent);
+      padding: 22px 24px;
+      border-radius: 0 12px 12px 0;
+      margin-top: 20px;
+      box-shadow: 0 2px 8px rgba(217, 119, 6, 0.08);
+    }
+
+    .testimony-box-text {
+      font-style: italic;
+      font-size: 1.12rem;
+      margin-bottom: 0;
+      color: #451A03;
+      line-height: 1.8;
+    }
+
+    /* Media & Images Gallery */
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      margin: 25px 0;
+      align-items: center;
+    }
+
+    .media-card {
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: #ffffff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      text-align: center;
+      transition: transform 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    .media-card:hover {
+      transform: translateY(-3px);
+    }
+
+    .media-card img {
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+    }
+
+    .media-card.logo-card {
+      background: #ffffff;
+      border: 2px solid var(--primary-light);
+    }
+
+    .media-card.logo-card img.logo-img {
+      object-fit: contain;
+      padding: 15px;
+      background-color: #ffffff;
+    }
+
+    .media-card .caption {
+      padding: 12px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      background-color: #F8FAFC;
+    }
+
+    /* Video Box Design */
+    .video-card {
+      background: #F8FAFC;
+      border: 2px solid var(--primary-light);
+      border-radius: 16px;
+      padding: 24px;
+      margin: 25px 0;
+      text-align: center;
+    }
+
+    .video-card-header {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 12px;
+    }
+
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 12px;
+      margin-bottom: 18px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+      background-color: #000000;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .video-action-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background-color: #CC0000;
+      color: #ffffff !important;
+      font-weight: 700;
+      font-size: 1.05rem;
+      padding: 14px 28px;
+      border-radius: 30px;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(204, 0, 0, 0.25);
+      transition: background-color 0.2s, transform 0.2s;
+    }
+
+    .video-action-btn:hover {
+      background-color: #990000;
+      transform: scale(1.03);
+    }
+
+    /* Table Style */
+    .history-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 0.98rem;
+    }
+
+    .history-table th, .history-table td {
+      padding: 14px 16px;
+      border: 1px solid var(--border);
+      text-align: right;
+    }
+
+    .history-table th {
+      background-color: var(--primary);
+      color: #ffffff;
+      font-weight: 700;
+      width: 28%;
+    }
+
+    .history-table tr:nth-child(even) {
+      background-color: #F8FAFC;
+    }
+
+    /* Donation Grid */
+    .donation-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 18px;
+      margin-top: 25px;
+    }
+
+    .donation-card {
+      background: #ffffff;
+      border: 2px solid var(--border);
+      border-radius: 12px;
+      padding: 24px 12px;
+      text-align: center;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .donation-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(15, 44, 89, 0.12);
+    }
+
+    .donation-card.special-tier {
+      border-color: var(--accent);
+      background: linear-gradient(180deg, #FFFDF5 0%, #FFFFFF 100%);
+    }
+
+    .card-amount {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 18px;
+    }
+
+    .btn-donate {
+      display: block;
+      background-color: var(--primary);
+      color: #ffffff !important;
+      text-decoration: none;
+      font-weight: 700;
+      padding: 12px 10px;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .btn-donate:hover {
+      background-color: var(--primary-light);
+    }
+
+    .btn-special {
+      background-color: var(--accent) !important;
+      color: #ffffff !important;
+    }
+
+    .btn-special:hover {
+      background-color: var(--accent-hover) !important;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      border-top: 1px solid var(--border);
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.7rem; }
+      .donation-grid { grid-template-columns: 1fr 1fr; }
+      .history-table th, .history-table td { display: block; width: 100%; }
+      .history-table th { background-color: #E2E8F0; color: var(--text-dark); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <div class="container">
+      <h1>שימור מורשת מעפילי ה"פאנים"<br>בשביל הים</h1>
+      <div class="subtitle">הדגל נמסר לנו! מטביעים את חותם מעפילי קפריסין על חופי המדינה</div>
+      <div class="goal-badge">מטרת הגיוס המשותפת של משפחת 'הפאנים': 40,000 ₪</div>
+    </div>
+  </header>
+
+  <main class="container">
     
-    <!-- שורה עליונה (מימין לשמאל: 720, 360, 180) -->
-    <div class="donation-row">
-        
-        <div class="donation-card-custom">
-            <div class="card-amount">₪720</div>
-            <a href="https://pay.grow.link/OTkxMDI~7645ce79d23164ddbc012c17f6367308-MzU0OTAwMQ" target="_blank" rel="noopener noreferrer" class="donate-btn">הצטרפות</a>
-        </div>
+    <!-- Hero Gallery: 2 Images + Cyprus Logo Centered -->
+    <div class="media-grid">
+      <div class="media-card">
+        <img src="panim_ship_at_sea.png" alt="ספינות הפאנים בלב ים">
+        <div class="caption">ספינות המעפילים 'הפאנים' ('עצמאות' ו'קיבוץ גלויות') בנתיבן ההיסטורי</div>
+      </div>
+      
+      <!-- לוגו ארגון מעפילי קפריסין במרכז -->
+      <div class="media-card logo-card">
+        <img src="קפריסין.PNG" alt="לוגו מעפילי קפריסין" class="logo-img">
+        <div class="caption">ארגון מעפילי קפריסין</div>
+      </div>
 
-        <div class="donation-card-custom">
-            <div class="card-amount">₪360</div>
-            <a href="https://pay.grow.link/OTkxMDI~f28b5226e8e2972af60dbde9252ef19b-MzU0MjU0Mw" target="_blank" rel="noopener noreferrer" class="donate-btn">הצטרפות</a>
-        </div>
-
-        <div class="donation-card-custom">
-            <div class="card-amount">₪180</div>
-            <a href="https://pay.grow.link/OTkxMDI~609ee4070b8fb715aa68b5173eaf2fdb-MzU0MjQ4OQ" target="_blank" rel="noopener noreferrer" class="donate-btn">הצטרפות</a>
-        </div>
-
+      <div class="media-card">
+        <img src="https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/שלט במפרץ.png" alt="דגם שלט הנצחה בשביל הים">
+        <div class="caption">דגם שלט ההנצחה המתוכנן להצבה לאורך שביל הים</div>
+      </div>
     </div>
 
-    <!-- שורה תחתונה (מימין לשמאל: 1500, סכום אחר) -->
-    <div class="donation-row">
+    <!-- Intro Story -->
+    <section>
+      <h2>חברות וחברי משפחת 'הפאנים' היקרים,</h2>
+      <p>על החופים האלה, שבהם נשברים גלי הים התיכון, נכתב אחד הפרקים הדרמטיים והמפוארים ביותר בסיפור הקמתה של מדינת ישראל. אל החופים הללו נשאו את עיניהם הורינו, סבינו ואולי חלקכם – למעלה מ-15,000 מעפילים שיצאו מבורגס שבבולגריה במבצע ההעפלה הגדול בהיסטוריה, כמענה מוחץ לשבירת הרוח של גירוש 'אקסודוס'.</p>
+      <p>הם עברו מסע תלאות ברכבות ברחבי אירופה ובבטן הספינות הצפופות, <strong>חלמו על חופי הארץ</strong> ושרו את "התקווה" בדמעות לפני הגירוש הכואב למחנות המעצר בקפריסין.</p>
+      
+      <blockquote>
+        "כל שלט הנצחה הוא יד זיכרון חיה. הוא הגשר שיחבר בין המטייל בשביל לבין המעפילות, המעפילים והצוותים שעל הסיפון."
+      </blockquote>
+
+      <p><strong>ארגון מעפילי קפריסין</strong>, כמיזם מרכזי לציון אירועי 80 שנה למחנות קפריסין ולקום המדינה, פועל להקים לאורך חופי ארצנו 30 שלטי הנצחה ונקודות מידע אינטראקטיביות לכל 142 ספינות ההעפלה. כדי להשלים את התקנת השלט של 'הפאנים' – אנחנו צריכים אתכם איתנו.</p>
+    </section>
+
+    <!-- Donation Section -->
+    <section id="donate">
+      <h2 style="text-align: center; display: block; border: none;">לתרומה מאובטחת והבטחת מקומנו על השביל:</h2>
+      
+      <div class="donation-grid">
+        <div class="donation-card">
+          <div class="card-amount">₪180</div>
+          <a href="https://pay.grow.link/OTkxMDI~609ee4070b8fb715aa68b5173eaf2fdb-MzU0MjQ4OQ" target="_blank" class="btn-donate">שותפים לדרך</a>
+        </div>
+
+        <div class="donation-card special-tier">
+          <div class="card-amount">₪360</div>
+          <a href="https://pay.grow.link/OTkxMDI~f28b5226e8e2972af60dbde9252ef19b-MzU0MjU0Mw" target="_blank" class="btn-donate btn-special">שותפים לדרך</a>
+        </div>
+
+        <div class="donation-card">
+          <div class="card-amount">₪720</div>
+          <a href="https://pay.grow.link/OTkxMDI~7645ce79d23164ddbc012c17f6367308-MzU0OTAwMQ" target="_blank" class="btn-donate">שותפים לדרך</a>
+        </div>
+
+        <div class="donation-card">
+          <div class="card-amount">₪1,500</div>
+          <a href="https://pay.grow.link/OTkxMDI~c0106f819f7fa5e39c9415ae11997e8b-MzU0OT0zNA" target="_blank" class="btn-donate">שותפים לדרך</a>
+        </div>
+
+        <div class="donation-card">
+          <div class="card-amount" style="font-size: 1.3rem; margin-top: 10px;">סכום אחר</div>
+          <a href="https://pay.grow.link/OTkxMDI~1ae44df27a248930a79f9e07e08f2634-MzU0MzY0MA" target="_blank" class="btn-donate">לתרומה</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Video Testimony Section -->
+    <section>
+      <h2>רגע של עדות: עדות מעפילי 'הפאנים'</h2>
+      <p>צפו בסרטון העדויות המיוחד של מעפילי 'הפאנים' ('עצמאות' ו'קיבוץ גלויות'):</p>
+
+      <div class="video-card">
+        <div class="video-card-header">🎬 מסע ה"פאנים" - מעפילי "עצמאות" ו"קיבוץ גלויות" מספרים</div>
         
-        <div class="donation-card-custom">
-            <div class="card-amount">₪1,500</div>
-            <a href="https://pay.grow.link/OTkxMDI~c0106f819f7fa5e39c9415ae11997e8b-MzU0OTAzNA" target="_blank" rel="noopener noreferrer" class="donate-btn">הצטרפות</a>
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/QXKyeKvH5KQ" title="מסע ה'פאנים' - מעפילי 'עצמאות' ו'קיבוץ גלויות' מספרים" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
 
-        <div class="donation-card-custom">
-            <div class="card-amount" style="font-size: 0.9em; margin-bottom: 10px;">סכום אחר</div>
-            <a href="https://pay.grow.link/OTkxMDI~1ae44df27a248930a79f9e07e08f2634-MzU0MzY0MA" target="_blank" rel="noopener noreferrer" class="donate-btn">לתרומה</a>
-        </div>
+        <a href="https://youtu.be/QXKyeKvH5KQ" target="_blank" class="video-action-btn">
+          ▶ לחצו לצפייה ישירה בסרטון ב-YouTube
+        </a>
+      </div>
 
+      <!-- העדות מתוך הסרטון -->
+      <div class="testimony-box">
+        <p class="testimony-box-text">
+          "אחת המשחתות הבריטיות התקרבה לאונייה שלנו ממש כמעט נגעה בה, כמה חיילים בריטים קפצו ועלו לסיפון... פתאום התחילו לשיר 'התקווה'. כל האנשים שרו עם דמעות בעיניים. החייל הבריטי שבמקרה עמד לידי נעמד דום ונתן כבוד. אני זוכר את הרגע הזה – הוא עמד על יד אנשים ששרו בדמעות כשה הובילו אותנו לקפריסין."
+        </p>
+      </div>
+    </section>
+
+    <!-- Historical Data Table -->
+    <section>
+      <h2>תעודת זהות היסטורית: 'עצמאות' ו'קיבוץ גלויות'</h2>
+      <table class="history-table">
+        <tr>
+          <th>נמל ומועד יציאה</th>
+          <td>בורגס, בולגריה | 27 בדצמבר 1947</td>
+        </tr>
+        <tr>
+          <th>מספר המעפילים</th>
+          <td>כ-15,000–16,000 מעפילים (מבצע ההעפלה המרוכז הגדול ביותר)</td>
+        </tr>
+        <tr>
+          <th>המסע והסיפון</th>
+          <td>צפיפות קשה בבטן האונייה, משמעת עצמית גבוהה ושירה על הסיפונים</td>
+        </tr>
+        <tr>
+          <th>המפגש בלב ים</th>
+          <td>כיתור ע"י 10 משחתות בריטיות. הושג הסדר לניווט ישיר לקפריסין למניעת אסון המוני</td>
+        </tr>
+        <tr>
+          <th>הגירוש לקפריסין</th>
+          <td>המעפילים היוו את הגרעין המרכזי והגדול במחנות קפריסין עד לשחרורם בעצמאות ישראל</td>
+        </tr>
+      </table>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p><strong>פרופ' סנונית שהם</strong>, יו"ר ארגון מעפילי קפריסין | <strong>צוות מורשת מעפילי הפאנים</strong></p>
+      <p>פרויקט הנצחת מורשת ההעפלה בשיתוף "שביל הים"</p>
     </div>
-</div>
-<!-- סיום בלוק כפתורי תרומה -->
+  </footer>
+
+</body>
+</html>
