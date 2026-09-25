@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>מורשת מעפילי ה"פאנים" | שביל הים</title>
+  <title>שימור מורשת מעפילי ה"פאנים" בשביל הים</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -51,8 +51,12 @@
     header h1 {
       font-size: 2.2rem;
       font-weight: 800;
-      margin-bottom: 12px;
+      margin-bottom: 14px;
       color: #ffffff;
+      line-height: 1.3;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     header .subtitle {
@@ -183,14 +187,7 @@
       font-size: 1.2rem;
       font-weight: 700;
       color: var(--primary);
-      margin-bottom: 8px;
-    }
-
-    .video-timestamp-note {
-      font-size: 0.98rem;
-      color: var(--accent-hover);
-      font-weight: 600;
-      margin-bottom: 18px;
+      margin-bottom: 12px;
     }
 
     .video-container {
@@ -271,7 +268,7 @@
       background: #ffffff;
       border: 2px solid var(--border);
       border-radius: 12px;
-      padding: 20px 12px;
+      padding: 24px 12px;
       text-align: center;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
       display: flex;
@@ -285,35 +282,16 @@
       box-shadow: 0 8px 20px rgba(15, 44, 89, 0.12);
     }
 
-    .donation-card.highlight {
+    .donation-card.special-tier {
       border-color: var(--accent);
       background: linear-gradient(180deg, #FFFDF5 0%, #FFFFFF 100%);
     }
 
-    .badge {
-      position: absolute;
-      top: -12px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: var(--accent);
-      color: #ffffff;
-      font-size: 0.75rem;
-      font-weight: 700;
-      padding: 2px 10px;
-      border-radius: 10px;
-    }
-
-    .card-title {
-      font-size: 1.1rem;
-      font-weight: 700;
-      margin-bottom: 6px;
-    }
-
     .card-amount {
-      font-size: 1.6rem;
+      font-size: 1.8rem;
       font-weight: 800;
       color: var(--primary);
-      margin-bottom: 16px;
+      margin-bottom: 18px;
     }
 
     .btn-donate {
@@ -322,22 +300,23 @@
       color: #ffffff !important;
       text-decoration: none;
       font-weight: 700;
-      padding: 10px;
+      padding: 12px 10px;
       border-radius: 8px;
-      font-size: 0.95rem;
-      transition: background-color 0.2s ease;
+      font-size: 1rem;
+      transition: background-color 0.2s ease, transform 0.2s ease;
     }
 
     .btn-donate:hover {
       background-color: var(--primary-light);
     }
 
-    .btn-gold {
-      background-color: var(--accent);
+    .btn-special {
+      background-color: var(--accent) !important;
+      color: #ffffff !important;
     }
 
-    .btn-gold:hover {
-      background-color: var(--accent-hover);
+    .btn-special:hover {
+      background-color: var(--accent-hover) !important;
     }
 
     /* Footer */
@@ -363,7 +342,7 @@
   <!-- Header Section -->
   <header>
     <div class="container">
-      <h1>מורשת מעפילי ה"פאנים" ('עצמאות' ו'קיבוץ גלויות') | שביל הים</h1>
+      <h1>שימור מורשת מעפילי ה"פאנים" בשביל הים</h1>
       <div class="subtitle">הדגל נמסר לנו! מטביעים את חותם מעפילי קפריסין על חופי המדינה</div>
       <div class="goal-badge">מטרת הגיוס המשותפת של משפחת 'הפאנים': 40,000 ₪</div>
     </div>
@@ -374,8 +353,8 @@
     <!-- Hero Gallery -->
     <div class="media-grid">
       <div class="media-card">
-        <img src="panim_ship_at_sea.png" alt="ספינת הפאנים בלב ים">
-        <div class="caption">אוניית המעפילים 'הפאנים' בנתיבה ההיסטורי (1947)</div>
+        <img src="panim_ship_at_sea.png" alt="ספינות הפאנים בלב ים">
+        <div class="caption">ספינות המעפילים 'הפאנים' ('עצמאות' ו'קיבוץ גלויות') בנתיבן ההיסטורי</div>
       </div>
       <div class="media-card">
         <img src="panim_immigrants_deck.png" alt="מעפילי הפאנים על הסיפון">
@@ -400,27 +379,58 @@
       <p><strong>ארגון מעפילי קפריסין</strong>, כמיזם מרכזי לציון אירועי 80 שנה למחנות קפריסין ולקום המדינה, פועל להקים לאורך חופי ארצנו 30 שלטי הנצחה ונקודות מידע אינטראקטיביות לכל 142 ספינות ההעפלה. כדי להשלים את התקנת השלט של 'הפאנים' – אנחנו צריכים אתכם איתנו.</p>
     </section>
 
+    <!-- Donation Section (Moved above Video) -->
+    <section id="donate">
+      <h2 style="text-align: center; display: block; border: none;">לתרומה מאובטחת והבטחת מקומנו על השביל:</h2>
+      
+      <div class="donation-grid">
+        <div class="donation-card">
+          <div class="card-amount">₪180</div>
+          <a href="https://pay.grow.link/OTkxMDI~609ee4070b8fb715aa68b5173eaf2fdb-MzU0MjQ4OQ" target="_blank" class="btn-donate">שותף לדרך</a>
+        </div>
+
+        <div class="donation-card special-tier">
+          <div class="card-amount">₪360</div>
+          <a href="https://pay.grow.link/OTkxMDI~f28b5226e8e2972af60dbde9252ef19b-MzU0MjU0Mw" target="_blank" class="btn-donate btn-special">שותף לדרך</a>
+        </div>
+
+        <div class="donation-card">
+          <div class="card-amount">₪720</div>
+          <a href="https://pay.grow.link/OTkxMDI~7645ce79d23164ddbc012c17f6367308-MzU0OTAwMQ" target="_blank" class="btn-donate">שותף לדרך</a>
+        </div>
+
+        <div class="donation-card">
+          <div class="card-amount">₪1,500</div>
+          <a href="https://pay.grow.link/OTkxMDI~c0106f819f7fa5e39c9415ae11997e8b-MzU0OT0zNA" target="_blank" class="btn-donate">שותף לדרך</a>
+        </div>
+
+        <div class="donation-card">
+          <div class="card-amount" style="font-size: 1.3rem; margin-top: 10px;">סכום אחר</div>
+          <a href="https://pay.grow.link/OTkxMDI~1ae44df27a248930a79f9e07e08f2634-MzU0MzY0MA" target="_blank" class="btn-donate">לתרומה</a>
+        </div>
+      </div>
+    </section>
+
     <!-- Video Testimony Section -->
     <section>
-      <h2>רגע של עדות: המפגש בלב ים ושירת "התקווה"</h2>
-      <p>צפו בעדות המרטיטה מתוך סרטון העדויות של מעפילי 'הפאנים' (מאוסף מרכז המידע "בנתיבי העפלה" במחנה עתלית). המעפילים מתארים את הכיתור בלב ים על ידי המשחתות הבריטיות, ואת רגע השיא <strong>בדקה 5:30 בסרטון</strong>:</p>
+      <h2>רגע של עדות: עדות מעפילי 'הפאנים'</h2>
+      <p>צפו בסרטון העדויות המיוחד של מעפילי 'הפאנים' ('עצמאות' ו'קיבוץ גלויות'):</p>
 
       <div class="video-card">
         <div class="video-card-header">🎬 מסע ה"פאנים" - מעפילי "עצמאות" ו"קיבוץ גלויות" מספרים</div>
-        <div class="video-timestamp-note">⏱️ נקודת השיא בעדות: דקה 5:30 (330 שניות)</div>
         
         <div class="video-container">
-          <iframe src="https://www.youtube.com/embed/M7lc1UVf-VE?start=330" title="מסע ה'פאנים' - מעפילי 'עצמאות' ו'קיבוץ גלויות' מספרים" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe src="https://www.youtube.com/embed/QXKyeKvH5KQ" title="מסע ה'פאנים' - מעפילי 'עצמאות' ו'קיבוץ גלויות' מספרים" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
 
-        <a href="https://www.youtube.com/watch?v=M7lc1UVf-VE&t=330s" target="_blank" class="video-action-btn">
-          ▶ לחצו לצפייה ישירה בעדות ב-YouTube (מדקה 5:30)
+        <a href="https://youtu.be/QXKyeKvH5KQ" target="_blank" class="video-action-btn">
+          ▶ לחצו לצפייה ישירה בסרטון ב-YouTube
         </a>
       </div>
 
       <!-- העדות המורחבת מתוך הסרטון -->
       <div class="testimony-box">
-        <div class="testimony-box-title">מתוך עדות המעפיל בסרטון (דקה 5:30):</div>
+        <div class="testimony-box-title">מתוך עדות המעפיל בסרטון:</div>
         <p class="testimony-box-text">
           "אחת המשחתות הבריטיות התקרבה לאונייה שלנו ממש כמעט נגעה בה, כמה חיילים בריטים קפצו ועלו לסיפון... פתאום התחילו לשיר 'התקווה'. כל האנשים שרו עם דמעות בעיניים. החייל הבריטי שבמקרה עמד לידי נעמד דום ונתן כבוד. אני זוכר את הרגע הזה – הוא עמד על יד אנשים ששרו בדמעות כשה הובילו אותנו לקפריסין."
         </p>
@@ -454,50 +464,12 @@
       </table>
     </section>
 
-    <!-- Donation Section -->
-    <section id="donate">
-      <h2 style="text-align: center; display: block; border: none;">לתרומה מאובטחת והבטחת מקומנו על השביל:</h2>
-      
-      <div class="donation-grid">
-        <div class="donation-card">
-          <div class="card-title">ידיד הנתיב</div>
-          <div class="card-amount">₪180</div>
-          <a href="https://pay.grow.link/OTkxMDI~609ee4070b8fb715aa68b5173eaf2fdb-MzU0MjQ4OQ" target="_blank" class="btn-donate">שותף לדרך</a>
-        </div>
-
-        <div class="donation-card highlight">
-          <div class="badge">מסלול מומלץ</div>
-          <div class="card-title">נאמן מורשת</div>
-          <div class="card-amount">₪360</div>
-          <a href="https://pay.grow.link/OTkxMDI~f28b5226e8e2972af60dbde9252ef19b-MzU0MjU0Mw" target="_blank" class="btn-donate btn-gold">שותף לדרך</a>
-        </div>
-
-        <div class="donation-card">
-          <div class="card-title">מייסד נקודה</div>
-          <div class="card-amount">₪720</div>
-          <a href="https://pay.grow.link/OTkxMDI~7645ce79d23164ddbc012c17f6367308-MzU0OTAwMQ" target="_blank" class="btn-donate">שותף לדרך</a>
-        </div>
-
-        <div class="donation-card">
-          <div class="card-title">מוביל הנתיב</div>
-          <div class="card-amount">₪1,500</div>
-          <a href="https://pay.grow.link/OTkxMDI~c0106f819f7fa5e39c9415ae11997e8b-MzU0OT0zNA" target="_blank" class="btn-donate">שותף לדרך</a>
-        </div>
-
-        <div class="donation-card">
-          <div class="card-title">סכום אחר</div>
-          <div class="card-amount" style="font-size: 1.2rem; margin-top: 8px;">לבחירתך</div>
-          <a href="https://pay.grow.link/OTkxMDI~1ae44df27a248930a79f9e07e08f2634-MzU0MzY0MA" target="_blank" class="btn-donate">לתרומה</a>
-        </div>
-      </div>
-    </section>
-
   </main>
 
   <!-- Footer -->
   <footer>
     <div class="container">
-      <p><strong>פרופ' סנונית שהם</strong>, יו"ר ארגון מעפילי קפריסין | צוות מורשת ספינות הפאנים</p>
+      <p><strong>פרופ' סנונית שהם</strong>, יו"ר ארגון מעפילי קפריסין | <strong>צוות מורשת מעפילי הפאנים</strong></p>
       <p>פרויקט הנצחת מורשת ההעפלה בשיתוף "שביל הים"</p>
     </div>
   </footer>
