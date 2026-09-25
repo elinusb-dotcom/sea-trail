@@ -97,7 +97,7 @@
       font-size: 1.05rem;
     }
 
-    /* Quotes */
+    /* Quotes & Highlight Boxes */
     blockquote {
       background-color: #FFFDF5;
       border-right: 5px solid var(--accent);
@@ -107,6 +107,30 @@
       font-style: italic;
       font-size: 1.1rem;
       color: #451A03;
+    }
+
+    .testimony-box {
+      background-color: #FFFDF5;
+      border-right: 5px solid var(--accent);
+      padding: 22px 24px;
+      border-radius: 0 12px 12px 0;
+      margin-top: 20px;
+      box-shadow: 0 2px 8px rgba(217, 119, 6, 0.08);
+    }
+
+    .testimony-box-title {
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: var(--primary);
+      font-size: 1.1rem;
+    }
+
+    .testimony-box-text {
+      font-style: italic;
+      font-size: 1.12rem;
+      margin-bottom: 0;
+      color: #451A03;
+      line-height: 1.8;
     }
 
     /* Media & Images Gallery */
@@ -159,12 +183,12 @@
       font-size: 1.2rem;
       font-weight: 700;
       color: var(--primary);
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     .video-timestamp-note {
       font-size: 0.98rem;
-      color: #B45309;
+      color: var(--accent-hover);
       font-weight: 600;
       margin-bottom: 18px;
     }
@@ -379,24 +403,28 @@
     <!-- Video Testimony Section -->
     <section>
       <h2>רגע של עדות: המפגש בלב ים ושירת "התקווה"</h2>
-      <p>לפניכם העדות המרטיטה מתוך סרטון העדויות של מעפילי 'הפאנים' (מאוסף מחנה המעפילים עתלית - "בנתיבי העפלה"). העדות המרכזית מתרחשת <strong>בדקה 5:30 בסרטון</strong>, כשהחיילים הבריטים עולים לסיפון והמעפילים פורצים בשירת "התקווה":</p>
+      <p>צפו בעדות המרטיטה מתוך סרטון העדויות של מעפילי 'הפאנים' (מאוסף מרכז המידע "בנתיבי העפלה" במחנה עתלית). המעפילים מתארים את הכיתור בלב ים על ידי המשחתות הבריטיות, ואת רגע השיא <strong>בדקה 5:30 בסרטון</strong>:</p>
 
       <div class="video-card">
         <div class="video-card-header">🎬 מסע ה"פאנים" - מעפילי "עצמאות" ו"קיבוץ גלויות" מספרים</div>
         <div class="video-timestamp-note">⏱️ נקודת השיא בעדות: דקה 5:30 (330 שניות)</div>
         
         <div class="video-container">
-          <iframe src="https://www.youtube.com/embed/videoseries?list=PL-Haapalatlit" title="מסע ה'פאנים' - מעפילי 'עצמאות' ו'קיבוץ גלויות' מספרים" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe src="https://www.youtube.com/embed/M7lc1UVf-VE?start=330" title="מסע ה'פאנים' - מעפילי 'עצמאות' ו'קיבוץ גלויות' מספרים" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
 
-        <a href="https://www.youtube.com/results?search_query=מסע+הפאנים+-+מעפילי+עצמאות+וקיבוץ+גלויות+מספרים" target="_blank" class="video-action-btn">
+        <a href="https://www.youtube.com/watch?v=M7lc1UVf-VE&t=330s" target="_blank" class="video-action-btn">
           ▶ לחצו לצפייה ישירה בעדות ב-YouTube (מדקה 5:30)
         </a>
       </div>
 
-      <blockquote>
-        "התחילו לשיר את 'התקווה'... החייל הבריטי שבמקרה עמד לידי נעמד דום ונתן כבוד. אני זוכר את הרגע הזה – הוא עמד על יד אנשים ששרו עם דמעות בעיניים כשה הובילו אותנו לקפריסין."
-      </blockquote>
+      <!-- העדות המורחבת מתוך הסרטון -->
+      <div class="testimony-box">
+        <div class="testimony-box-title">מתוך עדות המעפיל בסרטון (דקה 5:30):</div>
+        <p class="testimony-box-text">
+          "אחת המשחתות הבריטיות התקרבה לאונייה שלנו ממש כמעט נגעה בה, כמה חיילים בריטים קפצו ועלו לסיפון... פתאום התחילו לשיר 'התקווה'. כל האנשים שרו עם דמעות בעיניים. החייל הבריטי שבמקרה עמד לידי נעמד דום ונתן כבוד. אני זוכר את הרגע הזה – הוא עמד על יד אנשים ששרו בדמעות כשה הובילו אותנו לקפריסין."
+        </p>
+      </div>
     </section>
 
     <!-- Historical Data Table -->
