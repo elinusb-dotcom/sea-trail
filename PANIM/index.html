@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
   <meta charset="UTF-8">
@@ -102,23 +102,6 @@
       color: #451A03;
     }
 
-    .testimony-box {
-      background-color: #FFFDF5;
-      border-right: 5px solid var(--accent);
-      padding: 22px 24px;
-      border-radius: 0 12px 12px 0;
-      margin-top: 20px;
-      box-shadow: 0 2px 8px rgba(217, 119, 6, 0.08);
-    }
-
-    .testimony-box-text {
-      font-style: italic;
-      font-size: 1.12rem;
-      margin-bottom: 0;
-      color: #451A03;
-      line-height: 1.8;
-    }
-
     /* Media & Images Gallery */
     .media-grid {
       display: grid;
@@ -155,12 +138,14 @@
     .media-card.logo-card {
       background: #ffffff;
       border: 2px solid var(--primary-light);
+      justify-content: center;
     }
 
     .media-card.logo-card img.logo-img {
       object-fit: contain;
-      padding: 15px;
+      padding: 20px;
       background-color: #ffffff;
+      height: 230px;
     }
 
     .media-card .caption {
@@ -350,14 +335,13 @@
     <!-- Hero Gallery: 2 Images + Cyprus Logo Centered -->
     <div class="media-grid">
       <div class="media-card">
-        <img src="panim_ship_at_sea.png" alt="ספינות הפאנים בלב ים">
+        <img src="https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/PANIM/%D7%A4%D7%A0%D7%99%D7%9D.png" alt="ספינות הפאנים בלב ים">
         <div class="caption">ספינות המעפילים 'הפאנים' ('עצמאות' ו'קיבוץ גלויות') בנתיבן ההיסטורי</div>
       </div>
       
-      <!-- לוגו ארגון מעפילי קפריסין במרכז -->
+      <!-- לוגו ארגון מעפילי קפריסין במרכז (ללא כיתוב כפול) -->
       <div class="media-card logo-card">
         <img src="https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/PANIM/%D7%A7%D7%A4%D7%A8%D7%99%D7%A1%D7%99%D7%9F.png" alt="לוגו מעפילי קפריסין" class="logo-img">
-        <div class="caption">ארגון מעפילי קפריסין</div>
       </div>
 
       <div class="media-card">
@@ -369,7 +353,7 @@
     <!-- Intro Story -->
     <section>
       <h2>חברות וחברי משפחת 'הפאנים' היקרים,</h2>
-      <p>על החופים האלה, שבהם נשברים גלי הים התיכון, נכתב אחד הפרקים הדרמטיים והמפוארים בתולדות הקמתה של מדינת ישראל. אל החופים הללו נשאו את עיניהם למעלה מ-15,000 מעפילים – הורינו, סבינו ואולי גם אחדים מכם – שיצאו מבורגס שבבולגריה במבצע ההעפלה הגדול בהיסטוריה. מבצע זה היה תשובה ניצחת לגירוש מעפילי ״אקסודוס״ ועדות לרוחם שלא נשברה.</p>
+      <p>על החופים האלה, שבהם נשברים גלי הים התיכון, נכתב אחד הפרקים הדרמטיים והמפוארים בתולדות הקמתה של מדינת ישראל. אל החופים הללו נשאו את עיניהם כ-15,500 מעפילים – הורינו, סבינו ואולי גם אחדים מכם – שיצאו מבורגס שבבולגריה במבצע ההעפלה הגדול בהיסטוריה. מבצע זה היה תשובה ניצחת לגירוש מעפילי ״אקסודוס״ ועדות לרוחם שלא נשברה.</p>
       <p>הם עברו מסע תלאות ברכבות ברחבי אירופה ובבטן הספינות הצפופות, <strong>חלמו על חופי הארץ</strong>, ושרו את "התקווה" בדמעות לפני הגירוש הכואב למחנות המעצר בקפריסין.</p>
       
       <blockquote>
@@ -433,13 +417,6 @@
           ▶ לחצו לצפייה ישירה בסרטון ב-YouTube
         </a>
       </div>
-
-      <!-- העדות מתוך הסרטון -->
-      <div class="testimony-box">
-        <p class="testimony-box-text">
-          "אחת המשחתות הבריטיות התקרבה לאונייה שלנו ממש כמעט נגעה בה, כמה חיילים בריטים קפצו ועלו לסיפון... פתאום התחילו לשיר 'התקווה'. כל האנשים שרו עם דמעות בעיניים. החייל הבריטי שבמקרה עמד לידי נעמד דום ונתן כבוד. אני זוכר את הרגע הזה – הוא עמד על יד אנשים ששרו בדמעות כשה הובילו אותנו לקפריסין."
-        </p>
-      </div>
     </section>
 
     <!-- Historical Data Table -->
@@ -452,7 +429,7 @@
         </tr>
         <tr>
           <th>מספר המעפילים</th>
-          <td>כ-15,000–16,000 מעפילים (מבצע ההעפלה המרוכז הגדול ביותר)</td>
+          <td>כ-15,500 מעפילים (מבצע ההעפלה המרוכז הגדול ביותר)</td>
         </tr>
         <tr>
           <th>המסע והסיפון</th>
@@ -475,7 +452,7 @@
   <footer>
     <div class="container">
       <p><strong>פרופ' סנונית שהם</strong>, יו"ר ארגון מעפילי קפריסין | <strong>צוות מורשת מעפילי הפאנים</strong></p>
-      <p>סיוע ולמענה לשאלות: <a href="tel:+972544285388" style="color: inherit; font-weight: bold; text-decoration: none;">054-428-5388</a></p>
+      <p>סיוע ולמענה לשאלות - עופר: <a href="tel:+972544285388" style="color: inherit; font-weight: bold; text-decoration: none;">054-428-5388</a></p>
     </div>
   </footer>
 
