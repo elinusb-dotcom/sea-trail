@@ -1,1 +1,461 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preserving the Legacy of the Pan Ma'apilim Along the Sea Trail</title>
+  <link rel="preconnect" href="[suspicious link removed]">
+  <link rel="preconnect" href="[suspicious link removed]" crossorigin>
+  <link href="[suspicious link removed]" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0F2C59;
+      --primary-light: #1E40AF;
+      --accent: #D97706;
+      --accent-hover: #B45309;
+      --bg-light: #F8FAFC;
+      --text-dark: #1E293B;
+      --text-muted: #64748B;
+      --border: #E2E8F0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Rubik', sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-dark);
+      line-height: 1.7;
+      direction: ltr;
+    }
+
+    .container {
+      max-width: 950px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header & Hero */
+    header {
+      background: linear-gradient(135deg, #0A192F 0%, #0F2C59 100%);
+      color: #ffffff;
+      padding: 50px 20px;
+      text-align: center;
+      border-bottom: 5px solid var(--accent);
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      margin-bottom: 14px;
+      color: #ffffff;
+      line-height: 1.3;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    header .subtitle {
+      font-size: 1.25rem;
+      color: #E2E8F0;
+      font-weight: 500;
+      margin-bottom: 0;
+    }
+
+    /* Sections */
+    section {
+      background: #ffffff;
+      margin: 30px 0;
+      padding: 35px 30px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+      border: 1px solid var(--border);
+    }
+
+    section h2 {
+      color: var(--primary);
+      font-size: 1.6rem;
+      margin-bottom: 18px;
+      border-bottom: 3px solid var(--accent);
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    p {
+      margin-bottom: 15px;
+      font-size: 1.05rem;
+    }
+
+    /* Quotes & Highlight Boxes */
+    blockquote {
+      background-color: #FFFDF5;
+      border-left: 5px solid var(--accent);
+      padding: 18px 20px;
+      margin: 20px 0;
+      border-radius: 12px;
+      font-style: italic;
+      font-size: 1.1rem;
+      color: #451A03;
+    }
+
+    /* Media & Images Gallery */
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      margin: 25px 0;
+      align-items: center;
+    }
+
+    .media-card {
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: #ffffff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      text-align: center;
+      transition: transform 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    .media-card:hover {
+      transform: translateY(-3px);
+    }
+
+    .media-card img {
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+    }
+
+    .media-card.logo-card {
+      background: #ffffff;
+      border: 2px solid var(--primary-light);
+      justify-content: center;
+    }
+
+    .media-card.logo-card img.logo-img {
+      object-fit: contain;
+      padding: 20px;
+      background-color: #ffffff;
+      height: 230px;
+    }
+
+    .media-card .caption {
+      padding: 12px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      background-color: #F8FAFC;
+    }
+
+    /* Video Box Design */
+    .video-card {
+      background: #F8FAFC;
+      border: 2px solid var(--primary-light);
+      border-radius: 16px;
+      padding: 24px;
+      margin: 25px 0;
+      text-align: center;
+    }
+
+    .video-card-header {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 12px;
+    }
+
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 12px;
+      margin-bottom: 18px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+      background-color: #000000;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .video-action-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background-color: #CC0000;
+      color: #ffffff !important;
+      font-weight: 700;
+      font-size: 1.05rem;
+      padding: 14px 28px;
+      border-radius: 30px;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(204, 0, 0, 0.25);
+      transition: background-color 0.2s, transform 0.2s;
+    }
+
+    .video-action-btn:hover {
+      background-color: #990000;
+      transform: scale(1.03);
+    }
+
+    /* Table Style */
+    .history-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 0.98rem;
+    }
+
+    .history-table th, .history-table td {
+      padding: 14px 16px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+
+    .history-table th {
+      background-color: var(--primary);
+      color: #ffffff;
+      font-weight: 700;
+      width: 28%;
+    }
+
+    .history-table tr:nth-child(even) {
+      background-color: #F8FAFC;
+    }
+
+    /* Donation Grid */
+    .donation-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 18px;
+      margin-top: 25px;
+    }
+
+    .donation-card {
+      background: #ffffff;
+      border: 2px solid var(--border);
+      border-radius: 12px;
+      padding: 24px 12px;
+      text-align: center;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .donation-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(15, 44, 89, 0.12);
+    }
+
+    .donation-card.special-tier {
+      border-color: var(--accent);
+      background: linear-gradient(180deg, #FFFDF5 0%, #FFFFFF 100%);
+    }
+
+    .card-amount {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 18px;
+    }
+
+    .btn-donate {
+      display: block;
+      background-color: var(--primary);
+      color: #ffffff !important;
+      text-decoration: none;
+      font-weight: 700;
+      padding: 12px 10px;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .btn-donate:hover {
+      background-color: var(--primary-light);
+    }
+
+    .btn-special {
+      background-color: var(--accent) !important;
+      color: #ffffff !important;
+    }
+
+    .btn-special:hover {
+      background-color: var(--accent-hover) !important;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      border-top: 1px solid var(--border);
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.7rem; }
+      .donation-grid { grid-template-columns: 1fr 1fr; }
+      .history-table th, .history-table td { display: block; width: 100%; }
+      .history-table th { background-color: #E2E8F0; color: var(--text-dark); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <div class="container">
+      <h1>Preserving the Legacy of the "Pan" Ma'apilim<br>Along the Sea Trail</h1>
+      <div class="subtitle">The torch has been passed to us! Honoring the legacy of the Cyprus Ma’apilim along Israel’s shores.</div>
+    </div>
+  </header>
+
+  <main class="container">
+    
+    <!-- Hero Gallery -->
+    <div class="media-grid">
+      <div class="media-card">
+        <img src="[suspicious link removed]" alt="The Pan Ships at Sea">
+        <div class="caption">The "Pan" Ma'apilim ships – Kibbutz Galuyot and Atzmaut, on their historic voyage</div>
+      </div>
+      
+      <!-- Cyprus Ma'apilim Organization Logo Centered -->
+      <div class="media-card logo-card">
+        <img src="[suspicious link removed]" alt="Cyprus Ma'apilim Organization Logo" class="logo-img">
+      </div>
+
+      <div class="media-card">
+        <img src="[suspicious link removed] במפרץ.png" alt="Commemorative Sign Model on the Sea Trail">
+        <div class="caption">A model of the commemorative sign planned for installation along the Sea Trail</div>
+      </div>
+    </div>
+
+    <!-- Intro Story -->
+    <section>
+      <h2>Dear Members of the "Pan" Family,</h2>
+      <p>On these shores, where the waves of the Mediterranean break, one of the most dramatic and inspiring chapters in the story of Israel’s establishment unfolded. Towards these shores, some 15,500 Ma'apilim – our parents, our grandparents, and perhaps some of you – turned their eyes as they departed from Burgas, Bulgaria, in the largest operation in the history of Aliyah Bet. This operation was a resounding response to the deportation of the Exodus passengers and a testament to their unbroken spirit.</p>
+      <p>They endured an arduous journey on trains across Europe and in the crowded holds of ships, <strong>dreaming of the shores of their homeland</strong>, and sang "Hatikvah" through their tears before their painful deportation to the detention camps in Cyprus.</p>
+      
+      <blockquote>
+        "Every commemorative sign is a living memorial – a bridge connecting those who walk the trail with the women, men, and crews who were aboard the ships."
+      </blockquote>
+
+      <p><strong>The Organization of Cyprus Ma’apilim</strong> is working to install 30 commemorative signs and interactive information points along Israel’s coast, telling the stories of all 142 Aliyah Bet ships. A major initiative marking the 80th anniversaries of the Cyprus detention camps and the establishment of the State of Israel, the project aims to honor the Ma'apilim's memory and pass their legacy on to future generations.</p>
+      
+      <p>To complete the installation of the commemorative sign dedicated to the "Pan" ships, we need your support. Together, we can give their story a place of honor on the shores of the land they so deeply longed to reach.</p>
+    </section>
+
+    <!-- Donation Section -->
+    <section id="donate">
+      <h2 style="text-align: center; display: block; border: none; font-size: 1.35rem; line-height: 1.6; margin-bottom: 10px;">
+        The Organization of Cyprus Ma’apilim has undertaken to raise ₪320,000 for the entire commemorative project. Of this amount, the "Pan" community’s fundraising target is ₪40,000.
+        <br>
+        <span style="color: var(--accent); font-weight: 700; font-size: 1.2rem; display: inline-block; margin-top: 10px;">Choose an amount and join the journey:</span>
+      </h2>
+      
+      <div class="donation-grid">
+        <div class="donation-card">
+          <div class="card-amount">₪180</div>
+          <a href="https://pay.grow.link/OTkxMDI~609ee4070b8fb715aa68b5173eaf2fdb-MzU0MjQ4OQ" target="_blank" class="btn-donate">Join the journey</a>
+        </div>
+
+        <div class="donation-card special-tier">
+          <div class="card-amount">₪360</div>
+          <a href="https://pay.grow.link/OTkxMDI~f28b5226e8e2972af60dbde9252ef19b-MzU0MjU0Mw" target="_blank" class="btn-donate btn-special">Join the journey</a>
+        </div>
+
+        <div class="donation-card">
+          <div class="card-amount">₪720</div>
+          <a href="https://pay.grow.link/OTkxMDI~7645ce79d23164ddbc012c17f6367308-MzU0OTAwMQ" target="_blank" class="btn-donate">Join the journey</a>
+        </div>
+
+        <div class="donation-card">
+          <div class="card-amount">₪1,500</div>
+          <a href="[suspicious link removed]" target="_blank" class="btn-donate">Join the journey</a>
+        </div>
+
+        <div class="donation-card">
+          <div class="card-amount" style="font-size: 1.3rem; margin-top: 10px;">Custom Amount</div>
+          <a href="https://pay.grow.link/OTkxMDI~1ae44df27a248930a79f9e07e08f2634-MzU0MzY0MA" target="_blank" class="btn-donate">Donate</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Video Testimony Section -->
+    <section>
+      <h2>Voices of Those Who Were There: Testimony of the "Pan" Ma'apilim</h2>
+      <p>Watch the special video featuring testimonies from Ma'apilim who sailed aboard "Kibbutz Galuyot" and "Atzmaut":</p>
+
+      <div class="video-card">
+        <div class="video-card-header">🎬 The Voyage of the "Pan" Ships: Ma'apilim Aboard "Kibbutz Galuyot" and "Atzmaut" Tell Their Stories</div>
+        
+        <div class="video-container">
+          <iframe src="[suspicious link removed]" title="The Voyage of the Pan Ships: Ma'apilim Aboard Kibbutz Galuyot and Atzmaut Tell Their Stories" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <a href="[suspicious link removed]" target="_blank" class="video-action-btn">
+          ▶ Watch directly on YouTube
+        </a>
+      </div>
+    </section>
+
+    <!-- Historical Data Table -->
+    <section>
+      <h2>Historical Profile: "Kibbutz Galuyot" and "Atzmaut"</h2>
+      <table class="history-table">
+        <tr>
+          <th>Port and date of departure</th>
+          <td>Burgas, Bulgaria – 27 December 1947</td>
+        </tr>
+        <tr>
+          <th>Number of Ma'apilim</th>
+          <td>Approximately 15,500 – the largest single Aliyah Bet operation.</td>
+        </tr>
+        <tr>
+          <th>The voyage</th>
+          <td>Severe overcrowding in the ships' holds, a high degree of self-discipline, and singing on the decks.</td>
+        </tr>
+        <tr>
+          <th>The encounter at sea</th>
+          <td>Upon leaving the Dardanelles, the ships were surrounded by British destroyers. An agreement was reached to sail directly to Cyprus to avert a disaster involving mass casualties, and on 31 December 1947, British forces boarded the ships as they made their way towards the detention camps.</td>
+        </tr>
+        <tr>
+          <th>In the Cyprus detention camps</th>
+          <td>The Ma'apilim from the "Pan" ships formed the largest group in the detention camps until their release. Many subsequently took part in the War of Independence and helped build the state.</td>
+        </tr>
+      </table>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p><strong>Professor Snunith Shoham</strong>, Chair of the Organization of Cyprus Ma’apilim | <strong>The "Pan" Ma'apilim Heritage Team</strong></p>
+      <p>For assistance and enquiries, contact Ofer: <a href="tel:+972544285388" style="color: inherit; font-weight: bold; text-decoration: none;">+972-54-428-5388</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>
 
