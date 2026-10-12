@@ -116,6 +116,58 @@
       color: var(--text-dark);
       background-color: #F8FAFC;
     }
+    /* Video Box Design */
+    .video-card {
+      background: #F8FAFC;
+      border: 2px solid var(--primary-light);
+      border-radius: 16px;
+      padding: 24px;
+      margin: 25px 0;
+      text-align: center;
+    }
+    .video-card-header {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 12px;
+    }
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 12px;
+      margin-bottom: 18px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+      background-color: #000000;
+    }
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    .video-action-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background-color: #CC0000;
+      color: #ffffff !important;
+      font-weight: 700;
+      font-size: 1.05rem;
+      padding: 14px 28px;
+      border-radius: 30px;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(204, 0, 0, 0.25);
+      transition: background-color 0.2s, transform 0.2s;
+    }
+    .video-action-btn:hover {
+      background-color: #990000;
+      transform: scale(1.03);
+    }
     .donation-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -196,7 +248,7 @@
   <!-- Header Section -->
   <header>
     <div class="container">
-      <h1>Preserving the Legacy of the Pan York and Pan Crescent Ma'apilim Along the Sea Trail</h1>
+      <h1>Preserving the Legacy<br>of the Pan York and Pan Crescent Ma'apilim<br>Along the Sea Trail</h1>
       <div class="subtitle">The torch has been passed to us! Honoring the legacy of the Cyprus Ma’apilim along Israel’s shores.</div>
     </div>
   </header>
@@ -208,41 +260,45 @@
       <div class="media-grid">
         <div class="media-card">
           <img src="PANIM.png" alt="The Pan Ships at Sea">
-          <div class="caption">The “Pan” Ma'apilim ships – Kibbutz Galuyot and Atzmaut, on their historic voyage[cite: 9].</div>
+          <div class="caption">The “Pan” Ma'apilim ships – Kibbutz Galuyot and Atzmaut, on their historic voyage.</div>
         </div>
         
         <div class="media-card logo-card">
-          <img src="%D7%A7%D7%A4%D7%A8%D7%99%D7%A1%D7%99%D7%9F.png" alt="Cyprus Ma'apilim Logo">
+          <img src="קפריסין.PNG" alt="Cyprus Ma'apilim Logo" class="logo-img">
           <div class="caption">Cyprus Ma'apilim Organization</div>
         </div>
 
         <div class="media-card">
-          <img src="%D7%A9%D7%9C%D7%98%20%D7%91%D7%9E%D7%A4%D7%A8%D7%A5.png" alt="Commemorative Sign Model">
-          <div class="caption">A model of the commemorative sign planned for installation along the Sea Trail[cite: 9].</div>
+          <img src="שלט במפרץ.png" alt="Commemorative Sign Model">
+          <div class="caption">A model of the commemorative sign planned for installation along the Sea Trail.</div>
         </div>
       </div>
 
       <h2 style="margin-top: 15px;">Dear Members of the “Pan” Family,</h2>
-      <p>On these shores, where the waves of the Mediterranean break, one of the most dramatic and inspiring chapters in the story of Israel’s establishment unfolded. Towards these shores, some 15,500 Ma'apilim – our parents, our grandparents, and perhaps some of you, turned their eyes as they departed from Burgas, Bulgaria, in the largest operation in the history of Aliyah Bet, the movement to bring Jewish Ma'apilim to the country despite British restrictions. This operation was a resounding response to the deportation of the Exodus passengers and a testament to their unbroken spirit[cite: 9].</p>
+      <p>On these shores, where the waves of the Mediterranean break, one of the most dramatic and inspiring chapters in the story of Israel’s establishment unfolded. Towards these shores, some 15,500 Ma'apilim – our parents, our grandparents, and perhaps some of you, turned their eyes as they departed from Burgas, Bulgaria, in the largest operation in the history of Aliyah Bet, the movement to bring Jewish Ma'apilim to the country despite British restrictions. This operation was a resounding response to the deportation of the Exodus passengers and a testament to their unbroken spirit.</p>
       
-      <p>They endured an arduous journey on trains across Europe and in the crowded holds of ships, dreaming of the shores of their homeland, and sang “Hatikvah” through their tears before their painful deportation to the detention camps in Cyprus[cite: 9].</p>
+      <p>They endured an arduous journey on trains across Europe and in the crowded holds of ships, dreaming of the shores of their homeland, and sang “Hatikvah” through their tears before their painful deportation to the detention camps in Cyprus.</p>
       
       <blockquote>
-        “Every commemorative sign is a living memorial – a bridge connecting those who walk the trail with the women, men, and crews who were aboard the ships[cite: 9].”
+        “Every commemorative sign is a living memorial – a bridge connecting those who walk the trail with the women, men, and crews who were aboard the ships.”
       </blockquote>
 
-      <p>The Organization of Cyprus Ma’apilim is working to install 30 commemorative signs and interactive information points along Israel’s coast, telling the stories of all 142 Aliyah Bet ships. A major initiative marking the 80th anniversaries of the Cyprus detention camps and the establishment of the State of Israel, the project aims to honor the Ma'apilim's memory and pass their legacy on to future generations[cite: 9].</p>
+      <p>The Organization of Cyprus Ma’apilim is working to install 30 commemorative signs and interactive information points along Israel’s coast, telling the stories of all 142 Aliyah Bet ships. A major initiative marking the 80th anniversaries of the Cyprus detention camps and the establishment of the State of Israel, the project aims to honor the Ma'apilim's memory and pass their legacy on to future generations.</p>
       
-      <p>To complete the installation of the commemorative sign dedicated to the “Pan” ships, we need your support. Together, we can give their story a place of honor on the shores of the land they so deeply longed to reach[cite: 9].</p>
+      <p>To complete the installation of the commemorative sign dedicated to the “Pan” ships, we need your support. Together, we can give their story a place of honor on the shores of the land they so deeply longed to reach.</p>
     </section>
 
     <!-- Donation Section -->
     <section id="donate">
-      <h2 style="text-align: center; display: block; border: none; font-size: 1.35rem; line-height: 1.6; margin-bottom: 10px;">
-        Help Us Bring This Memorial to Life<br>
-        The Organization of Cyprus Ma’apilim has undertaken to raise ₪320,000 for the entire commemorative project. Of this amount, the “Pan” community’s fundraising target is ₪40,000.<br>
-        <span style="color: var(--accent); font-weight: 700; font-size: 1.2rem; display: inline-block; margin-top: 10px;">Choose an amount and become a partner in this journey. Payments abroad must be made by credit card[cite: 9].</span>
-      </h2>
+      <div style="text-align: center; margin-bottom: 25px;">
+        <h2 style="border-bottom: 3px solid var(--accent); display: inline-block; padding-bottom: 5px; font-size: 1.6rem; color: var(--primary); margin-bottom: 15px;">Help Us Bring This Memorial to Life</h2>
+        <p style="font-size: 1.1rem; line-height: 1.6; color: var(--text-dark); max-width: 850px; margin: 0 auto;">
+          The Organization of Cyprus Ma’apilim has undertaken to raise ₪320,000 for the entire commemorative project. Of this amount, the “Pan” community’s fundraising target is ₪40,000.
+        </p>
+        <p style="font-size: 1.1rem; line-height: 1.6; color: var(--accent); font-weight: 700; max-width: 850px; margin: 12px auto 0 auto;">
+          Choose an amount, dedicate your donation in honor of your loved ones, and become a partner in this journey. Payments abroad must be made by credit card.
+        </p>
+      </div>
       
       <div class="donation-grid">
         <div class="donation-card">
@@ -262,7 +318,7 @@
 
         <div class="donation-card">
           <div class="card-amount">₪1,500</div>
-          <a href="https://pay.grow.link/OTkxMDI~c0106f819f7fa5e39c9415ae11997e8b-MzU0OT0zNA" target="_blank" class="btn-donate">Join the journey</a>
+          <a href="https://pay.grow.link/OTkxMDI~c0106f819f7fa5e39c9415ae11997e8b-MzU0OTAzNA" target="_blank" class="btn-donate">Join the journey</a>
         </div>
 
         <div class="donation-card">
@@ -275,8 +331,19 @@
     <!-- Video Testimony Section -->
     <section>
       <h2>Voices of Those Who Were There</h2>
-      <p>Watch the special video featuring testimonies from Ma'apilim who sailed aboard Kibbutz Galuyot and Atzmaut. <a href="https://youtu.be/QXKyeKvH5KQ" target="_blank" style="color: var(--primary-light); font-weight: bold;">Watch on YouTube</a>[cite: 9].</p>
-      <p><strong>The Voyage of the “Pan” Ships: Ma'apilim Aboard Kibbutz Galuyot and Atzmaut Tell Their Stories[cite: 9].</strong></p>
+      <p>Watch the special video featuring testimonies from Ma'apilim who sailed aboard Kibbutz Galuyot and Atzmaut:</p>
+
+      <div class="video-card">
+        <div class="video-card-header">🎬 The Voyage of the “Pan” Ships: Ma'apilim Aboard Kibbutz Galuyot and Atzmaut Tell Their Stories</div>
+        
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/QXKyeKvH5KQ" title="The Voyage of the Pan Ships - Ma'apilim Tell Their Stories" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <a href="https://youtu.be/QXKyeKvH5KQ" target="_blank" class="video-action-btn">
+          ▶ Watch Directly on YouTube
+        </a>
+      </div>
     </section>
 
     <!-- Historical Data Table -->
@@ -285,23 +352,23 @@
       <table class="history-table">
         <tr>
           <th>Port and date of departure</th>
-          <td>Burgas, Bulgaria – 27 December 1947[cite: 9]</td>
+          <td>Burgas, Bulgaria – 27 December 1947</td>
         </tr>
         <tr>
           <th>Number of Ma'apilim</th>
-          <td>Approximately 15,500 – the largest single Aliyah Bet operation[cite: 9].</td>
+          <td>Approximately 15,500 – the largest single Aliyah Bet operation.</td>
         </tr>
         <tr>
           <th>The voyage</th>
-          <td>Severe overcrowding in the ships’ holds, a high degree of self-discipline, and singing on the decks[cite: 9].</td>
+          <td>Severe overcrowding in the ships’ holds, a high degree of self-discipline, and singing on the decks.</td>
         </tr>
         <tr>
           <th>The encounter at sea</th>
-          <td>Upon leaving the Dardanelles, the ships were surrounded by British destroyers. An agreement was reached to sail directly to Cyprus to avert a disaster involving mass casualties. On 31 December 1947, British forces boarded the ships as they made their way towards the detention camps[cite: 9].</td>
+          <td>Upon leaving the Dardanelles, the ships were surrounded by British destroyers. An agreement was reached to sail directly to Cyprus to avert a disaster involving mass casualties. On 31 December 1947, British forces boarded the ships as they made their way towards the detention camps.</td>
         </tr>
         <tr>
           <th>In the Cyprus detention camps</th>
-          <td>The Ma'apilim from the “Pan” ships formed the largest group in the detention camps until their release. Many subsequently took part in the War of Independence and helped build the state[cite: 9].</td>
+          <td>The Ma'apilim from the “Pan” ships formed the largest group in the detention camps until their release. Many subsequently took part in the War of Independence and helped build the state.</td>
         </tr>
       </table>
     </section>
@@ -313,7 +380,7 @@
     <div class="container">
       <p><strong>Professor Snunith Shoham</strong>, Chair of the Organization of Cyprus Ma’apilim<br>
       <strong>The “Pan” Ma'apilim Heritage Team</strong></p>
-      <p style="margin-top: 10px;">For assistance and enquiries, contact Ofer: <a href="tel:+972544285388" style="color: inherit; font-weight: bold; text-decoration: none;">+972-54-428-5388</a>[cite: 9]</p>
+      <p style="margin-top: 10px;">For assistance and enquiries, contact Ofer: <a href="tel:+972544285388" style="color: inherit; font-weight: bold; text-decoration: none;">+972-54-428-5388</a></p>
     </div>
   </footer>
 
