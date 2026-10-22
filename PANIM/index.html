@@ -1,4 +1,3 @@
- 
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
@@ -20,95 +19,70 @@
       --border: #E2E8F0;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       font-family: 'Rubik', sans-serif;
       background-color: var(--bg-light);
       color: var(--text-dark);
-      line-height: 1.7;
+      line-height: 1.6;
       direction: rtl;
     }
 
     .container {
-      max-width: 950px;
+      max-width: 900px;
       margin: 0 auto;
       padding: 0 20px;
     }
 
-    /* Header & Hero */
+    /* Header */
     header {
       background: linear-gradient(135deg, #0A192F 0%, #0F2C59 100%);
       color: #ffffff;
-      padding: 50px 20px;
+      padding: 30px 20px 40px;
       text-align: center;
       border-bottom: 5px solid var(--accent);
     }
 
+    .top-bar {
+      display: flex;
+      justify-content: flex-start;
+      margin-bottom: 10px;
+    }
+
+    .lang-btn {
+      background-color: rgba(255, 255, 255, 0.15);
+      color: #ffffff !important;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      padding: 6px 14px;
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      transition: background 0.2s;
+    }
+
+    .lang-btn:hover { background-color: rgba(255, 255, 255, 0.3); }
+
     header h1 {
-      font-size: 2.2rem;
+      font-size: 2.1rem;
       font-weight: 800;
-      margin-bottom: 14px;
-      color: #ffffff;
-      line-height: 1.3;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
+      margin-bottom: 10px;
+      line-height: 1.25;
     }
 
     header .subtitle {
-      font-size: 1.25rem;
+      font-size: 1.15rem;
       color: #E2E8F0;
       font-weight: 500;
-      margin-bottom: 0;
     }
 
-    /* Sections */
-    section {
-      background: #ffffff;
-      margin: 30px 0;
-      padding: 35px 30px;
-      border-radius: 16px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.04);
-      border: 1px solid var(--border);
-    }
-
-    section h2 {
-      color: var(--primary);
-      font-size: 1.6rem;
-      margin-bottom: 18px;
-      border-bottom: 3px solid var(--accent);
-      display: inline-block;
-      padding-bottom: 5px;
-    }
-
-    p {
-      margin-bottom: 15px;
-      font-size: 1.05rem;
-    }
-
-    /* Quotes & Highlight Boxes */
-    blockquote {
-      background-color: #FFFDF5;
-      border-right: 5px solid var(--accent);
-      padding: 18px 20px;
-      margin: 20px 0;
-      border-radius: 0 12px 12px 0;
-      font-style: italic;
-      font-size: 1.1rem;
-      color: #451A03;
-    }
-
-    /* Media & Images Gallery */
+    /* Media Grid */
     .media-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 20px;
-      margin: 25px 0;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin: 20px 0;
       align-items: center;
     }
 
@@ -117,165 +91,117 @@
       overflow: hidden;
       border: 1px solid var(--border);
       background: #ffffff;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
       text-align: center;
-      transition: transform 0.2s ease;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      height: 100%;
-    }
-
-    .media-card:hover {
-      transform: translateY(-3px);
     }
 
     .media-card img {
       width: 100%;
-      height: 210px;
+      height: 180px;
       object-fit: cover;
     }
 
     .media-card.logo-card {
-      background: #ffffff;
       border: 2px solid var(--primary-light);
+      display: flex;
+      align-items: center;
       justify-content: center;
+      height: 100%;
     }
 
-    .media-card.logo-card img.logo-img {
+    .media-card.logo-card img {
       object-fit: contain;
-      padding: 20px;
-      background-color: #ffffff;
-      height: 230px;
+      padding: 15px;
+      height: 180px;
     }
 
     .media-card .caption {
-      padding: 12px;
-      font-size: 0.9rem;
+      padding: 10px;
+      font-size: 0.85rem;
       font-weight: 600;
       color: var(--text-dark);
-      background-color: #F8FAFC;
-    }
-
-    /* Video Box Design */
-    .video-card {
       background: #F8FAFC;
-      border: 2px solid var(--primary-light);
-      border-radius: 16px;
-      padding: 24px;
-      margin: 25px 0;
-      text-align: center;
     }
 
-    .video-card-header {
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: var(--primary);
-      margin-bottom: 12px;
-    }
-
-    .video-container {
-      position: relative;
-      padding-bottom: 56.25%;
-      height: 0;
-      overflow: hidden;
-      border-radius: 12px;
-      margin-bottom: 18px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-      background-color: #000000;
-    }
-
-    .video-container iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: 0;
-    }
-
-    .video-action-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      background-color: #CC0000;
-      color: #ffffff !important;
-      font-weight: 700;
-      font-size: 1.05rem;
-      padding: 14px 28px;
-      border-radius: 30px;
-      text-decoration: none;
-      box-shadow: 0 4px 12px rgba(204, 0, 0, 0.25);
-      transition: background-color 0.2s, transform 0.2s;
-    }
-
-    .video-action-btn:hover {
-      background-color: #990000;
-      transform: scale(1.03);
-    }
-
-    /* Table Style */
-    .history-table {
-      width: 100%;
-      border-collapse: collapse;
+    /* Sections */
+    section {
+      background: #ffffff;
       margin: 20px 0;
-      font-size: 0.98rem;
-    }
-
-    .history-table th, .history-table td {
-      padding: 14px 16px;
+      padding: 25px 25px;
+      border-radius: 14px;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.03);
       border: 1px solid var(--border);
-      text-align: right;
     }
 
-    .history-table th {
-      background-color: var(--primary);
-      color: #ffffff;
-      font-weight: 700;
-      width: 28%;
+    section h2 {
+      color: var(--primary);
+      font-size: 1.45rem;
+      margin-bottom: 14px;
+      border-bottom: 3px solid var(--accent);
+      display: inline-block;
+      padding-bottom: 4px;
     }
 
-    .history-table tr:nth-child(even) {
-      background-color: #F8FAFC;
+    p { margin-bottom: 12px; font-size: 1rem; }
+
+    blockquote {
+      background-color: #FFFDF5;
+      border-right: 4px solid var(--accent);
+      padding: 14px 18px;
+      margin: 15px 0;
+      border-radius: 0 10px 10px 0;
+      font-style: italic;
+      font-size: 1.05rem;
+      color: #451A03;
     }
 
     /* Donation Grid */
+    .donation-banner {
+      text-align: center;
+      background: linear-gradient(180deg, #FFFDF5 0%, #FFFFFF 100%);
+      border: 2px solid var(--accent);
+      border-radius: 14px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    .donation-banner h3 {
+      color: var(--primary);
+      font-size: 1.25rem;
+      margin-bottom: 8px;
+    }
+
     .donation-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 18px;
-      margin-top: 25px;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 14px;
+      margin-top: 15px;
     }
 
     .donation-card {
       background: #ffffff;
       border: 2px solid var(--border);
-      border-radius: 12px;
-      padding: 24px 12px;
+      border-radius: 10px;
+      padding: 18px 10px;
       text-align: center;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      position: relative;
+      transition: transform 0.2s;
     }
 
     .donation-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 20px rgba(15, 44, 89, 0.12);
+      transform: translateY(-3px);
+      border-color: var(--primary-light);
     }
 
     .donation-card.special-tier {
       border-color: var(--accent);
-      background: linear-gradient(180deg, #FFFDF5 0%, #FFFFFF 100%);
+      background: #FFFDF5;
     }
 
     .card-amount {
-      font-size: 1.8rem;
+      font-size: 1.6rem;
       font-weight: 800;
       color: var(--primary);
-      margin-bottom: 18px;
+      margin-bottom: 12px;
     }
 
     .btn-donate {
@@ -284,37 +210,65 @@
       color: #ffffff !important;
       text-decoration: none;
       font-weight: 700;
-      padding: 12px 10px;
-      border-radius: 8px;
-      font-size: 1rem;
-      transition: background-color 0.2s ease, transform 0.2s ease;
-    }
-
-    .btn-donate:hover {
-      background-color: var(--primary-light);
+      padding: 10px 8px;
+      border-radius: 6px;
+      font-size: 0.95rem;
     }
 
     .btn-special {
       background-color: var(--accent) !important;
-      color: #ffffff !important;
     }
 
-    .btn-special:hover {
-      background-color: var(--accent-hover) !important;
+    /* Video Section */
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 10px;
+      margin: 15px 0;
+      background: #000;
     }
+
+    .video-container iframe {
+      position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;
+    }
+
+    /* History Table */
+    .history-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+      font-size: 0.95rem;
+    }
+
+    .history-table th, .history-table td {
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+      text-align: right;
+    }
+
+    .history-table th {
+      background-color: var(--primary);
+      color: #ffffff;
+      font-weight: 700;
+      width: 25%;
+    }
+
+    .history-table tr:nth-child(even) { background-color: #F8FAFC; }
 
     /* Footer */
     footer {
       text-align: center;
-      padding: 40px 20px;
+      padding: 30px 20px;
       color: var(--text-muted);
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       border-top: 1px solid var(--border);
-      margin-top: 40px;
+      margin-top: 30px;
     }
 
     @media (max-width: 600px) {
-      header h1 { font-size: 1.7rem; }
+      header h1 { font-size: 1.6rem; }
       .donation-grid { grid-template-columns: 1fr 1fr; }
       .history-table th, .history-table td { display: block; width: 100%; }
       .history-table th { background-color: #E2E8F0; color: var(--text-dark); }
@@ -323,126 +277,105 @@
 </head>
 <body>
 
-  <!-- Header Section -->
+  <!-- Header -->
   <header>
     <div class="container">
-      <h1>שימור מורשת מעפילי ה"פאנים"<br>בשביל הים</h1>
-      <div class="subtitle">הדגל נמסר לנו! מטביעים את חותם מעפילי קפריסין על חופי המדינה</div>
+      <div class="top-bar">
+        <a href="../PANIM%20ENG/index.html" class="lang-btn">🌐 English</a>
+      </div>
+      <h1>שימור מורשת מעפילי ה"פאנים" בשביל הים</h1>
+      <div class="subtitle">הדגל נמסר לנו! מנציחים את גבורת מעפילי קפריסין על חופי המדינה</div>
     </div>
   </header>
 
   <main class="container">
     
-    <!-- Hero Gallery: 2 Images + Cyprus Logo Centered -->
+    <!-- Visual Hero Gallery -->
     <div class="media-grid">
       <div class="media-card">
-        <img src="https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/PANIM/PANIM.png" alt="ספינות הפאנים בלב ים">
-        <div class="caption">ספינות המעפילים "הפאנים" ("עצמאות" ו"קיבוץ גלויות") בנתיבן ההיסטורי</div>
+        <img src="PANIM.png" alt="ספינות הפאנים בלב ים">
+        <div class="caption">ספינות "עצמאות" ו"קיבוץ גלויות" בלב ים</div>
       </div>
-      
-      <!-- לוגו ארגון מעפילי קפריסין במרכז -->
       <div class="media-card logo-card">
-        <img src="https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/PANIM/%D7%A7%D7%A4%D7%A8%D7%99%D7%A1%D7%99%D7%9F.png" alt="לוגו מעפילי קפריסין" class="logo-img">
+        <img src="קפריסין.png" alt="לוגו מעפילי קפריסין">
       </div>
-
       <div class="media-card">
-        <img src="https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/שלט במפרץ.png" alt="דגם שלט הנצחה בשביל הים">
-        <div class="caption">דגם שלט ההנצחה המתוכנן להצבה לאורך שביל הים</div>
+        <img src="../שלט במפרץ.png" alt="דגם שלט הנצחה">
+        <div class="caption">שלט ההנצחה המתוכנן בשביל הים</div>
       </div>
     </div>
 
-    <!-- Intro Story -->
+    <!-- Main Campaign Hook -->
     <section>
       <h2>חברות וחברי משפחת "הפאנים" היקרים,</h2>
-      <p>על החופים האלה, שבהם נשברים גלי הים התיכון, נכתב אחד הפרקים הדרמטיים והמפוארים בתולדות הקמתה של מדינת ישראל. אל החופים הללו נשאו את עיניהם כ-15,500 מעפילים – הורינו, סבינו ואולי גם אחדים מכם – שיצאו מבורגס שבבולגריה במבצע ההעפלה הגדול בהיסטוריה. מבצע זה היה תשובה ניצחת לגירוש מעפילי "אקסודוס" ועדות לרוחם שלא נשברה.</p>
-      <p>הם עברו מסע תלאות ברכבות ברחבי אירופה ובבטן הספינות הצפופות, <strong>חלמו על חופי הארץ</strong>, ושרו את "התקווה" בדמעות לפני הגירוש הכואב למחנות המעצר בקפריסין.</p>
+      <p>על חופים אלה נכתב פרק הוד בתולדות הקמת המדינה. כ-15,500 מעפילים – הורינו וסבינו – הפליגו מבורגס שבבולגריה במבצע ההעפלה הגדול בהיסטוריה, כתשובה ניצחת לגירוש "אקסודוס". הם עברו מסע תלאות, חלמו על חופי הארץ ושרו את "התקווה" בדמעות לפני גירושם למחנות קפריסין.</p>
       
       <blockquote>
-        "כל שלט הנצחה הוא יד זיכרון חיה. הוא הגשר שיחבר בין המטייל בשביל לבין המעפילות, המעפילים והצוותים שעל הסיפון."
+        "כל שלט הנצחה הוא יד זיכרון חיה – גשר שיחבר בין המטייל בשביל הים לבין סיפור גבורת המעפילים."
       </blockquote>
 
-      <p><strong>ארגון מעפילי קפריסין</strong> פועל להציב לאורך חופי ארצנו 30 שלטי הנצחה ונקודות מידע אינטראקטיביות, שיספרו את סיפורן של כל 142 ספינות ההעפלה. זהו מיזם מרכזי במסגרת אירועי ציון 80 שנה למחנות קפריסין ולהקמת מדינת ישראל, שנועד לשמר את זכר המעפילים ולהנחיל את מורשתם לדורות הבאים.</p>
-      
-      <p>כדי להשלים את הצבת שלט ההנצחה ל"פאנים" – אנחנו צריכים אתכם איתנו. יחד נעניק לסיפורן מקום של כבוד על חופי הארץ, שאליה כה נכספו.</p>
+      <p>כעת, במסגרת מיזם 30 שלטי ההנצחה לאורך חופי הארץ של <strong>ארגון מעפילי קפריסין</strong>, יש לנו הזדמנות להבטיח שסיפורן של "עצמאות" ו"קיבוץ גלויות" ייחקק לתמיד על החוף שאליה כה נכספו.</p>
     </section>
 
     <!-- Donation Section -->
     <section id="donate">
-      <h2 style="text-align: center; display: block; border: none; font-size: 1.35rem; line-height: 1.6; margin-bottom: 10px;">
-        ארגון מעפילי קפריסין לקח על עצמו לגייס 320,000 ₪ לכלל מיזם ההנצחה, מתוכם היעד של קהילת "הפאנים" הוא 40,000 ₪.
-        <br>
-        <span style="color: var(--accent); font-weight: 700; font-size: 1.2rem; display: inline-block; margin-top: 10px;">בחרו סכום והיו שותפים לדרך:</span>
-      </h2>
+      <div class="donation-banner">
+        <h3>יעד קהילת "הפאנים": 40,000 ₪</h3>
+        <p>(כחלק מיעד לאומי של 320,000 ₪ להנצחת כלל 142 ספינות ההעפלה)</p>
+        <p style="font-weight: 700; color: var(--accent); margin-top: 8px;">בחרו סכום והיו שותפים להקמת שלט ההנצחה:</p>
+      </div>
       
       <div class="donation-grid">
         <div class="donation-card">
           <div class="card-amount">₪180</div>
           <a href="https://pay.grow.link/OTkxMDI~609ee4070b8fb715aa68b5173eaf2fdb-MzU0MjQ4OQ" target="_blank" class="btn-donate">שותפים לדרך</a>
         </div>
-
         <div class="donation-card special-tier">
           <div class="card-amount">₪360</div>
           <a href="https://pay.grow.link/OTkxMDI~f28b5226e8e2972af60dbde9252ef19b-MzU0MjU0Mw" target="_blank" class="btn-donate btn-special">שותפים לדרך</a>
         </div>
-
         <div class="donation-card">
           <div class="card-amount">₪720</div>
           <a href="https://pay.grow.link/OTkxMDI~7645ce79d23164ddbc012c17f6367308-MzU0OTAwMQ" target="_blank" class="btn-donate">שותפים לדרך</a>
         </div>
-
         <div class="donation-card">
           <div class="card-amount">₪1,500</div>
           <a href="https://pay.grow.link/OTkxMDI~c0106f819f7fa5e39c9415ae11997e8b-MzU0OT0zNA" target="_blank" class="btn-donate">שותפים לדרך</a>
         </div>
-
         <div class="donation-card">
-          <div class="card-amount" style="font-size: 1.3rem; margin-top: 10px;">סכום אחר</div>
+          <div class="card-amount" style="font-size: 1.2rem; margin-top: 5px;">סכום אחר</div>
           <a href="https://pay.grow.link/OTkxMDI~1ae44df27a248930a79f9e07e08f2634-MzU0MzY0MA" target="_blank" class="btn-donate">לתרומה</a>
         </div>
       </div>
     </section>
 
-    <!-- Video Testimony Section -->
+    <!-- Video Testimony -->
     <section>
-      <h2>רגע של עדות: עדות מעפילי "הפאנים"</h2>
-      <p>צפו בסרטון העדויות המיוחד של מעפילי "הפאנים" ("עצמאות" ו"קיבוץ גלויות"):</p>
-
-      <div class="video-card">
-        <div class="video-card-header">🎬 מסע ה"פאנים" - מעפילי "עצמאות" ו"קיבוץ גלויות" מספרים</div>
-        
-        <div class="video-container">
-          <iframe src="https://www.youtube.com/embed/QXKyeKvH5KQ" title="מסע ה&quot;פאנים&quot; - מעפילי &quot;עצמאות&quot; ו&quot;קיבוץ גלויות&quot; מספרים" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-
-        <a href="https://youtu.be/QXKyeKvH5KQ" target="_blank" class="video-action-btn">
-          ▶ לחצו לצפייה ישירה בסרטון ב-YouTube
-        </a>
+      <h2>עדות מעפילי "הפאנים"</h2>
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/QXKyeKvH5KQ" title="מסע הפאנים" allowfullscreen></iframe>
       </div>
     </section>
 
-    <!-- Historical Data Table -->
+    <!-- Historical Table -->
     <section>
       <h2>תעודת זהות היסטורית: "עצמאות" ו"קיבוץ גלויות"</h2>
       <table class="history-table">
         <tr>
-          <th>נמל ומועד יציאה</th>
+          <th>יציאה</th>
           <td>בורגס, בולגריה | 27 בדצמבר 1947</td>
         </tr>
         <tr>
-          <th>מספר המעפילים</th>
-          <td>כ-15,500 מעפילים (מבצע ההעפלה המרוכז הגדול ביותר)</td>
-        </tr>
-        <tr>
-          <th>המסע</th>
-          <td>צפיפות קשה בבטן האונייה, משמעת עצמית גבוהה ושירה על הסיפונים</td>
+          <th>מעפילים</th>
+          <td>כ-15,500 מעפילים – מבצע ההעפלה המרוכז הגדול בהיסטוריה</td>
         </tr>
         <tr>
           <th>המפגש בלב ים</th>
-          <td>ביציאה מהדרדנלים כותרו על ידי משחתות בריטיות. הושג הסדר לניווט ישיר לקפריסין למניעת אסון המוני, וב-31.12.47 עלו הבריטים על הספינות בדרכן למחנות המעצר.</td>
+          <td>כיתור בריטי בדרדנלים. הסדר לניווט ישיר לקפריסין למניעת אסון המוני (31.12.47)</td>
         </tr>
         <tr>
-          <th>במחנות המעצר בקפריסין</th>
-          <td>מעפילי ה"פאנים" היוו את הגרעין הגדול במחנות המעצר עד לשחרורם ורבים מהם השתתפו במלחמת העצמאות ובתקומת המדינה.</td>
+          <th>קפריסין והתקומה</th>
+          <td>גרעין המעפילים הגדול במחנות קפריסין, שלחמו בהמשך במלחמת העצמאות</td>
         </tr>
       </table>
     </section>
@@ -459,4 +392,3 @@
 
 </body>
 </html>
-```
