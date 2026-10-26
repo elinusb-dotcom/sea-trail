@@ -1,1 +1,396 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preserving the Legacy of Clandestine Immigration Along Israel's Shores</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0F2C59;
+      --primary-light: #1E40AF;
+      --accent: #D97706;
+      --accent-hover: #B45309;
+      --bg-light: #F8FAFC;
+      --text-dark: #1E293B;
+      --text-muted: #64748B;
+      --border: #E2E8F0;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Rubik', sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-dark);
+      line-height: 1.6;
+      direction: ltr;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #0A192F 0%, #0F2C59 100%);
+      color: #ffffff;
+      padding: 35px 20px 45px;
+      text-align: center;
+      border-bottom: 5px solid var(--accent);
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: flex-start;
+      margin-bottom: 10px;
+    }
+
+    .lang-btn {
+      background-color: rgba(255, 255, 255, 0.15);
+      color: #ffffff !important;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      padding: 6px 14px;
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      transition: background 0.2s;
+    }
+
+    .lang-btn:hover { background-color: rgba(255, 255, 255, 0.3); }
+
+    header h1 {
+      font-size: 2.1rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+      line-height: 1.25;
+    }
+
+    header .subtitle {
+      font-size: 1.15rem;
+      color: #E2E8F0;
+      font-weight: 500;
+    }
+
+    /* Media Grid */
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin: 20px 0;
+      align-items: center;
+    }
+
+    .media-card {
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: #ffffff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      text-align: center;
+    }
+
+    .media-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .media-card.logo-card {
+      border: 2px solid var(--primary-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+
+    .media-card.logo-card img {
+      object-fit: contain;
+      padding: 15px;
+      height: 180px;
+    }
+
+    .media-card .caption {
+      padding: 10px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      background: #F8FAFC;
+    }
+
+    /* Sections */
+    section {
+      background: #ffffff;
+      margin: 20px 0;
+      padding: 25px 25px;
+      border-radius: 14px;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.03);
+      border: 1px solid var(--border);
+    }
+
+    section h2 {
+      color: var(--primary);
+      font-size: 1.45rem;
+      margin-bottom: 14px;
+      border-bottom: 3px solid var(--accent);
+      display: inline-block;
+      padding-bottom: 4px;
+    }
+
+    p { margin-bottom: 12px; font-size: 1rem; }
+
+    blockquote {
+      background-color: #FFFDF5;
+      border-left: 4px solid var(--accent);
+      padding: 14px 18px;
+      margin: 15px 0;
+      border-radius: 0 10px 10px 0;
+      font-style: italic;
+      font-size: 1.05rem;
+      color: #451A03;
+    }
+
+    /* Donation Grid */
+    .donation-banner {
+      text-align: center;
+      background: linear-gradient(180deg, #FFFDF5 0%, #FFFFFF 100%);
+      border: 2px solid var(--accent);
+      border-radius: 14px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    .donation-banner h3 {
+      color: var(--primary);
+      font-size: 1.25rem;
+      margin-bottom: 8px;
+    }
+
+    .donation-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 14px;
+      margin-top: 15px;
+    }
+
+    .donation-card {
+      background: #ffffff;
+      border: 2px solid var(--border);
+      border-radius: 10px;
+      padding: 18px 10px;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+
+    .donation-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--primary-light);
+    }
+
+    .donation-card.special-tier {
+      border-color: var(--accent);
+      background: #FFFDF5;
+    }
+
+    .card-amount {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 12px;
+    }
+
+    .btn-donate {
+      display: block;
+      background-color: var(--primary);
+      color: #ffffff !important;
+      text-decoration: none;
+      font-weight: 700;
+      padding: 10px 8px;
+      border-radius: 6px;
+      font-size: 0.95rem;
+    }
+
+    .btn-special {
+      background-color: var(--accent) !important;
+    }
+
+    /* Video Section */
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 10px;
+      margin: 15px 0;
+      background: #000;
+    }
+
+    .video-container iframe {
+      position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;
+    }
+
+    /* History Table */
+    .history-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+      font-size: 0.95rem;
+    }
+
+    .history-table th, .history-table td {
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+
+    .history-table th {
+      background-color: var(--primary);
+      color: #ffffff;
+      font-weight: 700;
+      width: 28%;
+    }
+
+    .history-table tr:nth-child(even) { background-color: #F8FAFC; }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      border-top: 1px solid var(--border);
+      margin-top: 30px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.6rem; }
+      .donation-grid { grid-template-columns: 1fr 1fr; }
+      .history-table th, .history-table td { display: block; width: 100%; }
+      .history-table th { background-color: #E2E8F0; color: var(--text-dark); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="top-bar">
+        <a href="../GENERAL/index.html" class="lang-btn">🌐 עברית</a>
+      </div>
+      <h1>Preserving the Legacy of Clandestine Immigration Along Israel's Shores</h1>
+      <div class="subtitle">The torch has been passed to us! Honoring the bravery of the 142 Aliyah Bet ships on the nation's coast.</div>
+    </div>
+  </header>
+
+  <main class="container">
+    
+    <!-- Visual Hero Gallery -->
+    <div class="media-grid">
+      <div class="media-card">
+        <img src="../GENERAL/PANIM.png" alt="Aliyah Bet ships at sea">
+        <div class="caption">Aliyah Bet ships on their historic journey to the homeland</div>
+      </div>
+      <div class="media-card logo-card">
+        <img src="../GENERAL/קפריסין.png" alt="Cyprus Ma'apilim Organization Logo">
+      </div>
+      <div class="media-card">
+        <img src="../GENERAL/שלט במפרץ.png" alt="Commemorative sign model">
+        <div class="caption">The planned interactive commemorative sign</div>
+      </div>
+    </div>
+
+    <!-- Main Campaign Hook -->
+    <section>
+      <h2>Dear Descendants and Families of the Ma'apilim,</h2>
+      <p>On these shores of the Land of Israel, one of the most dramatic and heroic chapters in the nation's rebirth was written. Over 110,000 immigrants sailed aboard 142 clandestine ships by sea and air. They battled stormy seas, faced the British blockade, were deported to detention camps in Cyprus and Europe, and never gave up until reaching safe shores to build the State of Israel.</p>
+      
+      <blockquote>
+        "Every commemorative marker is a living memorial – a bridge connecting hikers along Israel's coast with the brave story of the Ma'apilim and your family's ship."
+      </blockquote>
+
+      <p>Now, the <strong>Organization of Cyprus Ma’apilim</strong> is leading a national project to install 30 interactive memorial stations along the coastline. Our goal is clear: <strong>to ensure that every single immigrant ship is honorably and permanently commemorated at the coastal location tied to its historic story</strong>, for generations to come.</p>
+    </section>
+
+    <!-- Donation Section -->
+    <section id="donate">
+      <div class="donation-banner">
+        <h3>National Target: ₪320,000 for Commemorating All 142 Ships</h3>
+        <p>Join us in building the heritage stations and honoring the ship dear to your heart</p>
+        <p style="font-weight: 700; color: var(--accent); margin-top: 8px;">Choose a donation amount and write a meaningful dedication for your loved ones and your ship:</p>
+      </div>
+      
+      <div class="donation-grid">
+        <div class="donation-card">
+          <div class="card-amount">₪180</div>
+          <a href="https://pay.grow.link/OTkxMDI~609ee4070b8fb715aa68b5173eaf2fdb-MzU0MjQ4OQ" target="_blank" class="btn-donate">Join the Journey</a>
+        </div>
+        <div class="donation-card special-tier">
+          <div class="card-amount">₪360</div>
+          <a href="https://pay.grow.link/OTkxMDI~f28b5226e8e2972af60dbde9252ef19b-MzU0MjU0Mw" target="_blank" class="btn-donate btn-special">Join the Journey</a>
+        </div>
+        <div class="donation-card">
+          <div class="card-amount">₪720</div>
+          <a href="https://pay.grow.link/OTkxMDI~7645ce79d23164ddbc012c17f6367308-MzU0OTAwMQ" target="_blank" class="btn-donate">Join the Journey</a>
+        </div>
+        <div class="donation-card">
+          <div class="card-amount">₪1,500</div>
+          <a href="https://pay.grow.link/OTkxMDI~c0106f819f7fa5e39c9415ae11997e8b-MzU0OTAzNA" target="_blank" class="btn-donate">Join the Journey</a>
+        </div>
+        <div class="donation-card">
+          <div class="card-amount" style="font-size: 1.2rem; margin-top: 5px;">Custom Amount</div>
+          <a href="https://pay.grow.link/OTkxMDI~1ae44df27a248930a79f9e07e08f2634-MzU0MzY0MA" target="_blank" class="btn-donate">Donate</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Video Testimony Section -->
+    <section>
+      <h2>Voices of Clandestine Immigration</h2>
+      <p>Watch testimonies and historic moments of the Ma'apilim:</p>
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/QXKyeKvH5KQ" title="Ma'apilim Testimonies" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <!-- Historical Overview Table -->
+    <section>
+      <h2>Clandestine Immigration in Numbers</h2>
+      <table class="history-table">
+        <tr>
+          <th>Aliyah Bet Vessels</th>
+          <td>142 immigrant ships that sailed from Europe and North Africa</td>
+        </tr>
+        <tr>
+          <th>The Ma'apilim</th>
+          <td>Over 110,000 immigrants who arrived despite British White Paper restrictions</td>
+        </tr>
+        <tr>
+          <th>Cyprus Camps</th>
+          <td>~52,000 immigrants deported to Cyprus detention camps, playing a decisive role in the nation's struggle</td>
+        </tr>
+        <tr>
+          <th>Coastal Heritage Project</th>
+          <td>30 interactive heritage stations with QR codes at landing and heritage sites along Israel's coast</td>
+        </tr>
+      </table>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p><strong>Prof. Snunith Shoham</strong>, Chair of the Organization of Cyprus Ma’apilim | <strong>Aliyah Bet Heritage Team</strong></p>
+      <p>For assistance and inquiries - Ofer: <a href="tel:+972544285388" style="color: inherit; font-weight: bold; text-decoration: none;">054-428-5388</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>
 
