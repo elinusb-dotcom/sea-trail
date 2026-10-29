@@ -1,113 +1,431 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>מורשת מעפילי "התקווה" | שביל הים</title>
-    <style>
-        body { font-family: Arial, sans-serif; line-height: 1.4; margin: 0; padding: 0; background-color: #f4f7f9; color: #1a1a1a; text-align: center; }
-        
-        .hero-banner { 
-            background: linear-gradient(rgba(0, 34, 68, 0.9), rgba(0, 74, 153, 0.9)), url('https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/כותרת.jpg'); 
-            background-size: cover; background-position: center; color: white; padding: 20px 10px; 
-            display: flex; align-items: center; justify-content: center; flex-wrap: wrap; 
-            gap: 10px; max-width: 1200px; margin: 0 auto; box-sizing: border-box; border-radius: 0 0 8px 8px; 
-        }
-        
-        .banner-img { width: 120px; height: 90px; object-fit: cover; border-radius: 6px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); border: 2px solid rgba(255, 255, 255, 0.2); }
-        .banner-center-content { flex: 1; min-width: 250px; display: flex; flex-direction: column; align-items: center; gap: 5px; }
-        .banner-text h1 { font-size: 1.8em; margin: 0; font-weight: bold; }
-        .banner-text h2 { font-size: 1.2em; color: #fffb00; margin: 0; }
-        .org-logo-small { width: 60px; height: 60px; object-fit: contain; background-color: rgba(255, 255, 255, 0.95); padding: 4px; border-radius: 50%; }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>מורשת מעפילי "מולדת" | הנצחת חופי הארץ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0F2C59;
+      --primary-light: #1E40AF;
+      --accent: #D97706;
+      --accent-hover: #B45309;
+      --bg-light: #F8FAFC;
+      --text-dark: #1E293B;
+      --text-muted: #64748B;
+      --border: #E2E8F0;
+    }
 
-        .container { max-width: 850px; margin: 20px auto; padding: 20px; background: white; border-radius: 8px; text-align: right; box-sizing: border-box; }
-        .target-box { background-color: #e6f0fa; border: 1px solid #b3d1f2; padding: 15px; border-radius: 6px; font-weight: bold; color: #004a99; font-size: 1.1em; margin-bottom: 30px; text-align: center; }
-        .content-text { font-size: 1.15em; color: #333; }
-        .highlight-box { border-right: 4px solid #004a99; padding-right: 15px; margin: 25px 0; font-style: italic; color: #003366; }
-        
-        /* אזור כפתורי תרומה - מעל הסרטון */
-        .donation-section { margin: 30px 0; }
-        .donation-section h3 { font-size: 1.4em; color: #004a99; margin-bottom: 20px; text-align: right; }
-        .donation-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; }
-        .donation-card { background: #fdfdfd; border: 2px solid #004a99; border-radius: 8px; padding: 12px; text-align: center; }
-        .donate-btn { background-color: #004a99; color: white !important; text-decoration: none; padding: 10px 12px; border-radius: 4px; font-weight: bold; display: inline-block; margin-top: 8px; font-size: 1em; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
-        .donate-btn:hover { background-color: #002244; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
-        /* אזור סרטון עם כותרת "לא נפסיק לזכור" */
-        .video-section { margin: 30px 0; background-color: #f8f9fa; padding: 20px; border-radius: 8px; border: 1px solid #eee; text-align: center; }
-        .video-section h3 { font-size: 1.3em; color: #004a99; margin-top: 0; margin-bottom: 15px; }
-        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
-        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
-        
-        .data-table { width: 100%; border-collapse: collapse; margin-top: 20px; text-align: right; }
-        .data-table th { background-color: #004a99; color: white; padding: 12px; }
-        .data-table td { padding: 12px; border: 1px solid #e1e8ed; }
-        
-        .signature-box-container { margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px; display: flex; justify-content: space-between; }
-    </style>
+    body {
+      font-family: 'Rubik', sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-dark);
+      line-height: 1.6;
+      direction: rtl;
+    }
+
+    .container {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 0 20px;
+      width: 100%;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #0A192F 0%, #0F2C59 100%);
+      color: #ffffff;
+      padding: 40px 20px 50px;
+      text-align: center;
+      border-bottom: 5px solid var(--accent);
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: flex-start;
+      margin-bottom: 15px;
+    }
+
+    .lang-btn {
+      background-color: rgba(255, 255, 255, 0.15);
+      color: #ffffff !important;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      padding: 6px 16px;
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      transition: all 0.2s ease;
+    }
+
+    .lang-btn:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+      transform: translateY(-1px);
+    }
+
+    header h1 {
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      font-weight: 800;
+      margin-bottom: 12px;
+      line-height: 1.25;
+    }
+
+    header .subtitle {
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      color: #E2E8F0;
+      font-weight: 500;
+    }
+
+    /* Media Grid */
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin: 25px 0;
+      align-items: stretch;
+    }
+
+    .media-card {
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: #ffffff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .media-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .media-card.logo-card {
+      border: 2px solid var(--primary-light);
+      justify-content: center;
+    }
+
+    .media-card.logo-card img {
+      object-fit: contain;
+      padding: 15px;
+      height: 200px;
+    }
+
+    .media-card .caption {
+      padding: 12px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      background: #F8FAFC;
+      margin-top: auto;
+    }
+
+    /* Sections */
+    section {
+      background: #ffffff;
+      margin: 25px 0;
+      padding: 30px 35px;
+      border-radius: 14px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+      border: 1px solid var(--border);
+    }
+
+    section h2 {
+      color: var(--primary);
+      font-size: 1.55rem;
+      margin-bottom: 16px;
+      border-bottom: 3px solid var(--accent);
+      display: inline-block;
+      padding-bottom: 4px;
+    }
+
+    p { margin-bottom: 14px; font-size: 1.05rem; }
+
+    blockquote {
+      background-color: #FFFDF5;
+      border-right: 4px solid var(--accent);
+      padding: 16px 22px;
+      margin: 20px 0;
+      border-radius: 0 10px 10px 0;
+      font-style: italic;
+      font-size: 1.1rem;
+      color: #451A03;
+    }
+
+    /* Donation Grid */
+    .donation-banner {
+      text-align: center;
+      background: linear-gradient(180deg, #FFFDF5 0%, #FFFFFF 100%);
+      border: 2px solid var(--accent);
+      border-radius: 14px;
+      padding: 25px;
+      margin-bottom: 20px;
+    }
+
+    .donation-banner h3 {
+      color: var(--primary);
+      font-size: 1.35rem;
+      margin-bottom: 8px;
+    }
+
+    .donation-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .donation-card {
+      background: #ffffff;
+      border: 2px solid var(--border);
+      border-radius: 10px;
+      padding: 20px 10px;
+      text-align: center;
+      transition: all 0.2s ease-in-out;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .donation-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--primary-light);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+    }
+
+    .donation-card.special-tier {
+      border-color: var(--accent);
+      background: #FFFDF5;
+    }
+
+    .card-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+
+    .card-amount {
+      font-size: 1.7rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 14px;
+    }
+
+    .btn-donate {
+      display: block;
+      background-color: var(--primary);
+      color: #ffffff !important;
+      text-decoration: none;
+      font-weight: 700;
+      padding: 12px 10px;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      transition: background 0.2s;
+    }
+
+    .btn-donate:hover { background-color: var(--primary-light); }
+
+    .btn-special { background-color: var(--accent) !important; }
+
+    .btn-special:hover { background-color: var(--accent-hover) !important; }
+
+    /* Video Section */
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 12px;
+      margin: 20px 0;
+      background: #000;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .video-container iframe {
+      position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;
+    }
+
+    /* History Table */
+    .history-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+      font-size: 1rem;
+    }
+
+    .history-table th, .history-table td {
+      padding: 12px 16px;
+      border: 1px solid var(--border);
+      text-align: right;
+    }
+
+    .history-table th {
+      background-color: var(--primary);
+      color: #ffffff;
+      font-weight: 700;
+      width: 28%;
+    }
+
+    .history-table tr:nth-child(even) { background-color: #F8FAFC; }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 35px 20px;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      border-top: 1px solid var(--border);
+      margin-top: 40px;
+    }
+
+    @media (max-width: 900px) {
+      .media-grid { grid-template-columns: 1fr 1fr; }
+      .donation-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    @media (max-width: 600px) {
+      section { padding: 20px 18px; }
+      .media-grid { grid-template-columns: 1fr; }
+      .donation-grid { grid-template-columns: 1fr 1fr; }
+      .history-table th, .history-table td { display: block; width: 100%; }
+      .history-table th { background-color: #E2E8F0; color: var(--text-dark); }
+    }
+  </style>
 </head>
 <body>
 
-    <div class="hero-banner">
-        <img class="banner-img" src="https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/שלט במפרץ.png" alt="שלט הנצחה">
-        <div class="banner-center-content">
-            <img class="org-logo-small" src="https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/heritage/קפריסין.png" alt="לוגו">
-            <div class="banner-text">
-                <h1>מורשת ההעפלה בשביל הים</h1>
-                <h2>הדגל נמסר לנו!<br>מטביעים את חותם מעפילי "התקווה" על חופי המדינה</h2>
-            </div>
-        </div>
-        <img class="banner-img" src="https://raw.githubusercontent.com/elinusb-dotcom/sea-trail/main/%D7%94%D7%AA%D7%A7%D7%95%D7%94.png" alt="אוניית המעפילים התקווה">
-    </div>
-
+  <!-- Header -->
+  <header>
     <div class="container">
-        <div class="target-box">מטרת הגיוס המשותפת של משפחת "התקווה" : 40,000 ₪</div>
-        <div class="content-text">
-            <p><strong>חברות וחברי משפחת מעפילי "התקווה" היקרים,</strong></p>
-            <p>על החופים האלה, שבהם נשברים גלי הים התיכון, נכתב אחד הפרקים הדרמטיים ביותר בסיפור הקמתה של מדינת ישראל. אל חופים אלה הגיעו הורינו, סבינו, ואולי חלקכם אחרי מסע תלאות, הראשונים ממשפחתם בשרשרת הדורות. נאבקו בבריטים על הזכות להגיע למולדת האבות. ראו את הארץ ושרו התקווה לפני הגירוש הכואב למחנות בקפריסין.</p>
-            <p>היום, יש לנו הזדמנות היסטורית להבטיח שהסיפור הזה לא יישכח לעולם.</p>
-            <p>אנו פועלים במסגרת פרויקט להנצחת מורשת ההעפלה בשיתוף עם פרויקט "שביל הים" – שביל הליכה לאומי ורציף לאורך חופי המדינה, שבו צועדים אלפי מטיילים, בני נוער, משפחות ותיירים. בשיתוף פעולה ייחודי, קיבלנו את המנדט להקים לאורך השביל שלטי הנצחה ונקודות מידע אינטראקטיביות, שיספרו את סיפורי ההעפלה המרגשים בנקודות שבהן ספינות המעפילים הגיעו אל החוף (או שהיו מיועדות אליו).</p>
-            <p>מיזם זה הינו מיזם מרכזי של ארגון מעפילי קפריסין. כדי להשלים את התקנת 30 שלטי ההנצחה – אנחנו צריכים אתכם איתנו.</p>
-            <div class="highlight-box">
-                "כל שלט הנצחה הוא יד זיכרון חיה. הוא הגשר שיחבר בין המטייל לבין המעפילים והצוותים שהגיעו בספינה. סיפור הגבורה והנחישות המלא של אלו שאנו חבים להם כה רבות יונгש למטיילים פיזית ובמרחב הדיגיטלי."
-            </div>
-            <p><strong>כיצד אתם יכולים לעזור?</strong> אנו קוראים לכל אחד ואחת מחברי משפחת מעפילי הספינה 'התקווה' לקחת חלק במאמץ המשותף ולתרום לפרויקט. כל תרומה, קטנה כגדולה, תוקדש ישירות למימון הכנת והתקנת שלט ההנצחה, והנגשת המידע למטיילים בשטח.</p>
-        </div>
-
-        <!-- אזור כפתורי תרומה מודגשים מעל הסרטון -->
-        <div class="donation-section">
-            <h3>לתרומה מאובטחת והבטחת מקומנו על השביל:</h3>
-            <div class="donation-grid">
-                <div class="donation-card"><div>ידיד הנתיב</div><strong>₪180</strong><br><a href="https://pay.grow.link/OTkxMDI~609ee4070b8fb715aa68b5173eaf2fdb-MzU0MjQ4OQ" target="_blank" rel="noopener noreferrer" class="donate-btn">לתרומה</a></div>
-                <div class="donation-card"><div>נאמן מורשת</div><strong>₪360</strong><br><a href="https://pay.grow.link/OTkxMDI~f28b5226e8e2972af60dbde9252ef19b-MzU0MjU0Mw" target="_blank" rel="noopener noreferrer" class="donate-btn">לתרומה</a></div>
-                <div class="donation-card"><div>מייסד נקודה</div><strong>₪720</strong><br><a href="https://pay.grow.link/OTkxMDI~7645ce79d23164ddbc012c17f6367308-MzU0OTAwMQ" target="_blank" rel="noopener noreferrer" class="donate-btn">לתרומה</a></div>
-                <div class="donation-card"><div>מוביל הנתיב</div><strong>₪1,500</strong><br><a href="https://pay.grow.link/OTkxMDI~c0106f819f7fa5e39c9415ae11997e8b-MzU0OTAzNA" target="_blank" rel="noopener noreferrer" class="donate-btn">לתרומה</a></div>
-                <div class="donation-card"><div>סכום אחר</div><br>לבחירתך<br><a href="https://pay.grow.link/OTkxMDI~1ae44df27a248930a79f9e07e08f2634-MzU0MzY0MA" target="_blank" rel="noopener noreferrer" class="donate-btn">לתרומה</a></div>
-            </div>
-        </div>
-
-        <!-- אזור סרטון עם כותרת "לא נפסיק לזכור" -->
-        <div class="video-section">
-            <h3>לא נפסיק לזכור...</h3>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/ap9GSRZcBTs" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-        </div>
-
-        <h3>תעודת זהות היסטורית: אוניית המעפילים "התקווה"</h3>
-        <table class="data-table">
-            <tr><th>פרק בהיסטוריה</th><th>נתוני הפלגת הגבורה של "התקווה"</th></tr>
-            <tr><td><strong>נמל יציאה</strong></td><td>איטליה, בוקה דה מגרה</td></tr>
-            <tr><td><strong>מועד הגעה</strong></td><td>17 במאי 1947</td></tr>
-            <tr><td><strong>מספר מעפילים</strong></td><td>1,414 מעפילים</td></tr>
-            <tr><td><strong>גורל הספינה</strong></td><td>נתפסה על ידי הבריטים, המעפילים גורשו לקפריסין</td></tr>
-            <tr><td><strong>מיקום שלט ההנצחה</strong></td><td>מפרץ חיפה</td></tr>
-        </table>
-
-        <div class="signature-box-container">
-            <div>בתודה ובשותפות,<br><strong>פרופ' סנונית שהם</strong><br>יו"ר ארגון מעפילי קפריסין</div>
-            <div><strong>צוות מורשת התקווה</strong></div>
-        </div>
+      <div class="top-bar">
+        <a href="../GENERTAL/index.html" class="lang-btn">🌐 לדף הכללי</a>
+      </div>
+      <h1>מורשת מעפילי "מולדת" לאורך החוף</h1>
+      <div class="subtitle">הדגל נמסר לנו! מטביעים את חותם מעפילי "מולדת" על חופי המדינה.</div>
     </div>
+  </header>
+
+  <main class="container">
+    
+    <!-- Hero Gallery -->
+    <div class="media-grid">
+      <div class="media-card">
+        <img src="panim.png" alt="אוניית המעפילים מולדת">
+        <div class="caption">אוניית המעפילים "מולדת" בדרכה לחופי המולדת</div>
+      </div>
+      <div class="media-card logo-card">
+        <img src="cyprus_logo.png" alt="לוגו ארגון מעפילי קפריסין">
+      </div>
+      <div class="media-card">
+        <img src="sign_model.png" alt="דגם שלט ההנצחה">
+        <div class="caption">שלט ההנצחה האינטראקטיבי המתוכנן להצבה בראש הנקרה</div>
+      </div>
+    </div>
+
+    <!-- Campaign Hook -->
+    <section>
+      <h2>חברות וחברי משפחת מעפילי "מולדת" היקרים,</h2>
+      <p>על החופים האלה, שבהם נשברים גלי הים התיכון, נכתב אחד הפרקים הדרמטיים והאמיצים ביותר בסיפור הקמתה של מדינת ישראל. אל החופים הצפוניים הללו נשאו את עיניהם הורינו וסבינו – 1,568 מעפילים גיבורים ניצולי שואה – שהפליגו מנמל מטאפונטו באיטליה במרץ 1947.</p>
+
+      <p>במהלך ההפלגה התמודדה הספינה עם תקלות מנוע קשות ונטייה מסוכנת על צדה בים סוער. למרות התנאים הבלתי אפשריים והמפגש המאיים עם המשחתות הבריטיות, גילו המעפילים והמפקדים נחישות ועוז רוח עילאי, עד שנגררו לחיפה וגורשו למחנות המעצר בקפריסין.</p>
+      
+      <blockquote>
+        "כל שלט הנצחה הוא יד זיכרון חיה – גשר שיחבר בין אלפי המטיילים לאורך החוף לבין סיפור הגבורה, המסירות והנחישות של מעפילי 'מולדת'."
+      </blockquote>
+
+      <p>אנו פועלים במסגרת מיזם לאומי להנצחת מורשת ההעפלה לאורך חופי המדינה. המטרה של קהילתנו ברורה: <strong>להקים תחנת הנצחה ושלטים אינטראקטיביים באזור ראש הנקרה</strong> – בנקודה הצפונית שבה פגשו המעפילים לראשונה את חופי הארץ אליה ערגו.</p>
+    </section>
+
+    <!-- Donation Section -->
+    <section id="donate">
+      <div class="donation-banner">
+        <h3>הצטרפו למשפחות שכבר תרמו להשלמת מטרת הגיוס המשותפת של משפחת "מולדת": 40,000 ₪</h3>
+        <p>היו שותפים להקמת תחנת הזיכרון והבטיחו את מקום הורינו על החוף</p>
+        <p style="font-weight: 700; color: var(--accent); margin-top: 8px;">בחרו את סכום התרומה, ורשמו הקדשה לכבודם או לזכרם של יקירכם.</p>
+      </div>
+      
+      <div class="donation-grid">
+        <div class="donation-card">
+          <div class="card-title">ידיד הנתיב</div>
+          <div class="card-amount">₪180</div>
+          <a href="https://pay.grow.link/OTkxMDI~609ee4070b8fb715aa68b5173eaf2fdb-MzU0MjQ4OQ" target="_blank" class="btn-donate">שותף לדרך</a>
+        </div>
+        <div class="donation-card special-tier">
+          <div class="card-title">נאמן מורשת</div>
+          <div class="card-amount">₪360</div>
+          <a href="https://pay.grow.link/OTkxMDI~f28b5226e8e2972af60dbde9252ef19b-MzU0MjU0Mw" target="_blank" class="btn-donate btn-special">שותף לדרך</a>
+        </div>
+        <div class="donation-card">
+          <div class="card-title">מייסד נקודה</div>
+          <div class="card-amount">₪720</div>
+          <a href="https://pay.grow.link/OTkxMDI~7645ce79d23164ddbc012c17f6367308-MzU0OTAwMQ" target="_blank" class="btn-donate">שותף לדרך</a>
+        </div>
+        <div class="donation-card">
+          <div class="card-title">מוביל הנתיב</div>
+          <div class="card-amount">₪1,500</div>
+          <a href="https://pay.grow.link/OTkxMDI~c0106f819f7fa5e39c9415ae11997e8b-MzU0OT0zNA" target="_blank" class="btn-donate">שותף לדרך</a>
+        </div>
+        <div class="donation-card">
+          <div class="card-title">סכום אחר</div>
+          <div class="card-amount" style="font-size: 1.2rem; margin-top: 5px;">לבחירתך</div>
+          <a href="https://pay.grow.link/OTkxMDI~1ae44df27a248930a79f9e07e08f2634-MzU0MzY0MA" target="_blank" class="btn-donate">לתרומה</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Video Testimony Section -->
+    <section>
+      <h2>רגע של עדות: מעפילי מולדת מספרים</h2>
+      <p>צפו בעדויות וברגעים ההיסטוריים של מעפילי האונייה "מולדת":</p>
+      <div class="video-container">
+        <iframe src="[suspicious link removed]" title="עדויות מעפילי מולדת" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <!-- Historical Overview Table -->
+    <section>
+      <h2>תעודת זהות היסטורית: אוניית המעפילים "מולדת"</h2>
+      <table class="history-table">
+        <tr>
+          <th>נמל ומועד היציאה</th>
+          <td>מטאפונטו, איטליה (23 במרץ 1947)</td>
+        </tr>
+        <tr>
+          <th>מספר מעפילים</th>
+          <td>1,568 מעפילים ניצולי שואה</td>
+        </tr>
+        <tr>
+          <th>ההגעה והעימות בים</th>
+          <td>29 במרץ 1947 – התמודדות מול משחתות בריטיות בתנאי ים קשים, תקלות מנוע ונטייה חריפה של הספינה על צדה</td>
+        </tr>
+        <tr>
+          <th>הגירוש לקפריסין</th>
+          <td>האונייה נגררה לנמל חיפה והמעפילים גורשו למחנות המעצר בקפריסין</td>
+        </tr>
+        <tr>
+          <th>מיקום שלט ההנצחה</th>
+          <td>ראש הנקרה</td>
+        </tr>
+      </table>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p><strong>פרופ' סנונית שהם</strong>, יו"ר ארגון מעפילי קפריסין | <strong>צוות מורשת "מולדת"</strong></p>
+      <p>לשאלות, מסירת מידע וסיפורים משפחתיים - עופר: <a href="tel:+972544285388" style="color: inherit; font-weight: bold; text-decoration: none;">054-428-5388</a></p>
+    </div>
+  </footer>
+
 </body>
 </html>
