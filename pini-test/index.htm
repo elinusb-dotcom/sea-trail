@@ -1,3 +1,14 @@
+הנה שני הגורמים לבעיות שציינת והתיקון המלא שלהן:
+
+1. **מה גרם לשגיאה בסרטון?**  
+   בבקשה האחרונה שלך השתייר סוגר מרובע מיותר **`]`** בצמוד ל-ID של הסרטון (`jEl2xWmGlPg]`). הסוגר הזה פגם בכתובת והביא לשגיאת 404 מ-YouTube. בכתובת למטה הסוגר הוסר לחלוטין (`https://www.youtube.com/embed/jEl2xWmGlPg`).
+2. **מחיקת "מראות מהעבר"**: הטקסט הוסר לחלוטין מתוך סקציית הסרטון.
+3. **התאמה מלאה לתצוגת מחשב (Desktop)**: שודרגו הגדרות ה-CSS Grid כך שעל מסך מחשב רחב (מעל 992 פיקסלים) העמוד נפרס במלוא הדרו – **5 כרטיסי תרומה בשורה אחת**, **3 תמונות עליונות בשורה אחת**, וטבלה היסטורית רחבה וקריאה בחלוקה של 25%/75%.
+
+---
+
+### **קוד HTML מלא ומותאם למחשב ולסלולר (`PANIM/index.html`):**
+
 ```html
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
@@ -31,7 +42,7 @@
     }
 
     .container {
-      max-width: 1050px;
+      max-width: 1100px;
       margin: 0 auto;
       padding: 0 20px;
       width: 100%;
@@ -86,8 +97,8 @@
     .media-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      margin: 25px 0;
+      gap: 24px;
+      margin: 30px 0;
       align-items: stretch;
     }
 
@@ -104,7 +115,7 @@
 
     .media-card img {
       width: 100%;
-      height: 200px;
+      height: 220px;
       object-fit: cover;
     }
 
@@ -116,7 +127,7 @@
     .media-card.logo-card img {
       object-fit: contain;
       padding: 15px;
-      height: 200px;
+      height: 220px;
     }
 
     .media-card .caption {
@@ -132,7 +143,7 @@
     section {
       background: #ffffff;
       margin: 25px 0;
-      padding: 30px 35px;
+      padding: 35px 40px;
       border-radius: 14px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.04);
       border: 1px solid var(--border);
@@ -140,8 +151,8 @@
 
     section h2 {
       color: var(--primary);
-      font-size: 1.55rem;
-      margin-bottom: 16px;
+      font-size: 1.6rem;
+      margin-bottom: 18px;
       border-bottom: 3px solid var(--accent);
       display: inline-block;
       padding-bottom: 4px;
@@ -153,9 +164,9 @@
       background-color: #F0F9FF;
       border: 1px solid #BAE6FD;
       border-radius: 8px;
-      padding: 12px 18px;
-      margin-top: 15px;
-      font-size: 0.98rem;
+      padding: 14px 20px;
+      margin-top: 18px;
+      font-size: 1rem;
       color: #0369A1;
       text-align: center;
     }
@@ -166,28 +177,28 @@
       background: linear-gradient(180deg, #FFFDF5 0%, #FFFFFF 100%);
       border: 2px solid var(--accent);
       border-radius: 14px;
-      padding: 25px;
-      margin-bottom: 20px;
+      padding: 28px;
+      margin-bottom: 24px;
     }
 
     .donation-banner h3 {
       color: var(--primary);
-      font-size: 1.4rem;
+      font-size: 1.5rem;
       margin-bottom: 12px;
     }
 
     .donation-grid {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
-      gap: 15px;
-      margin-top: 20px;
+      gap: 16px;
+      margin-top: 24px;
     }
 
     .donation-card {
       background: #ffffff;
       border: 2px solid var(--border);
       border-radius: 10px;
-      padding: 20px 10px;
+      padding: 22px 12px;
       text-align: center;
       transition: all 0.2s ease-in-out;
       display: flex;
@@ -214,7 +225,7 @@
     }
 
     .card-amount {
-      font-size: 1.7rem;
+      font-size: 1.75rem;
       font-weight: 800;
       color: var(--primary);
       margin-bottom: 14px;
@@ -259,20 +270,25 @@
       width: 100%;
       border-collapse: collapse;
       margin-top: 15px;
-      font-size: 1rem;
+      font-size: 1.05rem;
     }
 
     .history-table th, .history-table td {
-      padding: 12px 16px;
+      padding: 14px 18px;
       border: 1px solid var(--border);
       text-align: right;
+      vertical-align: top;
     }
 
     .history-table th {
       background-color: var(--primary);
       color: #ffffff;
       font-weight: 700;
-      width: 28%;
+      width: 25%;
+    }
+
+    .history-table td {
+      width: 75%;
     }
 
     .history-table tr:nth-child(even) { background-color: #F8FAFC; }
@@ -287,15 +303,19 @@
       margin-top: 40px;
     }
 
-    @media (max-width: 900px) {
-      .media-grid { grid-template-columns: 1fr 1fr; }
+    /* Responsive Breakpoints */
+    @media (max-width: 992px) {
       .donation-grid { grid-template-columns: repeat(3, 1fr); }
     }
 
-    @media (max-width: 600px) {
-      section { padding: 20px 18px; }
+    @media (max-width: 768px) {
       .media-grid { grid-template-columns: 1fr; }
-      .donation-grid { grid-template-columns: 1fr 1fr; }
+      .donation-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 576px) {
+      section { padding: 20px 16px; }
+      .donation-grid { grid-template-columns: 1fr; }
       .history-table th, .history-table td { display: block; width: 100%; }
       .history-table th { background-color: #E2E8F0; color: var(--text-dark); }
     }
@@ -310,7 +330,7 @@
         <a href="../GENERTAL/index.html" class="lang-btn">🌐 לדף הכללי</a>
       </div>
       <h1>שימור מורשת מעפילי ה"פאנים" לאורך חופי הים</h1>
-      <div class="subtitle"> – מחברים את הדורות ומנציחים את גבורת ה"פאן יורק" ("קיבוץ גלויות") וה"פאן קרסנט" ("עצמאות")</div>
+      <div class="subtitle">מחברים את הדורות ומנציחים את גבורת ה"פאן יורק" ("קיבוץ גלויות") וה"פאן קרסנט" ("עצמאות")</div>
     </div>
   </header>
 
@@ -320,7 +340,8 @@
     <div class="media-grid">
       <div class="media-card">
         <img src="../GENERTAL/panim.png" alt="הספינות פאן יורק ופאן קרסנט בלב ים">
-        <div class="caption">הספינות ה"פאן יורק" וה"פאן קרסנט" 
+        <div class="caption">הספינות ה"פאן יורק" וה"פאן קרסנט" בדרכן לחופי המולדת</div>
+      </div>
       <div class="media-card logo-card">
         <img src="../GENERTAL/cyprus_logo.png" alt="לוגו ארגון מעפילי קפריסין">
       </div>
@@ -335,7 +356,7 @@
       <h2>חברות וחברי משפחת ה"פאנים" היקרים,</h2>
       <p>כ-15,500 מעפילים – הורינו וסבינו – הפליגו מבורגס שבבולגריה על סיפון <strong>ה"פאן יורק" ("קיבוץ גלויות") וה"פאן קרסנט" ("עצמאות")</strong>. הם עברו מסע תלאות, חלמו על חופי הארץ ושרו את "התקווה" בדמעות לפני גירושם למחנות קפריסין.</p>
       
-      <p><strong>תודה ענקית לכל מי שכבר נרתם, תרם והניח את החותם הראשוני בסבבים הקודמים!</strong> בזכותכם הגענו עד הלום, אך המסע טרם הסתיים – ואנו זקוקים לכל אחד ואחת מכם כדי לחצות את קו הגמר ולחבר בין המטיילים לאורך חופי הים לבין סיפור גבורת המעפילים.</p>
+      <p><strong>תודה ענקית לכל מי שכבר נרתם ותרם!</strong> בזכותכם אנו מתקדמים, אך המסע טרם הסתיים – ואנו זקוקים לכל אחד ואחת מכם כדי לחצות את קו הגמר ולחבר בין המטיילים לאורך חופי הים לבין סיפור גבורת המעפילים.</p>
 
       <p>במסגרת מיזם 30 שלטי ההנצחה לאורך חוף הארץ של ארגון מעפילי קפריסין, יש לנו הזדמנות להבטיח שסיפורן של ה"פאן יורק" וה"פאן קרסנט" ייחקק לתמיד על החוף שאליו כה נכספו.</p>
     </section>
@@ -349,7 +370,8 @@
           אנו מזמינים אתכם לחקוק את המורשת ולהבטיח את זיכרונם
         </p>
         <p style="font-size: 1.05rem; font-weight: 600; color: var(--primary); margin-bottom: 12px;">
-          תרמו כעת ורשמו את ההקדשה הראויה ליקיריכם שתונצח בכבוד באתר הארגון        </p>
+          תרמו כעת ורשמו את ההקדשה הראויה ליקיריכם (אשר תונצח בכבוד באתר הארגון).
+        </p>
         
         <div class="sponsor-note">
           💡 <strong>רוצים להרחיב את המעורבות?</strong> ניתן להקדיש <strong>שלט שלם או יותר</strong> – לפרטים נוספים פנו לעופר.
@@ -387,10 +409,9 @@
 
     <!-- Video Section -->
     <section>
-      <h2>🎬 מעפילים עולים על ה״פאן יורק״ בפמגוסטה, קפריסין יולי 1948 </h2>
-      <p>מראות מהעבר</p>
+      <h2>🎬 מעפילים עולים על ה״פאן יורק״ בפמגוסטה, קפריסין ביולי 1948</h2>
       <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/jEl2xWmGlPg]" title="מעפילים עולים על ה״פאן יורק״ בפמגוסטה, קפריסין ביולי 1948 ומגיעים לחיפה" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/jEl2xWmGlPg" title="מעפילים עולים על ה״פאן יורק״ בפמגוסטה, קפריסין ביולי 1948 ומגיעים לחיפה" allowfullscreen></iframe>
       </div>
     </section>
 
@@ -431,6 +452,6 @@
 </html>
 ```
 
-⚓ העתק והדבק את הקוד ישירות לתוך הקובץ `PANIM/index.html` ב-GitHub ובצע **Commit changes**.
+⚓ העתק את הקוד כולו ישירות ל-GitHub בתיקיית `PANIM/index.html` ולחץ על **Commit changes**. התצוגה כעת תהיה רחבה ומרהיבה במחשב, והסרטון יפעל בצורה חלקים!
 
-נראה שהכול מושלם כעת! תרצה לבדוק או לעדכן משהו נוסף?
+תרצה שנבדוק יחד גם את התצוגה בדפי הספינות האחרות?
