@@ -1,1 +1,448 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>שימור מורשת מעפילי "הגנה" לאורך חופי הים</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0F2C59;
+      --primary-light: #1E40AF;
+      --accent: #D97706;
+      --accent-hover: #B45309;
+      --bg-light: #F8FAFC;
+      --text-dark: #1E293B;
+      --text-muted: #64748B;
+      --border: #E2E8F0;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Rubik', sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-dark);
+      line-height: 1.6;
+      direction: rtl;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+      width: 100%;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #0A192F 0%, #0F2C59 100%);
+      color: #ffffff;
+      padding: 40px 20px 50px;
+      text-align: center;
+      border-bottom: 5px solid var(--accent);
+    }
+
+    header h1 {
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      font-weight: 800;
+      margin-bottom: 12px;
+      line-height: 1.25;
+    }
+
+    header .subtitle {
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      color: #E2E8F0;
+      font-weight: 500;
+    }
+
+    /* Media Grid */
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin: 30px 0;
+      align-items: stretch;
+    }
+
+    .media-card {
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: #ffffff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .media-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .media-card.logo-card {
+      border: 2px solid var(--primary-light);
+      justify-content: center;
+    }
+
+    .media-card.logo-card img {
+      object-fit: contain;
+      padding: 15px;
+      height: 220px;
+    }
+
+    .media-card .caption {
+      padding: 12px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      background: #F8FAFC;
+      margin-top: auto;
+    }
+
+    /* Sections */
+    section {
+      background: #ffffff;
+      margin: 25px 0;
+      padding: 35px 40px;
+      border-radius: 14px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+      border: 1px solid var(--border);
+    }
+
+    section h2 {
+      color: var(--primary);
+      font-size: 1.6rem;
+      margin-bottom: 18px;
+      border-bottom: 3px solid var(--accent);
+      display: inline-block;
+      padding-bottom: 4px;
+    }
+
+    p { margin-bottom: 14px; font-size: 1.05rem; }
+
+    .announcement-box {
+      background-color: #ECFDF5;
+      border: 2px solid #10B981;
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin: 18px 0;
+      font-size: 1.1rem;
+      color: #065F46;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    .info-project-box {
+      background-color: #F0F9FF;
+      border-right: 4px solid var(--primary-light);
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin: 20px 0;
+    }
+
+    .info-project-box h3 {
+      color: var(--primary);
+      font-size: 1.25rem;
+      margin-bottom: 10px;
+    }
+
+    .info-project-box ul {
+      margin-right: 20px;
+      margin-bottom: 10px;
+    }
+
+    .info-project-box li {
+      margin-bottom: 6px;
+      font-size: 1.05rem;
+    }
+
+    /* Video Container */
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 12px;
+      margin-top: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* Donation Grid - 4 Columns */
+    .donation-banner {
+      text-align: center;
+      background: linear-gradient(180deg, #FFFDF5 0%, #FFFFFF 100%);
+      border: 2px solid var(--accent);
+      border-radius: 14px;
+      padding: 28px;
+      margin-bottom: 24px;
+    }
+
+    .donation-banner h3 {
+      color: var(--primary);
+      font-size: 1.5rem;
+      margin-bottom: 12px;
+    }
+
+    .donation-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin-top: 24px;
+    }
+
+    .donation-card {
+      background: #ffffff;
+      border: 2px solid var(--border);
+      border-radius: 10px;
+      padding: 22px 12px;
+      text-align: center;
+      transition: all 0.2s ease-in-out;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .donation-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--primary-light);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+    }
+
+    .donation-card.special-tier {
+      border-color: var(--accent);
+      background: #FFFDF5;
+    }
+
+    .card-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+
+    .card-amount {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 14px;
+    }
+
+    .btn-donate {
+      display: block;
+      background-color: var(--primary);
+      color: #ffffff !important;
+      text-decoration: none;
+      font-weight: 700;
+      padding: 12px 10px;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      transition: background 0.2s;
+    }
+
+    .btn-donate:hover { background-color: var(--primary-light); }
+
+    .btn-special { background-color: var(--accent) !important; }
+
+    .btn-special:hover { background-color: var(--accent-hover) !important; }
+
+    /* History Table */
+    .history-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+      font-size: 1.05rem;
+    }
+
+    .history-table th, .history-table td {
+      padding: 14px 18px;
+      border: 1px solid var(--border);
+      text-align: right;
+      vertical-align: top;
+    }
+
+    .history-table th {
+      background-color: var(--primary);
+      color: #ffffff;
+      font-weight: 700;
+      width: 25%;
+    }
+
+    .history-table td {
+      width: 75%;
+    }
+
+    .history-table tr:nth-child(even) { background-color: #F8FAFC; }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 35px 20px;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      border-top: 1px solid var(--border);
+      margin-top: 40px;
+    }
+
+    /* Responsive Breakpoints */
+    @media (max-width: 992px) {
+      .donation-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 768px) {
+      .media-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 576px) {
+      section { padding: 20px 16px; }
+      .donation-grid { grid-template-columns: 1fr; }
+      .history-table th, .history-table td { display: block; width: 100%; }
+      .history-table th { background-color: #E2E8F0; color: var(--text-dark); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <h1>שימור מורשת מעפילי "הגנה" לאורך חופי הים</h1>
+      <div class="subtitle">מחברים את הדורות ומנציחים את גבורת מעפילי האונייה "הגנה" בטיילת העיר חיפה</div>
+    </div>
+  </header>
+
+  <main class="container">
+    
+    <!-- Hero Gallery -->
+    <div class="media-grid">
+      <div class="media-card">
+        <img src="HAGANA.GIF" alt="ספינת המעפילים &quot;ההגנה&quot;">
+        <div class="caption">ספינת המעפילים "ההגנה"</div>
+      </div>
+      <div class="media-card logo-card">
+        <img src="../קפריסין.png" alt="לוגו ארגון מעפילי קפריסין">
+      </div>
+      <div class="media-card">
+        <img src="sign_model.png" alt="דגם שלט ההנצחה בחיפה">
+        <div class="caption">שלט ההנצחה האינטראקטיבי המתוכנן להצבה בטיילת העיר חיפה</div>
+      </div>
+    </div>
+
+    <!-- Campaign Hook -->
+    <section>
+      <h2>חברות וחברי משפחת "הגנה" היקרים,</h2>
+      <p>כ-2,678 מעפילים – הורינו וסבינו – הפליגו ב-24 ביולי 1946 מנמל באקאר שביוגוסלביה על סיפונה של אוניית המעפילים <strong>"הגנה"</strong>. הם חצו ימים סוערים, נאבקו בנחישות על הזכות להגיע לחופי המולדת, ועמדו בגבורה עילאית מול המצור והמשחתות הבריטיות בלב ים.</p>
+      
+      <div class="announcement-box">
+        🌊 <strong>מיזם ההנצחה:</strong> שלט ההנצחה של אוניית "הגנה" מתוכנן להיות מוצב בטיילת העיר חיפה, ממול למקום שבו השתלטו הבריטים על הספינה!
+      </div>
+
+      <div class="info-project-box">
+        <h3>🏛️ מורשת ההעפלה בשביל הים – מיזם הנצחה לאומי</h3>
+        <p>ארגון מעפילי קפריסין מוביל מיזם הנצחה לאומי לאורך חופי המדינה, בו אלפי מטיילים, בני נוער ומשפחות נחשפים לסיפור המדהים של ההעפלה הבלתי לגאלית.</p>
+        <ul>
+          <li><strong>30 תחנות הנצחה אינטראקטיביות:</strong> מוקמות עם קודי QR בנקודות בהן נחתו או יורטו הספינות.</li>
+          <li><strong>"יד זיכרון חיה":</strong> מחברת בין הצועדים לבין סיפור הגבורה של כל 142 ספינות ההעפלה ולמעלה מ-110,000 המעפילים.</li>
+          <li><strong>יעד לאומי כולל:</strong> היעד הכספי להקמת כלל התחנות לאורך החוף עומד על 320,000 ₪.</li>
+        </ul>
+      </div>
+
+      <p>הצטרפו למיזם ההנצחה והבטיחו שסיפור גבורת מעפילי "הגנה" ייחקק לתמיד אל מול הים בחיפה!</p>
+    </section>
+
+    <!-- Donation Section -->
+    <section id="donate">
+      <div class="donation-banner">
+        <h3>🎯 יעד קהילת "הגנה": 40,000 ₪</h3>
+        <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 8px;">(כחלק מיעד לאומי של 320,000 ₪ להנצחת כלל 142 ספינות ההעפלה)</p>
+        
+        <p style="font-size: 1.15rem; font-weight: 700; color: var(--primary); margin-top: 10px; margin-bottom: 6px;">
+          אנו מזמינים אתכם לחקוק את המורשת ולהבטיח את זיכרונם
+        </p>
+        <p style="font-size: 1.05rem; font-weight: 600; color: var(--primary); margin-bottom: 12px;">
+          תרמו כעת ורשמו את ההקדשה הראויה ליקיריכם (אשר תונצח בכבוד באתר הארגון).
+        </p>
+      </div>
+      
+      <div class="donation-grid">
+        <div class="donation-card special-tier">
+          <div class="card-title">נאמן מורשת</div>
+          <div class="card-amount">₪360</div>
+          <a href="https://pay.grow.link/OTkxMDI~f28b5226e8e2972af60dbde9252ef19b-MzU0MjU0Mw" target="_blank" class="btn-donate btn-special">הצטרפו למסע</a>
+        </div>
+        <div class="donation-card">
+          <div class="card-title">מייסד נקודה</div>
+          <div class="card-amount">₪720</div>
+          <a href="https://pay.grow.link/OTkxMDI~7645ce79d23164ddbc012c17f6367308-MzU0OTAwMQ" target="_blank" class="btn-donate">הצטרפו למסע</a>
+        </div>
+        <div class="donation-card">
+          <div class="card-title">מוביל הנתיב</div>
+          <div class="card-amount">₪1,500</div>
+          <a href="https://pay.grow.link/OTkxMDI~c0106f819f7fa5e39c9415ae11997e8b-MzU0OTAzNA" target="_blank" class="btn-donate">הצטרפו למסע</a>
+        </div>
+        <div class="donation-card">
+          <div class="card-title">סכום אחר</div>
+          <div class="card-amount" style="font-size: 1.2rem; margin-top: 5px;">לבחירתך</div>
+          <a href="https://pay.grow.link/OTkxMDI~1ae44df27a248930a79f9e07e08f2634-MzU0MzY0MA" target="_blank" class="btn-donate">לתרומה</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Video Section -->
+    <section>
+      <h2>🎬 עדות מעפילי האונייה</h2>
+      <p>צפו בסרטון העדויות המרגש של מעפילי האונייה "הגנה":</p>
+      <div class="video-container">
+        <iframe src="[suspicious link removed]" title="עדויות מעפילי הגנה" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <!-- History Table -->
+    <section>
+      <h2>תעודת זהות היסטורית: אוניית המעפילים "הגנה"</h2>
+      <table class="history-table">
+        <tr>
+          <th>יציאה ומועד</th>
+          <td>24 ביולי 1946 | מנמל באקאר שביוגוסלביה</td>
+        </tr>
+        <tr>
+          <th>מספר מעפילים</th>
+          <td>כ-2,678 מעפילים – ניצולי שואה ולוחמים ששאפו להקים את ביתם במולדת</td>
+        </tr>
+        <tr>
+          <th>העימות והגזירה</th>
+          <td>עימות עיקש מול הצי הבריטי בלב ים, השתלטות בריטית וגרירת האונייה לנמל חיפה</td>
+        </tr>
+        <tr>
+          <th>מיקום שלט ההנצחה</th>
+          <td>טיילת העיר חיפה, ממול למקום שבו השתלטו הבריטים על הספינה</td>
+        </tr>
+      </table>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p><strong>פרופ' סנונית שהם</strong>, יו"ר ארגון מעפילי קפריסין | <strong>צוות מורשת מעפילי "הגנה"</strong></p>
+      <p>סיוע, מענה לשאלות ומסירת מידע - עופר: <a href="tel:+972544285388" style="color: inherit; font-weight: bold; text-decoration: none;">054-428-5388</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>
 
