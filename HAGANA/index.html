@@ -58,12 +58,13 @@
       font-weight: 500;
     }
 
-    /* Media Grid */
+    /* Media Grid - 2 Columns */
     .media-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 24px;
-      margin: 30px 0;
+      margin: 30px auto;
+      max-width: 900px;
       align-items: stretch;
     }
 
@@ -80,24 +81,13 @@
 
     .media-card img {
       width: 100%;
-      height: 220px;
+      height: 240px;
       object-fit: cover;
-    }
-
-    .media-card.logo-card {
-      border: 2px solid var(--primary-light);
-      justify-content: center;
-    }
-
-    .media-card.logo-card img {
-      object-fit: contain;
-      padding: 15px;
-      height: 220px;
     }
 
     .media-card .caption {
       padding: 12px;
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       font-weight: 600;
       color: var(--text-dark);
       background: #F8FAFC;
@@ -129,9 +119,9 @@
       background-color: #ECFDF5;
       border: 2px solid #10B981;
       border-radius: 10px;
-      padding: 16px 20px;
-      margin: 18px 0;
-      font-size: 1.1rem;
+      padding: 18px 24px;
+      margin: 20px 0 25px;
+      font-size: 1.15rem;
       color: #065F46;
       font-weight: 600;
       text-align: center;
@@ -326,14 +316,11 @@
 
   <main class="container">
     
-    <!-- Hero Gallery -->
+    <!-- Hero Gallery - 2 Images -->
     <div class="media-grid">
       <div class="media-card">
         <img src="HAGANA.GIF" alt="ספינת המעפילים &quot;ההגנה&quot;">
         <div class="caption">ספינת המעפילים "ההגנה"</div>
-      </div>
-      <div class="media-card logo-card">
-        <img src="../קפריסין.png" alt="לוגו ארגון מעפילי קפריסין">
       </div>
       <div class="media-card">
         <img src="sign_model.png" alt="דגם שלט ההנצחה בחיפה">
@@ -345,18 +332,14 @@
     <section>
       <h2>חברות וחברי משפחת "הגנה" היקרים,</h2>
       <p>כ-2,678 מעפילים – הורינו וסבינו – הפליגו ב-24 ביולי 1946 מנמל באקאר שביוגוסלביה על סיפונה של אוניית המעפילים <strong>"הגנה"</strong>. הם חצו ימים סוערים, נאבקו בנחישות על הזכות להגיע לחופי המולדת, ועמדו בגבורה עילאית מול המצור והמשחתות הבריטיות בלב ים.</p>
-      
-      <div class="announcement-box">
-        🌊 <strong>מיזם ההנצחה:</strong> שלט ההנצחה עם ההקדשה ל"הגנה" מתוכנן להיות מוצב בטיילת העיר חיפה, ממול למקום שבו השתלטו הבריטים על הספינה!
-      </div>
 
       <div class="info-project-box">
         <h3>🏛️ מורשת ההעפלה בשביל הים – מיזם הנצחה לאומי</h3>
-        <p>ארגון מעפילי קפריסין מוביל מיזם הנצחה לאומי לאורך חופי המדינה, בו אלפי מטיילים, בני נוער ומשפחות נחשפים לסיפור המדהים של ההעפלה הבלתי לגאלית [1, 2].</p>
+        <p>מיזם הנצחה לאומי מוביל לאורך חופי המדינה, בו אלפי מטיילים, בני נוער ומשפחות נחשפים לסיפור המדהים של ההעפלה הבלתי לגאלית.</p>
         <ul>
-          <li><strong>30 תחנות הנצחה אינטראקטיביות:</strong> מוקמות עם קודי QR בנקודות בהן נחתו או יורטו הספינות [1, 2].</li>
-          <li><strong>"יד זיכרון חיה":</strong> מחברת בין הצועדים לבין סיפור הגבורה של כל 142 ספינות ההעפלה ולמעלה מ-110,000 המעפילים [1-3].</li>
-          <li><strong>יעד לאומי כולל:</strong> היעד הכספי להקמת כלל התחנות לאורך החוף עומד על 320,000 ₪ [1, 2].</li>
+          <li><strong>30 תחנות הנצחה אינטראקטיביות:</strong> מוקמות עם קודי QR בנקודות בהן נחתו או יורטו הספינות.</li>
+          <li><strong>"יד זיכרון חיה":</strong> מחברת בין הצועדים לבין סיפור הגבורה של כל 142 ספינות ההעפלה ולמעלה מ-110,000 המעפילים.</li>
+          <li><strong>יעד לאומי כולל:</strong> היעד הכספי להקמת כלל התחנות לאורך החוף עומד על 320,000 ₪.</li>
         </ul>
       </div>
 
@@ -365,15 +348,21 @@
 
     <!-- Donation Section -->
     <section id="donate">
+      
+      <!-- Moved Announcement Box Above Donation Buttons -->
+      <div class="announcement-box">
+        🌊 <strong>מיזם ההנצחה:</strong> שלט ההנצחה עם ההקדשה ל"הגנה" מתוכנן להיות מוצב בטיילת העיר חיפה, ממול למקום שבו השתלטו הבריטים על הספינה!
+      </div>
+
       <div class="donation-banner">
         <h3>🎯 יעד קהילת "הגנה": 40,000 ₪</h3>
-        <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 8px;">(כחלק מיעד לאומי של 320,000 ₪ להנצחת כלל 142 ספינות ההעפלה) [1, 2]</p>
+        <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 8px;">(כחלק מיעד לאומי של 320,000 ₪ להנצחת כלל 142 ספינות ההעפלה)</p>
         
         <p style="font-size: 1.15rem; font-weight: 700; color: var(--primary); margin-top: 10px; margin-bottom: 6px;">
           אנו מזמינים אתכם לחקוק את המורשת ולהבטיח את זיכרונם
         </p>
         <p style="font-size: 1.05rem; font-weight: 600; color: var(--primary); margin-bottom: 12px;">
-          תרמו כעת ורשמו את ההקדשה הראויה ליקיריכם (אשר תונצח בכבוד באתר הארגון).
+          תרמו כעת ורשמו את ההקדשה הראויה ליקיריכם (אשר תונצח בכבוד באתר המורשת).
         </p>
       </div>
       
@@ -406,7 +395,7 @@
       <h2>🎬 עדות מעפילי האונייה</h2>
       <p>צפו בסרטון העדויות המרגש של מעפילי האונייה "הגנה":</p>
       <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/7gzRj2oDVV8" title=  עדויות מעפילי הגנה allowfullscreen></iframe>
+        <iframe src="[suspicious link removed]" title="עדויות מעפילי הגנה" allowfullscreen></iframe>
       </div>
     </section>
 
@@ -438,8 +427,9 @@
   <!-- Footer -->
   <footer>
     <div class="container">
-      <p><strong>פרופ' סנונית שהם</strong>, יו"ר ארגון מעפילי קפריסין | <strong>צוות מורשת מעפילי "הגנה"</strong> [2, 4]</p>
-      <p>סיוע, מענה לשאלות ומסירת מידע - עופר: <a href="tel:+972544285388" style="color: inherit; font-weight: bold; text-decoration: none;">054-428-5388</a> [2, 4]</p>
+      <p><strong>פרופ' סנונית שהם</strong></p>
+      <p style="margin-top: 4px;"><strong>צוות מורשת מעפילי "הגנה"</strong></p>
+      <p style="margin-top: 10px;">סיוע, מענה לשאלות ומסירת מידע - עופר: <a href="tel:+972544285388" style="color: inherit; font-weight: bold; text-decoration: none;">054-428-5388</a></p>
     </div>
   </footer>
 
