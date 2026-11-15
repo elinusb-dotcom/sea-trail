@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>שימור מורשת מעפילי ה"פאנים" לאורך חופי הים</title>
+  <title>שימור מורשת מעפילי "הפאנים" לאורך חופי הים</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -30,17 +30,17 @@
     }
 
     .container {
-      max-width: 1100px;
+      max-width: 1000px;
       margin: 0 auto;
       padding: 0 20px;
       width: 100%;
     }
 
-    /* Header */
+    /* Header & Language Switcher */
     header {
       background: linear-gradient(135deg, #0A192F 0%, #0F2C59 100%);
       color: #ffffff;
-      padding: 40px 20px 50px;
+      padding: 30px 20px 40px;
       text-align: center;
       border-bottom: 5px solid var(--accent);
     }
@@ -48,7 +48,7 @@
     .top-bar {
       display: flex;
       justify-content: flex-start;
-      margin-bottom: 15px;
+      margin-bottom: 12px;
     }
 
     .lang-btn {
@@ -56,27 +56,23 @@
       color: #ffffff !important;
       text-decoration: none;
       font-weight: 600;
-      font-size: 0.9rem;
-      padding: 6px 16px;
+      font-size: 0.85rem;
+      padding: 5px 14px;
       border-radius: 20px;
       border: 1px solid rgba(255, 255, 255, 0.3);
       transition: all 0.2s ease;
     }
 
-    .lang-btn:hover {
-      background-color: rgba(255, 255, 255, 0.3);
-      transform: translateY(-1px);
-    }
+    .lang-btn:hover { background-color: rgba(255, 255, 255, 0.3); }
 
     header h1 {
-      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
       font-weight: 800;
-      margin-bottom: 12px;
-      line-height: 1.25;
+      margin-bottom: 8px;
     }
 
     header .subtitle {
-      font-size: clamp(1rem, 2vw, 1.25rem);
+      font-size: clamp(1rem, 2vw, 1.2rem);
       color: #E2E8F0;
       font-weight: 500;
     }
@@ -85,9 +81,8 @@
     .media-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      margin: 30px 0;
-      align-items: stretch;
+      gap: 18px;
+      margin: 25px 0;
     }
 
     .media-card {
@@ -103,24 +98,19 @@
 
     .media-card img {
       width: 100%;
-      height: 220px;
+      height: 190px;
       object-fit: cover;
-    }
-
-    .media-card.logo-card {
-      border: 2px solid var(--primary-light);
-      justify-content: center;
     }
 
     .media-card.logo-card img {
       object-fit: contain;
-      padding: 15px;
-      height: 220px;
+      padding: 12px;
+      height: 190px;
     }
 
     .media-card .caption {
-      padding: 12px;
-      font-size: 0.9rem;
+      padding: 10px;
+      font-size: 0.88rem;
       font-weight: 600;
       color: var(--text-dark);
       background: #F8FAFC;
@@ -130,33 +120,63 @@
     /* Sections */
     section {
       background: #ffffff;
-      margin: 25px 0;
-      padding: 35px 40px;
+      margin: 20px 0;
+      padding: 28px 32px;
       border-radius: 14px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
       border: 1px solid var(--border);
     }
 
     section h2 {
       color: var(--primary);
-      font-size: 1.6rem;
-      margin-bottom: 18px;
+      font-size: 1.5rem;
+      margin-bottom: 14px;
       border-bottom: 3px solid var(--accent);
       display: inline-block;
-      padding-bottom: 4px;
+      padding-bottom: 3px;
     }
 
-    p { margin-bottom: 14px; font-size: 1.05rem; }
+    p { margin-bottom: 12px; font-size: 1.05rem; }
 
-    .sponsor-note {
-      background-color: #F0F9FF;
-      border: 1px solid #BAE6FD;
-      border-radius: 8px;
-      padding: 14px 20px;
-      margin-top: 18px;
-      font-size: 1rem;
-      color: #0369A1;
+    .announcement-box {
+      background-color: #ECFDF5;
+      border: 2px solid #10B981;
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin: 15px 0 20px;
+      font-size: 1.1rem;
+      color: #065F46;
+      font-weight: 600;
       text-align: center;
+    }
+
+    .highlight-box {
+      background-color: #F0F9FF;
+      border-right: 4px solid var(--primary-light);
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin: 16px 0;
+      font-size: 1.05rem;
+    }
+
+    /* Video Container */
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 12px;
+      margin-top: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
     }
 
     /* Donation Grid */
@@ -164,41 +184,37 @@
       text-align: center;
       background: linear-gradient(180deg, #FFFDF5 0%, #FFFFFF 100%);
       border: 2px solid var(--accent);
-      border-radius: 14px;
-      padding: 28px;
-      margin-bottom: 24px;
+      border-radius: 12px;
+      padding: 22px;
+      margin-bottom: 20px;
     }
 
     .donation-banner h3 {
       color: var(--primary);
-      font-size: 1.5rem;
-      margin-bottom: 12px;
+      font-size: 1.4rem;
+      margin-bottom: 8px;
     }
 
     .donation-grid {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
-      gap: 16px;
-      margin-top: 24px;
+      gap: 12px;
+      margin-top: 20px;
     }
 
     .donation-card {
       background: #ffffff;
       border: 2px solid var(--border);
       border-radius: 10px;
-      padding: 22px 12px;
+      padding: 18px 8px;
       text-align: center;
-      transition: all 0.2s ease-in-out;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      transition: transform 0.2s;
     }
 
-    .donation-card:hover {
-      transform: translateY(-4px);
-      border-color: var(--primary-light);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
-    }
+    .donation-card:hover { transform: translateY(-3px); }
 
     .donation-card.special-tier {
       border-color: var(--accent);
@@ -206,17 +222,17 @@
     }
 
     .card-title {
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       font-weight: 700;
       color: var(--text-muted);
-      margin-bottom: 6px;
+      margin-bottom: 4px;
     }
 
     .card-amount {
-      font-size: 1.75rem;
+      font-size: 1.6rem;
       font-weight: 800;
       color: var(--primary);
-      margin-bottom: 14px;
+      margin-bottom: 12px;
     }
 
     .btn-donate {
@@ -225,10 +241,9 @@
       color: #ffffff !important;
       text-decoration: none;
       font-weight: 700;
-      padding: 12px 10px;
+      padding: 10px 8px;
       border-radius: 6px;
-      font-size: 0.95rem;
-      transition: background 0.2s;
+      font-size: 0.9rem;
     }
 
     .btn-donate:hover { background-color: var(--primary-light); }
@@ -237,35 +252,34 @@
 
     .btn-special:hover { background-color: var(--accent-hover) !important; }
 
-    /* Video Section */
-    .video-container {
-      position: relative;
-      padding-bottom: 56.25%;
-      height: 0;
-      overflow: hidden;
-      border-radius: 12px;
-      margin: 20px 0;
-      background: #000;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    /* Abroad Box */
+    .abroad-box {
+      background: #F0FDF4;
+      border: 1px solid #10B981;
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin-top: 20px;
+      font-size: 0.92rem;
     }
 
-    .video-container iframe {
-      position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;
+    .abroad-box h4 {
+      color: #065F46;
+      font-size: 1.05rem;
+      margin-bottom: 6px;
     }
 
     /* History Table */
     .history-table {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 15px;
-      font-size: 1.05rem;
+      margin-top: 12px;
+      font-size: 1rem;
     }
 
     .history-table th, .history-table td {
-      padding: 14px 18px;
+      padding: 12px 15px;
       border: 1px solid var(--border);
       text-align: right;
-      vertical-align: top;
     }
 
     .history-table th {
@@ -275,37 +289,19 @@
       width: 25%;
     }
 
-    .history-table td {
-      width: 75%;
-    }
-
-    .history-table tr:nth-child(even) { background-color: #F8FAFC; }
-
     /* Footer */
     footer {
       text-align: center;
-      padding: 35px 20px;
+      padding: 30px 20px;
       color: var(--text-muted);
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       border-top: 1px solid var(--border);
-      margin-top: 40px;
+      margin-top: 30px;
     }
 
-    /* Responsive Breakpoints */
-    @media (max-width: 992px) {
-      .donation-grid { grid-template-columns: repeat(3, 1fr); }
-    }
-
-    @media (max-width: 768px) {
+    @media (max-width: 800px) {
       .media-grid { grid-template-columns: 1fr; }
       .donation-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-
-    @media (max-width: 576px) {
-      section { padding: 20px 16px; }
-      .donation-grid { grid-template-columns: 1fr; }
-      .history-table th, .history-table td { display: block; width: 100%; }
-      .history-table th { background-color: #E2E8F0; color: var(--text-dark); }
     }
   </style>
 </head>
@@ -315,9 +311,10 @@
   <header>
     <div class="container">
       <div class="top-bar">
-             </div>
-      <h1>שימור מורשת מעפילי ה"פאנים" לאורך חופי הים</h1>
-      <div class="subtitle">מחברים את הדורות ומנציחים את גבורת ה"פאן יורק" ("קיבוץ גלויות") וה"פאן קרסנט" ("עצמאות")</div>
+        <a href="../PANIM%20ENG/index.html" class="lang-btn">🌐 English Version</a>
+      </div>
+      <h1>שימור מורשת מעפילי "הפאנים" לאורך חופי הים</h1>
+      <div class="subtitle">הנצחת גבורת 15,500 מעפילי "קיבוץ גלויות" (פאן יורק) ו"עצמאות" (פאן קרסנט)</div>
     </div>
   </header>
 
@@ -326,100 +323,105 @@
     <!-- Hero Gallery -->
     <div class="media-grid">
       <div class="media-card">
-        <img src="PANIM.png" alt="הספינות פאן יורק ופאן קרסנט בלב ים">
-        <div class="caption">הספינות ה"פאן יורק" וה"פאן קרסנט" בדרכן לחופי המולדת</div>
+        <img src="panim.png" alt="הספינות פאן יורק ופאן קרסנט בלב ים">
+        <div class="caption">הספינות "פאן יורק" ו"פאן קרסנט" בלב ים</div>
       </div>
       <div class="media-card logo-card">
         <img src="../קפריסין.png" alt="לוגו ארגון מעפילי קפריסין">
       </div>
       <div class="media-card">
-        <img src="../GENRTAL/sign_model.png" alt="דגם שלט ההנצחה">
-        <div class="caption">שלט ההנצחה האינטראקטיבי המתוכנן להצבה לאורך החוף</div>
+        <img src="sign_model.png" alt="דגם שלט ההנצחה המתוכנן">
+        <div class="caption">שלט ההנצחה האינטראקטיבי המתוכנן להצבה בחוף</div>
       </div>
     </div>
 
-    <!-- Campaign Hook -->
+    <!-- Campaign Hook (Updated Text) -->
     <section>
-      <h2>חברות וחברי משפחת ה"פאנים" היקרים,</h2>
-      <p>כ-15,500 מעפילים – הורינו וסבינו – הפליגו מבורגס שבבולגריה על סיפון <strong>ה"פאן יורק" ("קיבוץ גלויות") וה"פאן קרסנט" ("עצמאות")</strong>. הם עברו מסע תלאות, חלמו על חופי הארץ ושרו את "התקווה" בדמעות לפני גירושם למחנות קפריסין.</p>
+      <h2>חברות וחברי משפחת "הפאנים" היקרים,</h2>
+      <p>15,500 מעפילים – הורינו וסבינו – הפליגו ב-27 בדצמבר 1947 מבורגס שבבולגריה במבצע ההעפלה המרוכז והגדול בהיסטוריה. הם חצו ימים סוערים, עמדו בצפיפות עילאית ושרו את "התקווה" בדמעות אל מול המשחתות הבריטיות.</p>
       
-      <p><strong>תודה ענקית לכל מי שכבר נרתם ותרם!</strong> בזכותכם אנו מתקדמים, אך המסע טרם הסתיים – ואנו זקוקים לכל אחד ואחת מכם כדי לחצות את קו הגמר ולחבר בין המטיילים לאורך חופי הים לבין סיפור גבורת המעפילים.</p>
-
-      <p>במסגרת מיזם 30 שלטי ההנצחה לאורך חוף הארץ של ארגון מעפילי קפריסין, יש לנו הזדמנות להבטיח שסיפורן של ה"פאן יורק" וה"פאן קרסנט" ייחקק לתמיד על החוף שאליו כה נכספו.</p>
+      <div class="highlight-box">
+        ❤️ <strong>תודה ענקית לכל המשפחות שכבר נרתמו!</strong> בזכותכם אנו מתקרבים אל קו הסיום. כל תרומה תסייע להבטיח שסיפור הגבורה של יקירינו ייחקק לתמיד אל מול הים.
+      </div>
     </section>
 
     <!-- Donation Section -->
     <section id="donate">
+      
+      <div class="announcement-box">
+        🌊 <strong>שלב ההגשמה:</strong> שלט ההנצחה האינטראקטיבי של "הפאנים" מתוכנן להיות מוצב לאורך החוף אל מול נתיב הגעתן ההיסטורי!
+      </div>
+
       <div class="donation-banner">
-        <h3>🎯 יעד קהילת ה"פאנים": 40,000 ₪</h3>
-        
-        <p style="font-size: 1.15rem; font-weight: 700; color: var(--primary); margin-top: 10px; margin-bottom: 6px;">
-          אנו מזמינים אתכם לחקוק את המורשת ולהבטיח את זיכרונם
+        <h3>🎯 מגיעים ליעד קהילת "הפאנים": 40,000 ₪</h3>
+        <p style="font-size: 1.1rem; font-weight: 700; color: var(--primary); margin-top: 6px;">
+          אנו מזמינים אתכם לחקוק את המורשת ולרשום את ההקדשה המשפחתית ליקיריכם
         </p>
-        <p style="font-size: 2.05rem; font-weight: 600; color: var(--primary); margin-bottom: 12px;">
-          תרמו כעת ורשמו את ההקדשה הראויה ליקיריכם  שתונצח בכבוד באתר הארגון.
+        <p style="font-size: 0.95rem; color: var(--text-muted); margin-top: 4px;">
+          (ניתן גם להקדיש שלט שלם או יותר – לפרטים פנו לעופר)
         </p>
-        
-        <div class="sponsor-note">
-          💡 <strong>רוצים להרחיב את המעורבות?</strong> ניתן להקדיש <strong>שלט שלם או יותר</strong> – לפרטים נוספים פנו לעופר.
-        </div>
       </div>
       
       <div class="donation-grid">
         <div class="donation-card">
           <div class="card-title">ידיד הנתיב</div>
           <div class="card-amount">₪180</div>
-          <a href="https://pay.grow.link/OTkxMDI~609ee4070b8fb715aa68b5173eaf2fdb-MzU0MjQ4OQ" target="_blank" class="btn-donate">הצטרפו למסע</a>
+          <a href="https://pay.grow.link/OTkxMDI~609ee4070b8fb715aa68b5173eaf2fdb-MzU0MjQ4OQ" target="_blank" class="btn-donate">להצטרפות</a>
         </div>
         <div class="donation-card special-tier">
           <div class="card-title">נאמן מורשת</div>
           <div class="card-amount">₪360</div>
-          <a href="https://pay.grow.link/OTkxMDI~f28b5226e8e2972af60dbde9252ef19b-MzU0MjU0Mw" target="_blank" class="btn-donate btn-special">הצטרפו למסע</a>
+          <a href="https://pay.grow.link/OTkxMDI~f28b5226e8e2972af60dbde9252ef19b-MzU0MjU0Mw" target="_blank" class="btn-donate btn-special">להצטרפות</a>
         </div>
         <div class="donation-card">
           <div class="card-title">מייסד נקודה</div>
           <div class="card-amount">₪720</div>
-          <a href="https://pay.grow.link/OTkxMDI~7645ce79d23164ddbc012c17f6367308-MzU0OTAwMQ" target="_blank" class="btn-donate">הצטרפו למסע</a>
+          <a href="https://pay.grow.link/OTkxMDI~7645ce79d23164ddbc012c17f6367308-MzU0OTAwMQ" target="_blank" class="btn-donate">להצטרפות</a>
         </div>
         <div class="donation-card">
           <div class="card-title">מוביל הנתיב</div>
           <div class="card-amount">₪1,500</div>
-          <a href="https://pay.grow.link/OTkxMDI~c0106f819f7fa5e39c9415ae11997e8b-MzU0OTAzNA" target="_blank" class="btn-donate">הצטרפו למסע</a>
+          <a href="https://pay.grow.link/OTkxMDI~c0106f819f7fa5e39c9415ae11997e8b-MzU0OTAzNA" target="_blank" class="btn-donate">להצטרפות</a>
         </div>
         <div class="donation-card">
           <div class="card-title">סכום אחר</div>
-          <div class="card-amount" style="font-size: 1.2rem; margin-top: 5px;">לבחירתך</div>
+          <div class="card-amount" style="font-size: 1.15rem; margin-top: 4px;">לבחירתך</div>
           <a href="https://pay.grow.link/OTkxMDI~1ae44df27a248930a79f9e07e08f2634-MzU0MzY0MA" target="_blank" class="btn-donate">לתרומה</a>
         </div>
       </div>
+
+      <!-- Abroad Box -->
+      <div class="abroad-box">
+        <h4>🌍 תורמים מחו"ל בכרטיס אשראי?</h4>
+        <p>במערכת התשלום יש להזין את המספר <strong>054-4285338</strong> בשדה הנייד, ואת מספרכם הבינלאומי בתיבת ההערות. תודה!</p>
+      </div>
+
     </section>
 
     <!-- Video Section -->
     <section>
-      <h2>🎬 מעפילים על ה״פאן יורק״ מפמגוסטה לחיפה, יולי 1948</h2>
+      <h2>🎬 עדות מעפילי "הפאנים"</h2>
+      <p>צפו בסרטון העדויות המרגש של מעפילי "עצמאות" ו"קיבוץ גלויות" – <strong>ואולי תזהו בו מי מיקיריכם...</strong></p>
       <div class="video-container">
-       <iframe src="https://www.youtube.com/embed/jEl2xWmGlPg?cc_load_policy=1&cc_lang_pref=he&hl=he" title="מעפילים עולים על ה״פאן יורק״ בפמגוסטה, קפריסין ביולי 1948 " allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/jEl2xWmGlPg?cc_load_policy=1&cc_lang_pref=he&hl=he" title="מסע הפאנים - מעפילי עצמאות וקיבוץ גלויות מספרים" allowfullscreen></iframe>
+      </div>
     </section>
 
     <!-- History Table -->
     <section>
-      <h2>תעודת זהות היסטורית: ה"פאן יורק" ("קיבוץ גלויות") וה"פאן קרסנט" ("עצמאות")</h2>
+      <h2>תעודת זהות היסטורית: "עצמאות" ו"קיבוץ גלויות"</h2>
       <table class="history-table">
         <tr>
           <th>יציאה ומועד</th>
-          <td>בורגס, בולגריה | 27 בדצמבר 1947</td>
+          <td>27 בדצמבר 1947 | נמל בורגס, בולגריה</td>
         </tr>
         <tr>
           <th>מספר מעפילים</th>
-          <td>כ-15,500 מעפילים – מבצע ההעפלה המרוכז והגדול ביותר בהיסטוריה</td>
+          <td>כ-15,500 מעפילים – המבצע המרוכז והגדול ביותר בהיסטוריית ההעפלה</td>
         </tr>
         <tr>
-          <th>המפגש בלב ים</th>
-          <td>31.12.1947 – כיתור בריטי בדרדנלים. הסדר לניווט ישיר לקפריסין למניעת אסון המוני וקרב דמים</td>
-        </tr>
-        <tr>
-          <th>קפריסין והתקומה</th>
-          <td>גרעין המעפילים הגדול ביותר במחנות קפריסין, אשר לחמו בהמשך במלחמת העצמאות והיוו נדבך מרכזי בבניית המדינה</td>
+          <th>העימות והגרוש</th>
+          <td>כיתור בריטי בים, הפלגה לקפריסין והשתלבות בבניית המדינה והגנתה</td>
         </tr>
       </table>
     </section>
@@ -429,11 +431,11 @@
   <!-- Footer -->
   <footer>
     <div class="container">
-      <p><strong>פרופ' סנונית שהם</strong>, יו"ר ארגון מעפילי קפריסין | <strong>צוות מורשת מעפילי ה"פאנים"</strong></p>
-      <p>סיוע, מענה לשאלות ומסירת מידע - עופר: <a href="tel:+972544285388" style="color: inherit; font-weight: bold; text-decoration: none;">054-428-5388</a></p>
+      <p><strong>פרופ' סנונית שהם</strong>, יו"ר ארגון מעפילי קפריסין</p>
+      <p style="margin-top: 4px;"><strong>צוות מורשת מעפילי "הפאנים" (אקי ועופר)</strong></p>
+      <p style="margin-top: 8px;">סיוע ומענה לשאלות - עופר: <a href="tel:+972544285388" style="color: inherit; font-weight: bold; text-decoration: none;">054-428-5388</a></p>
     </div>
   </footer>
 
 </body>
 </html>
-
