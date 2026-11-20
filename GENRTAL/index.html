@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
   <meta charset="UTF-8">
@@ -36,11 +36,11 @@
       width: 100%;
     }
 
-    /* Header */
+    /* Header & Top Bar */
     header {
       background: linear-gradient(135deg, #0A192F 0%, #0F2C59 100%);
       color: #ffffff;
-      padding: 40px 20px 50px;
+      padding: 35px 20px 45px;
       text-align: center;
       border-bottom: 5px solid var(--accent);
     }
@@ -63,15 +63,12 @@
       transition: all 0.2s ease;
     }
 
-    .lang-btn:hover {
-      background-color: rgba(255, 255, 255, 0.3);
-      transform: translateY(-1px);
-    }
+    .lang-btn:hover { background-color: rgba(255, 255, 255, 0.3); }
 
     header h1 {
       font-size: clamp(1.8rem, 4vw, 2.5rem);
       font-weight: 800;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
       line-height: 1.25;
     }
 
@@ -81,7 +78,7 @@
       font-weight: 500;
     }
 
-    /* Media Grid - 3 columns on Desktop */
+    /* Media Grid - 3 Columns */
     .media-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -148,18 +145,32 @@
 
     p { margin-bottom: 14px; font-size: 1.05rem; }
 
-    blockquote {
-      background-color: #FFFDF5;
-      border-right: 4px solid var(--accent);
-      padding: 16px 22px;
-      margin: 20px 0;
-      border-radius: 0 10px 10px 0;
-      font-style: italic;
-      font-size: 1.1rem;
-      color: #451A03;
+    /* Eye-Catching News Box */
+    .news-box {
+      background-color: #ECFDF5;
+      border: 2px solid #10B981;
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin: 22px 0;
+      color: #065F46;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.1);
     }
 
-    /* Donation Grid - 5 columns on Desktop */
+    .news-box h3 {
+      font-size: 1.35rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+      color: #047857;
+    }
+
+    .news-box p {
+      font-size: 1.1rem;
+      margin-bottom: 0;
+      line-height: 1.5;
+    }
+
+    /* Donation Grid - 5 Columns */
     .donation-banner {
       text-align: center;
       background: linear-gradient(180deg, #FFFDF5 0%, #FFFFFF 100%);
@@ -171,7 +182,7 @@
 
     .donation-banner h3 {
       color: var(--primary);
-      font-size: 1.35rem;
+      font-size: 1.4rem;
       margin-bottom: 8px;
     }
 
@@ -224,33 +235,22 @@
       transition: background 0.2s;
     }
 
-    .btn-donate:hover {
-      background-color: var(--primary-light);
+    .btn-donate:hover { background-color: var(--primary-light); }
+    .btn-special { background-color: var(--accent) !important; }
+    .btn-special:hover { background-color: var(--accent-hover) !important; }
+
+    /* Abroad Instructions Box */
+    .abroad-box {
+      background: #F0FDF4;
+      border: 1px solid #10B981;
+      border-radius: 10px;
+      padding: 18px 22px;
+      margin-top: 20px;
+      font-size: 0.95rem;
     }
 
-    .btn-special {
-      background-color: var(--accent) !important;
-    }
-
-    .btn-special:hover {
-      background-color: var(--accent-hover) !important;
-    }
-
-    /* Video Section */
-    .video-container {
-      position: relative;
-      padding-bottom: 56.25%;
-      height: 0;
-      overflow: hidden;
-      border-radius: 12px;
-      margin: 20px 0;
-      background: #000;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    }
-
-    .video-container iframe {
-      position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;
-    }
+    .abroad-box h4 { color: #065F46; margin-bottom: 8px; }
+    .abroad-box ol { margin-right: 20px; margin-bottom: 10px; }
 
     /* History Table */
     .history-table {
@@ -285,7 +285,6 @@
       margin-top: 40px;
     }
 
-    /* Media Queries for Tablets & Mobile */
     @media (max-width: 900px) {
       .media-grid { grid-template-columns: 1fr 1fr; }
       .donation-grid { grid-template-columns: repeat(3, 1fr); }
@@ -306,27 +305,27 @@
   <header>
     <div class="container">
       <div class="top-bar">
-        <a href="../GENERAL%20ENG/index.html" class="lang-btn">🌐 English</a>
+        <a href="../GENERAL%20ENG/index.html" class="lang-btn">🌐 English Version</a>
       </div>
       <h1>שימור מורשת ההעפלה הבלתי לגאלית לאורך חופי הארץ</h1>
-      <div class="subtitle">הדגל נמסר לנו! מנציחים את גבורת 142 ספינות ההעפלה על חוף המדינה.</div>
+      <div class="subtitle">הדגל נמסר לנו! מנציחים את גבורת 142 ספינות ההעפלה על חופי המדינה</div>
     </div>
   </header>
 
   <main class="container">
     
-    <!-- Visual Hero Gallery -->
+    <!-- Hero Gallery (Updated Image) -->
     <div class="media-grid">
       <div class="media-card">
-        <img src="panim.png" alt="ספינות העפלה בלב ים">
-        <div class="caption">ספינות ההעפלה בדרכן לחופי המולדת</div>
+        <img src="../MOLEDET/rosh%20hanikra.jfif" alt="אוניית המעפילים על רקע ראש הנקרה">
+        <div class="caption">אוניית המעפילים על רקע ראש הנקרה</div>
       </div>
       <div class="media-card logo-card">
-        <img src="cyprus_logo.png" alt="לוגו ארגון מעפילי קפריסין">
+        <img src="../קפריסין.png" alt="לוגו ארגון מעפילי קפריסין">
       </div>
       <div class="media-card">
-        <img src="sign_model.png" alt="דגם שלט הנצחה לאורך החוף">
-        <div class="caption">שלט ההנצחה האינטראקטיבי המתוכנן</div>
+        <img src="../שלט במפרץ.png" alt="דגם שלט ההנצחה האינטראקטיבי">
+        <div class="caption">שלט ההנצחה האינטראקטיבי המתוכנן להצבה בחוף</div>
       </div>
     </div>
 
@@ -334,10 +333,12 @@
     <section>
       <h2>חברות וחברי משפחות המעפילים לדורותיהם,</h2>
       <p>על חופי ארץ ישראל נכתב הפרק הדרמטי והמפואר ביותר בתולדות הקמת המדינה. למעלה מ-110,000 מעפילים – הורינו, סבינו והדגלים שצעדו לפנינו – הפליגו ב-142 ספינות העפלה בים ובאוויר. הם נלחמו בים סוער, עמדו במצור הבריטי, גורשו למחנות המעצר בקפריסין ובאירופה, ולא ויתרו עד שהגיעו לחוף מבטחים והקימו את המדינה.</p>
-      
-      <blockquote>
-        "כל שלט הנצחה הוא יד זיכרון חיה – גשר שיחבר בין המטייל לאורך חופי הים לבין סיפור גבורת המעפילים והספינה של משפחתכם."
-      </blockquote>
+
+      <!-- Eye-Catching News Box -->
+      <div class="news-box">
+        <h3>🎉 חדשות טובות וצעד משמעותי במסע!</h3>
+        <p>בימים האחרונים קיבלנו אישור מ<strong>מועצת מטה אשר</strong> ומ<strong>עיריית נהריה</strong> להציב נקודות הנצחה בשטחן – צעד משמעותי ביותר בדרך להגשמת המיזם!</p>
+      </div>
 
       <p>כעת, <strong>ארגון מעפילי קפריסין</strong> מוביל מיזם לאומי להצבת 30 תחנות הנצחה ושלטים אינטראקטיביים לאורך חופי המדינה. המטרה שלנו ברורה: <strong>להבטיח שכל ספינת מעפילים באשר היא תונצח באופן מכובד וקבוע בנקודת החוף הקשורה בסיפורה ההיסטורי</strong>, למען הדורות הבאים.</p>
     </section>
@@ -345,9 +346,12 @@
     <!-- Donation Section -->
     <section id="donate">
       <div class="donation-banner">
-        <h3>היעד הלאומי: 320,000 ₪ להנצחת כלל 142 ספינות ההעפלה</h3>
+        <h3>🎯 היעד הלאומי: 320,000 ₪ להנצחת כלל 142 ספינות ההעפלה</h3>
         <p>היו שותפים להקמת תחנות הזיכרון והנצחת הספינה היקרה לליבכם</p>
-        <p style="font-weight: 700; color: var(--accent); margin-top: 8px;">בחרו את סכום התרומה ורשמו את ההקדשה הראויה ליקירכם ולספינתכם:</p>
+
+        <p style="font-weight: 700; color: var(--primary); margin-top: 8px;">
+          בחרו את סכום התרומה ורשמו את ההקדשה הראויה ליקירכם ולספינתכם (אשר תונצח בכבוד באתר הארגון):
+        </p>
       </div>
       
       <div class="donation-grid">
@@ -365,25 +369,29 @@
         </div>
         <div class="donation-card">
           <div class="card-amount">₪1,500</div>
-          <a href="https://pay.grow.link/OTkxMDI~c0106f819f7fa5e39c9415ae11997e8b-MzU0OT0zNA" target="_blank" class="btn-donate">שותפים לדרך</a>
+          <a href="https://pay.grow.link/OTkxMDI~c0106f819f7fa5e39c9415ae11997e8b-MzU0OTAzNA" target="_blank" class="btn-donate">שותפים לדרך</a>
         </div>
         <div class="donation-card">
           <div class="card-amount" style="font-size: 1.2rem; margin-top: 5px;">סכום אחר</div>
           <a href="https://pay.grow.link/OTkxMDI~1ae44df27a248930a79f9e07e08f2634-MzU0MzY0MA" target="_blank" class="btn-donate">לתרומה</a>
         </div>
       </div>
-    </section>
 
-    <!-- Video Testimony Section -->
-    <section>
-      <h2>רגע של עדות: סיפורי ההעפלה</h2>
-      <p>צפו בעדויות וברגעים ההיסטוריים של מעפילי הספינות:</p>
-      <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/QXKyeKvH5KQ" title="עדויות מעפילים" allowfullscreen></iframe>
+      <!-- Abroad Box -->
+      <div class="abroad-box">
+        <h4>🌍 תורמים מחו"ל? שימו לב – הנחיות לתשלום בכרטיס אשראי:</h4>
+        <ol>
+          <li><strong>כרטיס אשראי בלבד:</strong> אנו מקבלים כרטיסי אשראי בינלאומיים מוכרים.</li>
+          <li><strong>שדה מספר טלפון בנייד:</strong> יש להזין את המספר <strong>054-4285338</strong> בשדה הטלפון הנייד במערכת.</li>
+          <li><strong>מספר הטלפון הבינלאומי שלכם:</strong> הוסיפו את מספר הטלפון הבינלאומי שלכם בתיבת ההערות (Notes).</li>
+          <li><strong>אישור:</strong> קבלות נשלחות מיד באמצעות דוא"ל ומסרון (SMS).</li>
+        </ol>
+        <p><em>נא לעדכן אותנו ברגע שהתשלום הושלם כדי שנוכל לאשר את קבלתו!</em></p>
       </div>
+
     </section>
 
-    <!-- Historical Overview Table -->
+    <!-- Overview Table -->
     <section>
       <h2>מפעל ההעפלה במספרים</h2>
       <table class="history-table">
@@ -412,7 +420,7 @@
   <footer>
     <div class="container">
       <p><strong>פרופ' סנונית שהם</strong>, יו"ר ארגון מעפילי קפריסין | <strong>צוות מורשת ההעפלה</strong></p>
-      <p>סיוע, מענה לשאלות ומסירת מידע על ספינות - עופר: <a href="tel:+972544285388" style="color: inherit; font-weight: bold; text-decoration: none;">054-428-5388</a></p>
+      <p style="margin-top: 8px;">סיוע, מענה לשאלות ומסירת מידע על ספינות - עופר: <a href="tel:+972544285388" style="color: inherit; font-weight: bold; text-decoration: none;">054-428-5388</a></p>
     </div>
   </footer>
 
